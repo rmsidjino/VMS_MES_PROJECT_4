@@ -16,6 +16,9 @@ namespace VMS_MES_PROJECT_4
     {
         ServiceHelp srv = new ServiceHelp("");
         LoggingUtility _logging;
+        int editIndex;
+        List<SetupVO> slist;
+        List<CommonVO> com;
 
         public frmSetupTime()
         {
@@ -33,16 +36,32 @@ namespace VMS_MES_PROJECT_4
             DataGridViewUtil.AddGridTextColumn(dgvSetup, "공정ID", "STEP_ID", colWidth: 100);
             DataGridViewUtil.AddGridTextColumn(dgvSetup, "가동준비시간", "TIME", DataGridViewContentAlignment.MiddleRight, colWidth: 130);
 
+            DataGridViewButtonColumn btnEdit = new DataGridViewButtonColumn();
+
+            btnEdit.Text = "수정";
+            btnEdit.Width = 50;
+            btnEdit.UseColumnTextForButtonValue = true;
+            btnEdit.Name = "Edit";
+            editIndex = dgvSetup.Columns.Add(btnEdit);
+
             LoadData();
+
+
 
 
         }
 
         private async void LoadData()
         {
-            List<SetupVO> slist = null;
+            slist = null;
             slist = await srv.GetListAsync("api/Setup/Setups", slist);
             dgvSetup.DataSource = slist;
+
+            com = null;
+            com = await srv.GetListAsync($"api/Common/All", com);
+
+            CommonUtil.ComboBinding(cboSite, com, "SITE", blankText: "선택");
+            CommonUtil.ComboBinding(cboStep, com, "STEP", blankText: "선택");
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
@@ -80,6 +99,19 @@ namespace VMS_MES_PROJECT_4
             prod = await srv.GetAsync($"api/Setup/Search/{cboSite.SelectedValue}", prod);
 
             dgvSetup.DataSource = prod;
+        }
+
+        private void dgvSetup_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex == editIndex)
+            {
+                string siteID = dgvSetup["SITE_ID", e.RowIndex].Value.ToString();
+                string lineID = dgvSetup["LINE_ID", e.RowIndex].Value.ToString();
+                string stepID = dgvSetup["STEP_ID", e.RowIndex].Value.ToString();
+                SetupVO sitem = slist.Find((setup) => setup.SITE_ID == siteID && setup.LINE_ID == lineID && setup.STEP_ID==stepID);
+                PopupSetupTime frm = new PopupSetupTime(sitem);
+                frm.Show();
+            }
         }
     }
 }

@@ -223,6 +223,7 @@ namespace VMS_MES_PROJECT_4
             this.Controls.Add(this.label1);
             this.Name = "PopupSetupTime";
             this.Text = "셋업 등록";
+            this.Load += new System.EventHandler(this.PopupSetupTime_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -15,9 +15,21 @@ namespace VMS_MES_PROJECT_4
     {
         ServiceHelp srv = new ServiceHelp("");
         MESDTO.Message msg;
+        SetupVO sItem;
+        List<CommonVO> com;
+        bool update = false;
         public PopupSetupTime()
         {
             InitializeComponent();
+        }
+
+        public PopupSetupTime(SetupVO sItem)
+        {
+            InitializeComponent();
+            this.sItem = sItem;
+            update = true;
+            
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -51,5 +63,25 @@ namespace VMS_MES_PROJECT_4
             }
             MessageBox.Show(msg.ResultMessage);
         }
+
+        private async void PopupSetupTime_Load(object sender, EventArgs e)
+        {
+            com = null;
+            com = await srv.GetListAsync($"api/Common/All", com);
+
+            CommonUtil.ComboBinding(cboSite, com, "SITE", blankText: "선택");
+            CommonUtil.ComboBinding(cboLine, com, "LINE", blankText: "선택");
+            CommonUtil.ComboBinding(cboStep, com, "STEP", blankText: "선택");
+
+            if (update)
+            {
+                cboSite.SelectedValue = sItem.SITE_ID;
+                cboLine.SelectedValue = sItem.LINE_ID;
+                cboStep.SelectedValue = sItem.STEP_ID;
+                cboEqpGroup.SelectedValue = sItem.EQP_GROUP;
+                txtTime.Text = sItem.TIME.ToString();
+            }
+        }
+
     }
 }
