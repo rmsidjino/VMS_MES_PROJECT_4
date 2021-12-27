@@ -1,4 +1,5 @@
-﻿using MESDTO;
+﻿using log4net.Core;
+using MESDTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,10 +15,12 @@ namespace VMS_MES_PROJECT_4
     public partial class frmSetupTime : Form
     {
         ServiceHelp srv = new ServiceHelp("");
-        List<SetupVO> slist = null;
+        LoggingUtility _logging;
+
         public frmSetupTime()
         {
             InitializeComponent();
+            _logging = new LoggingUtility("Setup", Level.Debug, 30); //테스트용
         }
 
         private void frmSetupTime_Load(object sender, EventArgs e)
@@ -37,7 +40,7 @@ namespace VMS_MES_PROJECT_4
 
         private async void LoadData()
         {
-
+            List<SetupVO> slist = null;
             slist = await srv.GetListAsync("api/Setup/Setups", slist);
             dgvSetup.DataSource = slist;
         }
@@ -53,6 +56,7 @@ namespace VMS_MES_PROJECT_4
             if (dgvSetup.SelectedRows.Count < 1)
             {
                 MessageBox.Show("삭제할 셋업을 선택하여 주십시오.");
+                return;
             }
 
             string siteID = dgvSetup.SelectedRows[0].Cells["SITE_ID"].Value.ToString();
@@ -65,6 +69,7 @@ namespace VMS_MES_PROJECT_4
                     LoadData();
                 }
                 MessageBox.Show(msg.ResultMessage);
+                _logging.WriteInfo(msg.ResultMessage);
             }
         }
 

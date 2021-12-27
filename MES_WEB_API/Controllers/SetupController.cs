@@ -12,7 +12,8 @@ namespace MES_WEB_API.Controllers
     [RoutePrefix("api/Setup")]
     public class SetupController : ApiController
     {
-        //https://localhost:44322/api/Setup/Setups
+        //https://localhost:44332/api/Setup/Setups
+        [HttpGet]
         [Route("Setups")]
         public List<SetupVO> GetAllSetup()
         {

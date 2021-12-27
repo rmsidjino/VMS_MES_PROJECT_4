@@ -14,6 +14,7 @@ namespace VMS_MES_PROJECT_4
     public partial class PopupSetupTime : Form
     {
         ServiceHelp srv = new ServiceHelp("");
+        MESDTO.Message msg;
         public PopupSetupTime()
         {
             InitializeComponent();
@@ -36,8 +37,14 @@ namespace VMS_MES_PROJECT_4
                 MODIFIER = "Kim",
                 MODIFIED_DATE = DateTime.Now
             };
-
-            MESDTO.Message msg = await srv.PostAsyncNone("api/Setup/UpdateSetup", setup);
+            if (cboSite.Enabled)
+            {
+                msg = await srv.PostAsyncNone("api/Setup/InsertSetup", setup);
+            }
+            else
+            {
+                msg = await srv.PostAsyncNone("api/Setup/UpdateSetup", setup);
+            }
             if (msg.IsSuccess)
             {
                 //btnSearch.PerformClick();

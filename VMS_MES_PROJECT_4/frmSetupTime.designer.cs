@@ -216,6 +216,7 @@ namespace VMS_MES_PROJECT_4
             this.Controls.Add(this.panel1);
             this.Name = "frmSetupTime";
             this.Text = "셋업관리";
+            this.Load += new System.EventHandler(this.frmSetupTime_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
