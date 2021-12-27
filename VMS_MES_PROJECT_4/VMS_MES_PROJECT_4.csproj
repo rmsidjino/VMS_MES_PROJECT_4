@@ -78,17 +78,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAC\MenuDAC.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmMenuAuth.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMenuAuth.Designer.cs">
-      <DependentUpon>frmMenuAuth.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSetupTime.cs">
       <SubType>Form</SubType>
@@ -109,9 +104,6 @@
     <Compile Include="ServiceHelp.cs" />
     <Compile Include="Util\CommonUtil.cs" />
     <Compile Include="Util\DataGridViewUtil.cs" />
-    <EmbeddedResource Include="frmMenuAuth.resx">
-      <DependentUpon>frmMenuAuth.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmSetupTime.resx">
       <DependentUpon>frmSetupTime.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +118,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -146,18 +139,6 @@
       <Project>{D3A732E6-3B11-4489-9D7B-EDB65B769BD8}</Project>
       <Name>MESDTO</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.7.2%28x86 및 x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
