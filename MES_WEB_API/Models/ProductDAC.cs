@@ -11,11 +11,12 @@ namespace MES_WEB_API.Models
 {
     public class ProductDAC
     {
-        string conn = string.Empty;
+        //string conn = string.Empty;
+        SqlConnection conn;
 
         public ProductDAC()
         {
-            conn = WebConfigurationManager.ConnectionStrings["local"].ConnectionString;
+            conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["local"].ConnectionString);
         }
 
         public List<ProductVO> GetAllProduct()
