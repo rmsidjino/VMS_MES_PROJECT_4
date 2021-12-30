@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommonVO.cs" />
+    <Compile Include="EquipmentVO.cs" />
     <Compile Include="Message.cs" />
+    <Compile Include="ProductVO.cs" />
     <Compile Include="SetupVO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
