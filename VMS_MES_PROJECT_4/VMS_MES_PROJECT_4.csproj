@@ -161,6 +161,24 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEQP.resx">
+      <DependentUpon>frmEQP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEQP_AR.resx">
+      <DependentUpon>frmEQP_AR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEQP_AR_reg.resx">
+      <DependentUpon>frmEQP_AR_reg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEQP_reg.resx">
+      <DependentUpon>frmEQP_reg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuAuth.resx">
+      <DependentUpon>frmMenuAuth.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSetupTime.resx">
       <DependentUpon>frmSetupTime.cs</DependentUpon>
     </EmbeddedResource>
