@@ -1,7 +1,7 @@
 ﻿
 namespace VMS_MES_PROJECT_4
 {
-    partial class frmEQP_AR_reg
+    partial class PopupEQP_AR_reg
     {
         /// <summary>
         /// Required designer variable.
@@ -111,9 +111,9 @@ namespace VMS_MES_PROJECT_4
             this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label7.Location = new System.Drawing.Point(67, 222);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(124, 12);
+            this.label7.Size = new System.Drawing.Size(131, 12);
             this.label7.TabIndex = 25;
-            this.label7.Text = "장비 가동 시작 날짜";
+            this.label7.Text = "장비 가용 시간(시작)";
             // 
             // dateTimePicker3
             // 
@@ -129,9 +129,9 @@ namespace VMS_MES_PROJECT_4
             this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label8.Location = new System.Drawing.Point(67, 253);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(124, 12);
+            this.label8.Size = new System.Drawing.Size(131, 12);
             this.label8.TabIndex = 27;
-            this.label8.Text = "장비 가동 끝난 날짜";
+            this.label8.Text = "장비 가용 시간(종료)";
             // 
             // button1
             // 

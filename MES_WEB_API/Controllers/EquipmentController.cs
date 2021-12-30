@@ -47,12 +47,12 @@ namespace MES_WEB_API.Controllers
         //GET : https://localhost:44332/api/Equipment/DeleteEquipment/{id}
         [HttpGet]
         [Route("DeleteEquipment/{id}")]
-        public IHttpActionResult DeleteEquipment(string equipmentID)
+        public IHttpActionResult DeleteEquipment(string id)
         {
             Message msg = new Message();
 
             EquipmentDAC db = new EquipmentDAC();
-            bool result = db.DeleteEquipment(equipmentID);
+            bool result = db.DeleteEquipment(id);
 
             if (result)
             {
@@ -69,12 +69,12 @@ namespace MES_WEB_API.Controllers
         //GET : https://localhost:44332/api/Equipment/{id}
         [HttpGet]
         [Route("{id}")]
-        public IHttpActionResult GetEquipmentInfo(string equipmentID)
+        public IHttpActionResult GetEquipmentInfo(string id)
         {
             Message<EquipmentVO> msg = new Message<EquipmentVO>();
 
             EquipmentDAC db = new EquipmentDAC();
-            EquipmentVO product = db.GetEquipmentInfo(equipmentID);
+            EquipmentVO product = db.GetEquipmentInfo(id);
 
             if (product != null)
             {

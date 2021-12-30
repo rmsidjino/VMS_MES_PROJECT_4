@@ -98,6 +98,36 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEQP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEQP.Designer.cs">
+      <DependentUpon>frmEQP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEQP_AR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEQP_AR.Designer.cs">
+      <DependentUpon>frmEQP_AR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupEQP_AR_reg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupEQP_AR_reg.Designer.cs">
+      <DependentUpon>PopupEQP_AR_reg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupEQP_reg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupEQP_reg.Designer.cs">
+      <DependentUpon>PopupEQP_reg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSetupTime.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,7 +135,6 @@
       <DependentUpon>frmSetupTime.cs</DependentUpon>
     </Compile>
     <Compile Include="LoggingUtility.cs" />
-    <Compile Include="MenuDAC.cs" />
     <Compile Include="PopupSetupTime.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +146,21 @@
     <Compile Include="ServiceHelp.cs" />
     <Compile Include="Util\CommonUtil.cs" />
     <Compile Include="Util\DataGridViewUtil.cs" />
+    <EmbeddedResource Include="frmEQP.resx">
+      <DependentUpon>frmEQP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEQP_AR.resx">
+      <DependentUpon>frmEQP_AR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupEQP_AR_reg.resx">
+      <DependentUpon>PopupEQP_AR_reg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupEQP_reg.resx">
+      <DependentUpon>PopupEQP_reg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSetupTime.resx">
       <DependentUpon>frmSetupTime.cs</DependentUpon>
     </EmbeddedResource>

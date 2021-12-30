@@ -1,7 +1,7 @@
 ﻿
 namespace VMS_MES_PROJECT_4
 {
-    partial class frmEQP_reg
+    partial class PopupEQP_reg
     {
         /// <summary>
         /// Required designer variable.
@@ -48,19 +48,19 @@ namespace VMS_MES_PROJECT_4
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.comboBox10 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label6
@@ -254,26 +254,12 @@ namespace VMS_MES_PROJECT_4
             this.comboBox10.Size = new System.Drawing.Size(163, 20);
             this.comboBox10.TabIndex = 52;
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(186, 218);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(164, 21);
-            this.textBox3.TabIndex = 55;
-            // 
             // textBox7
             // 
             this.textBox7.Location = new System.Drawing.Point(609, 44);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(163, 21);
             this.textBox7.TabIndex = 58;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(609, 83);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(163, 21);
-            this.textBox8.TabIndex = 59;
             // 
             // textBox10
             // 
@@ -329,22 +315,6 @@ namespace VMS_MES_PROJECT_4
             this.comboBox2.Size = new System.Drawing.Size(164, 20);
             this.comboBox2.TabIndex = 66;
             // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(186, 132);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(164, 20);
-            this.comboBox3.TabIndex = 67;
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(186, 176);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(164, 20);
-            this.comboBox6.TabIndex = 68;
-            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
@@ -361,25 +331,57 @@ namespace VMS_MES_PROJECT_4
             this.comboBox7.Size = new System.Drawing.Size(164, 20);
             this.comboBox7.TabIndex = 70;
             // 
-            // frmEQP_reg
+            // comboBox8
+            // 
+            this.comboBox8.FormattingEnabled = true;
+            this.comboBox8.Location = new System.Drawing.Point(186, 218);
+            this.comboBox8.Name = "comboBox8";
+            this.comboBox8.Size = new System.Drawing.Size(164, 20);
+            this.comboBox8.TabIndex = 71;
+            // 
+            // comboBox9
+            // 
+            this.comboBox9.FormattingEnabled = true;
+            this.comboBox9.Location = new System.Drawing.Point(609, 83);
+            this.comboBox9.Name = "comboBox9";
+            this.comboBox9.Size = new System.Drawing.Size(163, 20);
+            this.comboBox9.TabIndex = 72;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox1.Location = new System.Drawing.Point(186, 132);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(164, 21);
+            this.textBox1.TabIndex = 73;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox2.Location = new System.Drawing.Point(186, 176);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(164, 21);
+            this.textBox2.TabIndex = 74;
+            // 
+            // PopupEQP_reg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(835, 388);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.comboBox9);
+            this.Controls.Add(this.comboBox8);
             this.Controls.Add(this.comboBox7);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBox6);
-            this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox12);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.textBox10);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.textBox8);
             this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.comboBox10);
             this.Controls.Add(this.comboBox5);
             this.Controls.Add(this.comboBox4);
@@ -399,7 +401,7 @@ namespace VMS_MES_PROJECT_4
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "frmEQP_reg";
+            this.Name = "PopupEQP_reg";
             this.Text = "설비 관리 등록";
             this.Load += new System.EventHandler(this.frmEQP_reg_Load);
             this.ResumeLayout(false);
@@ -427,18 +429,18 @@ namespace VMS_MES_PROJECT_4
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.ComboBox comboBox10;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.ComboBox comboBox9;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

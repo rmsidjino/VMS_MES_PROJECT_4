@@ -1,6 +1,7 @@
 ﻿using MESDTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -11,6 +12,7 @@ namespace MES_WEB_API.Models
 {
     public class EquipmentDAC : IDisposable
     {
+        string strConn = string.Empty;
         SqlConnection conn;
         public EquipmentDAC()
         {
@@ -24,7 +26,7 @@ namespace MES_WEB_API.Models
         public List<EquipmentVO> GetAllEquipment()
         {
             string sql = @"select SITE_ID, LINE_ID, EQP_ID, EQP_MODEL, EQP_GROUP, SIM_TYPE, 
-PRESET_ID, DISPATCHER_ID, EQP_STATE, EQP_STATE_CODE, STATE_CHANGE_TIME, AUTOMATION, MODIFIER, MODIFIER_DATE 
+PRESET_ID, DISPATCHER_TYPE, EQP_STATE, EQP_STATE_CODE, STATE_CHANGE_TIME, AUTOMATION, MODIFIER, MODIFIER_DATE 
                                     from EQUIPMENT";
 
             try
@@ -45,9 +47,9 @@ PRESET_ID, DISPATCHER_ID, EQP_STATE, EQP_STATE_CODE, STATE_CHANGE_TIME, AUTOMATI
         public bool InsertEquipment (EquipmentVO equipment)
         {
             string sql = @"insert into [EQUIPMENT] (SITE_ID, LINE_ID, EQP_ID, EQP_MODEL, EQP_TYPE,EQP_GROUP, SIM_TYPE, 
-PRESET_ID, DISPATCHER_ID, EQP_STATE, EQP_STATE_CODE, STATE_CHANGE_TIME, AUTOMATION, MODIFIER, MODIFIED_DATE)
+PRESET_ID, DISPATCHER_TYPE, EQP_STATE, EQP_STATE_CODE, STATE_CHANGE_TIME, AUTOMATION, MODIFIER, MODIFIER_DATE)
 values(@SITE_ID, @LINE_ID, @EQP_ID, @EQP_MODEL, @EQP_TYPE, @EQP_GROUP, @SIM_TYPE, 
-@PRESET_ID, @DISPATCHER_ID, @EQP_STATE, @EQP_STATE_CODE, @STATE_CHANGE_TIME, @AUTOMATION, @MODIFIER, @MODIFIER_DATE)";
+@PRESET_ID, @DISPATCHER_TYPE, @EQP_STATE, @EQP_STATE_CODE, @STATE_CHANGE_TIME, @AUTOMATION, @MODIFIER, @MODIFIER_DATE)";
 
             try
             {
@@ -63,7 +65,7 @@ values(@SITE_ID, @LINE_ID, @EQP_ID, @EQP_MODEL, @EQP_TYPE, @EQP_GROUP, @SIM_TYPE
                 cmd.Parameters.AddWithValue("@EQP_GROUP", equipment.EQP_GROUP);
                 cmd.Parameters.AddWithValue("@SIM_TYPE", equipment.SIM_TYPE);
                 cmd.Parameters.AddWithValue("@PRESET_ID", equipment.PRESET_ID);
-                cmd.Parameters.AddWithValue("@DISPATCHER_ID", equipment.DISPATCHER_ID);
+                cmd.Parameters.AddWithValue("@DISPATCHER_TYPE", equipment.DISPATCHER_TYPE);
                 cmd.Parameters.AddWithValue("@EQP_STATE", equipment.EQP_STATE);
                 cmd.Parameters.AddWithValue("@EQP_STATE_CODE", equipment.EQP_STATE_CODE);
                 cmd.Parameters.AddWithValue("@STATE_CHANGE_TIME", equipment.STATE_CHANGE_TIME);
@@ -80,7 +82,7 @@ values(@SITE_ID, @LINE_ID, @EQP_ID, @EQP_MODEL, @EQP_TYPE, @EQP_GROUP, @SIM_TYPE
             }
         }
 
-        public bool DeleteEquipment(string eqpID)
+        public bool DeleteEquipment(string id)
         {
             string sql = @"Delete from EQUIPMENT where EQP_ID = @EQP_ID ";
 
@@ -90,7 +92,7 @@ values(@SITE_ID, @LINE_ID, @EQP_ID, @EQP_MODEL, @EQP_TYPE, @EQP_GROUP, @SIM_TYPE
                 {
                     cmd.Connection.Open();
 
-                    cmd.Parameters.AddWithValue("@EQP_ID", eqpID);
+                    cmd.Parameters.AddWithValue("@EQP_ID", id);
 
                     int iRowAffect = cmd.ExecuteNonQuery();
                     cmd.Connection.Close();
@@ -104,17 +106,17 @@ values(@SITE_ID, @LINE_ID, @EQP_ID, @EQP_MODEL, @EQP_TYPE, @EQP_GROUP, @SIM_TYPE
             }
         }
 
-        public EquipmentVO GetEquipmentInfo(string eqpID)
+        public EquipmentVO GetEquipmentInfo(string id)
         {
             string sql = @"select SITE_ID, LINE_ID, EQP_ID, EQP_MODEL, EQP_GROUP, SIM_TYPE, 
-PRESET_ID, DISPATCHER_ID, EQP_STATE, EQP_STATE_CODE, STATE_CHANGE_TIME, AUTOMATION, MODIFIER, MODIFIER_DATE 
+PRESET_ID, DISPATCHER_TYPE, EQP_STATE, EQP_STATE_CODE, STATE_CHANGE_TIME, AUTOMATION, MODIFIER, MODIFIER_DATE 
                                     from EQUIPMENT where EQP_ID=@EQP_ID";
 
             try
             {
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
-                    cmd.Parameters.AddWithValue("@EQP_ID", eqpID);
+                    cmd.Parameters.AddWithValue("@EQP_ID", id);
 
                     cmd.Connection.Open();
                     List<EquipmentVO> list = Helper.DataReaderMapToList<EquipmentVO>(cmd.ExecuteReader());

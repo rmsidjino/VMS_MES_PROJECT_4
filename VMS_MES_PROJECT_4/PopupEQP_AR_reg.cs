@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace VMS_MES_PROJECT_4
 {
-    public partial class frmEQP_reg : Form
+    public partial class PopupEQP_AR_reg : Form
     {
-        public frmEQP_reg()
+        public PopupEQP_AR_reg()
         {
             InitializeComponent();
-        }
-
-        private void frmEQP_reg_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

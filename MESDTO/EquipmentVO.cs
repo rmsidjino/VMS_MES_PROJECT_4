@@ -16,7 +16,7 @@ namespace MESDTO
         public string EQP_GROUP { get; set; }
         public string SIM_TYPE { get; set; }
         public string PRESET_ID { get; set; }
-        public string DISPATCHER_ID { get; set; }
+        public string DISPATCHER_TYPE { get; set; }
         public string EQP_STATE { get; set; }
         public int EQP_STATE_CODE { get; set; }
         public DateTime STATE_CHANGE_TIME { get; set; }
