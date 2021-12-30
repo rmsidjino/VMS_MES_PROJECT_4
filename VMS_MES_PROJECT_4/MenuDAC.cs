@@ -15,27 +15,27 @@ namespace VMS_MES_PROJECT_4
 
         public MenuDAC()
         {
-            conn = new SqlConnection(ConfigurationManager.ConnectionStrings["localDB"].ConnectionString);
+            //conn = new SqlConnection(ConfigurationManager.ConnectionStrings["localDB"].ConnectionString);
         }
 
         public void Dispose()
         {
-            if (conn != null && conn.State == ConnectionState.Open)
-                conn.Close();
+            //if (conn != null && conn.State == ConnectionState.Open)
+               // conn.Close();
         }
 
         public DataTable GetMenuList()
         {
-            string sql = @"select menu_id, menu_name, menu_level, pnt_menu_id, program_name, menu_Img, menu_sort
-from Menu 
-order by pnt_menu_id, menu_sort";
+//            string sql = @"select menu_id, menu_name, menu_level, pnt_menu_id, program_name, menu_Img, menu_sort
+//from Menu 
+//order by pnt_menu_id, menu_sort";
 
-            DataTable dt = new DataTable();
-            using(SqlDataAdapter da = new SqlDataAdapter(sql, conn))
-            {
-                da.Fill(dt);
-            }
-            return dt;
+//            DataTable dt = new DataTable();
+//            using(SqlDataAdapter da = new SqlDataAdapter(sql, conn))
+//            {
+//                da.Fill(dt);
+//            }
+//            return dt;
         }
 
         public DataTable GetAuthList()

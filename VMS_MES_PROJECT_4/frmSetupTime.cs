@@ -45,10 +45,6 @@ namespace VMS_MES_PROJECT_4
             editIndex = dgvSetup.Columns.Add(btnEdit);
 
             LoadData();
-
-
-
-
         }
 
         private async void LoadData()
