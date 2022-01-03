@@ -110,6 +110,12 @@
     <Compile Include="frmEQP_AR.Designer.cs">
       <DependentUpon>frmEQP_AR.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProduct.designer.cs">
+      <DependentUpon>frmProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="PopupEQP_AR_reg.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,12 @@
     <Compile Include="frmSetupTime.designer.cs">
       <DependentUpon>frmSetupTime.cs</DependentUpon>
     </Compile>
+    <Compile Include="PopupProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupProduct.designer.cs">
+      <DependentUpon>PopupProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="PopupSetupTime.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +157,9 @@
     <EmbeddedResource Include="frmEQP_AR.resx">
       <DependentUpon>frmEQP_AR.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmProduct.resx">
+      <DependentUpon>frmProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PopupEQP_AR_reg.resx">
       <DependentUpon>PopupEQP_AR_reg.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSetupTime.resx">
       <DependentUpon>frmSetupTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupProduct.resx">
+      <DependentUpon>PopupProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PopupSetupTime.resx">
       <DependentUpon>PopupSetupTime.cs</DependentUpon>
