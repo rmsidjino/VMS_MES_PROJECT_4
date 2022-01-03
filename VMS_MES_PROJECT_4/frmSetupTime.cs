@@ -15,7 +15,7 @@ namespace VMS_MES_PROJECT_4
     public partial class frmSetupTime : Form
     {
         ServiceHelp srv = new ServiceHelp("");
-        LoggingUtility _logging;
+        //LoggingUtility _logging;
         int editIndex;
         List<SetupVO> slist;
         List<CommonVO> com;
@@ -23,7 +23,7 @@ namespace VMS_MES_PROJECT_4
         public frmSetupTime()
         {
             InitializeComponent();
-            _logging = new LoggingUtility("Setup", Level.Debug, 30); //테스트용
+            //logging = new LoggingUtility("Setup", Level.Debug, 30); //테스트용
         }
 
         private void frmSetupTime_Load(object sender, EventArgs e)
@@ -84,7 +84,7 @@ namespace VMS_MES_PROJECT_4
                     LoadData();
                 }
                 MessageBox.Show(msg.ResultMessage);
-                _logging.WriteInfo(msg.ResultMessage);
+                //_logging.WriteInfo(msg.ResultMessage);
             }
         }
 

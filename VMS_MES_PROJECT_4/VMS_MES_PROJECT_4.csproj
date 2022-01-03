@@ -122,12 +122,6 @@
     <Compile Include="PopupEQP_reg.Designer.cs">
       <DependentUpon>PopupEQP_reg.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMain.Designer.cs">
-      <DependentUpon>frmMain.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmSetupTime.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,21 +150,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PopupEQP_reg.resx">
       <DependentUpon>PopupEQP_reg.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmEQP.resx">
-      <DependentUpon>frmEQP.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmEQP_AR.resx">
-      <DependentUpon>frmEQP_AR.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMenuAuth.resx">
-      <DependentUpon>frmMenuAuth.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSetupTime.resx">
       <DependentUpon>frmSetupTime.cs</DependentUpon>

@@ -40,27 +40,27 @@ namespace VMS_MES_PROJECT_4
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtEqpStateCode = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnOK = new System.Windows.Forms.Button();
+            this.cboSiteID = new System.Windows.Forms.ComboBox();
+            this.cboLineID = new System.Windows.Forms.ComboBox();
+            this.cboAutomation = new System.Windows.Forms.ComboBox();
+            this.txtPresetID = new System.Windows.Forms.TextBox();
+            this.txtModifier = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtModifier_date = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.cboEqpState = new System.Windows.Forms.ComboBox();
+            this.cboEqpGroup = new System.Windows.Forms.ComboBox();
+            this.DtpStateChangeTime = new System.Windows.Forms.DateTimePicker();
+            this.cboSimType = new System.Windows.Forms.ComboBox();
+            this.cboEqpType = new System.Windows.Forms.ComboBox();
+            this.cboDispatcherType = new System.Windows.Forms.ComboBox();
+            this.cboEQPID = new System.Windows.Forms.ComboBox();
+            this.cboEQPModel = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label6
@@ -184,12 +184,12 @@ namespace VMS_MES_PROJECT_4
             this.label11.TabIndex = 34;
             this.label11.Text = "장비 가동 코드";
             // 
-            // textBox11
+            // txtEqpStateCode
             // 
-            this.textBox11.Location = new System.Drawing.Point(609, 161);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(163, 21);
-            this.textBox11.TabIndex = 33;
+            this.txtEqpStateCode.Location = new System.Drawing.Point(609, 161);
+            this.txtEqpStateCode.Name = "txtEqpStateCode";
+            this.txtEqpStateCode.Size = new System.Drawing.Size(163, 21);
+            this.txtEqpStateCode.TabIndex = 33;
             // 
             // label12
             // 
@@ -212,62 +212,64 @@ namespace VMS_MES_PROJECT_4
             this.label13.TabIndex = 38;
             this.label13.Text = "자동화";
             // 
-            // button2
+            // btnCancel
             // 
-            this.button2.Location = new System.Drawing.Point(436, 344);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 44;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCancel.Location = new System.Drawing.Point(436, 344);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 44;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // button1
+            // btnOK
             // 
-            this.button1.Location = new System.Drawing.Point(275, 344);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 43;
-            this.button1.Text = "OK";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnOK.Location = new System.Drawing.Point(275, 344);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(75, 23);
+            this.btnOK.TabIndex = 43;
+            this.btnOK.Text = "OK";
+            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.button1_Click);
             // 
-            // comboBox4
+            // cboSiteID
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(186, 44);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(164, 20);
-            this.comboBox4.TabIndex = 46;
+            this.cboSiteID.FormattingEnabled = true;
+            this.cboSiteID.Location = new System.Drawing.Point(186, 44);
+            this.cboSiteID.Name = "cboSiteID";
+            this.cboSiteID.Size = new System.Drawing.Size(164, 20);
+            this.cboSiteID.TabIndex = 46;
             // 
-            // comboBox5
+            // cboLineID
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(186, 87);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(164, 20);
-            this.comboBox5.TabIndex = 47;
+            this.cboLineID.FormattingEnabled = true;
+            this.cboLineID.Location = new System.Drawing.Point(186, 87);
+            this.cboLineID.Name = "cboLineID";
+            this.cboLineID.Size = new System.Drawing.Size(164, 20);
+            this.cboLineID.TabIndex = 47;
             // 
-            // comboBox10
+            // cboAutomation
             // 
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Location = new System.Drawing.Point(609, 239);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(163, 20);
-            this.comboBox10.TabIndex = 52;
+            this.cboAutomation.FormattingEnabled = true;
+            this.cboAutomation.Location = new System.Drawing.Point(609, 239);
+            this.cboAutomation.Name = "cboAutomation";
+            this.cboAutomation.Size = new System.Drawing.Size(163, 20);
+            this.cboAutomation.TabIndex = 52;
             // 
-            // textBox7
+            // txtPresetID
             // 
-            this.textBox7.Location = new System.Drawing.Point(609, 44);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(163, 21);
-            this.textBox7.TabIndex = 58;
+            this.txtPresetID.Location = new System.Drawing.Point(609, 44);
+            this.txtPresetID.Name = "txtPresetID";
+            this.txtPresetID.Size = new System.Drawing.Size(163, 21);
+            this.txtPresetID.TabIndex = 58;
             // 
-            // textBox10
+            // txtModifier
             // 
-            this.textBox10.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox10.Location = new System.Drawing.Point(609, 273);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(163, 21);
-            this.textBox10.TabIndex = 62;
+            this.txtModifier.BackColor = System.Drawing.SystemColors.Window;
+            this.txtModifier.Location = new System.Drawing.Point(609, 273);
+            this.txtModifier.Name = "txtModifier";
+            this.txtModifier.Size = new System.Drawing.Size(163, 21);
+            this.txtModifier.TabIndex = 62;
             // 
             // label14
             // 
@@ -280,13 +282,13 @@ namespace VMS_MES_PROJECT_4
             this.label14.TabIndex = 61;
             this.label14.Text = "최종 수정자";
             // 
-            // textBox12
+            // txtModifier_date
             // 
-            this.textBox12.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox12.Location = new System.Drawing.Point(609, 306);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(163, 21);
-            this.textBox12.TabIndex = 64;
+            this.txtModifier_date.BackColor = System.Drawing.SystemColors.Window;
+            this.txtModifier_date.Location = new System.Drawing.Point(609, 306);
+            this.txtModifier_date.Name = "txtModifier_date";
+            this.txtModifier_date.Size = new System.Drawing.Size(163, 21);
+            this.txtModifier_date.TabIndex = 64;
             // 
             // label15
             // 
@@ -299,69 +301,69 @@ namespace VMS_MES_PROJECT_4
             this.label15.TabIndex = 63;
             this.label15.Text = "수정일자";
             // 
-            // comboBox1
+            // cboEqpState
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(609, 122);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(163, 20);
-            this.comboBox1.TabIndex = 65;
+            this.cboEqpState.FormattingEnabled = true;
+            this.cboEqpState.Location = new System.Drawing.Point(609, 122);
+            this.cboEqpState.Name = "cboEqpState";
+            this.cboEqpState.Size = new System.Drawing.Size(163, 20);
+            this.cboEqpState.TabIndex = 65;
             // 
-            // comboBox2
+            // cboEqpGroup
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(186, 264);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(164, 20);
-            this.comboBox2.TabIndex = 66;
+            this.cboEqpGroup.FormattingEnabled = true;
+            this.cboEqpGroup.Location = new System.Drawing.Point(186, 264);
+            this.cboEqpGroup.Name = "cboEqpGroup";
+            this.cboEqpGroup.Size = new System.Drawing.Size(164, 20);
+            this.cboEqpGroup.TabIndex = 66;
             // 
-            // dateTimePicker1
+            // DtpStateChangeTime
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker1.Location = new System.Drawing.Point(609, 197);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(163, 21);
-            this.dateTimePicker1.TabIndex = 69;
+            this.DtpStateChangeTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.DtpStateChangeTime.Location = new System.Drawing.Point(609, 197);
+            this.DtpStateChangeTime.Name = "DtpStateChangeTime";
+            this.DtpStateChangeTime.Size = new System.Drawing.Size(163, 21);
+            this.DtpStateChangeTime.TabIndex = 69;
             // 
-            // comboBox7
+            // cboSimType
             // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(186, 306);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(164, 20);
-            this.comboBox7.TabIndex = 70;
+            this.cboSimType.FormattingEnabled = true;
+            this.cboSimType.Location = new System.Drawing.Point(186, 306);
+            this.cboSimType.Name = "cboSimType";
+            this.cboSimType.Size = new System.Drawing.Size(164, 20);
+            this.cboSimType.TabIndex = 70;
             // 
-            // comboBox8
+            // cboEqpType
             // 
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(186, 218);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(164, 20);
-            this.comboBox8.TabIndex = 71;
+            this.cboEqpType.FormattingEnabled = true;
+            this.cboEqpType.Location = new System.Drawing.Point(186, 218);
+            this.cboEqpType.Name = "cboEqpType";
+            this.cboEqpType.Size = new System.Drawing.Size(164, 20);
+            this.cboEqpType.TabIndex = 71;
             // 
-            // comboBox9
+            // cboDispatcherType
             // 
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(609, 83);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(163, 20);
-            this.comboBox9.TabIndex = 72;
+            this.cboDispatcherType.FormattingEnabled = true;
+            this.cboDispatcherType.Location = new System.Drawing.Point(609, 83);
+            this.cboDispatcherType.Name = "cboDispatcherType";
+            this.cboDispatcherType.Size = new System.Drawing.Size(163, 20);
+            this.cboDispatcherType.TabIndex = 72;
             // 
-            // textBox1
+            // cboEQPID
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(186, 132);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(164, 21);
-            this.textBox1.TabIndex = 73;
+            this.cboEQPID.FormattingEnabled = true;
+            this.cboEQPID.Location = new System.Drawing.Point(186, 132);
+            this.cboEQPID.Name = "cboEQPID";
+            this.cboEQPID.Size = new System.Drawing.Size(164, 20);
+            this.cboEQPID.TabIndex = 75;
             // 
-            // textBox2
+            // cboEQPModel
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox2.Location = new System.Drawing.Point(186, 176);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(164, 21);
-            this.textBox2.TabIndex = 74;
+            this.cboEQPModel.FormattingEnabled = true;
+            this.cboEQPModel.Location = new System.Drawing.Point(186, 176);
+            this.cboEQPModel.Name = "cboEQPModel";
+            this.cboEQPModel.Size = new System.Drawing.Size(164, 20);
+            this.cboEQPModel.TabIndex = 76;
             // 
             // PopupEQP_reg
             // 
@@ -369,28 +371,28 @@ namespace VMS_MES_PROJECT_4
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(835, 388);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox9);
-            this.Controls.Add(this.comboBox8);
-            this.Controls.Add(this.comboBox7);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.cboEQPModel);
+            this.Controls.Add(this.cboEQPID);
+            this.Controls.Add(this.cboDispatcherType);
+            this.Controls.Add(this.cboEqpType);
+            this.Controls.Add(this.cboSimType);
+            this.Controls.Add(this.DtpStateChangeTime);
+            this.Controls.Add(this.cboEqpGroup);
+            this.Controls.Add(this.cboEqpState);
+            this.Controls.Add(this.txtModifier_date);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.txtModifier);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.comboBox10);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtPresetID);
+            this.Controls.Add(this.cboAutomation);
+            this.Controls.Add(this.cboLineID);
+            this.Controls.Add(this.cboSiteID);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnOK);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.txtEqpStateCode);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -421,26 +423,26 @@ namespace VMS_MES_PROJECT_4
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtEqpStateCode;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox10;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.ComboBox cboSiteID;
+        private System.Windows.Forms.ComboBox cboLineID;
+        private System.Windows.Forms.ComboBox cboAutomation;
+        private System.Windows.Forms.TextBox txtPresetID;
+        private System.Windows.Forms.TextBox txtModifier;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txtModifier_date;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.ComboBox comboBox8;
-        private System.Windows.Forms.ComboBox comboBox9;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox cboEqpState;
+        private System.Windows.Forms.ComboBox cboEqpGroup;
+        private System.Windows.Forms.DateTimePicker DtpStateChangeTime;
+        private System.Windows.Forms.ComboBox cboSimType;
+        private System.Windows.Forms.ComboBox cboEqpType;
+        private System.Windows.Forms.ComboBox cboDispatcherType;
+        private System.Windows.Forms.ComboBox cboEQPID;
+        private System.Windows.Forms.ComboBox cboEQPModel;
     }
 }

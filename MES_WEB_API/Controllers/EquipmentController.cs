@@ -22,9 +22,9 @@ namespace MES_WEB_API.Controllers
             return db.GetAllEquipment();
         }
 
-        //Post : https://localhost:44332/api/Equipment/InsertEquipment/{id}
+        //Post : https://localhost:44332/api/Equipment/InsertEquipment}
         [HttpPost]
-        [Route("InsertEquipment/{id}")]
+        [Route("InsertEquipment")]
         public IHttpActionResult InsertEquipment(EquipmentVO equipment)
         {
             Message msg = new Message();
@@ -44,15 +44,15 @@ namespace MES_WEB_API.Controllers
             }
             return Ok(msg);
         }
-        //GET : https://localhost:44332/api/Equipment/DeleteEquipment/{id}
+        //GET : https://localhost:44332/api/Equipment/DelEquipment/{id}
         [HttpGet]
-        [Route("DeleteEquipment/{id}")]
-        public IHttpActionResult DeleteEquipment(string id)
+        [Route("DelEquipment/{id}")]
+        public IHttpActionResult DelEquipment(string id)
         {
             Message msg = new Message();
 
             EquipmentDAC db = new EquipmentDAC();
-            bool result = db.DeleteEquipment(id);
+            bool result = db.DelEquipment(id);
 
             if (result)
             {
@@ -66,9 +66,9 @@ namespace MES_WEB_API.Controllers
             }
             return Ok(msg);
         }
-        //GET : https://localhost:44332/api/Equipment/{id}
+        //GET : https://localhost:44332/api/Equipment/SearchEquipment/{id}
         [HttpGet]
-        [Route("{id}")]
+        [Route("SearchEquipment/{id}")]
         public IHttpActionResult GetEquipmentInfo(string id)
         {
             Message<EquipmentVO> msg = new Message<EquipmentVO>();

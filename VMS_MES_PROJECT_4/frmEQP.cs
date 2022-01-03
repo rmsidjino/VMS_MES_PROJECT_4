@@ -1,4 +1,6 @@
-﻿using System;
+﻿using log4net.Core;
+using MESDTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,104 @@ namespace VMS_MES_PROJECT_4
 {
     public partial class frmEQP : Form
     {
+        ServiceHelp srv = new ServiceHelp("");
+        int editIndex;
+        List<EquipmentVO> eqplist;
+        List<CommonVO> com;
+
         public frmEQP()
         {
             InitializeComponent();
+        }
+
+        private void frmEQP_Load(object sender, EventArgs e)
+        {
+            DataGridViewUtil.SetInitGridView(dgvEQP);
+            DataGridViewUtil.AddGridTextColumn(dgvEQP, "현장ID", "SITE_ID", colWidth: 100);
+            DataGridViewUtil.AddGridTextColumn(dgvEQP, "라인ID", "LINE_ID", colWidth: 100);
+            DataGridViewUtil.AddGridTextColumn(dgvEQP, "장비ID", "EQP_ID", colWidth: 100);
+            DataGridViewUtil.AddGridTextColumn(dgvEQP, "장비 모델", "EQP_MODEL", colWidth: 100);
+            DataGridViewUtil.AddGridTextColumn(dgvEQP, "장비타입", "EQP_TYPE", colWidth: 100);
+            DataGridViewUtil.AddGridTextColumn(dgvEQP, "공정 그룹", "EQP_GROUP", colWidth: 100);
+            DataGridViewUtil.AddGridTextColumn(dgvEQP, "시뮬레이션 타입", "SIM_TYPE", colWidth: 150);
+            DataGridViewUtil.AddGridTextColumn(dgvEQP, "사전 설정ID", "PRESET_ID", colWidth: 100);
+            DataGridViewUtil.AddGridTextColumn(dgvEQP, "비상배치타입", "DISPATCHER_TYPE", colWidth: 130);
+            DataGridViewUtil.AddGridTextColumn(dgvEQP, "장비 가동 상태", "EQP_STATE", colWidth: 150);
+            DataGridViewUtil.AddGridTextColumn(dgvEQP, "장비 가동 코드", "EQP_STATE_CODE", colWidth: 150);
+            DataGridViewUtil.AddGridTextColumn(dgvEQP, "장비 가동 변경 시간", "STATE_CHANGE_TIME", colWidth: 150);
+            DataGridViewUtil.AddGridTextColumn(dgvEQP, "자동화", "AUTOMATION", colWidth: 100);
+
+            DataGridViewButtonColumn btnEdit = new DataGridViewButtonColumn();
+
+            btnEdit.Text = "수정";
+            btnEdit.Width = 50;
+            btnEdit.UseColumnTextForButtonValue = true;
+            btnEdit.Name = "Edit";
+            editIndex = dgvEQP.Columns.Add(btnEdit);
+
+            LoadData();
+
+        }
+        private async void LoadData()
+        {
+            eqplist = null;
+            eqplist = await srv.GetListAsync("api/Equipment/Equipments", eqplist);
+            dgvEQP.DataSource = eqplist;
+
+            com = null;
+            com = await srv.GetListAsync($"api/Common/All", com);
+
+            
+            CommonUtil.ComboBinding(cboLineID, com, "LINE", blankText: "선택");
+            CommonUtil.ComboBinding(cboSiteID, com, "SITE", blankText: "선택");
+            CommonUtil.ComboBinding(cboEQPID, com, "EQPID", blankText: "선택");
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            PopupEQP_reg frm = new PopupEQP_reg();
+            frm.ShowDialog();
+        }
+
+        private async void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dgvEQP.SelectedRows.Count < 1)
+            {
+                MessageBox.Show("삭제할 설비를 선택하여 주십시오.");
+                return;
+            }
+
+            string eqpID = dgvEQP.SelectedRows[0].Cells["EQP_ID"].Value.ToString();
+
+            if (MessageBox.Show("정말 삭제하실겁니까?", "설비 삭제", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                MESDTO.Message msg = await srv.GetAsync($"api/Equipment/DelEquipment/{eqpID}");
+                if (msg.IsSuccess)
+                {
+                    LoadData();
+                }
+                MessageBox.Show(msg.ResultMessage);
+                //_logging.WriteInfo(msg.ResultMessage);
+            }
+        }
+
+        private async void btnSearch_Click(object sender, EventArgs e)
+        {
+            EquipmentVO prod = null;
+            prod = await srv.GetAsync($"api/Equipment/SearchEquipment/{cboEQPID.SelectedItem}", prod);
+
+            dgvEQP.DataSource = prod;
+        }
+
+        private void dgvEQP_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == editIndex)
+            {               
+                string eqpID = dgvEQP["EQP_ID", e.RowIndex].Value.ToString();
+                EquipmentVO eitem = eqplist.Find((equipment) => equipment.EQP_ID == eqpID);
+                PopupEQP_reg frm = new PopupEQP_reg(eitem);
+                frm.Show();
+            }
         }
     }
 }
