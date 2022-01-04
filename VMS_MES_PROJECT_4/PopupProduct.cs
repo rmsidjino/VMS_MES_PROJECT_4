@@ -49,7 +49,7 @@ namespace VMS_MES_PROJECT_4
             }
             else
             {
-                msg = await srv.PostAsyncNone("api/Product/UpdateSetup", product);
+                msg = await srv.PostAsyncNone("api/Product/UpdateProduct", product);
             }
             if (msg.IsSuccess)
             {
@@ -60,7 +60,7 @@ namespace VMS_MES_PROJECT_4
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private async void PopupProduct_Load(object sender, EventArgs e)
