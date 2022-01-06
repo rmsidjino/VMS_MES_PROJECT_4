@@ -62,7 +62,6 @@ namespace VMS_MES_PROJECT_4
                 //btnSearch.PerformClick();
             }
             MessageBox.Show(msg.ResultMessage);
-            this.Close();
         }
 
         private async void PopupSetupTime_Load(object sender, EventArgs e)
@@ -73,7 +72,6 @@ namespace VMS_MES_PROJECT_4
             CommonUtil.ComboBinding(cboSite, com, "SITE", blankText: "선택");
             CommonUtil.ComboBinding(cboLine, com, "LINE", blankText: "선택");
             CommonUtil.ComboBinding(cboStep, com, "STEP", blankText: "선택");
-            CommonUtil.ComboBinding(cboEqpGroup, com, "STEP", blankText: "선택");
 
             if (update)
             {

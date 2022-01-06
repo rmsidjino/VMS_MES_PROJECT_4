@@ -64,14 +64,13 @@ namespace VMS_MES_PROJECT_4
             
             CommonUtil.ComboBinding(cboLineID, com, "LINE", blankText: "선택");
             CommonUtil.ComboBinding(cboSiteID, com, "SITE", blankText: "선택");
-            
+            CommonUtil.ComboBinding(cboEQPID, com, "EQPID", blankText: "선택");
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
             PopupEQP_reg frm = new PopupEQP_reg();
             frm.ShowDialog();
-            LoadData();
         }
 
         private async void btnDelete_Click(object sender, EventArgs e)
@@ -84,7 +83,7 @@ namespace VMS_MES_PROJECT_4
 
             string eqpID = dgvEQP.SelectedRows[0].Cells["EQP_ID"].Value.ToString();
 
-            if (MessageBox.Show("설비 배치 데이터에 영향이 있습니다. 정말 삭제하실겁니까?", "설비 삭제", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("정말 삭제하실겁니까?", "설비 삭제", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 MESDTO.Message msg = await srv.GetAsync($"api/Equipment/DelEquipment/{eqpID}");
                 if (msg.IsSuccess)
@@ -98,17 +97,10 @@ namespace VMS_MES_PROJECT_4
 
         private async void btnSearch_Click(object sender, EventArgs e)
         {
-            string siteID = " ";
-            if (cboSiteID.SelectedIndex > 0)
-                siteID = cboSiteID.SelectedValue.ToString();
+            EquipmentVO prod = null;
+            prod = await srv.GetAsync($"api/Equipment/SearchEquipment/{cboEQPID.SelectedItem}", prod);
 
-            string lineID = " ";
-            if (cboLineID.SelectedIndex > 0)
-                lineID = cboLineID.SelectedValue.ToString();
-
-            eqplist = await srv.GetAsync($"api/Equipment/SearchEquipment/{siteID}/{lineID}/", eqplist);
-            dgvEQP.DataSource = null;
-            dgvEQP.DataSource = eqplist;
+            dgvEQP.DataSource = prod;
         }
 
         private void dgvEQP_CellClick(object sender, DataGridViewCellEventArgs e)

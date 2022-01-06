@@ -15,7 +15,7 @@ namespace VMS_MES_PROJECT_4
 
         public MenuDAC()
         {
-            conn = new SqlConnection(ConfigurationManager.ConnectionStrings["local"].ConnectionString);
+            conn = new SqlConnection(ConfigurationManager.ConnectionStrings["localDB"].ConnectionString);
         }
 
         public void Dispose()

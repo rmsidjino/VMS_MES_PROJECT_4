@@ -33,6 +33,7 @@ namespace VMS_MES_PROJECT_4
             this.panel1 = new System.Windows.Forms.Panel();
             this.cboLineID = new System.Windows.Forms.ComboBox();
             this.cboSiteID = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,6 +41,7 @@ namespace VMS_MES_PROJECT_4
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cboEQPID = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEQP)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -59,8 +61,10 @@ namespace VMS_MES_PROJECT_4
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.cboEQPID);
             this.panel1.Controls.Add(this.cboLineID);
             this.panel1.Controls.Add(this.cboSiteID);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -84,6 +88,15 @@ namespace VMS_MES_PROJECT_4
             this.cboSiteID.Name = "cboSiteID";
             this.cboSiteID.Size = new System.Drawing.Size(100, 20);
             this.cboSiteID.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(369, 16);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(50, 12);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "￭ 장비ID";
             // 
             // btnSearch
             // 
@@ -158,6 +171,14 @@ namespace VMS_MES_PROJECT_4
             this.panel2.Size = new System.Drawing.Size(1360, 33);
             this.panel2.TabIndex = 4;
             // 
+            // cboEQPID
+            // 
+            this.cboEQPID.FormattingEnabled = true;
+            this.cboEQPID.Location = new System.Drawing.Point(425, 13);
+            this.cboEQPID.Name = "cboEQPID";
+            this.cboEQPID.Size = new System.Drawing.Size(113, 20);
+            this.cboEQPID.TabIndex = 10;
+            // 
             // frmEQP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -189,7 +210,9 @@ namespace VMS_MES_PROJECT_4
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cboLineID;
         private System.Windows.Forms.ComboBox cboSiteID;
+        private System.Windows.Forms.ComboBox cboEQPID;
     }
 }

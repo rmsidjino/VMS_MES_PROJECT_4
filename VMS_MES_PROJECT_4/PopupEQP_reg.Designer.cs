@@ -59,8 +59,8 @@ namespace VMS_MES_PROJECT_4
             this.cboSimType = new System.Windows.Forms.ComboBox();
             this.cboEqpType = new System.Windows.Forms.ComboBox();
             this.cboDispatcherType = new System.Windows.Forms.ComboBox();
-            this.txtEQPID = new System.Windows.Forms.TextBox();
-            this.txtEQPModel = new System.Windows.Forms.TextBox();
+            this.cboEQPID = new System.Windows.Forms.ComboBox();
+            this.cboEQPModel = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label6
@@ -349,19 +349,21 @@ namespace VMS_MES_PROJECT_4
             this.cboDispatcherType.Size = new System.Drawing.Size(163, 20);
             this.cboDispatcherType.TabIndex = 72;
             // 
-            // txtEQPID
+            // cboEQPID
             // 
-            this.txtEQPID.Location = new System.Drawing.Point(186, 132);
-            this.txtEQPID.Name = "txtEQPID";
-            this.txtEQPID.Size = new System.Drawing.Size(163, 21);
-            this.txtEQPID.TabIndex = 77;
+            this.cboEQPID.FormattingEnabled = true;
+            this.cboEQPID.Location = new System.Drawing.Point(186, 132);
+            this.cboEQPID.Name = "cboEQPID";
+            this.cboEQPID.Size = new System.Drawing.Size(164, 20);
+            this.cboEQPID.TabIndex = 75;
             // 
-            // txtEQPModel
+            // cboEQPModel
             // 
-            this.txtEQPModel.Location = new System.Drawing.Point(186, 176);
-            this.txtEQPModel.Name = "txtEQPModel";
-            this.txtEQPModel.Size = new System.Drawing.Size(163, 21);
-            this.txtEQPModel.TabIndex = 78;
+            this.cboEQPModel.FormattingEnabled = true;
+            this.cboEQPModel.Location = new System.Drawing.Point(186, 176);
+            this.cboEQPModel.Name = "cboEQPModel";
+            this.cboEQPModel.Size = new System.Drawing.Size(164, 20);
+            this.cboEQPModel.TabIndex = 76;
             // 
             // PopupEQP_reg
             // 
@@ -369,8 +371,8 @@ namespace VMS_MES_PROJECT_4
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(835, 388);
-            this.Controls.Add(this.txtEQPModel);
-            this.Controls.Add(this.txtEQPID);
+            this.Controls.Add(this.cboEQPModel);
+            this.Controls.Add(this.cboEQPID);
             this.Controls.Add(this.cboDispatcherType);
             this.Controls.Add(this.cboEqpType);
             this.Controls.Add(this.cboSimType);
@@ -440,7 +442,7 @@ namespace VMS_MES_PROJECT_4
         private System.Windows.Forms.ComboBox cboSimType;
         private System.Windows.Forms.ComboBox cboEqpType;
         private System.Windows.Forms.ComboBox cboDispatcherType;
-        private System.Windows.Forms.TextBox txtEQPID;
-        private System.Windows.Forms.TextBox txtEQPModel;
+        private System.Windows.Forms.ComboBox cboEQPID;
+        private System.Windows.Forms.ComboBox cboEQPModel;
     }
 }
