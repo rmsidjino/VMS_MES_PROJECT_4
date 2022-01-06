@@ -35,9 +35,7 @@ namespace VMS_MES_PROJECT_4
             com = await srv.GetListAsync($"api/Common/All", com);
 
             CommonUtil.ComboBinding(cboSiteID, com, "SITE", blankText: "선택");
-            CommonUtil.ComboBinding(cboLineID, com, "LINE", blankText: "선택");
-            CommonUtil.ComboBinding(cboEQPID, com, "EQPID", blankText: "선택");
-            CommonUtil.ComboBinding(cboEQPModel, com, "EQPID", blankText: "선택");
+            CommonUtil.ComboBinding(cboLineID, com, "LINE", blankText: "선택");            
             CommonUtil.ComboBinding(cboEqpType, com, "GROUP", blankText: "선택");
             CommonUtil.ComboBinding(cboEqpGroup, com, "GROUP", blankText: "선택");
             CommonUtil.ComboBinding(cboSimType, com, "SIMULATION", blankText: "선택");
@@ -52,8 +50,8 @@ namespace VMS_MES_PROJECT_4
             {
                 cboSiteID.SelectedValue = eItem.SITE_ID;
                 cboLineID.SelectedValue = eItem.LINE_ID;
-                cboEQPID.SelectedText = eItem.EQP_ID;
-                cboEQPModel.SelectedText = eItem.EQP_MODEL;
+                txtEQPID.SelectedText = eItem.EQP_ID;
+                txtEQPModel.SelectedText = eItem.EQP_MODEL;
                 cboEqpGroup.SelectedValue = eItem.EQP_GROUP;
                 cboSimType.SelectedValue = eItem.SIM_TYPE;
                 txtPresetID.SelectedText = eItem.PRESET_ID;
@@ -73,8 +71,8 @@ namespace VMS_MES_PROJECT_4
             {
                 SITE_ID = cboSiteID.Text,
                 LINE_ID = cboLineID.Text,
-                EQP_ID = cboEQPID.Text,
-                EQP_MODEL = cboEQPModel.Text,
+                EQP_ID = txtEQPID.Text,
+                EQP_MODEL = txtEQPModel.Text,
                 EQP_TYPE = cboEqpType.Text,
                 EQP_GROUP = cboEqpGroup.Text,
                 SIM_TYPE = cboSimType.Text,
@@ -87,7 +85,7 @@ namespace VMS_MES_PROJECT_4
                 MODIFIER = "Kim",
                 MODIFIER_DATE = DateTime.Now
             };
-            if (cboEQPID.Enabled)
+            if (txtEQPID.Enabled)
             {
                 msg = await srv.PostAsyncNone("api/Equipment/InsertEquipment", equipment);
             }
@@ -100,6 +98,7 @@ namespace VMS_MES_PROJECT_4
                 //btnSearch.PerformClick();
             }
             MessageBox.Show(msg.ResultMessage);
+            this.Close();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

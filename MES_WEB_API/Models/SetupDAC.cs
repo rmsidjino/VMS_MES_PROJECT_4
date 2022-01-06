@@ -68,9 +68,9 @@ values(@SITE_ID,@LINE_ID,@EQP_GROUP,@STEP_ID,@TIME,@MODIFIER,@MODIFIED_DATE)";
             }
         }
 
-        public bool DeleteSetup(string siteID)
+        public bool DeleteSetup(string stepID)
         {
-            string sql = @"Delete from SETUP_TIME where SITE_ID = @SITE_ID ";
+            string sql = @"Delete from SETUP_TIME where STEP_ID = @STEP_ID ";
 
             try
             {
@@ -78,7 +78,7 @@ values(@SITE_ID,@LINE_ID,@EQP_GROUP,@STEP_ID,@TIME,@MODIFIER,@MODIFIED_DATE)";
                 {
                     cmd.Connection.Open();
 
-                    cmd.Parameters.AddWithValue("@SITE_ID", siteID);
+                    cmd.Parameters.AddWithValue("@STEP_ID", stepID);
 
                     int iRowAffect = cmd.ExecuteNonQuery();
                     cmd.Connection.Close();
@@ -92,28 +92,38 @@ values(@SITE_ID,@LINE_ID,@EQP_GROUP,@STEP_ID,@TIME,@MODIFIER,@MODIFIED_DATE)";
             }
         }
 
-        public SetupVO GetSetupInfo(string siteID)
+        public List<SetupVO> SearchSetup(string siteID="", string stepID="")
         {
             string sql = @"select SITE_ID, LINE_ID, EQP_GROUP, STEP_ID, TIME, MODIFIER,MODIFIED_DATE 
-                                    from SETUP_TIME where SITE_ID=@SITE_ID";
+                                    from SETUP_TIME where 1 = 1";
 
             try
             {
-                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                using (SqlCommand cmd = new SqlCommand())
                 {
-                    cmd.Parameters.AddWithValue("@SITE_ID", siteID);
+                    if (siteID != null && siteID.Trim().Length > 0)
+                    {
+                        sql += " and SITE_ID=@SITE_ID";
+                        cmd.Parameters.AddWithValue("@SITE_ID", siteID);
+                    }
 
+                    if (stepID != null && stepID.Trim().Length > 0)
+                    {
+                        sql += " and STEP_ID=@STEP_ID";
+                        cmd.Parameters.AddWithValue("@STEP_ID", stepID);
+                    }
+
+                    cmd.Connection = conn;
+                    cmd.CommandText = sql;
                     cmd.Connection.Open();
                     List<SetupVO> list = Helper.DataReaderMapToList<SetupVO>(cmd.ExecuteReader());
                     cmd.Connection.Close();
 
-                    if (list != null && list.Count > 0)
-                        return list[0];
-                    else
-                        return null;
+                    return list;
                 }
             }
-            catch
+
+            catch (Exception err)
             {
                 return null;
             }

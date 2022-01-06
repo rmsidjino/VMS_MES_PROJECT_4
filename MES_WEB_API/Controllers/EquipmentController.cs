@@ -22,7 +22,7 @@ namespace MES_WEB_API.Controllers
             return db.GetAllEquipment();
         }
 
-        //Post : https://localhost:44332/api/Equipment/InsertEquipment}
+        //Post : https://localhost:44332/api/Equipment/InsertEquipment
         [HttpPost]
         [Route("InsertEquipment")]
         public IHttpActionResult InsertEquipment(EquipmentVO equipment)
@@ -66,30 +66,54 @@ namespace MES_WEB_API.Controllers
             }
             return Ok(msg);
         }
-        //GET : https://localhost:44332/api/Equipment/SearchEquipment/{id}
+
+
+        //api/Equipment/SearchEquipment/{cboLineID.SelectedItem}/{cboSiteID.SelectedItem}
+        //GET : https://localhost:44332/api/Equipment/SearchEquipment/{siteID}/{lineID}
         [HttpGet]
-        [Route("SearchEquipment/{id}")]
-        public IHttpActionResult GetEquipmentInfo(string id)
+        [Route("SearchEquipment/{siteID}/{lineID}")] //https://localhost:44332/api/Equipment/SearchEquipment/SITE01/LINE01
+        public IHttpActionResult SearchEquipment(string siteID="", string lineID="")
         {
-            Message<EquipmentVO> msg = new Message<EquipmentVO>();
+            lineID = (lineID) ?? "";
+            siteID = (siteID) ?? "";
+            Message<List<EquipmentVO>> msg = new Message<List<EquipmentVO>>();
 
             EquipmentDAC db = new EquipmentDAC();
-            EquipmentVO product = db.GetEquipmentInfo(id);
+            List<EquipmentVO> equipment = db.SearchEquipment(siteID.Trim(), lineID.Trim());
 
-            if (product != null)
+            if (equipment != null)
             {
                 msg.IsSuccess = true;
                 msg.ResultMessage = "성공적으로 조회되었습니다.";
-                msg.Data = product;
+                msg.Data = equipment;
             }
             else
             {
-                msg.IsSuccess = true;
+                msg.IsSuccess = false;
                 msg.ResultMessage = "해당하는 제품이 없습니다.";
-                msg.Data = null;
             }
             return Ok(msg);
         }
+        //public IHttpActionResult SearchEquipment(string lineID, string siteID)
+        //{
+        //    Message<EquipmentVO> msg = new Message<EquipmentVO>();
 
+        //    EquipmentDAC db = new EquipmentDAC();
+        //    List<EquipmentVO> product = db.SearchEquipment(siteID, lineID);
+
+        //    if (product != null)
+        //    {
+        //        msg.IsSuccess = true;
+        //        msg.ResultMessage = "성공적으로 조회되었습니다.";
+        //        //msg.Data = product();
+        //    }
+        //    else
+        //    {
+        //        msg.IsSuccess = true;
+        //        msg.ResultMessage = "해당하는 제품이 없습니다.";
+        //        msg.Data = null;
+        //    }
+        //    return Ok(msg);
+        //}
     }
 }

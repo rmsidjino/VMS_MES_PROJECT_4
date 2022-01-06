@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.Configuration;
 
@@ -35,7 +36,7 @@ PRESET_ID, DISPATCHER_TYPE, EQP_STATE, EQP_STATE_CODE, STATE_CHANGE_TIME, AUTOMA
                 {
                     cmd.Connection.Open();
 
-                    return Helper.DataReaderMapToList<EquipmentVO>(cmd.ExecuteReader()); ;
+                    return Helper.DataReaderMapToList<EquipmentVO>(cmd.ExecuteReader()); 
                 }
             }
             catch (Exception err)
@@ -106,32 +107,46 @@ values(@SITE_ID, @LINE_ID, @EQP_ID, @EQP_MODEL, @EQP_TYPE, @EQP_GROUP, @SIM_TYPE
             }
         }
 
-        public EquipmentVO GetEquipmentInfo(string id)
+        public List<EquipmentVO> SearchEquipment(string siteID, string lineID)
         {
+
             string sql = @"select SITE_ID, LINE_ID, EQP_ID, EQP_MODEL, EQP_GROUP, SIM_TYPE, 
 PRESET_ID, DISPATCHER_TYPE, EQP_STATE, EQP_STATE_CODE, STATE_CHANGE_TIME, AUTOMATION, MODIFIER, MODIFIER_DATE 
-                                    from EQUIPMENT where EQP_ID=@EQP_ID";
+                                    from EQUIPMENT where 1=1 ";// SITE_ID="" or LINE_ID=""";
+
 
             try
             {
-                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                using (SqlCommand cmd = new SqlCommand())
                 {
-                    cmd.Parameters.AddWithValue("@EQP_ID", id);
+                    if (siteID != null && siteID.Trim().Length > 0)
+                    {
+                        sql += " and SITE_ID=@SITE_ID";
+                        cmd.Parameters.AddWithValue("@SITE_ID", siteID);
+                    }
 
+                    if (lineID != null && lineID.Trim().Length > 0)
+                    {
+                        sql += " and LINE_ID=@LINE_ID";
+                        cmd.Parameters.AddWithValue("@LINE_ID", lineID);
+                    }
+
+                    cmd.Connection = conn;
+                    cmd.CommandText = sql;
                     cmd.Connection.Open();
                     List<EquipmentVO> list = Helper.DataReaderMapToList<EquipmentVO>(cmd.ExecuteReader());
                     cmd.Connection.Close();
 
-                    if (list != null && list.Count > 0)
-                        return list[0];
-                    else
-                        return null;
+                    return list;
                 }
             }
-            catch
+
+            catch (Exception err)
             {
                 return null;
             }
+
         }
+        }
+            
     }
-}
