@@ -110,6 +110,12 @@
     <Compile Include="frmEQP_AR.Designer.cs">
       <DependentUpon>frmEQP_AR.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="PopupEQP_AR_reg.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEQP_AR.resx">
       <DependentUpon>frmEQP_AR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PopupEQP_AR_reg.resx">
       <DependentUpon>PopupEQP_AR_reg.cs</DependentUpon>

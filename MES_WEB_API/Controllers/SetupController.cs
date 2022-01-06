@@ -20,7 +20,7 @@ namespace MES_WEB_API.Controllers
             SetupDAC db = new SetupDAC();
             return db.GetAllSetup();
         }
-
+        //https://localhost:44332/api/Setup/InsertSetup
         [HttpPost]
         [Route("InsertSetup")]
         public IHttpActionResult InsertSetup(SetupVO setup)
@@ -43,14 +43,15 @@ namespace MES_WEB_API.Controllers
             return Ok(msg);
         }
 
+        //https://localhost:44332/api/Setup/DelSetup/{id}
         [HttpGet]
         [Route("DelSetup/{id}")]
-        public IHttpActionResult DeleteSetup(string siteID)
+        public IHttpActionResult DeleteSetup(string id)
         {
             Message msg = new Message();
 
             SetupDAC db = new SetupDAC();
-            bool result = db.DeleteSetup(siteID);
+            bool result = db.DeleteSetup(id);
 
             if (result)
             {
@@ -65,14 +66,18 @@ namespace MES_WEB_API.Controllers
             return Ok(msg);
         }
 
+        //https://localhost:44332/api/Setup/SearchSetup/{siteID}/{stepID}
         [HttpGet]
-        [Route("{id}")]
-        public IHttpActionResult GetSetupInfo(string siteID)
+        [Route("SearchSetup/{siteID}/{stepID}")]
+        public IHttpActionResult GetSetupInfo(string siteID ="", string stepID = "") 
         {
-            Message<SetupVO> msg = new Message<SetupVO>();
+            
+            siteID = (siteID) ?? "";
+            stepID = (stepID) ?? "";
+            Message<List<SetupVO>> msg = new Message<List<SetupVO>>();
 
             SetupDAC db = new SetupDAC();
-            SetupVO setup = db.GetSetupInfo(siteID);
+            List<SetupVO> setup = db.SearchSetup(siteID.Trim(), stepID.Trim());
 
             if (setup != null)
             {
@@ -82,9 +87,8 @@ namespace MES_WEB_API.Controllers
             }
             else
             {
-                msg.IsSuccess = true;
-                msg.ResultMessage = "해당하는 셋업정보가 없습니다.";
-                msg.Data = null;
+                msg.IsSuccess = false;
+                msg.ResultMessage = "해당하는 제품이 없습니다.";
             }
             return Ok(msg);
         }
