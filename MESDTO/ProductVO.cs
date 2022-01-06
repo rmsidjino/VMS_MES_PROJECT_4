@@ -15,6 +15,6 @@ namespace MESDTO
         public int LOT_SIZE { get; set; }
         public int INPUT_BATCH_SIZE { get; set; }
         public string MODIFIER { get; set; }
-        public DateTime MODIFIED_DATE{ get; set; }
+        public DateTime MODIFIER_DATE{ get; set; }
     }
 }

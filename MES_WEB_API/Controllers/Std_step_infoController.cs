@@ -7,30 +7,29 @@ using System.Web.Http;
 using MESDTO;
 using MES_WEB_API.Models;
 
-
 namespace MES_WEB_API.Controllers
 {
-    [RoutePrefix("api/Product")]
-    public class ProductController : ApiController
+    [RoutePrefix("api/Std_step_info")]
+    public class Std_step_infoController : ApiController
     {
-        //GET : https://localhost:44332/api/Product/Products
+        //GET : https://localhost:44332/api/Std_step_info/Std_step_infos
         [HttpGet]
-        [Route("Products")]
-        public List<ProductVO> GetAllProduct()
+        [Route("Std_step_infos")]
+        public List<Std_step_infoVO> GetAllStd_step_info()
         {
-            ProductDAC db = new ProductDAC();
-            return db.GetAllProduct();
+            Std_step_infoDAC db = new Std_step_infoDAC();
+            return db.GetAllStd_step_info();
         }
 
-        //Post : https://localhost:44332/api/Product/InsertProduct/{id}
+        //Post : https://localhost:44332/api/Std_step_info/InsertStd_step_info/{id}
         [HttpPost]
-        [Route("InsertProduct/{id}")]
-        public IHttpActionResult InsertProduct(ProductVO product)
+        [Route("InsertStd_step_info/{id}")]
+        public IHttpActionResult InsertStd_step_info(Std_step_infoVO std_step_info)
         {
             Message msg = new Message();
 
-            ProductDAC db = new ProductDAC();
-            bool result = db.InsertProduct(product);
+            Std_step_infoDAC db = new Std_step_infoDAC();
+            bool result = db.InsertStd_step_info(std_step_info);
 
             if (result)
             {
@@ -45,15 +44,15 @@ namespace MES_WEB_API.Controllers
             return Ok(msg);
         }
 
-        //GET : https://localhost:44332/api/Product/DeleteProduct/{id}
+        //GET : https://localhost:44332/api/Std_step_info/DeleteStd_step_info/{id}
         [HttpGet]
-        [Route("DeleteProduct/{id}")]
-        public IHttpActionResult DeleteProduct(string id)
+        [Route("DeleteStd_step_info/{id}")]
+        public IHttpActionResult DeleteStd_step_info(string id)
         {
             Message msg = new Message();
 
-            ProductDAC db = new ProductDAC();
-            bool result = db.DeleteProduct(id);
+            Std_step_infoDAC db = new Std_step_infoDAC();
+            bool result = db.DeleteStd_step_info(id);
 
             if (result)
             {
@@ -68,21 +67,21 @@ namespace MES_WEB_API.Controllers
             return Ok(msg);
         }
 
-        //GET : https://localhost:44332/api/Product/{id}
+        //GET : https://localhost:44332/api/Std_step_info/{id}
         [HttpGet]
         [Route("{id}")]
-        public IHttpActionResult GetProductInfo(string id)
+        public IHttpActionResult GetStd_step_infoInfo(string id)
         {
-            Message<ProductVO> msg = new Message<ProductVO>();
+            Message<Std_step_infoVO> msg = new Message<Std_step_infoVO>();
 
-            ProductDAC db = new ProductDAC();
-            ProductVO product = db.GetProductInfo(id);
+            Std_step_infoDAC db = new Std_step_infoDAC();
+            Std_step_infoVO std_step_info = db.GetStd_step_infoInfo(id);
 
-            if (product != null)
+            if (std_step_info != null)
             {
                 msg.IsSuccess = true;
                 msg.ResultMessage = "성공적으로 조회되었습니다.";
-                msg.Data = product;
+                msg.Data = std_step_info;
             }
             else
             {

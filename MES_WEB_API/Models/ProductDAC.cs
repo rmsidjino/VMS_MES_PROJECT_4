@@ -21,7 +21,7 @@ namespace MES_WEB_API.Models
 
         public List<ProductVO> GetAllProduct()
         {
-            string sql = @"select PRODUCT_ID, PRODUCT_TYPE, PRODUCT_NAME, PROCESS_ID, LOT_SIZE, INPUT_BATCH_SIZE, MODIFIER, MODIFIED_DATE 
+            string sql = @"select PRODUCT_ID, PRODUCT_TYPE, PRODUCT_NAME, PROCESS_ID, LOT_SIZE, INPUT_BATCH_SIZE, MODIFIER, MODIFIER_DATE 
 from PRODUCT";
 
             try
@@ -41,8 +41,8 @@ from PRODUCT";
 
         public bool InsertProduct(ProductVO product)
         {
-            string sql = @"insert into [PRODUCT] (PRODUCT_ID, PRODUCT_TYPE, PRODUCT_NAME, PROCESS_ID, LOT_SIZE, INPUT_BATCH_SIZE, MODIFIER, MODIFIED_DATE)
-values(@PRODUCT_ID, @PRODUCT_TYPE, @PRODUCT_NAME, @PROCESS_ID, @LOT_SIZE, @INPUT_BATCH_SIZE, @MODIFIER, @MODIFIED_DATE)";
+            string sql = @"insert into [PRODUCT] (PRODUCT_ID, PRODUCT_TYPE, PRODUCT_NAME, PROCESS_ID, LOT_SIZE, INPUT_BATCH_SIZE, MODIFIER, MODIFIER_DATE)
+values(@PRODUCT_ID, @PRODUCT_TYPE, @PRODUCT_NAME, @PROCESS_ID, @LOT_SIZE, @INPUT_BATCH_SIZE, @MODIFIER, @MODIFIER_DATE)";
 
             try
             {
@@ -56,7 +56,7 @@ values(@PRODUCT_ID, @PRODUCT_TYPE, @PRODUCT_NAME, @PROCESS_ID, @LOT_SIZE, @INPUT
                 cmd.Parameters.AddWithValue("@LOT_SIZE", product.LOT_SIZE);
                 cmd.Parameters.AddWithValue("@INPUT_BATCH_SIZE", product.INPUT_BATCH_SIZE);
                 cmd.Parameters.AddWithValue("@MODIFIER", product.MODIFIER);
-                cmd.Parameters.AddWithValue("@MODIFIED_DATE", product.MODIFIED_DATE);
+                cmd.Parameters.AddWithValue("@MODIFIER_DATE", product.MODIFIER_DATE);
 
                 cmd.ExecuteNonQuery();
                 return true;
@@ -67,7 +67,7 @@ values(@PRODUCT_ID, @PRODUCT_TYPE, @PRODUCT_NAME, @PROCESS_ID, @LOT_SIZE, @INPUT
             }
         }
 
-        public bool DeleteProduct(string productID)
+        public bool DeleteProduct(string id)
         {
             string sql = @"Delete from PRODUCT where PRODUCT_ID = @PRODUCT_ID ";
 
@@ -77,7 +77,7 @@ values(@PRODUCT_ID, @PRODUCT_TYPE, @PRODUCT_NAME, @PROCESS_ID, @LOT_SIZE, @INPUT
                 {
                     cmd.Connection.Open();
 
-                    cmd.Parameters.AddWithValue("@PRODUCT_ID", productID);
+                    cmd.Parameters.AddWithValue("@PRODUCT_ID", id);
 
                     int iRowAffect = cmd.ExecuteNonQuery();
                     cmd.Connection.Close();
@@ -91,16 +91,16 @@ values(@PRODUCT_ID, @PRODUCT_TYPE, @PRODUCT_NAME, @PROCESS_ID, @LOT_SIZE, @INPUT
             }
         }
 
-        public ProductVO GetProductInfo(string productID)
+        public ProductVO GetProductInfo(string id)
         {
-            string sql = @"select PRODUCT_ID, PRODUCT_TYPE, PRODUCT_NAME, PROCESS_ID, LOT_SIZE, INPUT_BATCH_SIZE, MODIFIER, MODIFIED_DATE
+            string sql = @"select PRODUCT_ID, PRODUCT_TYPE, PRODUCT_NAME, PROCESS_ID, LOT_SIZE, INPUT_BATCH_SIZE, MODIFIER, MODIFIER_DATE
                                     from PRODUCT where PRODUCT_ID=@PRODUCT_ID";
 
             try
             {
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
-                    cmd.Parameters.AddWithValue("@PRODUCT_ID", productID);
+                    cmd.Parameters.AddWithValue("@PRODUCT_ID", id);
 
                     cmd.Connection.Open();
                     List<ProductVO> list = Helper.DataReaderMapToList<ProductVO>(cmd.ExecuteReader());
