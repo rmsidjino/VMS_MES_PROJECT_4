@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -128,13 +129,49 @@ namespace VMS_MES_PROJECT_4
                 btnItem.Name = "button7";
                 btnItem.Size = new System.Drawing.Size(215, 36);    
                 btnItem.TabIndex = 2;
-                btnItem.Tag = "1@1";
+                btnItem.Tag = dv1[i]["program_name"].ToString();
                 btnItem.Text = dv1[i]["menu_name"].ToString();
                 btnItem.UseVisualStyleBackColor = false;
+                btnItem.Click += BtnItem_Click;
 
                 panel1.Controls.Add(btnItem);  
             }
             
+        }
+
+        private void BtnItem_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            OpenCreateForm(btn.Tag.ToString(), btn.Text);
+        }
+
+        private void OpenCreateForm(string pgmName, string formText)
+        {
+            string appName = Assembly.GetEntryAssembly().GetName().Name;
+            Type frmType = Type.GetType($"{appName}.{pgmName}");
+
+            foreach (Form frm in Application.OpenForms)
+            {
+                if (frm.GetType() == frmType)
+                {
+                    frm.Activate();
+                    frm.BringToFront();
+                    return;
+                }
+            }
+
+            try
+            {
+                Form frm = (Form)Activator.CreateInstance(frmType);
+                frm.MdiParent = this;
+                frm.WindowState = FormWindowState.Maximized;
+                frm.Text = formText;
+                frm.Show();
+            }
+            catch
+            {
+                MessageBox.Show("등록된 프로그램이 존재하지 않습니다.");
+            }
         }
     }
 }
