@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommonVO.cs" />
+    <Compile Include="EquipmentArrVO.cs" />
     <Compile Include="EquipmentVO.cs" />
     <Compile Include="Load_StatVO.cs" />
     <Compile Include="Message.cs" />

@@ -64,6 +64,7 @@ namespace VMS_MES_PROJECT_4
         {
             PopupSetupTime frm = new PopupSetupTime();
             frm.ShowDialog();
+            LoadData();
         }
 
         private async void btnDelete_Click(object sender, EventArgs e)
@@ -74,11 +75,11 @@ namespace VMS_MES_PROJECT_4
                 return;
             }
 
-            string siteID = dgvSetup.SelectedRows[0].Cells["SITE_ID"].Value.ToString();
+            string stepID = dgvSetup.SelectedRows[0].Cells["STEP_ID"].Value.ToString();
 
             if (MessageBox.Show("정말 삭제하실겁니까?", "셋업 삭제", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                MESDTO.Message msg = await srv.GetAsync($"api/Setup/DelSetup/{siteID}");
+                MESDTO.Message msg = await srv.GetAsync($"api/Setup/DelSetup/{stepID}");
                 if (msg.IsSuccess)
                 {
                     LoadData();
@@ -90,11 +91,17 @@ namespace VMS_MES_PROJECT_4
 
         private async void btnSearch_Click(object sender, EventArgs e)
         {
+            string siteID = " ";
+            if (cboSite.SelectedIndex > 0)
+                siteID = cboSite.SelectedValue.ToString();
 
-            SetupVO prod = null;
-            prod = await srv.GetAsync($"api/Setup/Search/{cboSite.SelectedValue}", prod);
+            string stepID = " ";
+            if (cboStep.SelectedIndex > 0)
+                stepID = cboStep.SelectedValue.ToString();
 
-            dgvSetup.DataSource = prod;
+            slist = await srv.GetAsync($"api/Setup/SearchSetup/{siteID}/{stepID}/", slist);
+            dgvSetup.DataSource = null;
+            dgvSetup.DataSource = slist;           
         }
 
         private void dgvSetup_CellClick(object sender, DataGridViewCellEventArgs e)
