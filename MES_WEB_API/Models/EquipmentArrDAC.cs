@@ -101,7 +101,7 @@ values(@PRODUCT_ID,@PROCESS_ID,@STEP_ID,@EQP_ID,@TACT_TIME,@PROC_TIME,@EFF_START
         public List<EquipmentArrVO> SearchEquipmentArr(string productID, string processID)
         {
 
-            string sql = @"select PRODUCT_ID,PROCESS_ID,STEP_ID,EQP_ID,TACT_TIME,PROC_TIME,EFF_START_DATE,EFF_END_DATE, MODIFIER, MODIFIER_DATE 
+            string sql = @"select PRODUCT_ID,PROCESS_ID,STEP_ID,EQP_ID,TACT_TIME,PROC_TIME,EFF_START_DATE, EFF_END_DATE, MODIFIER, MODIFIER_DATE 
                                     from EQP_ARRANGE where 1=1 ";
 
 
@@ -111,8 +111,8 @@ values(@PRODUCT_ID,@PROCESS_ID,@STEP_ID,@EQP_ID,@TACT_TIME,@PROC_TIME,@EFF_START
                 {
                     if (productID != null && productID.Trim().Length > 0)
                     {
-                        sql += " and PRODCUCT_ID=@PRODCUCT_ID";
-                        cmd.Parameters.AddWithValue("@PRODCUCT_ID", productID);
+                        sql += " and PRODUCT_ID=@PRODUCT_ID";
+                        cmd.Parameters.AddWithValue("@PRODUCT_ID", productID);
                     }
 
                     if (processID != null && processID.Trim().Length > 0)
