@@ -7,30 +7,29 @@ using System.Web.Http;
 using MESDTO;
 using MES_WEB_API.Models;
 
-
 namespace MES_WEB_API.Controllers
 {
-    [RoutePrefix("api/Product")]
-    public class ProductController : ApiController
+    [RoutePrefix("api/Load_Stat")]
+    public class Load_StatController : ApiController
     {
-        //GET : https://localhost:44332/api/Product/Products
+        //GET : https://localhost:44332/api/Load_Stat/Load_Stats
         [HttpGet]
-        [Route("Products")]
-        public List<ProductVO> GetAllProduct()
+        [Route("Load_Stats")]
+        public List<Load_StatVO> GetAllLoadStat()
         {
-            ProductDAC db = new ProductDAC();
-            return db.GetAllProduct();
+            Load_StatDAC db = new Load_StatDAC();
+            return db.GetAllLoadStat();
         }
 
-        //Post : https://localhost:44332/api/Product/InsertProduct
+        //Post : https://localhost:44332/api/Load_Stat/InsertLoad_Stat
         [HttpPost]
-        [Route("InsertProduct")]
-        public IHttpActionResult InsertProduct(ProductVO product)
+        [Route("InsertLoad_Stat")]
+        public IHttpActionResult InsertLoad_Stat(Load_StatVO load_stat)
         {
             Message msg = new Message();
 
-            ProductDAC db = new ProductDAC();
-            bool result = db.InsertProduct(product);
+            Load_StatDAC db = new Load_StatDAC();
+            bool result = db.InsertLoad_Stat(load_stat);
 
             if (result)
             {
@@ -45,15 +44,15 @@ namespace MES_WEB_API.Controllers
             return Ok(msg);
         }
 
-        //GET : https://localhost:44332/api/Product/DeleteProduct/{id}
+        //GET : https://localhost:44332/api/Load_Stat/DeleteLoad_Stat/{id}
         [HttpGet]
-        [Route("DeleteProduct/{id}")]
-        public IHttpActionResult DeleteProduct(string id)
+        [Route("DeleteLoad_Stat/{id}")]
+        public IHttpActionResult DeleteLoad_Stat(string id)
         {
             Message msg = new Message();
 
-            ProductDAC db = new ProductDAC();
-            bool result = db.DeleteProduct(id);
+            Load_StatDAC db = new Load_StatDAC();
+            bool result = db.DeleteLoad_Stat(id);
 
             if (result)
             {
@@ -69,30 +68,30 @@ namespace MES_WEB_API.Controllers
         }
 
 
-        //GET : https://localhost:44332/api/Product/SearchProductList?productID={productID}&processID={processID}
+        //GET : https://localhost:44332/api/Load_Stat/SearchLoad_StatList?lineID={lineID}&eqpID={eqpID}
         [HttpGet]
-        [Route("SearchProductList")]
-        public List<ProductVO> SearchProductList(string productID = "", string processID = "")
+        [Route("SearchLoad_StatList")]
+        public List<Load_StatVO> SearchLoad_StatList(string lineID = "", string eqpID = "")
         {
-            ProductDAC db = new ProductDAC();
-            return db.SearchProductList(productID, processID);
+            Load_StatDAC db = new Load_StatDAC();
+            return db.SearchLoad_StatList(lineID, eqpID);
         }
 
-        //GET : https://localhost:44332/api/Product/{id}
+        //GET : https://localhost:44332/api/Load_Stat/{id}
         [HttpGet]
         [Route("{id}")]
-        public IHttpActionResult GetProductInfo(string id)
+        public IHttpActionResult GetLoadStatInfo(string id)
         {
-            Message<ProductVO> msg = new Message<ProductVO>();
+            Message<Load_StatVO> msg = new Message<Load_StatVO>();
 
-            ProductDAC db = new ProductDAC();
-            ProductVO product = db.GetProductInfo(id);
+            Load_StatDAC db = new Load_StatDAC();
+            Load_StatVO load_stat = db.GetLoadStatInfo(id);
 
-            if (product != null)
+            if (load_stat != null)
             {
                 msg.IsSuccess = true;
                 msg.ResultMessage = "성공적으로 조회되었습니다.";
-                msg.Data = product;
+                msg.Data = load_stat;
             }
             else
             {

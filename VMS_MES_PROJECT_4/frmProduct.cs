@@ -16,18 +16,23 @@ namespace VMS_MES_PROJECT_4
     {
         ServiceHelp srv = new ServiceHelp("");
         int editIndex;
-        List<ProductVO> slist;
+        List<ProductVO> plist;
         List<CommonVO> com;
+
+        public frmProduct()
+        {
+            InitializeComponent();        
+        }
 
         private void frmProduct_Load(object sender, EventArgs e)
         {
             DataGridViewUtil.SetInitGridView(dgvProduct);
             DataGridViewUtil.AddGridTextColumn(dgvProduct, "제품ID", "PRODUCT_ID", colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvProduct, "제품유형", "LINE_ID", colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvProduct, "제품이름", "EQP_GROUP", colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvProduct, "공정ID", "STEP_ID", colWidth: 100);
+            DataGridViewUtil.AddGridTextColumn(dgvProduct, "제품유형", "PRODUCT_TYPE", colWidth: 100);
+            DataGridViewUtil.AddGridTextColumn(dgvProduct, "제품이름", "PRODUCT_NAME", colWidth: 100);
+            DataGridViewUtil.AddGridTextColumn(dgvProduct, "프로세스ID", "PROCESS_ID", colWidth: 100);
             DataGridViewUtil.AddGridTextColumn(dgvProduct, "로트크기", "LOT_SIZE", colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvProduct, "입력되는 1회분 사이즈", "INPUT_BATCH_SIZE", colWidth: 100);
+            DataGridViewUtil.AddGridTextColumn(dgvProduct, "입력되는 1회분 사이즈", "INPUT_BATCH_SIZE", colWidth: 170);
 
             DataGridViewButtonColumn btnEdit = new DataGridViewButtonColumn();
 
@@ -42,15 +47,15 @@ namespace VMS_MES_PROJECT_4
 
         private async void LoadData()
         {
-            slist = null;
-            slist = await srv.GetListAsync("api/Product/Products", slist);
-            dgvProduct.DataSource = slist;
+            plist = null;
+            plist = await srv.GetListAsync("api/Product/Products", plist);
+            dgvProduct.DataSource = plist;
 
             com = null;
             com = await srv.GetListAsync($"api/Common/All", com);
 
-            CommonUtil.ComboBinding(cboProduct, com, "PRODUCT", blankText: "선택");
-            CommonUtil.ComboBinding(cboProcess, com, "PROCESS", blankText: "선택");
+            CommonUtil.ComboBinding(cboProduct, com, "PRODUCT_ID", blankText: "선택");
+            CommonUtil.ComboBinding(cboProcess, com, "PROCESS_ID", blankText: "선택");
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
@@ -82,10 +87,20 @@ namespace VMS_MES_PROJECT_4
 
         private async void btnSearch_Click(object sender, EventArgs e)
         {
-            ProductVO prod = null;
-            prod = await srv.GetAsync($"api/Product/Search/{cboProduct.SelectedValue}", prod);
-            prod = await srv.GetAsync($"api/Product/Search/{cboProcess.SelectedValue}", prod);
-            dgvProduct.DataSource = prod;
+            string productID = " ";
+            if (cboProduct.SelectedIndex > 0)
+                productID = cboProduct.SelectedValue.ToString();
+
+            string processID = " ";
+            if (cboProcess.SelectedIndex > 0)
+                processID = cboProcess.SelectedValue.ToString();
+
+
+            string url = $"api/Product/SearchProductList?productID={productID}&processID={processID}";
+            plist = null;
+            plist = await srv.GetListAsync(url, plist);
+            dgvProduct.DataSource = null;
+            dgvProduct.DataSource = plist;
         }
 
         private void dgvProduct_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -93,8 +108,9 @@ namespace VMS_MES_PROJECT_4
             if (e.ColumnIndex == editIndex)
             {
                 string productID = dgvProduct["PRODUCT_ID", e.RowIndex].Value.ToString();
-               
-                ProductVO sitem = slist.Find((product) => product.PRODUCT_ID == productID);
+
+                ProductVO sitem = plist.Find((product) => product.PRODUCT_ID == productID);
+
                 PopupProduct frm = new PopupProduct(sitem);
                 frm.Show();
             }

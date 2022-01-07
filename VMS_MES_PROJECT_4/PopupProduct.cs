@@ -56,6 +56,7 @@ namespace VMS_MES_PROJECT_4
                 //btnSearch.PerformClick();
             }
             MessageBox.Show(msg.ResultMessage);
+            this.Close();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -68,11 +69,14 @@ namespace VMS_MES_PROJECT_4
             com = null;
             com = await srv.GetListAsync($"api/Common/All", com);
 
-            CommonUtil.ComboBinding(cboProductType, com, "PRODUCT_TYPE", blankText: "선택");
+            CommonUtil.ComboBinding(cboProductType, com, "PRODUCTTYPE", blankText: "선택");
 
             if (update)
             {
+                txtProductID.Text = sItem.PRODUCT_ID.ToString();
                 cboProductType.SelectedValue = sItem.PRODUCT_TYPE;
+                txtProductName.Text = sItem.PRODUCT_NAME.ToString();
+                txtProcessID.Text = sItem.PROCESS_ID.ToString();
                 txtLotSize.Text = sItem.LOT_SIZE.ToString();
                 txtInputBatchSize.Text = sItem.INPUT_BATCH_SIZE.ToString();
             }

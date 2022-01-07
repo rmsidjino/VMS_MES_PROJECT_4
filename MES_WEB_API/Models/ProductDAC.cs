@@ -30,7 +30,7 @@ from PRODUCT";
                 {
                     cmd.Connection.Open();
 
-                    return Helper.DataReaderMapToList<ProductVO>(cmd.ExecuteReader()); ;
+                    return Helper.DataReaderMapToList<ProductVO>(cmd.ExecuteReader());
                 }
             }
             catch (Exception err)
@@ -113,6 +113,43 @@ values(@PRODUCT_ID, @PRODUCT_TYPE, @PRODUCT_NAME, @PROCESS_ID, @LOT_SIZE, @INPUT
                 }
             }
             catch
+            {
+                return null;
+            }
+        }
+
+        public List<ProductVO> SearchProductList(string productID = "", string processID = "")
+        {
+            string sql = @"select PRODUCT_ID, PRODUCT_TYPE, PRODUCT_NAME, PROCESS_ID, LOT_SIZE, INPUT_BATCH_SIZE, MODIFIER, MODIFIER_DATE
+                                    from PRODUCT where 1=1 ";
+
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    if (productID != null && productID.Trim().Length > 0)
+                    {
+                        sql += " and PRODUCT_ID=@PRODUCT_ID";
+                        cmd.Parameters.AddWithValue("@PRODUCT_ID", productID);
+                    }
+
+                    if (processID != null && processID.Trim().Length > 0)
+                    {
+                        sql += " and PROCESS_ID=@PROCESS_ID";
+                        cmd.Parameters.AddWithValue("@PROCESS_ID", processID);
+                    }
+
+                    cmd.Connection = conn;
+                    cmd.CommandText = sql;
+                    cmd.Connection.Open();
+                    List<ProductVO> list = Helper.DataReaderMapToList<ProductVO>(cmd.ExecuteReader());
+                    cmd.Connection.Close();
+
+                    return list;
+                }
+            }
+
+            catch (Exception err)
             {
                 return null;
             }
