@@ -47,6 +47,9 @@
     <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
@@ -106,9 +109,6 @@
     <Reference Include="System.Web.Http.WebHost">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
-      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Site.css" />
@@ -123,7 +123,7 @@
     <Compile Include="Controllers\CommonController.cs" />
     <Compile Include="Controllers\EquipmentArrController.cs" />
     <Compile Include="Controllers\EquipmentController.cs" />
-    <Compile Include="Controllers\EquipmentPlanController.cs" />
+    <Compile Include="Controllers\Load_StatController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\SetupController.cs" />
     <Compile Include="Controllers\Std_step_infoController.cs" />
@@ -135,6 +135,7 @@
     <Compile Include="Models\EquipmentDAC.cs" />
     <Compile Include="Models\Equipment_PlanDAC.cs" />
     <Compile Include="Models\Helper.cs" />
+    <Compile Include="Models\Load_StatDAC.cs" />
     <Compile Include="Models\ProductDAC.cs" />
     <Compile Include="Models\SetupDAC.cs" />
     <Compile Include="Models\Std_step_infoDAC.cs" />

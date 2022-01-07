@@ -115,5 +115,36 @@ values(@STD_STEP_ID, @STD_STEP_NAME, @STEP_TAT, @STEP_YIELD, @STEP_SETUP, @MODIF
                 return null;
             }
         }
+
+        public List<Std_step_infoVO> SearchStdStepInfoList(string std_step_ID = "")
+        {
+            string sql = @"select STD_STEP_ID, STD_STEP_NAME, STEP_TAT, STEP_YIELD, STEP_SETUP, MODIFIER, MODIFIER_DATE
+                                    from STD_STEP_INFO where 1=1 ";
+
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    if (std_step_ID != null && std_step_ID.Trim().Length > 0)
+                    {
+                        sql += " and STD_STEP_ID=@STD_STEP_ID";
+                        cmd.Parameters.AddWithValue("@STD_STEP_ID", std_step_ID);
+                    }
+
+                    cmd.Connection = conn;
+                    cmd.CommandText = sql;
+                    cmd.Connection.Open();
+                    List<Std_step_infoVO> list = Helper.DataReaderMapToList<Std_step_infoVO>(cmd.ExecuteReader());
+                    cmd.Connection.Close();
+
+                    return list;
+                }
+            }
+
+            catch (Exception err)
+            {
+                return null;
+            }
+        }
     }
 }

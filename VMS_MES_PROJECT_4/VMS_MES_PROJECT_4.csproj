@@ -128,6 +128,12 @@
     <Compile Include="frmProduct.designer.cs">
       <DependentUpon>frmProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLoad_Stat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoad_Stat.designer.cs">
+      <DependentUpon>frmLoad_Stat.cs</DependentUpon>
+    </Compile>
     <Compile Include="PopupEQP_AR_reg.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,9 +164,21 @@
     <Compile Include="PopupSetupTime.designer.cs">
       <DependentUpon>PopupSetupTime.cs</DependentUpon>
     </Compile>
+    <Compile Include="PopupStd_step_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupStd_step_info.designer.cs">
+      <DependentUpon>PopupStd_step_info.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceHelp.cs" />
+    <Compile Include="frmStd_step_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStd_step_info.designer.cs">
+      <DependentUpon>frmStd_step_info.cs</DependentUpon>
+    </Compile>
     <Compile Include="Util\CommonUtil.cs" />
     <Compile Include="Util\DataGridViewUtil.cs" />
     <EmbeddedResource Include="frmEQP.resx">
@@ -174,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoad_Stat.resx">
+      <DependentUpon>frmLoad_Stat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PopupEQP_AR_reg.resx">
       <DependentUpon>PopupEQP_AR_reg.cs</DependentUpon>
@@ -190,6 +211,9 @@
     <EmbeddedResource Include="PopupSetupTime.resx">
       <DependentUpon>PopupSetupTime.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PopupStd_step_info.resx">
+      <DependentUpon>PopupStd_step_info.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -200,6 +224,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="frmStd_step_info.resx">
+      <DependentUpon>frmStd_step_info.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

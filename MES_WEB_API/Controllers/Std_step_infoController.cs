@@ -21,9 +21,9 @@ namespace MES_WEB_API.Controllers
             return db.GetAllStd_step_info();
         }
 
-        //Post : https://localhost:44332/api/Std_step_info/InsertStd_step_info/{id}
+        //Post : https://localhost:44332/api/Std_step_info/InsertStd_step_info
         [HttpPost]
-        [Route("InsertStd_step_info/{id}")]
+        [Route("InsertStd_step_info")]
         public IHttpActionResult InsertStd_step_info(Std_step_infoVO std_step_info)
         {
             Message msg = new Message();
@@ -42,6 +42,15 @@ namespace MES_WEB_API.Controllers
                 msg.ResultMessage = "등록 중 오류가 발생했습니다.";
             }
             return Ok(msg);
+        }
+
+        //GET : https://localhost:44332/api/Std_step_info/SearchStdStepInfoList?std_step_ID={std_step_ID}
+        [HttpGet]
+        [Route("SearchStdStepInfoList")]
+        public List<Std_step_infoVO> SearchStdStepInfoList(string std_step_ID = "")
+        {
+            Std_step_infoDAC db = new Std_step_infoDAC();
+            return db.SearchStdStepInfoList(std_step_ID);
         }
 
         //GET : https://localhost:44332/api/Std_step_info/DeleteStd_step_info/{id}
