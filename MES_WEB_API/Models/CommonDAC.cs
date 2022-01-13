@@ -76,7 +76,7 @@ where category in ('{category}')";
 
         public List<CommonVO> GetCodeList()
         {
-            string sql = $@"select CCODE, CNAME, CCATEGORY,CVALUE from vw_codeList";
+            string sql = $@"select CCODE, CNAME, CCATEGORY from vw_codeList";
             try
             {
                 using (SqlCommand cmd = new SqlCommand(sql, conn))

@@ -26,24 +26,18 @@ namespace VMS_MES_PROJECT_4
         private void frmLoad_Stat_Load(object sender, EventArgs e)
         {
             DataGridViewUtil.SetInitGridView(dgvLoadStat);
-            DataGridViewUtil.AddGridTextColumn(dgvLoadStat, "버전번호", "VERSION_NO", colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvLoadStat, "라인ID", "LINE_ID", colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvLoadStat, "장비ID", "EQP_ID", colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvLoadStat, "목표마감일", "TARGET_DATE", colWidth: 130);
-            DataGridViewUtil.AddGridTextColumn(dgvLoadStat, "가동준비 비율", "SETUP", colWidth: 130);
-            DataGridViewUtil.AddGridTextColumn(dgvLoadStat, "가동", "BUSY", colWidth: 70);
-            DataGridViewUtil.AddGridTextColumn(dgvLoadStat, "유후실행", "IDLERUN", colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvLoadStat, "유후", "IDLE", colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvLoadStat, "예방정비", "PM", colWidth: 130);
-            DataGridViewUtil.AddGridTextColumn(dgvLoadStat, "중단", "DOWN", colWidth: 70);
+            DataGridViewUtil.AddGridTextColumn(dgvLoadStat, "버전번호", "VERSION_NO", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
+            DataGridViewUtil.AddGridTextColumn(dgvLoadStat, "라인ID", "LINE_ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 80);
+            DataGridViewUtil.AddGridTextColumn(dgvLoadStat, "장비ID", "EQP_ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 80);
+            DataGridViewUtil.AddGridTextColumn(dgvLoadStat, "목표마감일", "TARGET_DATE", DataGridViewContentAlignment.MiddleRight, colWidth: 100);
+            DataGridViewUtil.AddGridTextColumn(dgvLoadStat, "가동준비 비율", "SETUP", DataGridViewContentAlignment.MiddleRight, colWidth: 130);
+            DataGridViewUtil.AddGridTextColumn(dgvLoadStat, "가동", "BUSY", DataGridViewContentAlignment.MiddleRight, colWidth: 70);
+            DataGridViewUtil.AddGridTextColumn(dgvLoadStat, "유후실행", "IDLERUN", DataGridViewContentAlignment.MiddleRight, colWidth: 80);
+            DataGridViewUtil.AddGridTextColumn(dgvLoadStat, "유후", "IDLE", DataGridViewContentAlignment.MiddleRight, colWidth: 70);
+            DataGridViewUtil.AddGridTextColumn(dgvLoadStat, "예방정비", "PM", DataGridViewContentAlignment.MiddleRight, colWidth: 80);
+            DataGridViewUtil.AddGridTextColumn(dgvLoadStat, "중단", "DOWN", DataGridViewContentAlignment.MiddleRight, colWidth: 70);
 
             DataGridViewButtonColumn btnEdit = new DataGridViewButtonColumn();
-
-            btnEdit.Text = "수정";
-            btnEdit.Width = 50;
-            btnEdit.UseColumnTextForButtonValue = true;
-            btnEdit.Name = "Edit";
-            editIndex = dgvLoadStat.Columns.Add(btnEdit);
 
             LoadData();
         }

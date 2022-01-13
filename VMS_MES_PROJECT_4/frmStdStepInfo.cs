@@ -11,14 +11,14 @@ using MESDTO;
 
 namespace VMS_MES_PROJECT_4
 {
-    public partial class frmStd_step_info : Form
+    public partial class frmStdStepInfo : Form
     {
         ServiceHelp srv = new ServiceHelp("");
         int editIndex;
-        List<Std_step_infoVO> stlist;
+        List<StdStepInfoVO> stlist;
         List<CommonVO> com;
 
-        public frmStd_step_info()
+        public frmStdStepInfo()
         {
             InitializeComponent();
         }
@@ -26,11 +26,11 @@ namespace VMS_MES_PROJECT_4
         private void frmStd_step_info_Load(object sender, EventArgs e)
         {
             DataGridViewUtil.SetInitGridView(dgvStdStepInfo);
-            DataGridViewUtil.AddGridTextColumn(dgvStdStepInfo, "표준공정ID", "STD_STEP_ID", colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvStdStepInfo, "표준공정이름", "STD_STEP_NAME", colWidth: 130);
-            DataGridViewUtil.AddGridTextColumn(dgvStdStepInfo, "공정시간", "STEP_TAT", colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvStdStepInfo, "공정수율", "STEP_YIELD", colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvStdStepInfo, "공정준비시간", "STEP_SETUP", colWidth: 130);
+            DataGridViewUtil.AddGridTextColumn(dgvStdStepInfo, "표준공정ID", "STD_STEP_ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
+            DataGridViewUtil.AddGridTextColumn(dgvStdStepInfo, "표준공정이름", "STD_STEP_NAME", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
+            DataGridViewUtil.AddGridTextColumn(dgvStdStepInfo, "공정시간", "STEP_TAT", DataGridViewContentAlignment.MiddleRight, colWidth: 80);
+            DataGridViewUtil.AddGridTextColumn(dgvStdStepInfo, "공정수율", "STEP_YIELD", DataGridViewContentAlignment.MiddleRight, colWidth: 80);
+            DataGridViewUtil.AddGridTextColumn(dgvStdStepInfo, "공정준비시간", "STEP_SETUP", DataGridViewContentAlignment.MiddleRight, colWidth: 100);
 
             DataGridViewButtonColumn btnEdit = new DataGridViewButtonColumn();
 
@@ -56,8 +56,9 @@ namespace VMS_MES_PROJECT_4
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            PopupStd_step_info frm = new PopupStd_step_info();
+            PopupStdStepInfo frm = new PopupStdStepInfo();
             frm.ShowDialog();
+            LoadData();
         }
 
         private async void btnDelete_Click(object sender, EventArgs e)
@@ -100,8 +101,10 @@ namespace VMS_MES_PROJECT_4
             {
                 string std_step_ID = dgvStdStepInfo["STD_STEP_ID", e.RowIndex].Value.ToString();
 
-                Std_step_infoVO sitem = stlist.Find((std_step_info) => std_step_info.STD_STEP_ID == std_step_ID);
-                PopupStd_step_info frm = new PopupStd_step_info(sitem);
+                StdStepInfoVO sitem = stlist.Find((std_step_info) => std_step_info.STD_STEP_ID == std_step_ID);
+
+                PopupStdStepInfo frm = new PopupStdStepInfo(sitem);
+                frm.StartPosition = FormStartPosition.CenterScreen;
                 frm.Show();
             }
         }

@@ -15,20 +15,20 @@ namespace MES_WEB_API.Controllers
         //GET : https://localhost:44332/api/Std_step_info/Std_step_infos
         [HttpGet]
         [Route("Std_step_infos")]
-        public List<Std_step_infoVO> GetAllStd_step_info()
+        public List<StdStepInfoVO> GetAllStd_step_info()
         {
-            Std_step_infoDAC db = new Std_step_infoDAC();
+            StdStepInfoDAC db = new StdStepInfoDAC();
             return db.GetAllStd_step_info();
         }
 
         //Post : https://localhost:44332/api/Std_step_info/InsertStd_step_info
         [HttpPost]
         [Route("InsertStd_step_info")]
-        public IHttpActionResult InsertStd_step_info(Std_step_infoVO std_step_info)
+        public IHttpActionResult InsertStd_step_info(StdStepInfoVO std_step_info)
         {
             Message msg = new Message();
 
-            Std_step_infoDAC db = new Std_step_infoDAC();
+            StdStepInfoDAC db = new StdStepInfoDAC();
             bool result = db.InsertStd_step_info(std_step_info);
 
             if (result)
@@ -47,9 +47,9 @@ namespace MES_WEB_API.Controllers
         //GET : https://localhost:44332/api/Std_step_info/SearchStdStepInfoList?std_step_ID={std_step_ID}
         [HttpGet]
         [Route("SearchStdStepInfoList")]
-        public List<Std_step_infoVO> SearchStdStepInfoList(string std_step_ID = "")
+        public List<StdStepInfoVO> SearchStdStepInfoList(string std_step_ID = "")
         {
-            Std_step_infoDAC db = new Std_step_infoDAC();
+            StdStepInfoDAC db = new StdStepInfoDAC();
             return db.SearchStdStepInfoList(std_step_ID);
         }
 
@@ -60,7 +60,7 @@ namespace MES_WEB_API.Controllers
         {
             Message msg = new Message();
 
-            Std_step_infoDAC db = new Std_step_infoDAC();
+            StdStepInfoDAC db = new StdStepInfoDAC();
             bool result = db.DeleteStd_step_info(id);
 
             if (result)
@@ -81,10 +81,10 @@ namespace MES_WEB_API.Controllers
         [Route("{id}")]
         public IHttpActionResult GetStd_step_infoInfo(string id)
         {
-            Message<Std_step_infoVO> msg = new Message<Std_step_infoVO>();
+            Message<StdStepInfoVO> msg = new Message<StdStepInfoVO>();
 
-            Std_step_infoDAC db = new Std_step_infoDAC();
-            Std_step_infoVO std_step_info = db.GetStd_step_infoInfo(id);
+            StdStepInfoDAC db = new StdStepInfoDAC();
+            StdStepInfoVO std_step_info = db.GetStd_step_infoInfo(id);
 
             if (std_step_info != null)
             {

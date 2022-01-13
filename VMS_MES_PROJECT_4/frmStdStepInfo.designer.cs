@@ -1,7 +1,7 @@
 ﻿
 namespace VMS_MES_PROJECT_4
 {
-    partial class frmStd_step_info
+    partial class frmStdStepInfo
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.

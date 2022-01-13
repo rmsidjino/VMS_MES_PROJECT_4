@@ -15,7 +15,7 @@ namespace VMS_MES_PROJECT_4
     {
         ServiceHelp srv = new ServiceHelp("");
         MESDTO.Message msg;
-        ProductVO sItem;
+        ProductVO pItem;
         List<CommonVO> com;
         bool update = false;
         public PopupProduct()
@@ -23,10 +23,10 @@ namespace VMS_MES_PROJECT_4
             InitializeComponent();
         }
 
-        public PopupProduct(ProductVO sItem)
+        public PopupProduct(ProductVO pItem)
         {
             InitializeComponent();
-            this.sItem = sItem;
+            this.pItem = pItem;
             update = true;
         }
 
@@ -73,12 +73,12 @@ namespace VMS_MES_PROJECT_4
 
             if (update)
             {
-                txtProductID.Text = sItem.PRODUCT_ID.ToString();
-                cboProductType.SelectedValue = sItem.PRODUCT_TYPE;
-                txtProductName.Text = sItem.PRODUCT_NAME.ToString();
-                txtProcessID.Text = sItem.PROCESS_ID.ToString();
-                txtLotSize.Text = sItem.LOT_SIZE.ToString();
-                txtInputBatchSize.Text = sItem.INPUT_BATCH_SIZE.ToString();
+                txtProductID.Text = pItem.PRODUCT_ID.ToString();
+                cboProductType.SelectedValue = pItem.PRODUCT_TYPE;
+                txtProductName.Text = pItem.PRODUCT_NAME.ToString();
+                txtProcessID.Text = pItem.PROCESS_ID.ToString();
+                txtLotSize.Text = pItem.LOT_SIZE.ToString();
+                txtInputBatchSize.Text = pItem.INPUT_BATCH_SIZE.ToString();
             }
         }
     }

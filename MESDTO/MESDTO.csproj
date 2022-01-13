@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommonVO.cs" />
+    <Compile Include="DemandVO.cs" />
     <Compile Include="EquipmentArrVO.cs" />
     <Compile Include="EquipmentVO.cs" />
     <Compile Include="Load_StatVO.cs" />
@@ -49,7 +50,8 @@
     <Compile Include="ProductVO.cs" />
     <Compile Include="SetupVO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Std_step_infoVO.cs" />
+    <Compile Include="StdStepInfoVO.cs" />
+    <Compile Include="StepRouteVO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

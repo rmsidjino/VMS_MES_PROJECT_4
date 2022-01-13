@@ -9,16 +9,16 @@ using MESDTO;
 
 namespace MES_WEB_API.Models
 {
-    public class Std_step_infoDAC
+    public class StdStepInfoDAC
     {
         SqlConnection conn;
 
-        public Std_step_infoDAC()
+        public StdStepInfoDAC()
         {
             conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["local"].ConnectionString);
         }
 
-        public List<Std_step_infoVO> GetAllStd_step_info()
+        public List<StdStepInfoVO> GetAllStd_step_info()
         {
             string sql = @"select STD_STEP_ID, STD_STEP_NAME, STEP_TAT, STEP_YIELD, STEP_SETUP, MODIFIER, MODIFIER_DATE 
 from STD_STEP_INFO";
@@ -29,7 +29,7 @@ from STD_STEP_INFO";
                 {
                     cmd.Connection.Open();
 
-                    return Helper.DataReaderMapToList<Std_step_infoVO>(cmd.ExecuteReader()); ;
+                    return Helper.DataReaderMapToList<StdStepInfoVO>(cmd.ExecuteReader()); ;
                 }
             }
             catch (Exception err)
@@ -38,7 +38,7 @@ from STD_STEP_INFO";
             }
         }
 
-        public bool InsertStd_step_info(Std_step_infoVO std_step_info)
+        public bool InsertStd_step_info(StdStepInfoVO std_step_info)
         {
             string sql = @"insert into [STD_STEP_INFO] (STD_STEP_ID, STD_STEP_NAME, STEP_TAT, STEP_YIELD, STEP_SETUP, MODIFIER, MODIFIER_DATE)
 values(@STD_STEP_ID, @STD_STEP_NAME, @STEP_TAT, @STEP_YIELD, @STEP_SETUP, @MODIFIER, @MODIFIER_DATE)";
@@ -89,7 +89,7 @@ values(@STD_STEP_ID, @STD_STEP_NAME, @STEP_TAT, @STEP_YIELD, @STEP_SETUP, @MODIF
             }
         }
 
-        public Std_step_infoVO GetStd_step_infoInfo(string id)
+        public StdStepInfoVO GetStd_step_infoInfo(string id)
         {
             string sql = @"select STD_STEP_ID, STD_STEP_NAME, STEP_TAT, STEP_YIELD, STEP_SETUP, MODIFIER, MODIFIER_DATE
                                     from STD_STEP_INFO where STD_STEP_ID=@STD_STEP_ID";
@@ -101,7 +101,7 @@ values(@STD_STEP_ID, @STD_STEP_NAME, @STEP_TAT, @STEP_YIELD, @STEP_SETUP, @MODIF
                     cmd.Parameters.AddWithValue("@STD_STEP_ID", id);
 
                     cmd.Connection.Open();
-                    List<Std_step_infoVO> list = Helper.DataReaderMapToList<Std_step_infoVO>(cmd.ExecuteReader());
+                    List<StdStepInfoVO> list = Helper.DataReaderMapToList<StdStepInfoVO>(cmd.ExecuteReader());
                     cmd.Connection.Close();
 
                     if (list != null && list.Count > 0)
@@ -116,7 +116,7 @@ values(@STD_STEP_ID, @STD_STEP_NAME, @STEP_TAT, @STEP_YIELD, @STEP_SETUP, @MODIF
             }
         }
 
-        public List<Std_step_infoVO> SearchStdStepInfoList(string std_step_ID = "")
+        public List<StdStepInfoVO> SearchStdStepInfoList(string std_step_ID = "")
         {
             string sql = @"select STD_STEP_ID, STD_STEP_NAME, STEP_TAT, STEP_YIELD, STEP_SETUP, MODIFIER, MODIFIER_DATE
                                     from STD_STEP_INFO where 1=1 ";
@@ -134,7 +134,7 @@ values(@STD_STEP_ID, @STD_STEP_NAME, @STEP_TAT, @STEP_YIELD, @STEP_SETUP, @MODIF
                     cmd.Connection = conn;
                     cmd.CommandText = sql;
                     cmd.Connection.Open();
-                    List<Std_step_infoVO> list = Helper.DataReaderMapToList<Std_step_infoVO>(cmd.ExecuteReader());
+                    List<StdStepInfoVO> list = Helper.DataReaderMapToList<StdStepInfoVO>(cmd.ExecuteReader());
                     cmd.Connection.Close();
 
                     return list;

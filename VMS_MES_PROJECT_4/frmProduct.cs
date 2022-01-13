@@ -27,12 +27,12 @@ namespace VMS_MES_PROJECT_4
         private void frmProduct_Load(object sender, EventArgs e)
         {
             DataGridViewUtil.SetInitGridView(dgvProduct);
-            DataGridViewUtil.AddGridTextColumn(dgvProduct, "제품ID", "PRODUCT_ID", colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvProduct, "제품유형", "PRODUCT_TYPE", colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvProduct, "제품이름", "PRODUCT_NAME", colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvProduct, "프로세스ID", "PROCESS_ID", colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvProduct, "로트크기", "LOT_SIZE", colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvProduct, "입력되는 1회분 사이즈", "INPUT_BATCH_SIZE", colWidth: 170);
+            DataGridViewUtil.AddGridTextColumn(dgvProduct, "제품ID", "PRODUCT_ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 180);
+            DataGridViewUtil.AddGridTextColumn(dgvProduct, "제품유형", "PRODUCT_TYPE", DataGridViewContentAlignment.MiddleCenter, colWidth: 80);
+            DataGridViewUtil.AddGridTextColumn(dgvProduct, "제품이름", "PRODUCT_NAME", DataGridViewContentAlignment.MiddleCenter, colWidth: 180);
+            DataGridViewUtil.AddGridTextColumn(dgvProduct, "프로세스ID", "PROCESS_ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 230);
+            DataGridViewUtil.AddGridTextColumn(dgvProduct, "로트크기", "LOT_SIZE", DataGridViewContentAlignment.MiddleRight, colWidth: 80);
+            DataGridViewUtil.AddGridTextColumn(dgvProduct, "입력되는 1회분 사이즈", "INPUT_BATCH_SIZE", DataGridViewContentAlignment.MiddleRight, colWidth: 170);
 
             DataGridViewButtonColumn btnEdit = new DataGridViewButtonColumn();
 
@@ -62,6 +62,7 @@ namespace VMS_MES_PROJECT_4
         {
             PopupProduct frm = new PopupProduct();
             frm.ShowDialog();
+            LoadData();
         }
 
         private async void btnDelete_Click(object sender, EventArgs e)
@@ -112,6 +113,7 @@ namespace VMS_MES_PROJECT_4
                 ProductVO sitem = plist.Find((product) => product.PRODUCT_ID == productID);
 
                 PopupProduct frm = new PopupProduct(sitem);
+                frm.StartPosition = FormStartPosition.CenterScreen;
                 frm.Show();
             }
         }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MESDTO
 {
-    public class Std_step_infoVO
+    public class StdStepInfoVO
     {
         public string STD_STEP_ID { get; set; }
         public string STD_STEP_NAME { get; set; }

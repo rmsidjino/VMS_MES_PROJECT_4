@@ -98,6 +98,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDemand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDemand.designer.cs">
+      <DependentUpon>frmDemand.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEQP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,18 @@
     </Compile>
     <Compile Include="frmLoad_Stat.designer.cs">
       <DependentUpon>frmLoad_Stat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStepRoute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStepRoute.designer.cs">
+      <DependentUpon>frmStepRoute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupDemand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupDemand.designer.cs">
+      <DependentUpon>PopupDemand.cs</DependentUpon>
     </Compile>
     <Compile Include="PopupEQP_AR_reg.cs">
       <SubType>Form</SubType>
@@ -158,23 +176,32 @@
     <Compile Include="PopupSetupTime.designer.cs">
       <DependentUpon>PopupSetupTime.cs</DependentUpon>
     </Compile>
-    <Compile Include="PopupStd_step_info.cs">
+    <Compile Include="PopupStdStepInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PopupStd_step_info.designer.cs">
-      <DependentUpon>PopupStd_step_info.cs</DependentUpon>
+    <Compile Include="PopupStdStepInfo.designer.cs">
+      <DependentUpon>PopupStdStepInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupStepRoute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupStepRoute.designer.cs">
+      <DependentUpon>PopupStepRoute.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceHelp.cs" />
-    <Compile Include="frmStd_step_info.cs">
+    <Compile Include="frmStdStepInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmStd_step_info.designer.cs">
-      <DependentUpon>frmStd_step_info.cs</DependentUpon>
+    <Compile Include="frmStdStepInfo.designer.cs">
+      <DependentUpon>frmStdStepInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Util\CommonUtil.cs" />
     <Compile Include="Util\DataGridViewUtil.cs" />
+    <EmbeddedResource Include="frmDemand.resx">
+      <DependentUpon>frmDemand.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEQP.resx">
       <DependentUpon>frmEQP.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,6 +213,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLoad_Stat.resx">
       <DependentUpon>frmLoad_Stat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProduct.resx">
+      <DependentUpon>frmProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStepRoute.resx">
+      <DependentUpon>frmStepRoute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupDemand.resx">
+      <DependentUpon>PopupDemand.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PopupEQP_AR_reg.resx">
       <DependentUpon>PopupEQP_AR_reg.cs</DependentUpon>
@@ -202,8 +238,11 @@
     <EmbeddedResource Include="PopupSetupTime.resx">
       <DependentUpon>PopupSetupTime.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PopupStd_step_info.resx">
-      <DependentUpon>PopupStd_step_info.cs</DependentUpon>
+    <EmbeddedResource Include="PopupStdStepInfo.resx">
+      <DependentUpon>PopupStdStepInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupStepRoute.resx">
+      <DependentUpon>PopupStepRoute.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -215,8 +254,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="frmStd_step_info.resx">
-      <DependentUpon>frmStd_step_info.cs</DependentUpon>
+    <EmbeddedResource Include="frmStdStepInfo.resx">
+      <DependentUpon>frmStdStepInfo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

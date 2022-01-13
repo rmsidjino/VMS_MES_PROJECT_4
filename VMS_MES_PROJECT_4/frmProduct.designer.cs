@@ -132,9 +132,9 @@ namespace VMS_MES_PROJECT_4
             // cboProcess
             // 
             this.cboProcess.FormattingEnabled = true;
-            this.cboProcess.Location = new System.Drawing.Point(321, 11);
+            this.cboProcess.Location = new System.Drawing.Point(356, 11);
             this.cboProcess.Name = "cboProcess";
-            this.cboProcess.Size = new System.Drawing.Size(124, 20);
+            this.cboProcess.Size = new System.Drawing.Size(188, 20);
             this.cboProcess.TabIndex = 8;
             // 
             // cboProduct
@@ -142,13 +142,13 @@ namespace VMS_MES_PROJECT_4
             this.cboProduct.FormattingEnabled = true;
             this.cboProduct.Location = new System.Drawing.Point(87, 11);
             this.cboProduct.Name = "cboProduct";
-            this.cboProduct.Size = new System.Drawing.Size(125, 20);
+            this.cboProduct.Size = new System.Drawing.Size(166, 20);
             this.cboProduct.TabIndex = 7;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(236, 16);
+            this.label2.Location = new System.Drawing.Point(271, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 12);
             this.label2.TabIndex = 6;

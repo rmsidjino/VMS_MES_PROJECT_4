@@ -239,6 +239,7 @@ namespace VMS_MES_PROJECT_4
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "PopupProduct";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "제품 등록";
             this.Load += new System.EventHandler(this.PopupProduct_Load);
             this.ResumeLayout(false);

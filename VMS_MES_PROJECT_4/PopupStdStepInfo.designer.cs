@@ -1,7 +1,7 @@
 ﻿
 namespace VMS_MES_PROJECT_4
 {
-    partial class PopupStd_step_info
+    partial class PopupStdStepInfo
     {
         /// <summary>
         /// Required designer variable.
@@ -52,7 +52,7 @@ namespace VMS_MES_PROJECT_4
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(45, 188);
+            this.label5.Location = new System.Drawing.Point(40, 188);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(95, 12);
             this.label5.TabIndex = 34;
@@ -63,7 +63,7 @@ namespace VMS_MES_PROJECT_4
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(45, 151);
+            this.label4.Location = new System.Drawing.Point(40, 151);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 12);
             this.label4.TabIndex = 33;
@@ -71,14 +71,14 @@ namespace VMS_MES_PROJECT_4
             // 
             // txtStep_Setup
             // 
-            this.txtStep_Setup.Location = new System.Drawing.Point(182, 183);
+            this.txtStep_Setup.Location = new System.Drawing.Point(177, 183);
             this.txtStep_Setup.Name = "txtStep_Setup";
             this.txtStep_Setup.Size = new System.Drawing.Size(163, 21);
             this.txtStep_Setup.TabIndex = 31;
             // 
             // txtStep_Yield
             // 
-            this.txtStep_Yield.Location = new System.Drawing.Point(182, 145);
+            this.txtStep_Yield.Location = new System.Drawing.Point(177, 145);
             this.txtStep_Yield.Name = "txtStep_Yield";
             this.txtStep_Yield.Size = new System.Drawing.Size(163, 21);
             this.txtStep_Yield.TabIndex = 32;
@@ -88,7 +88,7 @@ namespace VMS_MES_PROJECT_4
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(45, 114);
+            this.label3.Location = new System.Drawing.Point(40, 114);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 12);
             this.label3.TabIndex = 30;
@@ -96,7 +96,7 @@ namespace VMS_MES_PROJECT_4
             // 
             // txtStep_Tat
             // 
-            this.txtStep_Tat.Location = new System.Drawing.Point(182, 108);
+            this.txtStep_Tat.Location = new System.Drawing.Point(177, 108);
             this.txtStep_Tat.Name = "txtStep_Tat";
             this.txtStep_Tat.Size = new System.Drawing.Size(163, 21);
             this.txtStep_Tat.TabIndex = 29;
@@ -106,7 +106,7 @@ namespace VMS_MES_PROJECT_4
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(45, 77);
+            this.label2.Location = new System.Drawing.Point(40, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 12);
             this.label2.TabIndex = 28;
@@ -117,7 +117,7 @@ namespace VMS_MES_PROJECT_4
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(45, 41);
+            this.label1.Location = new System.Drawing.Point(40, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 12);
             this.label1.TabIndex = 26;
@@ -150,7 +150,7 @@ namespace VMS_MES_PROJECT_4
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(57, 264);
+            this.label8.Location = new System.Drawing.Point(52, 264);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(57, 12);
             this.label8.TabIndex = 40;
@@ -158,7 +158,7 @@ namespace VMS_MES_PROJECT_4
             // 
             // txtModDate
             // 
-            this.txtModDate.Location = new System.Drawing.Point(182, 258);
+            this.txtModDate.Location = new System.Drawing.Point(177, 258);
             this.txtModDate.Name = "txtModDate";
             this.txtModDate.Size = new System.Drawing.Size(163, 21);
             this.txtModDate.TabIndex = 39;
@@ -168,7 +168,7 @@ namespace VMS_MES_PROJECT_4
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(57, 226);
+            this.label7.Location = new System.Drawing.Point(52, 226);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(70, 12);
             this.label7.TabIndex = 38;
@@ -176,7 +176,7 @@ namespace VMS_MES_PROJECT_4
             // 
             // txtMod
             // 
-            this.txtMod.Location = new System.Drawing.Point(182, 220);
+            this.txtMod.Location = new System.Drawing.Point(177, 220);
             this.txtMod.Name = "txtMod";
             this.txtMod.Size = new System.Drawing.Size(163, 21);
             this.txtMod.TabIndex = 37;
@@ -184,7 +184,7 @@ namespace VMS_MES_PROJECT_4
             // cboStd_Step_Id
             // 
             this.cboStd_Step_Id.FormattingEnabled = true;
-            this.cboStd_Step_Id.Location = new System.Drawing.Point(182, 36);
+            this.cboStd_Step_Id.Location = new System.Drawing.Point(177, 36);
             this.cboStd_Step_Id.Name = "cboStd_Step_Id";
             this.cboStd_Step_Id.Size = new System.Drawing.Size(163, 20);
             this.cboStd_Step_Id.TabIndex = 41;
@@ -192,12 +192,12 @@ namespace VMS_MES_PROJECT_4
             // cboStd_Step_Name
             // 
             this.cboStd_Step_Name.FormattingEnabled = true;
-            this.cboStd_Step_Name.Location = new System.Drawing.Point(182, 73);
+            this.cboStd_Step_Name.Location = new System.Drawing.Point(177, 73);
             this.cboStd_Step_Name.Name = "cboStd_Step_Name";
             this.cboStd_Step_Name.Size = new System.Drawing.Size(163, 20);
             this.cboStd_Step_Name.TabIndex = 41;
             // 
-            // PopupStd_step_info
+            // PopupStdStepInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -220,8 +220,9 @@ namespace VMS_MES_PROJECT_4
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Name = "PopupStd_step_info";
-            this.Text = "표준공정정보관리 등록";
+            this.Name = "PopupStdStepInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "표준공정정보 등록";
             this.Load += new System.EventHandler(this.PopupStd_step_info_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
