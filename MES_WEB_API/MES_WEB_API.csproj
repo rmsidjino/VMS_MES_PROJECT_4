@@ -123,6 +123,7 @@
     <Compile Include="Controllers\CommonController.cs" />
     <Compile Include="Controllers\EquipmentArrController.cs" />
     <Compile Include="Controllers\EquipmentController.cs" />
+    <Compile Include="Controllers\EquipmentPlanController.cs" />
     <Compile Include="Controllers\Load_StatController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\SetupController.cs" />

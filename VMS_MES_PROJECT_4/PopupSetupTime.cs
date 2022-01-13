@@ -39,6 +39,7 @@ namespace VMS_MES_PROJECT_4
 
         private async void btnOK_Click(object sender, EventArgs e)
         {
+            //유효성 체크
             SetupVO setup = new SetupVO
             {
                 SITE_ID = cboSite.SelectedValue.ToString(),

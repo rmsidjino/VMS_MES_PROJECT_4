@@ -292,6 +292,7 @@ namespace VMS_MES_PROJECT_4
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.Coral;
             this.Name = "PopupEQP_AR_reg";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "설비 배치 등록";
             this.Load += new System.EventHandler(this.PopupEQP_AR_reg_Load);
             this.ResumeLayout(false);

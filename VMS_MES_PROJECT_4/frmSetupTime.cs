@@ -30,10 +30,10 @@ namespace VMS_MES_PROJECT_4
         {
             // 제품 데이터그리드뷰 컬럼 셋팅
             DataGridViewUtil.SetInitGridView(dgvSetup);
-            DataGridViewUtil.AddGridTextColumn(dgvSetup, "현장ID", "SITE_ID", colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvSetup, "라인ID", "LINE_ID", colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvSetup, "공정그룹", "EQP_GROUP", colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvSetup, "공정ID", "STEP_ID", colWidth: 100);
+            DataGridViewUtil.AddGridTextColumn(dgvSetup, "현장ID", "SITE_ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
+            DataGridViewUtil.AddGridTextColumn(dgvSetup, "라인ID", "LINE_ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
+            DataGridViewUtil.AddGridTextColumn(dgvSetup, "공정그룹", "EQP_GROUP", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
+            DataGridViewUtil.AddGridTextColumn(dgvSetup, "공정ID", "STEP_ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
             DataGridViewUtil.AddGridTextColumn(dgvSetup, "가동준비시간", "TIME", DataGridViewContentAlignment.MiddleRight, colWidth: 130);
 
             DataGridViewButtonColumn btnEdit = new DataGridViewButtonColumn();
@@ -113,6 +113,7 @@ namespace VMS_MES_PROJECT_4
                 string stepID = dgvSetup["STEP_ID", e.RowIndex].Value.ToString();
                 SetupVO sitem = slist.Find((setup) => setup.SITE_ID == siteID && setup.LINE_ID == lineID && setup.STEP_ID==stepID);
                 PopupSetupTime frm = new PopupSetupTime(sitem);
+                frm.StartPosition = FormStartPosition.CenterScreen;
                 frm.Show();
             }
         }

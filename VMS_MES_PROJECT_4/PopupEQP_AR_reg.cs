@@ -32,6 +32,13 @@ namespace VMS_MES_PROJECT_4
 
         private async void btnOK_Click(object sender, EventArgs e)
         {
+            //유효성 체크
+            //if (!= null && != .Text)
+            //{
+            //    MessageBox.Show("시간이 다릅니다");
+            //    return;
+            //}
+
             EquipmentArrVO equipmentarr = new EquipmentArrVO
             {
                 PRODUCT_ID = cboProductID.Text,

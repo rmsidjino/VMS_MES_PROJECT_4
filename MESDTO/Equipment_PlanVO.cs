@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 namespace MESDTO
 {
     public  class Equipment_PlanVO
-    {
-        public int EQP_PLAN_ID { get; set; }
+    {        
         public string VERSION_NO { get; set; }
         public string LINE_ID { get; set; }
         public string EQP_ID { get; set; }

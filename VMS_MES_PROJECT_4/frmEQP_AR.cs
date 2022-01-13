@@ -26,12 +26,12 @@ namespace VMS_MES_PROJECT_4
         private void frmEQP_AR_Load(object sender, EventArgs e)
         {
             DataGridViewUtil.SetInitGridView(dgvEqpArr);
-            DataGridViewUtil.AddGridTextColumn(dgvEqpArr, "제품ID", "PRODUCT_ID", colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvEqpArr, "프로세서ID", "PROCESS_ID", colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvEqpArr, "공정ID", "STEP_ID", colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvEqpArr, "장비ID", "EQP_ID", colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvEqpArr, "공정시간", "TACT_TIME", colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvEqpArr, "동작시간", "PROC_TIME", colWidth: 100);
+            DataGridViewUtil.AddGridTextColumn(dgvEqpArr, "제품ID", "PRODUCT_ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
+            DataGridViewUtil.AddGridTextColumn(dgvEqpArr, "프로세서ID", "PROCESS_ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
+            DataGridViewUtil.AddGridTextColumn(dgvEqpArr, "공정ID", "STEP_ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
+            DataGridViewUtil.AddGridTextColumn(dgvEqpArr, "장비ID", "EQP_ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
+            DataGridViewUtil.AddGridTextColumn(dgvEqpArr, "공정시간", "TACT_TIME", DataGridViewContentAlignment.MiddleRight,colWidth: 100);
+            DataGridViewUtil.AddGridTextColumn(dgvEqpArr, "동작시간", "PROC_TIME", DataGridViewContentAlignment.MiddleRight,colWidth: 100);
             DataGridViewUtil.AddGridTextColumn(dgvEqpArr, "장비 가용 시간(시작)", "EFF_START_DATE", colWidth: 150);
             DataGridViewUtil.AddGridTextColumn(dgvEqpArr, "장비 가용 시간(종료)", "EFF_END_DATE", colWidth: 150);            
 
@@ -42,6 +42,7 @@ namespace VMS_MES_PROJECT_4
             btnEdit.UseColumnTextForButtonValue = true;
             btnEdit.Name = "Edit";
             editIndex = dgvEqpArr.Columns.Add(btnEdit);
+            
 
             LoadData();
         }
@@ -110,7 +111,8 @@ namespace VMS_MES_PROJECT_4
             {
                 string productID = dgvEqpArr["PRODUCT_ID", e.RowIndex].Value.ToString();
                 EquipmentArrVO eqpitem = eqplist.Find((equipmentarr) => equipmentarr.PRODUCT_ID == productID);
-                PopupEQP_AR_reg frm = new PopupEQP_AR_reg(eqpitem);
+                PopupEQP_AR_reg frm = new PopupEQP_AR_reg(eqpitem);                
+                frm.StartPosition = FormStartPosition.CenterScreen;
                 frm.Show();
             }
         }
