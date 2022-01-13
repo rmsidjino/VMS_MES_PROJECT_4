@@ -30,8 +30,117 @@ namespace VMS_MES_PROJECT_4
         private void frmMain_Load(object sender, EventArgs e)
         {
             MenuBinding();
+            //ucTabControl1.Visible = false;
+        }
+        private void OpenCreateForm(string prgName)
+        {
+            // 열려있는 폼들중에서 없으면 새로 만들어서 폼을 보여주고,
+            // 이미 열려있는 폼이라면, 활성폼으로 만들어서 제일 앞으로 위치
+
+            string appName = Assembly.GetEntryAssembly().GetName().Name;
+
+            Type frmType = Type.GetType($"{appName}.{prgName}");
+            //어셈블리명.클래스명
+
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == frmType)
+                {
+                    form.Activate(); //Activate 이벤트
+                    form.BringToFront();
+                    return;
+                }
+            }
+
+            Form frm = (Form)Activator.CreateInstance(frmType);
+            frm.MdiParent = this;
+            frm.Show(); //Load->Activate 이벤트
+        }
+        private void MenuItem_Click(object sender, EventArgs e)
+        {
+            Button menu = (Button)sender;
+            OpenCreateForm(menu.Tag.ToString());
+        }
+        private void frmMain_MdiChildActivate(object sender, EventArgs e)
+        {
+            if (this.ActiveMdiChild == null)
+            {
+                //ucTabControl1.Visible = false;
+            }
+            else
+            {
+                this.ActiveMdiChild.WindowState = FormWindowState.Maximized;
+
+                if (this.ActiveMdiChild.Tag == null)
+                {
+                    //탭페이지를 추가해서 탭컨트롤에 추가
+                    TabPage tp = new TabPage(this.ActiveMdiChild.Text + "   ");
+                   // tp.Parent = ucTabControl1;
+                    tp.Tag = this.ActiveMdiChild;
+                    //ucTabControl1.SelectedTab = tp;
+
+                    this.ActiveMdiChild.FormClosed += ActiveMdiChild_FormClosed;
+
+                    this.ActiveMdiChild.Tag = tp;
+                }
+
+                //if (!ucTabControl1.Visible)
+                    //ucTabControl1.Visible = true;
+            }
         }
 
+        private void ActiveMdiChild_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Form frm = (Form)sender;
+            ((TabPage)frm.Tag).Dispose();
+        }
+
+        //private void ucTabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    if (ucTabControl1.SelectedTab != null)
+        //    {
+        //        Form frm = (Form)ucTabControl1.SelectedTab.Tag;
+        //        frm.Select();
+        //    }
+        //}
+
+        private void menuStrip1_ItemAdded(object sender, ToolStripItemEventArgs e)
+        {
+            if (e.Item.Text == ""
+                   || e.Item.Text == "닫기(&C)"
+                   || e.Item.Text == "최소화(&N)"
+                   || e.Item.Text == "이전 크기로(&R)")
+                e.Item.Visible = false;
+        }
+        //private void ucTabControl1_MouseDown(object sender, MouseEventArgs e)
+        //{
+        //    for (int i = 0; i < ucTabControl1.TabPages.Count; i++)
+        //    {
+        //        var r = ucTabControl1.GetTabRect(i);
+        //        var closeImage = Properties.Resources.close_grey;
+        //        var closeRect = new Rectangle((r.Right - closeImage.Width), r.Top + (r.Height - closeImage.Height) / 2,
+        //            closeImage.Width, closeImage.Height);
+
+        //        if (closeRect.Contains(e.Location))
+        //        {
+        //            this.ActiveMdiChild.Close();
+        //            break;
+        //        }
+        //    }
+        //}
+        //private Control[] GetControls(Control con)
+        //{
+        //    var conList = new List<Control>();
+        //    foreach (Control control in con.Controls)
+        //    {
+        //        if (control is DataGridView)
+        //            conList.Add(control);
+
+        //        if (control.Controls.Count > 0)
+        //            conList.AddRange(GetControls(control));
+        //    }
+        //    return conList.ToArray();
+        //}
         private void MenuBinding()
         {
             dtMenu = db.GetMenuList();

@@ -91,6 +91,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control\ucTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\ucTabControl.designer.cs">
+      <DependentUpon>ucTabControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ucTabControls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\ucTabControls.Designer.cs">
+      <DependentUpon>ucTabControls.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAC\MenuDAC.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -109,6 +121,12 @@
     </Compile>
     <Compile Include="frmEQP.Designer.cs">
       <DependentUpon>frmEQP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEQPPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEQPPlan.designer.cs">
+      <DependentUpon>frmEQPPlan.cs</DependentUpon>
     </Compile>
     <Compile Include="frmEQP_AR.cs">
       <SubType>Form</SubType>
@@ -199,11 +217,17 @@
     </Compile>
     <Compile Include="Util\CommonUtil.cs" />
     <Compile Include="Util\DataGridViewUtil.cs" />
-    <EmbeddedResource Include="frmDemand.resx">
-      <DependentUpon>frmDemand.cs</DependentUpon>
+    <EmbeddedResource Include="Control\ucTabControl.resx">
+      <DependentUpon>ucTabControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\ucTabControls.resx">
+      <DependentUpon>ucTabControls.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEQP.resx">
       <DependentUpon>frmEQP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEQPPlan.resx">
+      <DependentUpon>frmEQPPlan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEQP_AR.resx">
       <DependentUpon>frmEQP_AR.cs</DependentUpon>
@@ -276,6 +300,15 @@
       <Project>{D3A732E6-3B11-4489-9D7B-EDB65B769BD8}</Project>
       <Name>MESDTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-red.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -124,6 +124,7 @@
     <Compile Include="Controllers\DemandController.cs" />
     <Compile Include="Controllers\EquipmentArrController.cs" />
     <Compile Include="Controllers\EquipmentController.cs" />
+    <Compile Include="Controllers\EquipmentPlanController.cs" />
     <Compile Include="Controllers\Load_StatController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\SetupController.cs" />
@@ -136,6 +137,7 @@
     <Compile Include="Models\DemandDAC.cs" />
     <Compile Include="Models\EquipmentArrDAC.cs" />
     <Compile Include="Models\EquipmentDAC.cs" />
+    <Compile Include="Models\Equipment_PlanDAC.cs" />
     <Compile Include="Models\Helper.cs" />
     <Compile Include="Models\Load_StatDAC.cs" />
     <Compile Include="Models\ProductDAC.cs" />
@@ -161,6 +163,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Data\" />
     <Folder Include="Views\EquipmentArr\" />
+    <Folder Include="Views\EquipmentPlan\" />
     <Folder Include="Views\Equipment\" />
   </ItemGroup>
   <ItemGroup>

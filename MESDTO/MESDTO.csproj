@@ -45,6 +45,7 @@
     <Compile Include="DemandVO.cs" />
     <Compile Include="EquipmentArrVO.cs" />
     <Compile Include="EquipmentVO.cs" />
+    <Compile Include="Equipment_PlanVO.cs" />
     <Compile Include="Load_StatVO.cs" />
     <Compile Include="Message.cs" />
     <Compile Include="ProductVO.cs" />

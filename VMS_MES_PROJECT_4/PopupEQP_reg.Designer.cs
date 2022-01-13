@@ -402,6 +402,7 @@ namespace VMS_MES_PROJECT_4
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "PopupEQP_reg";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "설비 관리 등록";
             this.Load += new System.EventHandler(this.frmEQP_reg_Load);
             this.ResumeLayout(false);

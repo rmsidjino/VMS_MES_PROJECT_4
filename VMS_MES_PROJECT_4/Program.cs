@@ -16,7 +16,7 @@ namespace VMS_MES_PROJECT_4
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmStdStepInfo());
+            Application.Run(new frmMain());
         }
     }
 }

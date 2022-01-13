@@ -67,6 +67,8 @@ namespace VMS_MES_PROJECT_4
 
         private async void button1_Click(object sender, EventArgs e)// 수정
         {
+            //유효성 체크
+
             EquipmentVO equipment = new EquipmentVO
             {
                 SITE_ID = cboSiteID.Text,
