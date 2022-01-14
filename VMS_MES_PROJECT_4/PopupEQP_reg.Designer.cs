@@ -266,6 +266,7 @@ namespace VMS_MES_PROJECT_4
             // txtModifier
             // 
             this.txtModifier.BackColor = System.Drawing.SystemColors.Window;
+            this.txtModifier.Enabled = false;
             this.txtModifier.Location = new System.Drawing.Point(609, 273);
             this.txtModifier.Name = "txtModifier";
             this.txtModifier.Size = new System.Drawing.Size(163, 21);
@@ -285,6 +286,7 @@ namespace VMS_MES_PROJECT_4
             // txtModifier_date
             // 
             this.txtModifier_date.BackColor = System.Drawing.SystemColors.Window;
+            this.txtModifier_date.Enabled = false;
             this.txtModifier_date.Location = new System.Drawing.Point(609, 306);
             this.txtModifier_date.Name = "txtModifier_date";
             this.txtModifier_date.Size = new System.Drawing.Size(163, 21);

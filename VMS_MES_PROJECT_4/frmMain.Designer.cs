@@ -38,6 +38,7 @@ namespace VMS_MES_PROJECT_4
             this.button5 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.ucTabControl1 = new VMS_MES_PROJECT_4.ucTabControl();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -103,6 +104,7 @@ namespace VMS_MES_PROJECT_4
             this.button1.TabIndex = 4;
             this.button1.Tag = "100";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // flowLayoutPanel1
             // 
@@ -168,12 +170,26 @@ namespace VMS_MES_PROJECT_4
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.Visible = false;
             // 
+            // ucTabControl1
+            // 
+            this.ucTabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.ucTabControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ucTabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            this.ucTabControl1.Location = new System.Drawing.Point(218, 0);
+            this.ucTabControl1.Name = "ucTabControl1";
+            this.ucTabControl1.SelectedIndex = 0;
+            this.ucTabControl1.Size = new System.Drawing.Size(993, 26);
+            this.ucTabControl1.TabIndex = 12;
+            this.ucTabControl1.SelectedIndexChanged += new System.EventHandler(this.ucTabControl1_SelectedIndexChanged);
+            this.ucTabControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ucTabControl1_MouseDown);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.ClientSize = new System.Drawing.Size(1211, 695);
+            this.Controls.Add(this.ucTabControl1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
@@ -182,6 +198,7 @@ namespace VMS_MES_PROJECT_4
             this.Name = "frmMain";
             this.Text = "메인 메뉴";
             this.Load += new System.EventHandler(this.frmMain_Load);
+            this.MdiChildActivate += new System.EventHandler(this.frmMain_MdiChildActivate);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -198,6 +215,7 @@ namespace VMS_MES_PROJECT_4
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private ucTabControl ucTabControl1;
     }
 }
 

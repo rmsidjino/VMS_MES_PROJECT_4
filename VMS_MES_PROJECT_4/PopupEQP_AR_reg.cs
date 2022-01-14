@@ -33,12 +33,34 @@ namespace VMS_MES_PROJECT_4
         private async void btnOK_Click(object sender, EventArgs e)
         {
             //유효성 체크
-            //if (!= null && != .Text)
-            //{
-            //    MessageBox.Show("시간이 다릅니다");
-            //    return;
-            //}
+            StringBuilder sb = new StringBuilder();
 
+           
+            if (cboProductID.SelectedIndex < 1)
+            {
+                sb.AppendLine("- 제품ID를 선택하세요.");
+            }
+            if (cboProcessID.SelectedIndex < 1)
+            {
+                sb.AppendLine("- 프로세서ID를 선택하세요.");
+            }
+            if (cboStepID.SelectedIndex < 1)
+            {
+                sb.AppendLine("- 공정ID을 선택하세요.");
+            }
+            if (txtEQPID.Text.Length < 1)
+            {
+                sb.AppendLine("- 장비ID를 입력하세요.");
+            }
+            if (txtProcTime.Text != txtTactTime.Text)
+            {
+                sb.AppendLine("- 시간이 같지 않습니다. 다시 입력하세요.");
+            }
+            if (sb.ToString().Length > 1)
+            {
+                MessageBox.Show(sb.ToString());
+                return;
+            }
             EquipmentArrVO equipmentarr = new EquipmentArrVO
             {
                 PRODUCT_ID = cboProductID.Text,
