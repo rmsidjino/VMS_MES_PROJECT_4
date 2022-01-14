@@ -29,5 +29,83 @@ namespace MES_WEB_API.Controllers
             CommonDAC db = new CommonDAC();
             return db.GetCodeList();
         }
+
+        //https://localhost:44332/api/Common/Commons
+        [HttpGet]
+        [Route("Commons")]
+        public List<CommonVO> GetAllCommon()
+        {
+            CommonDAC db = new CommonDAC();
+            return db.GetCommonList();
+        }
+
+        //https://localhost:44332/api/Common/InsertCommon
+        [HttpPost]
+        [Route("InsertCommon")]
+        public IHttpActionResult InsertCommon(CommonVO com)
+        {
+            Message msg = new Message();
+
+            CommonDAC db = new CommonDAC();
+            bool result = db.InsertCommon(com);
+
+            if (result)
+            {
+                msg.IsSuccess = true;
+                msg.ResultMessage = "성공적으로 등록되었습니다.";
+            }
+            else
+            {
+                msg.IsSuccess = false;
+                msg.ResultMessage = "등록 중 오류가 발생했습니다.";
+            }
+            return Ok(msg);
+        }
+
+        //https://localhost:44332/api/Common/DelCommon/{id}
+        [HttpGet]
+        [Route("DelCommon/{id}")]
+        public IHttpActionResult DeleteCommon(string id)
+        {
+            Message msg = new Message();
+
+            CommonDAC db = new CommonDAC();
+            bool result = db.DeleteCommon(id);
+
+            if (result)
+            {
+                msg.IsSuccess = true;
+                msg.ResultMessage = "성공적으로 삭제되었습니다.";
+            }
+            else
+            {
+                msg.IsSuccess = false;
+                msg.ResultMessage = "삭제 중 오류가 발생했습니다.";
+            }
+            return Ok(msg);
+        }
+
+        //https://localhost:44332/api/Common/UpdateCommon
+        [HttpPost]
+        [Route("UpdateCommon")]
+        public IHttpActionResult UpdateCommon(CommonVO com)
+        {
+            Message msg = new Message();
+
+            CommonDAC db = new CommonDAC();
+            bool result = db.UpdateCommon(com);
+
+            if (result)
+            {
+                msg.IsSuccess = true;
+                msg.ResultMessage = "성공적으로 수정되었습니다.";
+            }
+            else
+            {
+                msg.IsSuccess = false;
+                msg.ResultMessage = "수정 중 오류가 발생했습니다.";
+            }
+            return Ok(msg);
+        }
     }
 }

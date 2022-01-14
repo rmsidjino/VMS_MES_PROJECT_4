@@ -123,7 +123,6 @@ namespace VMS_MES_PROJECT_4
         public async Task<Message> PostAsyncNone<T>(string path, T t)
         {
             path = BaseServiceUrl + path;
-            //https://localhost:44337/api/User/SaveUser
 
             Message result = null;
             try

@@ -155,6 +155,12 @@
     <Compile Include="frmLoad_Stat.designer.cs">
       <DependentUpon>frmLoad_Stat.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCommon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCommon.designer.cs">
+      <DependentUpon>frmCommon.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmStepRoute.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +196,12 @@
     </Compile>
     <Compile Include="PopupProduct.designer.cs">
       <DependentUpon>PopupProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupCommon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupCommon.designer.cs">
+      <DependentUpon>PopupCommon.cs</DependentUpon>
     </Compile>
     <Compile Include="PopupSetupTime.cs">
       <SubType>Form</SubType>
@@ -244,6 +256,9 @@
     <EmbeddedResource Include="frmProduct.resx">
       <DependentUpon>frmProduct.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCommon.resx">
+      <DependentUpon>frmCommon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmStepRoute.resx">
       <DependentUpon>frmStepRoute.cs</DependentUpon>
     </EmbeddedResource>
@@ -261,6 +276,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PopupProduct.resx">
       <DependentUpon>PopupProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupCommon.resx">
+      <DependentUpon>PopupCommon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PopupSetupTime.resx">
       <DependentUpon>PopupSetupTime.cs</DependentUpon>
