@@ -117,7 +117,7 @@ namespace VMS_MES_PROJECT_4
             this.cboEQP.Location = new System.Drawing.Point(330, 11);
             this.cboEQP.Name = "cboEQP";
             this.cboEQP.Size = new System.Drawing.Size(100, 20);
-            this.cboEQP.TabIndex = 6;
+            this.cboEQP.TabIndex = 1;
             // 
             // cboLine
             // 
@@ -125,7 +125,7 @@ namespace VMS_MES_PROJECT_4
             this.cboLine.Location = new System.Drawing.Point(84, 11);
             this.cboLine.Name = "cboLine";
             this.cboLine.Size = new System.Drawing.Size(100, 20);
-            this.cboLine.TabIndex = 5;
+            this.cboLine.TabIndex = 0;
             // 
             // frmLoad_Stat
             // 

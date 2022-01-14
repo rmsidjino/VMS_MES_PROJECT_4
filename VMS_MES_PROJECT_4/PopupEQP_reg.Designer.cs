@@ -189,7 +189,7 @@ namespace VMS_MES_PROJECT_4
             this.txtEqpStateCode.Location = new System.Drawing.Point(609, 161);
             this.txtEqpStateCode.Name = "txtEqpStateCode";
             this.txtEqpStateCode.Size = new System.Drawing.Size(163, 21);
-            this.txtEqpStateCode.TabIndex = 33;
+            this.txtEqpStateCode.TabIndex = 10;
             // 
             // label12
             // 
@@ -217,7 +217,7 @@ namespace VMS_MES_PROJECT_4
             this.btnCancel.Location = new System.Drawing.Point(436, 344);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 44;
+            this.btnCancel.TabIndex = 16;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -227,7 +227,7 @@ namespace VMS_MES_PROJECT_4
             this.btnOK.Location = new System.Drawing.Point(275, 344);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
-            this.btnOK.TabIndex = 43;
+            this.btnOK.TabIndex = 15;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.button1_Click);
@@ -238,7 +238,7 @@ namespace VMS_MES_PROJECT_4
             this.cboSiteID.Location = new System.Drawing.Point(186, 44);
             this.cboSiteID.Name = "cboSiteID";
             this.cboSiteID.Size = new System.Drawing.Size(164, 20);
-            this.cboSiteID.TabIndex = 46;
+            this.cboSiteID.TabIndex = 0;
             // 
             // cboLineID
             // 
@@ -246,7 +246,7 @@ namespace VMS_MES_PROJECT_4
             this.cboLineID.Location = new System.Drawing.Point(186, 87);
             this.cboLineID.Name = "cboLineID";
             this.cboLineID.Size = new System.Drawing.Size(164, 20);
-            this.cboLineID.TabIndex = 47;
+            this.cboLineID.TabIndex = 1;
             // 
             // cboAutomation
             // 
@@ -254,14 +254,14 @@ namespace VMS_MES_PROJECT_4
             this.cboAutomation.Location = new System.Drawing.Point(609, 239);
             this.cboAutomation.Name = "cboAutomation";
             this.cboAutomation.Size = new System.Drawing.Size(163, 20);
-            this.cboAutomation.TabIndex = 52;
+            this.cboAutomation.TabIndex = 12;
             // 
             // txtPresetID
             // 
             this.txtPresetID.Location = new System.Drawing.Point(609, 44);
             this.txtPresetID.Name = "txtPresetID";
             this.txtPresetID.Size = new System.Drawing.Size(163, 21);
-            this.txtPresetID.TabIndex = 58;
+            this.txtPresetID.TabIndex = 7;
             // 
             // txtModifier
             // 
@@ -270,7 +270,7 @@ namespace VMS_MES_PROJECT_4
             this.txtModifier.Location = new System.Drawing.Point(609, 273);
             this.txtModifier.Name = "txtModifier";
             this.txtModifier.Size = new System.Drawing.Size(163, 21);
-            this.txtModifier.TabIndex = 62;
+            this.txtModifier.TabIndex = 13;
             // 
             // label14
             // 
@@ -290,7 +290,7 @@ namespace VMS_MES_PROJECT_4
             this.txtModifier_date.Location = new System.Drawing.Point(609, 306);
             this.txtModifier_date.Name = "txtModifier_date";
             this.txtModifier_date.Size = new System.Drawing.Size(163, 21);
-            this.txtModifier_date.TabIndex = 64;
+            this.txtModifier_date.TabIndex = 14;
             // 
             // label15
             // 
@@ -309,7 +309,7 @@ namespace VMS_MES_PROJECT_4
             this.cboEqpState.Location = new System.Drawing.Point(609, 122);
             this.cboEqpState.Name = "cboEqpState";
             this.cboEqpState.Size = new System.Drawing.Size(163, 20);
-            this.cboEqpState.TabIndex = 65;
+            this.cboEqpState.TabIndex = 9;
             // 
             // cboEqpGroup
             // 
@@ -317,7 +317,7 @@ namespace VMS_MES_PROJECT_4
             this.cboEqpGroup.Location = new System.Drawing.Point(186, 264);
             this.cboEqpGroup.Name = "cboEqpGroup";
             this.cboEqpGroup.Size = new System.Drawing.Size(164, 20);
-            this.cboEqpGroup.TabIndex = 66;
+            this.cboEqpGroup.TabIndex = 5;
             // 
             // DtpStateChangeTime
             // 
@@ -325,7 +325,7 @@ namespace VMS_MES_PROJECT_4
             this.DtpStateChangeTime.Location = new System.Drawing.Point(609, 197);
             this.DtpStateChangeTime.Name = "DtpStateChangeTime";
             this.DtpStateChangeTime.Size = new System.Drawing.Size(163, 21);
-            this.DtpStateChangeTime.TabIndex = 69;
+            this.DtpStateChangeTime.TabIndex = 11;
             // 
             // cboSimType
             // 
@@ -333,7 +333,7 @@ namespace VMS_MES_PROJECT_4
             this.cboSimType.Location = new System.Drawing.Point(186, 306);
             this.cboSimType.Name = "cboSimType";
             this.cboSimType.Size = new System.Drawing.Size(164, 20);
-            this.cboSimType.TabIndex = 70;
+            this.cboSimType.TabIndex = 6;
             // 
             // cboEqpType
             // 
@@ -341,7 +341,7 @@ namespace VMS_MES_PROJECT_4
             this.cboEqpType.Location = new System.Drawing.Point(186, 218);
             this.cboEqpType.Name = "cboEqpType";
             this.cboEqpType.Size = new System.Drawing.Size(164, 20);
-            this.cboEqpType.TabIndex = 71;
+            this.cboEqpType.TabIndex = 4;
             // 
             // cboDispatcherType
             // 
@@ -349,21 +349,21 @@ namespace VMS_MES_PROJECT_4
             this.cboDispatcherType.Location = new System.Drawing.Point(609, 83);
             this.cboDispatcherType.Name = "cboDispatcherType";
             this.cboDispatcherType.Size = new System.Drawing.Size(163, 20);
-            this.cboDispatcherType.TabIndex = 72;
+            this.cboDispatcherType.TabIndex = 8;
             // 
             // txtEQPID
             // 
             this.txtEQPID.Location = new System.Drawing.Point(186, 132);
             this.txtEQPID.Name = "txtEQPID";
             this.txtEQPID.Size = new System.Drawing.Size(163, 21);
-            this.txtEQPID.TabIndex = 77;
+            this.txtEQPID.TabIndex = 2;
             // 
             // txtEQPModel
             // 
             this.txtEQPModel.Location = new System.Drawing.Point(186, 176);
             this.txtEQPModel.Name = "txtEQPModel";
             this.txtEQPModel.Size = new System.Drawing.Size(163, 21);
-            this.txtEQPModel.TabIndex = 78;
+            this.txtEQPModel.TabIndex = 3;
             // 
             // PopupEQP_reg
             // 

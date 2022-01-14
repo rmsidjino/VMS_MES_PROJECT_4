@@ -103,7 +103,7 @@ namespace VMS_MES_PROJECT_4
             this.txtStepSeq.Location = new System.Drawing.Point(166, 113);
             this.txtStepSeq.Name = "txtStepSeq";
             this.txtStepSeq.Size = new System.Drawing.Size(163, 21);
-            this.txtStepSeq.TabIndex = 4;
+            this.txtStepSeq.TabIndex = 1;
             // 
             // label4
             // 
@@ -132,7 +132,7 @@ namespace VMS_MES_PROJECT_4
             this.btnCancel.Location = new System.Drawing.Point(202, 426);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 16;
+            this.btnCancel.TabIndex = 10;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -142,7 +142,7 @@ namespace VMS_MES_PROJECT_4
             this.btnOk.Location = new System.Drawing.Point(105, 426);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(75, 23);
-            this.btnOk.TabIndex = 15;
+            this.btnOk.TabIndex = 9;
             this.btnOk.Text = "OK";
             this.btnOk.UseVisualStyleBackColor = true;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
@@ -164,7 +164,7 @@ namespace VMS_MES_PROJECT_4
             this.cboStepID.Location = new System.Drawing.Point(166, 77);
             this.cboStepID.Name = "cboStepID";
             this.cboStepID.Size = new System.Drawing.Size(163, 20);
-            this.cboStepID.TabIndex = 21;
+            this.cboStepID.TabIndex = 0;
             // 
             // cboStdStepID
             // 
@@ -172,7 +172,7 @@ namespace VMS_MES_PROJECT_4
             this.cboStdStepID.Location = new System.Drawing.Point(166, 149);
             this.cboStdStepID.Name = "cboStdStepID";
             this.cboStdStepID.Size = new System.Drawing.Size(163, 20);
-            this.cboStdStepID.TabIndex = 22;
+            this.cboStdStepID.TabIndex = 2;
             // 
             // cboStepType
             // 
@@ -180,7 +180,7 @@ namespace VMS_MES_PROJECT_4
             this.cboStepType.Location = new System.Drawing.Point(166, 185);
             this.cboStepType.Name = "cboStepType";
             this.cboStepType.Size = new System.Drawing.Size(163, 20);
-            this.cboStepType.TabIndex = 23;
+            this.cboStepType.TabIndex = 3;
             // 
             // cboProcessType
             // 
@@ -188,7 +188,7 @@ namespace VMS_MES_PROJECT_4
             this.cboProcessType.Location = new System.Drawing.Point(166, 221);
             this.cboProcessType.Name = "cboProcessType";
             this.cboProcessType.Size = new System.Drawing.Size(163, 20);
-            this.cboProcessType.TabIndex = 24;
+            this.cboProcessType.TabIndex = 4;
             // 
             // label8
             // 
@@ -206,14 +206,14 @@ namespace VMS_MES_PROJECT_4
             this.txtInStock.Location = new System.Drawing.Point(166, 256);
             this.txtInStock.Name = "txtInStock";
             this.txtInStock.Size = new System.Drawing.Size(163, 21);
-            this.txtInStock.TabIndex = 28;
+            this.txtInStock.TabIndex = 5;
             // 
             // txtOutStock
             // 
             this.txtOutStock.Location = new System.Drawing.Point(166, 291);
             this.txtOutStock.Name = "txtOutStock";
             this.txtOutStock.Size = new System.Drawing.Size(163, 21);
-            this.txtOutStock.TabIndex = 29;
+            this.txtOutStock.TabIndex = 6;
             // 
             // txtProcessID
             // 
@@ -228,7 +228,7 @@ namespace VMS_MES_PROJECT_4
             this.txtModDate.Location = new System.Drawing.Point(166, 365);
             this.txtModDate.Name = "txtModDate";
             this.txtModDate.Size = new System.Drawing.Size(163, 21);
-            this.txtModDate.TabIndex = 34;
+            this.txtModDate.TabIndex = 8;
             // 
             // label9
             // 
@@ -247,7 +247,7 @@ namespace VMS_MES_PROJECT_4
             this.txtMod.Location = new System.Drawing.Point(166, 329);
             this.txtMod.Name = "txtMod";
             this.txtMod.Size = new System.Drawing.Size(163, 21);
-            this.txtMod.TabIndex = 32;
+            this.txtMod.TabIndex = 7;
             // 
             // label10
             // 

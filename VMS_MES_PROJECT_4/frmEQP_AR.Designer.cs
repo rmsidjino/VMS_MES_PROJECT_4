@@ -74,7 +74,7 @@ namespace VMS_MES_PROJECT_4
             this.btnDelete.Location = new System.Drawing.Point(1307, 7);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(40, 20);
-            this.btnDelete.TabIndex = 9;
+            this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "삭제";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -87,7 +87,7 @@ namespace VMS_MES_PROJECT_4
             this.btnCreate.Location = new System.Drawing.Point(1261, 7);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(40, 20);
-            this.btnCreate.TabIndex = 8;
+            this.btnCreate.TabIndex = 4;
             this.btnCreate.Text = "등록";
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
@@ -120,7 +120,7 @@ namespace VMS_MES_PROJECT_4
             this.cboProcessID.Location = new System.Drawing.Point(303, 11);
             this.cboProcessID.Name = "cboProcessID";
             this.cboProcessID.Size = new System.Drawing.Size(129, 20);
-            this.cboProcessID.TabIndex = 6;
+            this.cboProcessID.TabIndex = 1;
             // 
             // cboProductID
             // 
@@ -128,14 +128,14 @@ namespace VMS_MES_PROJECT_4
             this.cboProductID.Location = new System.Drawing.Point(72, 12);
             this.cboProductID.Name = "cboProductID";
             this.cboProductID.Size = new System.Drawing.Size(121, 20);
-            this.cboProductID.TabIndex = 5;
+            this.cboProductID.TabIndex = 0;
             // 
             // btnSearch
             // 
             this.btnSearch.Location = new System.Drawing.Point(1272, 9);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 4;
+            this.btnSearch.TabIndex = 3;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);

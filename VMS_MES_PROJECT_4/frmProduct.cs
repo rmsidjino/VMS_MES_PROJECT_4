@@ -58,6 +58,7 @@ namespace VMS_MES_PROJECT_4
             CommonUtil.ComboBinding(cboProcess, com, "PROCESS_ID", blankText: "선택");
         }
 
+
         private void btnCreate_Click(object sender, EventArgs e)
         {
             PopupProduct frm = new PopupProduct();
@@ -75,7 +76,7 @@ namespace VMS_MES_PROJECT_4
 
             string productID = dgvProduct.SelectedRows[0].Cells["PRODUCT_ID"].Value.ToString();
 
-            if (MessageBox.Show("정말 삭제하실겁니까?", "제품 삭제", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("제품 데이터에 영향이 있습니다. 정말 삭제하실겁니까?", "제품 삭제", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 MESDTO.Message msg = await srv.GetAsync($"api/Product/DeleteProduct/{productID}");
                 if (msg.IsSuccess)

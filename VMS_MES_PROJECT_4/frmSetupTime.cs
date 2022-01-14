@@ -77,7 +77,7 @@ namespace VMS_MES_PROJECT_4
 
             string stepID = dgvSetup.SelectedRows[0].Cells["STEP_ID"].Value.ToString();
 
-            if (MessageBox.Show("정말 삭제하실겁니까?", "셋업 삭제", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("셋업 타입 데이터에 영향이 있습니다. 정말 삭제하실겁니까?", "셋업 삭제", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 MESDTO.Message msg = await srv.GetAsync($"api/Setup/DelSetup/{stepID}");
                 if (msg.IsSuccess)

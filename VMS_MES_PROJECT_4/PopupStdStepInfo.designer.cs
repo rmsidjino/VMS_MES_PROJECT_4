@@ -31,10 +31,10 @@ namespace VMS_MES_PROJECT_4
         {
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtStep_Setup = new System.Windows.Forms.TextBox();
-            this.txtStep_Yield = new System.Windows.Forms.TextBox();
+            this.txtStepSetup = new System.Windows.Forms.TextBox();
+            this.txtStepYield = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtStep_Tat = new System.Windows.Forms.TextBox();
+            this.txtStepTat = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -43,8 +43,8 @@ namespace VMS_MES_PROJECT_4
             this.txtModDate = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtMod = new System.Windows.Forms.TextBox();
-            this.cboStd_Step_Id = new System.Windows.Forms.ComboBox();
-            this.cboStd_Step_Name = new System.Windows.Forms.ComboBox();
+            this.cboStdStepID = new System.Windows.Forms.ComboBox();
+            this.cboStdStepName = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label5
@@ -69,19 +69,21 @@ namespace VMS_MES_PROJECT_4
             this.label4.TabIndex = 33;
             this.label4.Text = "* 공정수율";
             // 
-            // txtStep_Setup
+            // txtStepSetup
             // 
-            this.txtStep_Setup.Location = new System.Drawing.Point(177, 183);
-            this.txtStep_Setup.Name = "txtStep_Setup";
-            this.txtStep_Setup.Size = new System.Drawing.Size(163, 21);
-            this.txtStep_Setup.TabIndex = 31;
+            this.txtStepSetup.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtStepSetup.Location = new System.Drawing.Point(177, 183);
+            this.txtStepSetup.Name = "txtStepSetup";
+            this.txtStepSetup.Size = new System.Drawing.Size(163, 21);
+            this.txtStepSetup.TabIndex = 4;
             // 
-            // txtStep_Yield
+            // txtStepYield
             // 
-            this.txtStep_Yield.Location = new System.Drawing.Point(177, 145);
-            this.txtStep_Yield.Name = "txtStep_Yield";
-            this.txtStep_Yield.Size = new System.Drawing.Size(163, 21);
-            this.txtStep_Yield.TabIndex = 32;
+            this.txtStepYield.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtStepYield.Location = new System.Drawing.Point(177, 145);
+            this.txtStepYield.Name = "txtStepYield";
+            this.txtStepYield.Size = new System.Drawing.Size(163, 21);
+            this.txtStepYield.TabIndex = 3;
             // 
             // label3
             // 
@@ -94,12 +96,13 @@ namespace VMS_MES_PROJECT_4
             this.label3.TabIndex = 30;
             this.label3.Text = "* 공정시간";
             // 
-            // txtStep_Tat
+            // txtStepTat
             // 
-            this.txtStep_Tat.Location = new System.Drawing.Point(177, 108);
-            this.txtStep_Tat.Name = "txtStep_Tat";
-            this.txtStep_Tat.Size = new System.Drawing.Size(163, 21);
-            this.txtStep_Tat.TabIndex = 29;
+            this.txtStepTat.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtStepTat.Location = new System.Drawing.Point(177, 108);
+            this.txtStepTat.Name = "txtStepTat";
+            this.txtStepTat.Size = new System.Drawing.Size(163, 21);
+            this.txtStepTat.TabIndex = 2;
             // 
             // label2
             // 
@@ -129,7 +132,7 @@ namespace VMS_MES_PROJECT_4
             this.btnCancel.Location = new System.Drawing.Point(219, 313);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(86, 23);
-            this.btnCancel.TabIndex = 35;
+            this.btnCancel.TabIndex = 8;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -140,7 +143,7 @@ namespace VMS_MES_PROJECT_4
             this.btnOK.Location = new System.Drawing.Point(86, 313);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(86, 23);
-            this.btnOK.TabIndex = 36;
+            this.btnOK.TabIndex = 7;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
@@ -158,10 +161,12 @@ namespace VMS_MES_PROJECT_4
             // 
             // txtModDate
             // 
+            this.txtModDate.Enabled = false;
+            this.txtModDate.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtModDate.Location = new System.Drawing.Point(177, 258);
             this.txtModDate.Name = "txtModDate";
             this.txtModDate.Size = new System.Drawing.Size(163, 21);
-            this.txtModDate.TabIndex = 39;
+            this.txtModDate.TabIndex = 6;
             // 
             // label7
             // 
@@ -176,26 +181,30 @@ namespace VMS_MES_PROJECT_4
             // 
             // txtMod
             // 
+            this.txtMod.Enabled = false;
+            this.txtMod.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtMod.Location = new System.Drawing.Point(177, 220);
             this.txtMod.Name = "txtMod";
             this.txtMod.Size = new System.Drawing.Size(163, 21);
-            this.txtMod.TabIndex = 37;
+            this.txtMod.TabIndex = 5;
             // 
-            // cboStd_Step_Id
+            // cboStdStepID
             // 
-            this.cboStd_Step_Id.FormattingEnabled = true;
-            this.cboStd_Step_Id.Location = new System.Drawing.Point(177, 36);
-            this.cboStd_Step_Id.Name = "cboStd_Step_Id";
-            this.cboStd_Step_Id.Size = new System.Drawing.Size(163, 20);
-            this.cboStd_Step_Id.TabIndex = 41;
+            this.cboStdStepID.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cboStdStepID.FormattingEnabled = true;
+            this.cboStdStepID.Location = new System.Drawing.Point(177, 36);
+            this.cboStdStepID.Name = "cboStdStepID";
+            this.cboStdStepID.Size = new System.Drawing.Size(163, 20);
+            this.cboStdStepID.TabIndex = 0;
             // 
-            // cboStd_Step_Name
+            // cboStdStepName
             // 
-            this.cboStd_Step_Name.FormattingEnabled = true;
-            this.cboStd_Step_Name.Location = new System.Drawing.Point(177, 73);
-            this.cboStd_Step_Name.Name = "cboStd_Step_Name";
-            this.cboStd_Step_Name.Size = new System.Drawing.Size(163, 20);
-            this.cboStd_Step_Name.TabIndex = 41;
+            this.cboStdStepName.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cboStdStepName.FormattingEnabled = true;
+            this.cboStdStepName.Location = new System.Drawing.Point(177, 73);
+            this.cboStdStepName.Name = "cboStdStepName";
+            this.cboStdStepName.Size = new System.Drawing.Size(163, 20);
+            this.cboStdStepName.TabIndex = 1;
             // 
             // PopupStdStepInfo
             // 
@@ -203,8 +212,8 @@ namespace VMS_MES_PROJECT_4
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(384, 366);
-            this.Controls.Add(this.cboStd_Step_Name);
-            this.Controls.Add(this.cboStd_Step_Id);
+            this.Controls.Add(this.cboStdStepName);
+            this.Controls.Add(this.cboStdStepID);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtModDate);
             this.Controls.Add(this.label7);
@@ -213,10 +222,10 @@ namespace VMS_MES_PROJECT_4
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtStep_Setup);
-            this.Controls.Add(this.txtStep_Yield);
+            this.Controls.Add(this.txtStepSetup);
+            this.Controls.Add(this.txtStepYield);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtStep_Tat);
+            this.Controls.Add(this.txtStepTat);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -232,10 +241,10 @@ namespace VMS_MES_PROJECT_4
         #endregion
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtStep_Setup;
-        private System.Windows.Forms.TextBox txtStep_Yield;
+        private System.Windows.Forms.TextBox txtStepSetup;
+        private System.Windows.Forms.TextBox txtStepYield;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtStep_Tat;
+        private System.Windows.Forms.TextBox txtStepTat;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCancel;
@@ -244,7 +253,7 @@ namespace VMS_MES_PROJECT_4
         private System.Windows.Forms.TextBox txtModDate;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtMod;
-        private System.Windows.Forms.ComboBox cboStd_Step_Id;
-        private System.Windows.Forms.ComboBox cboStd_Step_Name;
+        private System.Windows.Forms.ComboBox cboStdStepID;
+        private System.Windows.Forms.ComboBox cboStdStepName;
     }
 }

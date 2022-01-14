@@ -108,8 +108,8 @@ namespace VMS_MES_PROJECT_4
                 txtEQPID.SelectedText = eqpItem.EQP_ID;
                 txtTactTime.SelectedText = eqpItem.TACT_TIME.ToString();
                 txtProcTime.SelectedText = eqpItem.PROC_TIME.ToString();
-                dtpStartDate.Value = eqpItem.EFF_START_DATE;
-                dtpEndTime.Value = eqpItem.EFF_END_DATE;
+                dtpStartDate.Text = eqpItem.EFF_START_DATE.ToString();
+                dtpEndTime.Text = eqpItem.EFF_END_DATE.ToString();
                 
             }
 

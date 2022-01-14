@@ -33,6 +33,44 @@ namespace VMS_MES_PROJECT_4
 
         private async void btnOk_Click(object sender, EventArgs e)
         {
+            StringBuilder sb = new StringBuilder();
+
+            if (txtDemand_Ver.Text.Length < 1)
+            {
+                sb.AppendLine("- 수주버전을 입력하세요.");
+            }
+
+            if (txtDemandID.Text.Length < 1)
+            {
+                sb.AppendLine("- 수주ID를 입력하세요.");
+            }
+
+            if (cboProductID.SelectedIndex < 1)
+            {
+                sb.AppendLine("- 제품ID를 선택하세요.");
+            }
+
+            if (cboCustomerID.SelectedIndex < 1)
+            {
+                sb.AppendLine("- 거래처ID를 선택하세요.");
+            }
+
+            if (dtpDueDate.Text.Length < 1)
+            {
+                sb.AppendLine("- 납기일을 선택하세요.");
+            }
+
+            if (txtDemand_Qty.Text.Length < 1)
+            {
+                sb.AppendLine("- 수주수량 입력하세요.");
+            }
+
+            if (sb.ToString().Length > 1)
+            {
+                MessageBox.Show(sb.ToString());
+                return;
+            }
+
             DemandVO demand = new DemandVO
             {
                 DEMAND_VER = txtDemand_Ver.Text,
@@ -44,7 +82,7 @@ namespace VMS_MES_PROJECT_4
                 MODIFIER = "Kim",
                 MODIFIER_DATE = DateTime.Now
             };
-            if (cboProductID.Enabled)
+            if (txtDemandID.Enabled)
             {
                 msg = await srv.PostAsyncNone("api/Demand/InsertDemand", demand);
             }
@@ -56,6 +94,7 @@ namespace VMS_MES_PROJECT_4
             {
                 //btnSearch.PerformClick();
             }
+
             MessageBox.Show(msg.ResultMessage);
             this.Close();
         }

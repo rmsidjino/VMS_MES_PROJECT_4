@@ -60,7 +60,7 @@ namespace VMS_MES_PROJECT_4
             this.cboProductID.Location = new System.Drawing.Point(75, 12);
             this.cboProductID.Name = "cboProductID";
             this.cboProductID.Size = new System.Drawing.Size(101, 20);
-            this.cboProductID.TabIndex = 12;
+            this.cboProductID.TabIndex = 0;
             // 
             // label5
             // 
@@ -77,7 +77,7 @@ namespace VMS_MES_PROJECT_4
             this.btnSearch.Location = new System.Drawing.Point(1272, 10);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 4;
+            this.btnSearch.TabIndex = 1;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.button1_Click);

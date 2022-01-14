@@ -70,13 +70,13 @@ namespace VMS_MES_PROJECT_4
         {
             if (dgvStepRoute.SelectedRows.Count < 1)
             {
-                MessageBox.Show("삭제할 제품을 선택하여 주십시오.");
+                MessageBox.Show("삭제할 프로세스ID를 선택하여 주십시오.");
                 return;
             }
 
             string processID = dgvStepRoute.SelectedRows[0].Cells["PROCESS_ID"].Value.ToString();
 
-            if (MessageBox.Show("정말 삭제하실겁니까?", "제품 삭제", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("작업 공정 데이터에 영향이 있습니다. 정말 삭제하실겁니까?", "프로세스ID 삭제", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 MESDTO.Message msg = await srv.GetAsync($"api/StepRoute/DeleteStepRoute/{processID}");
                 if (msg.IsSuccess)
@@ -111,8 +111,8 @@ namespace VMS_MES_PROJECT_4
             {
                 string processID = dgvStepRoute["PROCESS_ID", e.RowIndex].Value.ToString();
                 string stepID = dgvStepRoute["STEP_ID", e.RowIndex].Value.ToString();
-                string stdstepID = dgvStepRoute["STD_STEP_ID", e.RowIndex].Value.ToString();
-                StepRouteVO Sitem = Slist.Find((step_route) => step_route.PROCESS_ID == processID && step_route.STEP_ID == stepID && step_route.STD_STEP_ID == stdstepID);
+                
+                StepRouteVO Sitem = Slist.Find((step_route) => step_route.PROCESS_ID == processID && step_route.STEP_ID == stepID);
                 
                 PopupStepRoute frm = new PopupStepRoute(Sitem);
                 frm.StartPosition = FormStartPosition.CenterScreen;

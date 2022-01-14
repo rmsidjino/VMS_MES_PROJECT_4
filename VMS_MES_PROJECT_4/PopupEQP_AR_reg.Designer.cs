@@ -102,7 +102,7 @@ namespace VMS_MES_PROJECT_4
             this.dtpStartDate.Location = new System.Drawing.Point(220, 216);
             this.dtpStartDate.Name = "dtpStartDate";
             this.dtpStartDate.Size = new System.Drawing.Size(163, 21);
-            this.dtpStartDate.TabIndex = 26;
+            this.dtpStartDate.TabIndex = 7;
             // 
             // label7
             // 
@@ -120,7 +120,7 @@ namespace VMS_MES_PROJECT_4
             this.dtpEndTime.Location = new System.Drawing.Point(220, 247);
             this.dtpEndTime.Name = "dtpEndTime";
             this.dtpEndTime.Size = new System.Drawing.Size(163, 21);
-            this.dtpEndTime.TabIndex = 28;
+            this.dtpEndTime.TabIndex = 9;
             // 
             // label8
             // 
@@ -139,7 +139,7 @@ namespace VMS_MES_PROJECT_4
             this.btnOK.Location = new System.Drawing.Point(105, 354);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
-            this.btnOK.TabIndex = 29;
+            this.btnOK.TabIndex = 12;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
@@ -150,7 +150,7 @@ namespace VMS_MES_PROJECT_4
             this.btnCancel.Location = new System.Drawing.Point(235, 354);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 30;
+            this.btnCancel.TabIndex = 13;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -161,7 +161,7 @@ namespace VMS_MES_PROJECT_4
             this.cboProductID.Location = new System.Drawing.Point(220, 34);
             this.cboProductID.Name = "cboProductID";
             this.cboProductID.Size = new System.Drawing.Size(163, 20);
-            this.cboProductID.TabIndex = 31;
+            this.cboProductID.TabIndex = 0;
             // 
             // cboProcessID
             // 
@@ -169,7 +169,7 @@ namespace VMS_MES_PROJECT_4
             this.cboProcessID.Location = new System.Drawing.Point(220, 64);
             this.cboProcessID.Name = "cboProcessID";
             this.cboProcessID.Size = new System.Drawing.Size(163, 20);
-            this.cboProcessID.TabIndex = 32;
+            this.cboProcessID.TabIndex = 1;
             // 
             // cboStepID
             // 
@@ -177,7 +177,7 @@ namespace VMS_MES_PROJECT_4
             this.cboStepID.Location = new System.Drawing.Point(220, 94);
             this.cboStepID.Name = "cboStepID";
             this.cboStepID.Size = new System.Drawing.Size(163, 20);
-            this.cboStepID.TabIndex = 33;
+            this.cboStepID.TabIndex = 3;
             // 
             // label5
             // 
@@ -207,7 +207,7 @@ namespace VMS_MES_PROJECT_4
             this.txtTactTime.Location = new System.Drawing.Point(220, 154);
             this.txtTactTime.Name = "txtTactTime";
             this.txtTactTime.Size = new System.Drawing.Size(163, 21);
-            this.txtTactTime.TabIndex = 37;
+            this.txtTactTime.TabIndex = 5;
             // 
             // txtProcTime
             // 
@@ -215,7 +215,7 @@ namespace VMS_MES_PROJECT_4
             this.txtProcTime.Location = new System.Drawing.Point(220, 185);
             this.txtProcTime.Name = "txtProcTime";
             this.txtProcTime.Size = new System.Drawing.Size(163, 21);
-            this.txtProcTime.TabIndex = 38;
+            this.txtProcTime.TabIndex = 6;
             // 
             // txtModifier
             // 
@@ -224,7 +224,7 @@ namespace VMS_MES_PROJECT_4
             this.txtModifier.Location = new System.Drawing.Point(220, 278);
             this.txtModifier.Name = "txtModifier";
             this.txtModifier.Size = new System.Drawing.Size(163, 21);
-            this.txtModifier.TabIndex = 40;
+            this.txtModifier.TabIndex = 10;
             // 
             // label9
             // 
@@ -244,7 +244,7 @@ namespace VMS_MES_PROJECT_4
             this.txtModifierdate.Location = new System.Drawing.Point(220, 309);
             this.txtModifierdate.Name = "txtModifierdate";
             this.txtModifierdate.Size = new System.Drawing.Size(163, 21);
-            this.txtModifierdate.TabIndex = 42;
+            this.txtModifierdate.TabIndex = 11;
             // 
             // label10
             // 
@@ -263,7 +263,7 @@ namespace VMS_MES_PROJECT_4
             this.txtEQPID.Location = new System.Drawing.Point(220, 127);
             this.txtEQPID.Name = "txtEQPID";
             this.txtEQPID.Size = new System.Drawing.Size(163, 21);
-            this.txtEQPID.TabIndex = 43;
+            this.txtEQPID.TabIndex = 4;
             // 
             // PopupEQP_AR_reg
             // 

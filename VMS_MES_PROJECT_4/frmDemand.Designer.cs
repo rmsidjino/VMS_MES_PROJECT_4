@@ -31,7 +31,7 @@ namespace VMS_MES_PROJECT_4
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cboDemandVer = new System.Windows.Forms.ComboBox();
+            this.txtDemandVer = new System.Windows.Forms.TextBox();
             this.cboProduct = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,7 +56,7 @@ namespace VMS_MES_PROJECT_4
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.cboDemandVer);
+            this.panel1.Controls.Add(this.txtDemandVer);
             this.panel1.Controls.Add(this.cboProduct);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -66,13 +66,12 @@ namespace VMS_MES_PROJECT_4
             this.panel1.Size = new System.Drawing.Size(1346, 42);
             this.panel1.TabIndex = 0;
             // 
-            // cboDemandVer
+            // txtDemandVer
             // 
-            this.cboDemandVer.FormattingEnabled = true;
-            this.cboDemandVer.Location = new System.Drawing.Point(111, 11);
-            this.cboDemandVer.Name = "cboDemandVer";
-            this.cboDemandVer.Size = new System.Drawing.Size(101, 20);
-            this.cboDemandVer.TabIndex = 19;
+            this.txtDemandVer.Location = new System.Drawing.Point(101, 10);
+            this.txtDemandVer.Name = "txtDemandVer";
+            this.txtDemandVer.Size = new System.Drawing.Size(123, 21);
+            this.txtDemandVer.TabIndex = 0;
             // 
             // cboProduct
             // 
@@ -80,7 +79,7 @@ namespace VMS_MES_PROJECT_4
             this.cboProduct.Location = new System.Drawing.Point(304, 11);
             this.cboProduct.Name = "cboProduct";
             this.cboProduct.Size = new System.Drawing.Size(148, 20);
-            this.cboProduct.TabIndex = 18;
+            this.cboProduct.TabIndex = 1;
             // 
             // label2
             // 
@@ -94,7 +93,7 @@ namespace VMS_MES_PROJECT_4
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(42, 15);
+            this.label1.Location = new System.Drawing.Point(30, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 12);
             this.label1.TabIndex = 13;
@@ -106,7 +105,7 @@ namespace VMS_MES_PROJECT_4
             this.btnSearch.Location = new System.Drawing.Point(1258, 9);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 4;
+            this.btnSearch.TabIndex = 3;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -130,7 +129,7 @@ namespace VMS_MES_PROJECT_4
             this.btnDelete.Location = new System.Drawing.Point(1293, 7);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(40, 20);
-            this.btnDelete.TabIndex = 9;
+            this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "삭제";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -142,7 +141,7 @@ namespace VMS_MES_PROJECT_4
             this.btnCreate.Location = new System.Drawing.Point(1247, 7);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(40, 20);
-            this.btnCreate.TabIndex = 8;
+            this.btnCreate.TabIndex = 4;
             this.btnCreate.Text = "등록";
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
@@ -226,7 +225,7 @@ namespace VMS_MES_PROJECT_4
         private System.Windows.Forms.ContextMenuStrip ExcelMenu;
         private System.Windows.Forms.ToolStripMenuItem iMPORTToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eXPORTToolStripMenuItem;
-        private System.Windows.Forms.ComboBox cboDemandVer;
+        private System.Windows.Forms.TextBox txtDemandVer;
     }
 }
 

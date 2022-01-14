@@ -62,7 +62,7 @@ namespace VMS_MES_PROJECT_4
             this.btnDelete.Location = new System.Drawing.Point(1297, 7);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(40, 20);
-            this.btnDelete.TabIndex = 9;
+            this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "삭제";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -73,7 +73,7 @@ namespace VMS_MES_PROJECT_4
             this.btnCreate.Location = new System.Drawing.Point(1251, 7);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(40, 20);
-            this.btnCreate.TabIndex = 8;
+            this.btnCreate.TabIndex = 4;
             this.btnCreate.Text = "등록";
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
@@ -92,7 +92,7 @@ namespace VMS_MES_PROJECT_4
             this.btnSearch.Location = new System.Drawing.Point(1262, 11);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 4;
+            this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -135,7 +135,7 @@ namespace VMS_MES_PROJECT_4
             this.cboProcess.Location = new System.Drawing.Point(356, 11);
             this.cboProcess.Name = "cboProcess";
             this.cboProcess.Size = new System.Drawing.Size(188, 20);
-            this.cboProcess.TabIndex = 8;
+            this.cboProcess.TabIndex = 1;
             // 
             // cboProduct
             // 
@@ -143,7 +143,7 @@ namespace VMS_MES_PROJECT_4
             this.cboProduct.Location = new System.Drawing.Point(87, 11);
             this.cboProduct.Name = "cboProduct";
             this.cboProduct.Size = new System.Drawing.Size(166, 20);
-            this.cboProduct.TabIndex = 7;
+            this.cboProduct.TabIndex = 0;
             // 
             // label2
             // 

@@ -32,7 +32,6 @@ namespace VMS_MES_PROJECT_4
             com = null;
             com = await srv.GetListAsync($"api/Common/All", com);
 
-            CommonUtil.ComboBinding(cboDemandVer, com, "DEMAND_VER", blankText: "선택");
             CommonUtil.ComboBinding(cboProduct, com, "PRODUCT_ID", blankText: "선택");
 
         }
@@ -48,13 +47,13 @@ namespace VMS_MES_PROJECT_4
         {
             if (dgvDemand.SelectedRows.Count < 1)
             {
-                MessageBox.Show("삭제할 수주를 선택하여 주십시오.");
+                MessageBox.Show("삭제할 수주ID를 선택하여 주십시오.");
                 return;
             }
 
             string demand_ver = dgvDemand.SelectedRows[0].Cells["DEMAND_VER"].Value.ToString();
 
-            if (MessageBox.Show("정말 삭제하실겁니까?", "수주 삭제", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("수주관리 데이터에 영향이 있습니다. 정말 삭제하실겁니까?", "수주ID 삭제", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 MESDTO.Message msg = await srv.GetAsync($"api/Demand/DeleteDemand/{demand_ver}");
                 if (msg.IsSuccess)
@@ -68,8 +67,8 @@ namespace VMS_MES_PROJECT_4
         private async void btnSearch_Click(object sender, EventArgs e)
         {
             string demand_ver = " ";
-            if (cboDemandVer.SelectedIndex > 0)
-                demand_ver = cboDemandVer.SelectedValue.ToString();
+            if (txtDemandVer.Text.Length > 0)
+                demand_ver = txtDemandVer.Text.ToString();
 
             string productID = " ";
             if (cboProduct.SelectedIndex > 0)
