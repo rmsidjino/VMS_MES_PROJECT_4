@@ -231,9 +231,9 @@ namespace VMS_MES_PROJECT_4
             {
                 Button btnItem = new Button();
                 btnItem.BackColor = System.Drawing.Color.Silver;
-                btnItem.Dock = System.Windows.Forms.DockStyle.Top;
+                btnItem.Dock = System.Windows.Forms.DockStyle.Top;               
                 btnItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-                btnItem.ForeColor = System.Drawing.Color.White;
+                btnItem.ForeColor = System.Drawing.Color.Black;
                 btnItem.Location = new System.Drawing.Point(0, 0);
                 btnItem.Margin = new System.Windows.Forms.Padding(0);
                 btnItem.Name = "button7";

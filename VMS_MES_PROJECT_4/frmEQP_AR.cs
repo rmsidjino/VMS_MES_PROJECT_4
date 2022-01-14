@@ -26,8 +26,8 @@ namespace VMS_MES_PROJECT_4
         private void frmEQP_AR_Load(object sender, EventArgs e)
         {
             DataGridViewUtil.SetInitGridView(dgvEqpArr);
-            DataGridViewUtil.AddGridTextColumn(dgvEqpArr, "제품ID", "PRODUCT_ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvEqpArr, "프로세서ID", "PROCESS_ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
+            DataGridViewUtil.AddGridTextColumn(dgvEqpArr, "제품ID", "PRODUCT_ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 200);
+            DataGridViewUtil.AddGridTextColumn(dgvEqpArr, "프로세서ID", "PROCESS_ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 200);
             DataGridViewUtil.AddGridTextColumn(dgvEqpArr, "공정ID", "STEP_ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
             DataGridViewUtil.AddGridTextColumn(dgvEqpArr, "장비ID", "EQP_ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
             DataGridViewUtil.AddGridTextColumn(dgvEqpArr, "공정시간", "TACT_TIME", DataGridViewContentAlignment.MiddleRight,colWidth: 100);

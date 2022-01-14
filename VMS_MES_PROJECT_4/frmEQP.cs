@@ -84,7 +84,7 @@ namespace VMS_MES_PROJECT_4
 
             string eqpID = dgvEQP.SelectedRows[0].Cells["EQP_ID"].Value.ToString();
 
-            if (MessageBox.Show("설비 배치 데이터에 영향이 있습니다. 정말 삭제하실겁니까?", "설비 삭제", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("설비 관리 데이터에 영향이 있습니다. 정말 삭제하실겁니까?", "설비 삭제", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 MESDTO.Message msg = await srv.GetAsync($"api/Equipment/DelEquipment/{eqpID}");
                 if (msg.IsSuccess)
