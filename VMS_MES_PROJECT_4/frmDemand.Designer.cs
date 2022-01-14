@@ -31,6 +31,7 @@ namespace VMS_MES_PROJECT_4
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtDemandVer = new System.Windows.Forms.TextBox();
             this.cboProduct = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@ namespace VMS_MES_PROJECT_4
             this.ExcelMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.iMPORTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eXPORTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtDemandVer = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDemand)).BeginInit();
@@ -66,13 +66,20 @@ namespace VMS_MES_PROJECT_4
             this.panel1.Size = new System.Drawing.Size(1346, 42);
             this.panel1.TabIndex = 0;
             // 
+            // txtDemandVer
+            // 
+            this.txtDemandVer.Location = new System.Drawing.Point(101, 10);
+            this.txtDemandVer.Name = "txtDemandVer";
+            this.txtDemandVer.Size = new System.Drawing.Size(123, 21);
+            this.txtDemandVer.TabIndex = 0;
+            // 
             // cboProduct
             // 
             this.cboProduct.FormattingEnabled = true;
             this.cboProduct.Location = new System.Drawing.Point(304, 11);
             this.cboProduct.Name = "cboProduct";
             this.cboProduct.Size = new System.Drawing.Size(148, 20);
-            this.cboProduct.TabIndex = 18;
+            this.cboProduct.TabIndex = 1;
             // 
             // label2
             // 
@@ -98,7 +105,7 @@ namespace VMS_MES_PROJECT_4
             this.btnSearch.Location = new System.Drawing.Point(1258, 9);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 4;
+            this.btnSearch.TabIndex = 3;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -122,7 +129,7 @@ namespace VMS_MES_PROJECT_4
             this.btnDelete.Location = new System.Drawing.Point(1293, 7);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(40, 20);
-            this.btnDelete.TabIndex = 9;
+            this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "삭제";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -134,7 +141,7 @@ namespace VMS_MES_PROJECT_4
             this.btnCreate.Location = new System.Drawing.Point(1247, 7);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(40, 20);
-            this.btnCreate.TabIndex = 8;
+            this.btnCreate.TabIndex = 4;
             this.btnCreate.Text = "등록";
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
@@ -181,13 +188,6 @@ namespace VMS_MES_PROJECT_4
             this.eXPORTToolStripMenuItem.Name = "eXPORTToolStripMenuItem";
             this.eXPORTToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.eXPORTToolStripMenuItem.Text = "EXPORT";
-            // 
-            // txtDemandVer
-            // 
-            this.txtDemandVer.Location = new System.Drawing.Point(101, 10);
-            this.txtDemandVer.Name = "txtDemandVer";
-            this.txtDemandVer.Size = new System.Drawing.Size(123, 21);
-            this.txtDemandVer.TabIndex = 19;
             // 
             // frmDemand
             // 

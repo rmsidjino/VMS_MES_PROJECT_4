@@ -75,7 +75,7 @@ namespace VMS_MES_PROJECT_4
             this.txtStepSetup.Location = new System.Drawing.Point(177, 183);
             this.txtStepSetup.Name = "txtStepSetup";
             this.txtStepSetup.Size = new System.Drawing.Size(163, 21);
-            this.txtStepSetup.TabIndex = 31;
+            this.txtStepSetup.TabIndex = 4;
             // 
             // txtStepYield
             // 
@@ -83,7 +83,7 @@ namespace VMS_MES_PROJECT_4
             this.txtStepYield.Location = new System.Drawing.Point(177, 145);
             this.txtStepYield.Name = "txtStepYield";
             this.txtStepYield.Size = new System.Drawing.Size(163, 21);
-            this.txtStepYield.TabIndex = 32;
+            this.txtStepYield.TabIndex = 3;
             // 
             // label3
             // 
@@ -102,7 +102,7 @@ namespace VMS_MES_PROJECT_4
             this.txtStepTat.Location = new System.Drawing.Point(177, 108);
             this.txtStepTat.Name = "txtStepTat";
             this.txtStepTat.Size = new System.Drawing.Size(163, 21);
-            this.txtStepTat.TabIndex = 29;
+            this.txtStepTat.TabIndex = 2;
             // 
             // label2
             // 
@@ -132,7 +132,7 @@ namespace VMS_MES_PROJECT_4
             this.btnCancel.Location = new System.Drawing.Point(219, 313);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(86, 23);
-            this.btnCancel.TabIndex = 35;
+            this.btnCancel.TabIndex = 8;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -143,7 +143,7 @@ namespace VMS_MES_PROJECT_4
             this.btnOK.Location = new System.Drawing.Point(86, 313);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(86, 23);
-            this.btnOK.TabIndex = 36;
+            this.btnOK.TabIndex = 7;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
@@ -166,7 +166,7 @@ namespace VMS_MES_PROJECT_4
             this.txtModDate.Location = new System.Drawing.Point(177, 258);
             this.txtModDate.Name = "txtModDate";
             this.txtModDate.Size = new System.Drawing.Size(163, 21);
-            this.txtModDate.TabIndex = 39;
+            this.txtModDate.TabIndex = 6;
             // 
             // label7
             // 
@@ -186,7 +186,7 @@ namespace VMS_MES_PROJECT_4
             this.txtMod.Location = new System.Drawing.Point(177, 220);
             this.txtMod.Name = "txtMod";
             this.txtMod.Size = new System.Drawing.Size(163, 21);
-            this.txtMod.TabIndex = 37;
+            this.txtMod.TabIndex = 5;
             // 
             // cboStdStepID
             // 
@@ -195,7 +195,7 @@ namespace VMS_MES_PROJECT_4
             this.cboStdStepID.Location = new System.Drawing.Point(177, 36);
             this.cboStdStepID.Name = "cboStdStepID";
             this.cboStdStepID.Size = new System.Drawing.Size(163, 20);
-            this.cboStdStepID.TabIndex = 41;
+            this.cboStdStepID.TabIndex = 0;
             // 
             // cboStdStepName
             // 
@@ -204,7 +204,7 @@ namespace VMS_MES_PROJECT_4
             this.cboStdStepName.Location = new System.Drawing.Point(177, 73);
             this.cboStdStepName.Name = "cboStdStepName";
             this.cboStdStepName.Size = new System.Drawing.Size(163, 20);
-            this.cboStdStepName.TabIndex = 41;
+            this.cboStdStepName.TabIndex = 1;
             // 
             // PopupStdStepInfo
             // 

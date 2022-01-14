@@ -83,7 +83,7 @@ namespace VMS_MES_PROJECT_4
             this.txtDemandID.Location = new System.Drawing.Point(169, 78);
             this.txtDemandID.Name = "txtDemandID";
             this.txtDemandID.Size = new System.Drawing.Size(163, 21);
-            this.txtDemandID.TabIndex = 2;
+            this.txtDemandID.TabIndex = 1;
             // 
             // label3
             // 
@@ -134,21 +134,21 @@ namespace VMS_MES_PROJECT_4
             this.txtDemand_Qty.Location = new System.Drawing.Point(169, 224);
             this.txtDemand_Qty.Name = "txtDemand_Qty";
             this.txtDemand_Qty.Size = new System.Drawing.Size(163, 21);
-            this.txtDemand_Qty.TabIndex = 10;
+            this.txtDemand_Qty.TabIndex = 5;
             // 
             // dtpDueDate
             // 
             this.dtpDueDate.Location = new System.Drawing.Point(169, 187);
             this.dtpDueDate.Name = "dtpDueDate";
             this.dtpDueDate.Size = new System.Drawing.Size(163, 21);
-            this.dtpDueDate.TabIndex = 12;
+            this.dtpDueDate.TabIndex = 4;
             // 
             // btnOk
             // 
             this.btnOk.Location = new System.Drawing.Point(105, 358);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(75, 23);
-            this.btnOk.TabIndex = 13;
+            this.btnOk.TabIndex = 8;
             this.btnOk.Text = "OK";
             this.btnOk.UseVisualStyleBackColor = true;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
@@ -158,7 +158,7 @@ namespace VMS_MES_PROJECT_4
             this.btnCancel.Location = new System.Drawing.Point(202, 358);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 14;
+            this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -169,7 +169,7 @@ namespace VMS_MES_PROJECT_4
             this.cboProductID.Location = new System.Drawing.Point(169, 115);
             this.cboProductID.Name = "cboProductID";
             this.cboProductID.Size = new System.Drawing.Size(163, 20);
-            this.cboProductID.TabIndex = 20;
+            this.cboProductID.TabIndex = 2;
             // 
             // cboCustomerID
             // 
@@ -177,7 +177,7 @@ namespace VMS_MES_PROJECT_4
             this.cboCustomerID.Location = new System.Drawing.Point(169, 151);
             this.cboCustomerID.Name = "cboCustomerID";
             this.cboCustomerID.Size = new System.Drawing.Size(163, 20);
-            this.cboCustomerID.TabIndex = 21;
+            this.cboCustomerID.TabIndex = 3;
             // 
             // txtModDate
             // 
@@ -185,7 +185,7 @@ namespace VMS_MES_PROJECT_4
             this.txtModDate.Location = new System.Drawing.Point(169, 299);
             this.txtModDate.Name = "txtModDate";
             this.txtModDate.Size = new System.Drawing.Size(163, 21);
-            this.txtModDate.TabIndex = 29;
+            this.txtModDate.TabIndex = 7;
             // 
             // label7
             // 
@@ -204,7 +204,7 @@ namespace VMS_MES_PROJECT_4
             this.txtMod.Location = new System.Drawing.Point(169, 263);
             this.txtMod.Name = "txtMod";
             this.txtMod.Size = new System.Drawing.Size(163, 21);
-            this.txtMod.TabIndex = 27;
+            this.txtMod.TabIndex = 6;
             // 
             // label8
             // 

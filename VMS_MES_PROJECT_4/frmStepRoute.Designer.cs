@@ -66,7 +66,7 @@ namespace VMS_MES_PROJECT_4
             this.cboStep.Location = new System.Drawing.Point(375, 10);
             this.cboStep.Name = "cboStep";
             this.cboStep.Size = new System.Drawing.Size(101, 20);
-            this.cboStep.TabIndex = 10;
+            this.cboStep.TabIndex = 1;
             // 
             // cboProcess
             // 
@@ -74,7 +74,7 @@ namespace VMS_MES_PROJECT_4
             this.cboProcess.Location = new System.Drawing.Point(112, 10);
             this.cboProcess.Name = "cboProcess";
             this.cboProcess.Size = new System.Drawing.Size(188, 20);
-            this.cboProcess.TabIndex = 9;
+            this.cboProcess.TabIndex = 0;
             // 
             // btnSearch
             // 
@@ -82,7 +82,7 @@ namespace VMS_MES_PROJECT_4
             this.btnSearch.Location = new System.Drawing.Point(1254, 10);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 4;
+            this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -124,7 +124,7 @@ namespace VMS_MES_PROJECT_4
             this.btnDelete.Location = new System.Drawing.Point(1289, 7);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(40, 20);
-            this.btnDelete.TabIndex = 11;
+            this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "삭제";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -136,7 +136,7 @@ namespace VMS_MES_PROJECT_4
             this.btnCreate.Location = new System.Drawing.Point(1243, 7);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(40, 20);
-            this.btnCreate.TabIndex = 10;
+            this.btnCreate.TabIndex = 3;
             this.btnCreate.Text = "등록";
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);

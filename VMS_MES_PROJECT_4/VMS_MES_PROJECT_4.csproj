@@ -223,6 +223,9 @@
     <EmbeddedResource Include="Control\ucTabControl.resx">
       <DependentUpon>ucTabControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDemand.resx">
+      <DependentUpon>frmDemand.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEQP.resx">
       <DependentUpon>frmEQP.cs</DependentUpon>
     </EmbeddedResource>

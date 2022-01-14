@@ -60,7 +60,7 @@ namespace VMS_MES_PROJECT_4
             this.btnDelete.Location = new System.Drawing.Point(1249, 7);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(40, 20);
-            this.btnDelete.TabIndex = 9;
+            this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "삭제";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -71,7 +71,7 @@ namespace VMS_MES_PROJECT_4
             this.btnCreate.Location = new System.Drawing.Point(1203, 7);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(40, 20);
-            this.btnCreate.TabIndex = 8;
+            this.btnCreate.TabIndex = 2;
             this.btnCreate.Text = "등록";
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
@@ -90,7 +90,7 @@ namespace VMS_MES_PROJECT_4
             this.btnSearch.Location = new System.Drawing.Point(1215, 8);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 4;
+            this.btnSearch.TabIndex = 1;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -131,9 +131,9 @@ namespace VMS_MES_PROJECT_4
             this.cboStd_Step_Id.Location = new System.Drawing.Point(109, 12);
             this.cboStd_Step_Id.Name = "cboStd_Step_Id";
             this.cboStd_Step_Id.Size = new System.Drawing.Size(100, 20);
-            this.cboStd_Step_Id.TabIndex = 8;
+            this.cboStd_Step_Id.TabIndex = 0;
             // 
-            // frmStd_step_info
+            // frmStdStepInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -141,7 +141,7 @@ namespace VMS_MES_PROJECT_4
             this.Controls.Add(this.dgvStdStepInfo);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "frmStd_step_info";
+            this.Name = "frmStdStepInfo";
             this.Text = "표준공정정보관리";
             this.Load += new System.EventHandler(this.frmStd_step_info_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStdStepInfo)).EndInit();
