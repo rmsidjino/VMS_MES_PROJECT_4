@@ -47,7 +47,7 @@ namespace VMS_MES_PROJECT_4
             this.button4.BackColor = System.Drawing.Color.DimGray;
             this.button4.Dock = System.Windows.Forms.DockStyle.Top;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.ForeColor = System.Drawing.Color.Black;
             this.button4.Location = new System.Drawing.Point(0, 132);
             this.button4.Margin = new System.Windows.Forms.Padding(0);
             this.button4.Name = "button4";
@@ -63,7 +63,7 @@ namespace VMS_MES_PROJECT_4
             this.button3.BackColor = System.Drawing.Color.DimGray;
             this.button3.Dock = System.Windows.Forms.DockStyle.Top;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.ForeColor = System.Drawing.Color.Black;
             this.button3.Location = new System.Drawing.Point(0, 96);
             this.button3.Margin = new System.Windows.Forms.Padding(0);
             this.button3.Name = "button3";
@@ -79,7 +79,7 @@ namespace VMS_MES_PROJECT_4
             this.button2.BackColor = System.Drawing.Color.DimGray;
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Location = new System.Drawing.Point(0, 60);
             this.button2.Margin = new System.Windows.Forms.Padding(0);
             this.button2.Name = "button2";
@@ -101,7 +101,7 @@ namespace VMS_MES_PROJECT_4
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(218, 60);
-            this.button1.TabIndex = 4;
+            this.button1.TabIndex = 0;
             this.button1.Tag = "100";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
@@ -126,7 +126,7 @@ namespace VMS_MES_PROJECT_4
             this.button6.BackColor = System.Drawing.Color.DimGray;
             this.button6.Dock = System.Windows.Forms.DockStyle.Top;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.ForeColor = System.Drawing.Color.Black;
             this.button6.Location = new System.Drawing.Point(0, 168);
             this.button6.Margin = new System.Windows.Forms.Padding(0);
             this.button6.Name = "button6";
@@ -142,7 +142,7 @@ namespace VMS_MES_PROJECT_4
             this.button5.BackColor = System.Drawing.Color.DimGray;
             this.button5.Dock = System.Windows.Forms.DockStyle.Top;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.ForeColor = System.Drawing.Color.Black;
             this.button5.Location = new System.Drawing.Point(0, 204);
             this.button5.Margin = new System.Windows.Forms.Padding(0);
             this.button5.Name = "button5";
@@ -178,7 +178,7 @@ namespace VMS_MES_PROJECT_4
             this.ucTabControl1.Location = new System.Drawing.Point(218, 0);
             this.ucTabControl1.Name = "ucTabControl1";
             this.ucTabControl1.SelectedIndex = 0;
-            this.ucTabControl1.Size = new System.Drawing.Size(993, 26);
+            this.ucTabControl1.Size = new System.Drawing.Size(1415, 26);
             this.ucTabControl1.TabIndex = 12;
             this.ucTabControl1.SelectedIndexChanged += new System.EventHandler(this.ucTabControl1_SelectedIndexChanged);
             this.ucTabControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ucTabControl1_MouseDown);
@@ -188,7 +188,7 @@ namespace VMS_MES_PROJECT_4
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.ClientSize = new System.Drawing.Size(1211, 695);
+            this.ClientSize = new System.Drawing.Size(1633, 695);
             this.Controls.Add(this.ucTabControl1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
