@@ -83,6 +83,10 @@ namespace VMS_MES_PROJECT_4
 
                     this.ActiveMdiChild.Tag = tp;
                 }
+                else
+                {
+                    ucTabControl1.SelectedTab = (TabPage)this.ActiveMdiChild.Tag;
+                }
 
                 if (!ucTabControl1.Visible)
                     ucTabControl1.Visible = true;
@@ -104,14 +108,7 @@ namespace VMS_MES_PROJECT_4
             }
         }
 
-        private void menuStrip1_ItemAdded(object sender, ToolStripItemEventArgs e)
-        {
-            if (e.Item.Text == ""
-                   || e.Item.Text == "닫기(&C)"
-                   || e.Item.Text == "최소화(&N)"
-                   || e.Item.Text == "이전 크기로(&R)")
-                e.Item.Visible = false;
-        }
+       
         private void ucTabControl1_MouseDown(object sender, MouseEventArgs e)
         {
             for (int i = 0; i < ucTabControl1.TabPages.Count; i++)
@@ -145,14 +142,6 @@ namespace VMS_MES_PROJECT_4
         {
             dtMenu = db.GetMenuList();
 
-            //DataView dv1 = new DataView(dtMenu);
-            //dv1.RowFilter = "menu_level=1";
-            //dv1.Sort = "menu_sort";
-
-            //for(int i=0; i<dv1.Count; i++)
-            //{
-            //    TreeNode node = new TreeNode(dv1[i]())
-            //}
         }
 
 
@@ -217,14 +206,7 @@ namespace VMS_MES_PROJECT_4
             dv1.RowFilter = "menu_level=2 and pnt_menu_id=" + btn.Tag.ToString().Split('@')[1];
             dv1.Sort = "menu_sort";
 
-            //treeView1.Nodes.Clear();
-
-            //for (int i = 0; i < dv1.Count; i++)
-            //{
-            //    TreeNode node = new TreeNode(dv1[i]["menu_name"].ToString());
-            //    treeView1.Nodes.Add(node);
-            //}
-
+           
             panel1.Controls.Clear();
 
             for (int i = 0; i < dv1.Count; i++)
@@ -234,10 +216,11 @@ namespace VMS_MES_PROJECT_4
                 btnItem.Dock = System.Windows.Forms.DockStyle.Top;               
                 btnItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
                 btnItem.ForeColor = System.Drawing.Color.Black;
+                btnItem.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
                 btnItem.Location = new System.Drawing.Point(0, 0);
                 btnItem.Margin = new System.Windows.Forms.Padding(0);
                 btnItem.Name = "button7";
-                btnItem.Size = new System.Drawing.Size(215, 36);    
+                btnItem.Size = new System.Drawing.Size(218, 36);    
                 btnItem.TabIndex = 2;
                 btnItem.Tag = dv1[i]["program_name"].ToString();
                 btnItem.Text = dv1[i]["menu_name"].ToString();

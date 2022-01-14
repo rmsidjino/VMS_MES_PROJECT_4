@@ -44,9 +44,10 @@ namespace VMS_MES_PROJECT_4
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.DimGray;
+            this.button4.BackColor = System.Drawing.Color.SandyBrown;
             this.button4.Dock = System.Windows.Forms.DockStyle.Top;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button4.ForeColor = System.Drawing.Color.Black;
             this.button4.Location = new System.Drawing.Point(0, 132);
             this.button4.Margin = new System.Windows.Forms.Padding(0);
@@ -60,9 +61,10 @@ namespace VMS_MES_PROJECT_4
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.DimGray;
+            this.button3.BackColor = System.Drawing.Color.SandyBrown;
             this.button3.Dock = System.Windows.Forms.DockStyle.Top;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button3.ForeColor = System.Drawing.Color.Black;
             this.button3.Location = new System.Drawing.Point(0, 96);
             this.button3.Margin = new System.Windows.Forms.Padding(0);
@@ -76,9 +78,10 @@ namespace VMS_MES_PROJECT_4
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.DimGray;
+            this.button2.BackColor = System.Drawing.Color.SandyBrown;
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Location = new System.Drawing.Point(0, 60);
             this.button2.Margin = new System.Windows.Forms.Padding(0);
@@ -117,15 +120,17 @@ namespace VMS_MES_PROJECT_4
             this.flowLayoutPanel1.Controls.Add(this.panel1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(218, 695);
             this.flowLayoutPanel1.TabIndex = 8;
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.DimGray;
+            this.button6.BackColor = System.Drawing.Color.SandyBrown;
             this.button6.Dock = System.Windows.Forms.DockStyle.Top;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button6.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button6.ForeColor = System.Drawing.Color.Black;
             this.button6.Location = new System.Drawing.Point(0, 168);
             this.button6.Margin = new System.Windows.Forms.Padding(0);
@@ -139,9 +144,10 @@ namespace VMS_MES_PROJECT_4
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.DimGray;
+            this.button5.BackColor = System.Drawing.Color.SandyBrown;
             this.button5.Dock = System.Windows.Forms.DockStyle.Top;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button5.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button5.ForeColor = System.Drawing.Color.Black;
             this.button5.Location = new System.Drawing.Point(0, 204);
             this.button5.Margin = new System.Windows.Forms.Padding(0);
@@ -156,9 +162,10 @@ namespace VMS_MES_PROJECT_4
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(3, 243);
+            this.panel1.Location = new System.Drawing.Point(0, 240);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(215, 452);
+            this.panel1.Size = new System.Drawing.Size(218, 452);
             this.panel1.TabIndex = 11;
             // 
             // menuStrip1
@@ -199,6 +206,7 @@ namespace VMS_MES_PROJECT_4
             this.Text = "메인 메뉴";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.MdiChildActivate += new System.EventHandler(this.frmMain_MdiChildActivate);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ucTabControl1_MouseDown);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -120,7 +120,7 @@ namespace VMS_MES_PROJECT_4
                 PopupEQP_reg frm = new PopupEQP_reg(eitem);             
                 frm.StartPosition = FormStartPosition.CenterScreen;
                 frm.Show();
-            }
+            }         
         }
     }
 }

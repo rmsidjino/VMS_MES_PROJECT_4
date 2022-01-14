@@ -44,6 +44,7 @@ namespace MES_WEB_API.Controllers
             }
             return Ok(msg);
         }
+        
         //GET : https://localhost:44332/api/Equipment/DelEquipment/{id}
         [HttpGet]
         [Route("DelEquipment/{id}")]

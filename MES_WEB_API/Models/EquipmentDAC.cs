@@ -82,7 +82,6 @@ values(@SITE_ID, @LINE_ID, @EQP_ID, @EQP_MODEL, @EQP_TYPE, @EQP_GROUP, @SIM_TYPE
                 return false;
             }
         }
-
         public bool DelEquipment(string id)
         {
             string sql = @"Delete from EQUIPMENT where EQP_ID = @EQP_ID ";
