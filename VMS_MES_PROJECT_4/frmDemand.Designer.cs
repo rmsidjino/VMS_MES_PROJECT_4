@@ -31,7 +31,6 @@ namespace VMS_MES_PROJECT_4
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cboDemandVer = new System.Windows.Forms.ComboBox();
             this.cboProduct = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,6 +43,7 @@ namespace VMS_MES_PROJECT_4
             this.ExcelMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.iMPORTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eXPORTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtDemandVer = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDemand)).BeginInit();
@@ -56,7 +56,7 @@ namespace VMS_MES_PROJECT_4
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.cboDemandVer);
+            this.panel1.Controls.Add(this.txtDemandVer);
             this.panel1.Controls.Add(this.cboProduct);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -65,14 +65,6 @@ namespace VMS_MES_PROJECT_4
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1346, 42);
             this.panel1.TabIndex = 0;
-            // 
-            // cboDemandVer
-            // 
-            this.cboDemandVer.FormattingEnabled = true;
-            this.cboDemandVer.Location = new System.Drawing.Point(111, 11);
-            this.cboDemandVer.Name = "cboDemandVer";
-            this.cboDemandVer.Size = new System.Drawing.Size(101, 20);
-            this.cboDemandVer.TabIndex = 19;
             // 
             // cboProduct
             // 
@@ -94,7 +86,7 @@ namespace VMS_MES_PROJECT_4
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(42, 15);
+            this.label1.Location = new System.Drawing.Point(30, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 12);
             this.label1.TabIndex = 13;
@@ -190,6 +182,13 @@ namespace VMS_MES_PROJECT_4
             this.eXPORTToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.eXPORTToolStripMenuItem.Text = "EXPORT";
             // 
+            // txtDemandVer
+            // 
+            this.txtDemandVer.Location = new System.Drawing.Point(101, 10);
+            this.txtDemandVer.Name = "txtDemandVer";
+            this.txtDemandVer.Size = new System.Drawing.Size(123, 21);
+            this.txtDemandVer.TabIndex = 19;
+            // 
             // frmDemand
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -226,7 +225,7 @@ namespace VMS_MES_PROJECT_4
         private System.Windows.Forms.ContextMenuStrip ExcelMenu;
         private System.Windows.Forms.ToolStripMenuItem iMPORTToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eXPORTToolStripMenuItem;
-        private System.Windows.Forms.ComboBox cboDemandVer;
+        private System.Windows.Forms.TextBox txtDemandVer;
     }
 }
 

@@ -27,10 +27,10 @@ namespace VMS_MES_PROJECT_4
         {
             DataGridViewUtil.SetInitGridView(dgvStdStepInfo);
             DataGridViewUtil.AddGridTextColumn(dgvStdStepInfo, "표준공정ID", "STD_STEP_ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvStdStepInfo, "표준공정이름", "STD_STEP_NAME", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
+            DataGridViewUtil.AddGridTextColumn(dgvStdStepInfo, "표준공정이름", "STD_STEP_NAME", DataGridViewContentAlignment.MiddleCenter, colWidth: 110);
             DataGridViewUtil.AddGridTextColumn(dgvStdStepInfo, "공정시간", "STEP_TAT", DataGridViewContentAlignment.MiddleRight, colWidth: 80);
             DataGridViewUtil.AddGridTextColumn(dgvStdStepInfo, "공정수율", "STEP_YIELD", DataGridViewContentAlignment.MiddleRight, colWidth: 80);
-            DataGridViewUtil.AddGridTextColumn(dgvStdStepInfo, "공정준비시간", "STEP_SETUP", DataGridViewContentAlignment.MiddleRight, colWidth: 100);
+            DataGridViewUtil.AddGridTextColumn(dgvStdStepInfo, "공정준비시간", "STEP_SETUP", DataGridViewContentAlignment.MiddleRight, colWidth: 110);
 
             DataGridViewButtonColumn btnEdit = new DataGridViewButtonColumn();
 
@@ -65,13 +65,13 @@ namespace VMS_MES_PROJECT_4
         {
             if (dgvStdStepInfo.SelectedRows.Count < 1)
             {
-                MessageBox.Show("삭제할 표준공정정보를 선택하여 주십시오.");
+                MessageBox.Show("삭제할 표준공정ID를 선택하여 주십시오.");
                 return;
             }
 
             string std_step_ID = dgvStdStepInfo.SelectedRows[0].Cells["STD_STEP_ID"].Value.ToString();
 
-            if (MessageBox.Show("정말 삭제하실겁니까?", "표준공정ID 삭제", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("표준 공정 정보 데이터에 영향이 있습니다. 정말 삭제하실겁니까?", "표준공정ID 삭제", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 MESDTO.Message msg = await srv.GetAsync($"api/Std_step_info/DeleteStd_step_info/{std_step_ID}");
                 if (msg.IsSuccess)

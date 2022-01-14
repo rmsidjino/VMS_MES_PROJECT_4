@@ -172,6 +172,7 @@ namespace VMS_MES_PROJECT_4
             // 
             // txtMod
             // 
+            this.txtMod.Enabled = false;
             this.txtMod.Location = new System.Drawing.Point(167, 248);
             this.txtMod.Name = "txtMod";
             this.txtMod.Size = new System.Drawing.Size(163, 21);
@@ -190,6 +191,7 @@ namespace VMS_MES_PROJECT_4
             // 
             // txtModDate
             // 
+            this.txtModDate.Enabled = false;
             this.txtModDate.Location = new System.Drawing.Point(167, 285);
             this.txtModDate.Name = "txtModDate";
             this.txtModDate.Size = new System.Drawing.Size(163, 21);
