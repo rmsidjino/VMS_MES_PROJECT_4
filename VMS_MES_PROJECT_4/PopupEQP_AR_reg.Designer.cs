@@ -203,7 +203,7 @@ namespace VMS_MES_PROJECT_4
             // 
             // txtTactTime
             // 
-            this.txtTactTime.BackColor = System.Drawing.SystemColors.Control;
+            this.txtTactTime.BackColor = System.Drawing.Color.White;
             this.txtTactTime.Location = new System.Drawing.Point(220, 154);
             this.txtTactTime.Name = "txtTactTime";
             this.txtTactTime.Size = new System.Drawing.Size(163, 21);
@@ -211,7 +211,7 @@ namespace VMS_MES_PROJECT_4
             // 
             // txtProcTime
             // 
-            this.txtProcTime.BackColor = System.Drawing.SystemColors.Control;
+            this.txtProcTime.BackColor = System.Drawing.Color.White;
             this.txtProcTime.Location = new System.Drawing.Point(220, 185);
             this.txtProcTime.Name = "txtProcTime";
             this.txtProcTime.Size = new System.Drawing.Size(163, 21);
@@ -220,6 +220,7 @@ namespace VMS_MES_PROJECT_4
             // txtModifier
             // 
             this.txtModifier.BackColor = System.Drawing.SystemColors.Window;
+            this.txtModifier.Enabled = false;
             this.txtModifier.Location = new System.Drawing.Point(220, 278);
             this.txtModifier.Name = "txtModifier";
             this.txtModifier.Size = new System.Drawing.Size(163, 21);
@@ -239,6 +240,7 @@ namespace VMS_MES_PROJECT_4
             // txtModifierdate
             // 
             this.txtModifierdate.BackColor = System.Drawing.SystemColors.Window;
+            this.txtModifierdate.Enabled = false;
             this.txtModifierdate.Location = new System.Drawing.Point(220, 309);
             this.txtModifierdate.Name = "txtModifierdate";
             this.txtModifierdate.Size = new System.Drawing.Size(163, 21);

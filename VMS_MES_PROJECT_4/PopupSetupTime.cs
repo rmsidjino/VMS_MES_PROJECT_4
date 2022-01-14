@@ -40,6 +40,32 @@ namespace VMS_MES_PROJECT_4
         private async void btnOK_Click(object sender, EventArgs e)
         {
             //유효성 체크
+            StringBuilder sb = new StringBuilder();
+            if (cboSite.SelectedIndex < 1)
+            {
+                sb.AppendLine("- 현장ID를 선택하세요.");
+            }
+            if (cboLine.SelectedIndex < 1)
+            {
+                sb.AppendLine("- 라인ID를 선택하세요.");
+            }
+            if (cboEqpGroup.SelectedIndex < 1)
+            {
+                sb.AppendLine("- 공정 그룸을 선택하세요.");
+            }
+            if (cboStep.SelectedIndex < 1)
+            {
+                sb.AppendLine("- 공정 ID를 선택하세요.");
+            }
+            if (txtTime.Text.Length < 1)
+            {
+                sb.AppendLine("- 가동준비시간을 입력하세요.");
+            }
+            if (sb.ToString().Length > 1)
+            {
+                MessageBox.Show(sb.ToString());
+                return;
+            }
             SetupVO setup = new SetupVO
             {
                 SITE_ID = cboSite.SelectedValue.ToString(),
