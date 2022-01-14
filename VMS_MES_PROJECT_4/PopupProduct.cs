@@ -32,6 +32,55 @@ namespace VMS_MES_PROJECT_4
 
         private async void btnOk_Click(object sender, EventArgs e)
         {
+            StringBuilder sb = new StringBuilder();
+
+            if (txtProductID.Text.Length < 1)
+            {
+                sb.AppendLine("- 제품ID를 입력하세요.");
+            }
+
+            if (cboProductType.SelectedIndex < 1)
+            {
+                sb.AppendLine("- 제품 유형을 선택하세요.");
+            }
+
+            if (txtProductName.Text.Length < 1)
+            {
+                sb.AppendLine("- 제품 이름을 입력하세요.");
+            }
+
+            if (txtProductID.Text != txtProductName.Text)
+            {
+                sb.AppendLine("- 제품 정보가 같지 않습니다. 다시 입력하세요.");
+            }
+
+            if (txtProcessID.Text.Length < 1)
+            {
+                sb.AppendLine("- 프로세스ID를 입력하세요.");
+            }
+
+            if (txtLotSize.Text.Length < 1)
+            {
+                sb.AppendLine("- 로트크기를 입력하세요.");
+            }
+
+            if (txtInputBatchSize.Text.Length < 1)
+            {
+                sb.AppendLine("- 단위평균수주량 입력하세요.");
+            }
+
+            if (sb.ToString().Length > 1)
+            {
+                MessageBox.Show(sb.ToString());
+                return;
+            }
+
+            if (sb.ToString().Length > 1)
+            {
+                MessageBox.Show(sb.ToString());
+                return;
+            }
+
             ProductVO product = new ProductVO
             {
                 PRODUCT_ID = txtProductID.Text,
@@ -43,7 +92,7 @@ namespace VMS_MES_PROJECT_4
                 MODIFIER = "Kim",
                 MODIFIER_DATE = DateTime.Now
             };
-            if (cboProductType.Enabled)
+            if (txtProductID.Enabled)
             {
                 msg = await srv.PostAsyncNone("api/Product/InsertProduct", product);
             }
@@ -55,6 +104,7 @@ namespace VMS_MES_PROJECT_4
             {
                 //btnSearch.PerformClick();
             }
+
             MessageBox.Show(msg.ResultMessage);
             this.Close();
         }

@@ -33,6 +33,49 @@ namespace VMS_MES_PROJECT_4
 
         private async void btnOk_Click(object sender, EventArgs e)
         {
+            StringBuilder sb = new StringBuilder();
+
+            if (txtProcessID.Text.Length < 1)
+            {
+                sb.AppendLine("- 프로세스ID를 입력하세요.");
+            }
+
+            if (cboStepID.SelectedIndex < 1)
+            {
+                sb.AppendLine("- 공정ID를 선택하세요.");
+            }
+
+            if (txtStepSeq.Text.Length < 1)
+            {
+                sb.AppendLine("- 공정단계를 입력하세요.");
+            }
+
+            if (cboStdStepID.SelectedIndex < 1)
+            {
+                sb.AppendLine("- 표준공정ID를 선택하세요.");
+            }
+
+            if (cboStepID.SelectedIndex != cboStdStepID.SelectedIndex)
+            {
+                sb.AppendLine("- 공정이 같지 않습니다. 다시 입력하세요.");
+            }
+
+            if (cboStepType.SelectedIndex < 1)
+            {
+                sb.AppendLine("- 공정유형을 선택하세요.");
+            }
+
+            if (cboProcessType.SelectedIndex < 1)
+            {
+                sb.AppendLine("- 프로세스 유형을 선택하세요.");
+            }
+
+            if (sb.ToString().Length > 1)
+            {
+                MessageBox.Show(sb.ToString());
+                return;
+            }
+
             StepRouteVO step_route = new StepRouteVO
             {
                 PROCESS_ID = txtProcessID.Text,
@@ -46,7 +89,7 @@ namespace VMS_MES_PROJECT_4
                 MODIFIER = "Kim",
                 MODIFIER_DATE = DateTime.Now
             };
-            if (cboStepID.Enabled)
+            if (txtProcessID.Enabled)
             {
                 msg = await srv.PostAsyncNone("api/StepRoute/InsertStepRoute", step_route);
             }
@@ -58,6 +101,7 @@ namespace VMS_MES_PROJECT_4
             {
                 //btnSearch.PerformClick();
             }
+
             MessageBox.Show(msg.ResultMessage);
             this.Close();
         }
