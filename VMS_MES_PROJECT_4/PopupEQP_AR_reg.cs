@@ -74,19 +74,21 @@ namespace VMS_MES_PROJECT_4
                 MODIFIER = "Kim",
                 MODIFIER_DATE = DateTime.Now
             };
-            if (cboProductID.Enabled)
+            if (update)
             {
-                msg = await srv.PostAsyncNone("api/EquipmentArr/InsertEquipmentArr", equipmentarr);
+                msg = await srv.PostAsyncNone("api/EquipmentArr/UpdateEquipmentArr", equipmentarr);
+               
             }
             else
             {
-                msg = await srv.PostAsyncNone("api/EquipmentArr/UpdateEquipmentArr", equipmentarr);
+                msg = await srv.PostAsyncNone("api/EquipmentArr/InsertEquipmentArr", equipmentarr);
             }
+
+            MessageBox.Show(msg.ResultMessage);
             if (msg.IsSuccess)
             {
                 //btnSearch.PerformClick();
-            }
-            MessageBox.Show(msg.ResultMessage);
+            }           
             this.Close();
         }
 

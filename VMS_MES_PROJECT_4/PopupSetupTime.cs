@@ -76,19 +76,22 @@ namespace VMS_MES_PROJECT_4
                 MODIFIER = "Kim",
                 MODIFIED_DATE = DateTime.Now
             };
-            if (cboSite.Enabled)
+            if (update)
             {
-                msg = await srv.PostAsyncNone("api/Setup/InsertSetup", setup);
+                msg = await srv.PostAsyncNone("api/Setup/UpdateSetup", setup);
+                
             }
             else
             {
-                msg = await srv.PostAsyncNone("api/Setup/UpdateSetup", setup);
+                msg = await srv.PostAsyncNone("api/Setup/InsertSetup", setup);
             }
+
+            MessageBox.Show(msg.ResultMessage);
             if (msg.IsSuccess)
             {
                 //btnSearch.PerformClick();
             }
-            MessageBox.Show(msg.ResultMessage);
+           
             this.Close();
         }
 

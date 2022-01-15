@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Web;
@@ -44,7 +45,7 @@ PRESET_ID, DISPATCHER_TYPE, EQP_STATE, EQP_STATE_CODE, STATE_CHANGE_TIME, AUTOMA
                 return null;
             }
         }
-
+       
         public bool InsertEquipment (EquipmentVO equipment)
         {
             string sql = @"insert into [EQUIPMENT] (SITE_ID, LINE_ID, EQP_ID, EQP_MODEL, EQP_TYPE,EQP_GROUP, SIM_TYPE, 
@@ -146,6 +147,43 @@ PRESET_ID, DISPATCHER_TYPE, EQP_STATE, EQP_STATE_CODE, STATE_CHANGE_TIME, AUTOMA
             }
 
         }
+        public bool UpdateEquipment(EquipmentVO equipment)
+        {
+            string sql = @"Update [EQUIPMENT] SET SITE_ID=@SITE_ID, LINE_ID=@LINE_ID, EQP_MODEL=@EQP_MODEL, EQP_TYPE=@EQP_TYPE,EQP_GROUP=@EQP_GROUP, SIM_TYPE=@SIM_TYPE, 
+PRESET_ID=@PRESET_ID, DISPATCHER_TYPE=@DISPATCHER_TYPE, EQP_STATE=@EQP_STATE, EQP_STATE_CODE=@EQP_STATE_CODE, STATE_CHANGE_TIME=@STATE_CHANGE_TIME, AUTOMATION=@AUTOMATION, MODIFIER=@MODIFIER, MODIFIER_DATE=@MODIFIER_DATE
+WHERE EQP_ID=@EQP_ID";
+
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                
+
+                cmd.Parameters.AddWithValue("@SITE_ID", equipment.SITE_ID);
+                cmd.Parameters.AddWithValue("@LINE_ID", equipment.LINE_ID);
+                cmd.Parameters.AddWithValue("@EQP_ID", equipment.EQP_ID);
+                cmd.Parameters.AddWithValue("@EQP_MODEL", equipment.EQP_MODEL);
+                cmd.Parameters.AddWithValue("@EQP_TYPE", equipment.EQP_TYPE);
+                cmd.Parameters.AddWithValue("@EQP_GROUP", equipment.EQP_GROUP);
+                cmd.Parameters.AddWithValue("@SIM_TYPE", equipment.SIM_TYPE);
+                cmd.Parameters.AddWithValue("@PRESET_ID", equipment.PRESET_ID);
+                cmd.Parameters.AddWithValue("@DISPATCHER_TYPE", equipment.DISPATCHER_TYPE);
+                cmd.Parameters.AddWithValue("@EQP_STATE", equipment.EQP_STATE);
+                cmd.Parameters.AddWithValue("@EQP_STATE_CODE", equipment.EQP_STATE_CODE);
+                cmd.Parameters.AddWithValue("@STATE_CHANGE_TIME", equipment.STATE_CHANGE_TIME);
+                cmd.Parameters.AddWithValue("@AUTOMATION", equipment.AUTOMATION);
+                cmd.Parameters.AddWithValue("@MODIFIER", equipment.MODIFIER);
+                cmd.Parameters.AddWithValue("@MODIFIER_DATE", equipment.MODIFIER_DATE);
+
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception err)
+            {
+                Debug.WriteLine(err.Message);
+                return false;
+            }
         }
-            
     }
+            
+}

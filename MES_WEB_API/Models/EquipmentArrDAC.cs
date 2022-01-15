@@ -97,7 +97,36 @@ values(@PRODUCT_ID,@PROCESS_ID,@STEP_ID,@EQP_ID,@TACT_TIME,@PROC_TIME,@EFF_START
                 return false;
             }
         }
+        public bool UpdateEquipmentArr(EquipmentArrVO equipmentarr)
+        {
+            string sql = @"update EQP_ARRANGE set PROCESS_ID=@PROCESS_ID,STEP_ID=@STEP_ID,EQP_ID=@EQP_ID,TACT_TIME=@TACT_TIME,PROC_TIME=@PROC_TIME,EFF_START_DATE=@EFF_START_DATE,EFF_END_DATE=@EFF_END_DATE,MODIFIER=@MODIFIER,MODIFIER_DATE=@MODIFIER_DATE
+where PRODUCT_ID=@PRODUCT_ID ";
 
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Connection.Open();
+
+                cmd.Parameters.AddWithValue("@PRODUCT_ID", equipmentarr.PRODUCT_ID);
+                cmd.Parameters.AddWithValue("@PROCESS_ID", equipmentarr.PROCESS_ID);
+                cmd.Parameters.AddWithValue("@STEP_ID", equipmentarr.STEP_ID);
+                cmd.Parameters.AddWithValue("@EQP_ID", equipmentarr.EQP_ID);
+                cmd.Parameters.AddWithValue("@TACT_TIME", equipmentarr.TACT_TIME);
+                cmd.Parameters.AddWithValue("@PROC_TIME", equipmentarr.PROC_TIME);
+                cmd.Parameters.AddWithValue("@EFF_START_DATE", equipmentarr.EFF_START_DATE);
+                cmd.Parameters.AddWithValue("@EFF_END_DATE", equipmentarr.EFF_END_DATE);
+                cmd.Parameters.AddWithValue("@MODIFIER", equipmentarr.MODIFIER);
+                cmd.Parameters.AddWithValue("@MODIFIER_DATE", equipmentarr.MODIFIER_DATE);
+
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception err)
+            {
+                return false;
+            }
+        }
         public List<EquipmentArrVO> SearchEquipmentArr(string productID, string processID)
         {
 
