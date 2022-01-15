@@ -113,6 +113,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAccount.Designer.cs">
+      <DependentUpon>frmAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUser.designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDemand.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +148,12 @@
     </Compile>
     <Compile Include="frmEQP_AR.Designer.cs">
       <DependentUpon>frmEQP_AR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -166,6 +184,12 @@
     </Compile>
     <Compile Include="frmStepRoute.designer.cs">
       <DependentUpon>frmStepRoute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupUser.designer.cs">
+      <DependentUpon>PopupUser.cs</DependentUpon>
     </Compile>
     <Compile Include="PopupDemand.cs">
       <SubType>Form</SubType>
@@ -235,6 +259,12 @@
     <EmbeddedResource Include="Control\ucTabControl.resx">
       <DependentUpon>ucTabControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAccount.resx">
+      <DependentUpon>frmAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDemand.resx">
       <DependentUpon>frmDemand.cs</DependentUpon>
     </EmbeddedResource>
@@ -246,6 +276,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEQP_AR.resx">
       <DependentUpon>frmEQP_AR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
@@ -261,6 +294,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmStepRoute.resx">
       <DependentUpon>frmStepRoute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupUser.resx">
+      <DependentUpon>PopupUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PopupDemand.resx">
       <DependentUpon>PopupDemand.cs</DependentUpon>

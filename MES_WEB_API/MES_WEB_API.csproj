@@ -130,6 +130,7 @@
     <Compile Include="Controllers\SetupController.cs" />
     <Compile Include="Controllers\StdStepInfoController.cs" />
     <Compile Include="Controllers\StepRouteController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -144,6 +145,7 @@
     <Compile Include="Models\SetupDAC.cs" />
     <Compile Include="Models\StdStepInfoDAC.cs" />
     <Compile Include="Models\StepRouteDAC.cs" />
+    <Compile Include="Models\UserDAC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -27,6 +27,7 @@ namespace VMS_MES_PROJECT_4
             InitializeComponent();
             this.eItem = eItem;
             update = true;
+            txtEQPID.Enabled = false;
         }
 
         private async void frmEQP_reg_Load(object sender, EventArgs e) // 수정

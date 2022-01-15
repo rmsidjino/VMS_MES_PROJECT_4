@@ -106,15 +106,16 @@ namespace VMS_MES_PROJECT_4
 
         private void dgvSetup_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.ColumnIndex == editIndex)
+            if (e.ColumnIndex == editIndex)
             {
                 string siteID = dgvSetup["SITE_ID", e.RowIndex].Value.ToString();
                 string lineID = dgvSetup["LINE_ID", e.RowIndex].Value.ToString();
                 string stepID = dgvSetup["STEP_ID", e.RowIndex].Value.ToString();
-                SetupVO sitem = slist.Find((setup) => setup.SITE_ID == siteID && setup.LINE_ID == lineID && setup.STEP_ID==stepID);
+                SetupVO sitem = slist.Find((setup) => setup.SITE_ID == siteID && setup.LINE_ID == lineID && setup.STEP_ID == stepID);
                 PopupSetupTime frm = new PopupSetupTime(sitem);
                 frm.StartPosition = FormStartPosition.CenterScreen;
-                frm.Show();
+                frm.ShowDialog();
+                LoadData();
             }
         }
     }
