@@ -149,7 +149,7 @@ PRESET_ID, DISPATCHER_TYPE, EQP_STATE, EQP_STATE_CODE, STATE_CHANGE_TIME, AUTOMA
         }
         public bool UpdateEquipment(EquipmentVO equipment)
         {
-            string sql = @"Update [EQUIPMENT] SET SITE_ID=@SITE_ID, LINE_ID=@LINE_ID, EQP_MODEL=@EQP_MODEL, EQP_TYPE=@EQP_TYPE,EQP_GROUP=@EQP_GROUP, SIM_TYPE=@SIM_TYPE, 
+            string sql = @"Update EQUIPMENT SET SITE_ID=@SITE_ID, LINE_ID=@LINE_ID, EQP_MODEL=@EQP_MODEL, EQP_TYPE=@EQP_TYPE,EQP_GROUP=@EQP_GROUP, SIM_TYPE=@SIM_TYPE, 
 PRESET_ID=@PRESET_ID, DISPATCHER_TYPE=@DISPATCHER_TYPE, EQP_STATE=@EQP_STATE, EQP_STATE_CODE=@EQP_STATE_CODE, STATE_CHANGE_TIME=@STATE_CHANGE_TIME, AUTOMATION=@AUTOMATION, MODIFIER=@MODIFIER, MODIFIER_DATE=@MODIFIER_DATE
 WHERE EQP_ID=@EQP_ID";
 
@@ -157,8 +157,8 @@ WHERE EQP_ID=@EQP_ID";
             {
 
                 SqlCommand cmd = new SqlCommand(sql, conn);
-                
 
+                cmd.Connection.Open();
                 cmd.Parameters.AddWithValue("@SITE_ID", equipment.SITE_ID);
                 cmd.Parameters.AddWithValue("@LINE_ID", equipment.LINE_ID);
                 cmd.Parameters.AddWithValue("@EQP_ID", equipment.EQP_ID);

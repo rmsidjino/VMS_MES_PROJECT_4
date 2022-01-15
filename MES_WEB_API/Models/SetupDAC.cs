@@ -95,7 +95,7 @@ values(@SITE_ID,@LINE_ID,@EQP_GROUP,@STEP_ID,@TIME,@MODIFIER,@MODIFIED_DATE)";
         }
         public bool UpdateSetup(SetupVO setup)
         {
-            string sql = @"update SETUP_TIME set SITE_ID=@SITE_ID, LINE_ID=@LINE_ID, EQP_GROUP=@EQP_GROUP, TIME=@TIME, MODIFIER=@MODIFIER, MODIFIED_DATE=@MODIFIED_DATE where STEP_ID=@STEP_ID";
+            string sql = @"update SETUP_TIME set  TIME=@TIME, MODIFIER=@MODIFIER, MODIFIED_DATE=@MODIFIED_DATE where SITE_ID=@SITE_ID and LINE_ID=@LINE_ID and STEP_ID=@STEP_ID";
 
 
             try

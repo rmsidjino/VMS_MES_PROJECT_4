@@ -28,7 +28,9 @@ namespace VMS_MES_PROJECT_4
             InitializeComponent();
             this.sItem = sItem;
             update = true;
-            
+            cboLine.Enabled = false;
+            cboSite.Enabled = false;
+            cboStep.Enabled = false;
 
         }
 
