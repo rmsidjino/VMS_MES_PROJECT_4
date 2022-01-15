@@ -10,25 +10,25 @@ using MES_WEB_API.Models;
 namespace MES_WEB_API.Controllers
 {
     [RoutePrefix("api/Load_Stat")]
-    public class Load_StatController : ApiController
+    public class LoadStatController : ApiController
     {
         //GET : https://localhost:44332/api/Load_Stat/Load_Stats
         [HttpGet]
         [Route("Load_Stats")]
-        public List<Load_StatVO> GetAllLoadStat()
+        public List<LoadStatVO> GetAllLoadStat()
         {
-            Load_StatDAC db = new Load_StatDAC();
+            LoadStatDAC db = new LoadStatDAC();
             return db.GetAllLoadStat();
         }
 
         //Post : https://localhost:44332/api/Load_Stat/InsertLoad_Stat
         [HttpPost]
         [Route("InsertLoad_Stat")]
-        public IHttpActionResult InsertLoad_Stat(Load_StatVO load_stat)
+        public IHttpActionResult InsertLoad_Stat(LoadStatVO load_stat)
         {
             Message msg = new Message();
 
-            Load_StatDAC db = new Load_StatDAC();
+            LoadStatDAC db = new LoadStatDAC();
             bool result = db.InsertLoad_Stat(load_stat);
 
             if (result)
@@ -51,7 +51,7 @@ namespace MES_WEB_API.Controllers
         {
             Message msg = new Message();
 
-            Load_StatDAC db = new Load_StatDAC();
+            LoadStatDAC db = new LoadStatDAC();
             bool result = db.DeleteLoad_Stat(id);
 
             if (result)
@@ -71,9 +71,9 @@ namespace MES_WEB_API.Controllers
         //GET : https://localhost:44332/api/Load_Stat/SearchLoad_StatList?lineID={lineID}&eqpID={eqpID}
         [HttpGet]
         [Route("SearchLoad_StatList")]
-        public List<Load_StatVO> SearchLoad_StatList(string lineID = "", string eqpID = "")
+        public List<LoadStatVO> SearchLoad_StatList(string lineID = "", string eqpID = "")
         {
-            Load_StatDAC db = new Load_StatDAC();
+            LoadStatDAC db = new LoadStatDAC();
             return db.SearchLoad_StatList(lineID, eqpID);
         }
 
@@ -82,10 +82,10 @@ namespace MES_WEB_API.Controllers
         [Route("{id}")]
         public IHttpActionResult GetLoadStatInfo(string id)
         {
-            Message<Load_StatVO> msg = new Message<Load_StatVO>();
+            Message<LoadStatVO> msg = new Message<LoadStatVO>();
 
-            Load_StatDAC db = new Load_StatDAC();
-            Load_StatVO load_stat = db.GetLoadStatInfo(id);
+            LoadStatDAC db = new LoadStatDAC();
+            LoadStatVO load_stat = db.GetLoadStatInfo(id);
 
             if (load_stat != null)
             {

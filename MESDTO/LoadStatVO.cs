@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MESDTO
 {
-    public class Load_StatVO
+    public class LoadStatVO
     {
         public string VERSION_NO { get; set; }
         public string LINE_ID { get; set; }

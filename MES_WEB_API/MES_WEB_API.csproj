@@ -125,10 +125,10 @@
     <Compile Include="Controllers\EquipmentArrController.cs" />
     <Compile Include="Controllers\EquipmentController.cs" />
     <Compile Include="Controllers\EquipmentPlanController.cs" />
-    <Compile Include="Controllers\Load_StatController.cs" />
+    <Compile Include="Controllers\LoadStatController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\SetupController.cs" />
-    <Compile Include="Controllers\Std_step_infoController.cs" />
+    <Compile Include="Controllers\StdStepInfoController.cs" />
     <Compile Include="Controllers\StepRouteController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -139,7 +139,7 @@
     <Compile Include="Models\EquipmentDAC.cs" />
     <Compile Include="Models\Equipment_PlanDAC.cs" />
     <Compile Include="Models\Helper.cs" />
-    <Compile Include="Models\Load_StatDAC.cs" />
+    <Compile Include="Models\LoadStatDAC.cs" />
     <Compile Include="Models\ProductDAC.cs" />
     <Compile Include="Models\SetupDAC.cs" />
     <Compile Include="Models\StdStepInfoDAC.cs" />

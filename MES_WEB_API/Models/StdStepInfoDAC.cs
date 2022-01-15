@@ -146,5 +146,30 @@ values(@STD_STEP_ID, @STD_STEP_NAME, @STEP_TAT, @STEP_YIELD, @STEP_SETUP, @MODIF
                 return null;
             }
         }
+        public bool UpdateStd_step_info(StdStepInfoVO std_step_info)
+        {
+            string sql = "Update STD_STEP_INFO set STD_STEP_NAME=@STD_STEP_NAME, STEP_TAT=@STEP_TAT, STEP_YIELD=@STEP_YIELD, STEP_SETUP=@STEP_SETUP, MODIFIER=@MODIFIER, MODIFIER_DATE=@MODIFIER_DATE where STD_STEP_ID=@STD_STEP_ID";
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Connection.Open();
+
+                cmd.Parameters.AddWithValue("@STD_STEP_ID", std_step_info.STD_STEP_ID);
+                cmd.Parameters.AddWithValue("@STD_STEP_NAME", std_step_info.STD_STEP_NAME);
+                cmd.Parameters.AddWithValue("@STEP_TAT", std_step_info.STEP_TAT);
+                cmd.Parameters.AddWithValue("@STEP_YIELD", std_step_info.STEP_YIELD);
+                cmd.Parameters.AddWithValue("@STEP_SETUP", std_step_info.STEP_SETUP);
+                cmd.Parameters.AddWithValue("@MODIFIER", std_step_info.MODIFIER);
+                cmd.Parameters.AddWithValue("@MODIFIER_DATE", std_step_info.MODIFIER_DATE);
+
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception err)
+            {
+                return false;
+            }
+        }
     }
 }

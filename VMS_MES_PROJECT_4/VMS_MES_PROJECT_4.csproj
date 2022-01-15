@@ -224,11 +224,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceHelp.cs" />
-    <Compile Include="frmStdStepInfo.cs">
+    <Compile Include="frmStd_step_info.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmStdStepInfo.designer.cs">
-      <DependentUpon>frmStdStepInfo.cs</DependentUpon>
+    <Compile Include="frmStd_step_info.designer.cs">
+      <DependentUpon>frmStd_step_info.cs</DependentUpon>
     </Compile>
     <Compile Include="Util\CommonUtil.cs" />
     <Compile Include="Util\DataGridViewUtil.cs" />
@@ -300,8 +300,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="frmStdStepInfo.resx">
-      <DependentUpon>frmStdStepInfo.cs</DependentUpon>
+    <EmbeddedResource Include="frmStd_step_info.resx">
+      <DependentUpon>frmStd_step_info.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

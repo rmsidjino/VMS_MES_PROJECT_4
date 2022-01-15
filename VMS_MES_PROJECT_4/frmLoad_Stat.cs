@@ -15,7 +15,7 @@ namespace VMS_MES_PROJECT_4
     {
         ServiceHelp srv = new ServiceHelp("");
         int editIndex;
-        List<Load_StatVO> Llist;
+        List<LoadStatVO> Llist;
         List<CommonVO> com;
 
         public frmLoad_Stat()
@@ -51,7 +51,7 @@ namespace VMS_MES_PROJECT_4
             com = null;
             com = await srv.GetListAsync($"api/Common/All", com);
 
-            CommonUtil.ComboBinding(cboLine, com, "LINE_ID", blankText: "선택");
+            CommonUtil.ComboBinding(cboLine, com, "LINE", blankText: "선택");
             CommonUtil.ComboBinding(cboEQP, com, "EQP_ID", blankText: "선택");
         }
 

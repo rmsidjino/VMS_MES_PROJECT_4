@@ -9,17 +9,17 @@ using MESDTO;
 
 namespace MES_WEB_API.Models
 {
-    public class Load_StatDAC
+    public class LoadStatDAC
     {
         //string conn = string.Empty;
         SqlConnection conn;
 
-        public Load_StatDAC()
+        public LoadStatDAC()
         {
             conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["local"].ConnectionString);
         }
 
-        public List<Load_StatVO> GetAllLoadStat()
+        public List<LoadStatVO> GetAllLoadStat()
         {
             string sql = @"select VERSION_NO, LINE_ID, EQP_ID, TARGET_DATE, SETUP, BUSY, IDLERUN, IDLE, PM, DOWN, MODIFIER, MODIFIER_DATE
 from LOAD_STAT";
@@ -30,7 +30,7 @@ from LOAD_STAT";
                 {
                     cmd.Connection.Open();
 
-                    return Helper.DataReaderMapToList<Load_StatVO>(cmd.ExecuteReader());
+                    return Helper.DataReaderMapToList<LoadStatVO>(cmd.ExecuteReader());
                 }
             }
             catch (Exception err)
@@ -39,7 +39,7 @@ from LOAD_STAT";
             }
         }
 
-        public bool InsertLoad_Stat(Load_StatVO load_stat)
+        public bool InsertLoad_Stat(LoadStatVO load_stat)
         {
             string sql = @"insert into [LOAD_STAT] (VERSION_NO, LINE_ID, EQP_ID, TARGET_DATE, SETUP, BUSY, IDLERUN, IDLE, PM, DOWN, MODIFIER, MODIFIER_DATE)
 values(@VERSION_NO, @LINE_ID, @EQP_ID, @TARGET_DATE, @SETUP, @BUSY, @IDLERUN, @IDLE, @PM, @DOWN, @MODIFIER, @MODIFIER_DATE)";
@@ -95,7 +95,7 @@ values(@VERSION_NO, @LINE_ID, @EQP_ID, @TARGET_DATE, @SETUP, @BUSY, @IDLERUN, @I
             }
         }
 
-        public Load_StatVO GetLoadStatInfo(string id)
+        public LoadStatVO GetLoadStatInfo(string id)
         {
             string sql = @"select VERSION_NO, LINE_ID, EQP_ID, TARGET_DATE, SETUP, BUSY, IDLERUN, IDLE, PM, DOWN, MODIFIER, MODIFIER_DATE
                                     from LOAD_STAT where VERSION_NO=@VERSION_NO";
@@ -107,7 +107,7 @@ values(@VERSION_NO, @LINE_ID, @EQP_ID, @TARGET_DATE, @SETUP, @BUSY, @IDLERUN, @I
                     cmd.Parameters.AddWithValue("@VERSION_NO", id);
 
                     cmd.Connection.Open();
-                    List<Load_StatVO> list = Helper.DataReaderMapToList<Load_StatVO>(cmd.ExecuteReader());
+                    List<LoadStatVO> list = Helper.DataReaderMapToList<LoadStatVO>(cmd.ExecuteReader());
                     cmd.Connection.Close();
 
                     if (list != null && list.Count > 0)
@@ -122,7 +122,7 @@ values(@VERSION_NO, @LINE_ID, @EQP_ID, @TARGET_DATE, @SETUP, @BUSY, @IDLERUN, @I
             }
         }
 
-        public List<Load_StatVO> SearchLoad_StatList(string lineID = "", string eqpID = "")
+        public List<LoadStatVO> SearchLoad_StatList(string lineID = "", string eqpID = "")
         {
             string sql = @"select VERSION_NO, LINE_ID, EQP_ID, TARGET_DATE, SETUP, BUSY, IDLERUN, IDLE, PM, DOWN, MODIFIER, MODIFIER_DATE
                                     from LOAD_STAT where 1=1 ";
@@ -146,7 +146,7 @@ values(@VERSION_NO, @LINE_ID, @EQP_ID, @TARGET_DATE, @SETUP, @BUSY, @IDLERUN, @I
                     cmd.Connection = conn;
                     cmd.CommandText = sql;
                     cmd.Connection.Open();
-                    List<Load_StatVO> list = Helper.DataReaderMapToList<Load_StatVO>(cmd.ExecuteReader());
+                    List<LoadStatVO> list = Helper.DataReaderMapToList<LoadStatVO>(cmd.ExecuteReader());
                     cmd.Connection.Close();
 
                     return list;

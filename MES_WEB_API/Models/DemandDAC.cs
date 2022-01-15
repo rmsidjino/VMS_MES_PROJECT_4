@@ -154,5 +154,32 @@ from DEMAND where 1=1 ";
                 return null;
             }
         }
+
+        public bool UpdateDemand(DemandVO demand)
+        {
+            string sql = "Update DEMAND set PRODUCT_ID=@PRODUCT_ID, CUSTOMER_ID=@CUSTOMER_ID, DUE_DATE=@DUE_DATE, DEMAND_QTY=@DEMAND_QTY, MODIFIER=@MODIFIER, MODIFIER_DATE=@MODIFIER_DATE where DEMAND_VER=@DEMAND_VER and DEMAND_ID=@DEMAND_ID";
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Connection.Open();
+
+                cmd.Parameters.AddWithValue("@DEMAND_VER", demand.DEMAND_VER);
+                cmd.Parameters.AddWithValue("@DEMAND_ID", demand.DEMAND_ID);
+                cmd.Parameters.AddWithValue("@PRODUCT_ID", demand.PRODUCT_ID);
+                cmd.Parameters.AddWithValue("@CUSTOMER_ID", demand.CUSTOMER_ID);
+                cmd.Parameters.AddWithValue("@DUE_DATE", demand.DUE_DATE);
+                cmd.Parameters.AddWithValue("@DEMAND_QTY", demand.DEMAND_QTY);
+                cmd.Parameters.AddWithValue("@MODIFIER", demand.MODIFIER);
+                cmd.Parameters.AddWithValue("@MODIFIER_DATE", demand.MODIFIER_DATE);
+
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception err)
+            {
+                return false;
+            }
+        }
     }
 }
