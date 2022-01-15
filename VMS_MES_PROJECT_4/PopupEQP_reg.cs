@@ -134,19 +134,21 @@ namespace VMS_MES_PROJECT_4
                 MODIFIER = "Kim",
                 MODIFIER_DATE = DateTime.Now
             };
-            if (txtEQPID.Enabled)
+            if (update)
             {
-                msg = await srv.PostAsyncNone("api/Equipment/InsertEquipment", equipment);
+                msg = await srv.PostAsyncNone("api/Equipment/UpdateEquipment", equipment);
+                
             }
             else
             {
-                msg = await srv.PostAsyncNone("api/Equipment/UpdateEquipment", equipment);
+                msg = await srv.PostAsyncNone("api/Equipment/InsertEquipment", equipment);
             }
+            MessageBox.Show(msg.ResultMessage);
             if (msg.IsSuccess)
             {
                 //btnSearch.PerformClick();
             }
-            MessageBox.Show(msg.ResultMessage);
+           
             this.Close();
         }
 

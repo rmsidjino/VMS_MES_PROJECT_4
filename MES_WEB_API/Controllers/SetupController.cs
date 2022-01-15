@@ -42,6 +42,28 @@ namespace MES_WEB_API.Controllers
             }
             return Ok(msg);
         }
+        //https://localhost:44332/api/Setup/UpdateSetup
+        [HttpPost]
+        [Route("UpdateSetup")]
+        public IHttpActionResult UpdateSetup(SetupVO setup)
+        {
+            Message msg = new Message();
+
+            SetupDAC db = new SetupDAC();
+            bool result = db.UpdateSetup(setup);
+
+            if (result)
+            {
+                msg.IsSuccess = true;
+                msg.ResultMessage = "성공적으로 수정되었습니다.";
+            }
+            else
+            {
+                msg.IsSuccess = false;
+                msg.ResultMessage = "수정 중 오류가 발생했습니다.";
+            }
+            return Ok(msg);
+        }
 
         //https://localhost:44332/api/Setup/DelSetup/{id}
         [HttpGet]

@@ -1,7 +1,9 @@
 ﻿using MESDTO;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Configuration;
@@ -91,7 +93,33 @@ values(@SITE_ID,@LINE_ID,@EQP_GROUP,@STEP_ID,@TIME,@MODIFIER,@MODIFIED_DATE)";
                 return false;
             }
         }
+        public bool UpdateSetup(SetupVO setup)
+        {
+            string sql = @"update SETUP_TIME set SITE_ID=@SITE_ID, LINE_ID=@LINE_ID, EQP_GROUP=@EQP_GROUP, TIME=@TIME, MODIFIER=@MODIFIER, MODIFIED_DATE=@MODIFIED_DATE where STEP_ID=@STEP_ID";
 
+
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand(sql, conn);
+
+                cmd.Connection.Open();
+                cmd.Parameters.AddWithValue("@SITE_ID", setup.SITE_ID);
+                cmd.Parameters.AddWithValue("@LINE_ID", setup.LINE_ID);
+                cmd.Parameters.AddWithValue("@EQP_GROUP", setup.EQP_GROUP);
+                cmd.Parameters.AddWithValue("@STEP_ID", setup.STEP_ID);
+                cmd.Parameters.AddWithValue("@TIME", setup.TIME);
+                cmd.Parameters.AddWithValue("@MODIFIER", setup.MODIFIER);
+                cmd.Parameters.AddWithValue("@MODIFIED_DATE", setup.MODIFIED_DATE);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception err)
+            {
+                Debug.WriteLine(err.Message);
+                return false;
+            }
+        }
         public List<SetupVO> SearchSetup(string siteID="", string stepID="")
         {
             string sql = @"select SITE_ID, LINE_ID, EQP_GROUP, STEP_ID, TIME, MODIFIER,MODIFIED_DATE 

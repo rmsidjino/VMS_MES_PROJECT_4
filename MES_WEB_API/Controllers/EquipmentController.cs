@@ -95,6 +95,28 @@ namespace MES_WEB_API.Controllers
             }
             return Ok(msg);
         }
+        //Post : https://localhost:44332/api/Equipment/UpdateEquipment
+        [HttpPost]
+        [Route("UpdateEquipment")]
+        public IHttpActionResult UpdateEquipment(EquipmentVO equipment)
+        {
+            Message msg = new Message();
+
+            EquipmentDAC db = new EquipmentDAC();
+            bool result = db.UpdateEquipment(equipment);
+
+            if (result)
+            {
+                msg.IsSuccess = true;
+                msg.ResultMessage = "성공적으로 수정되었습니다.";
+            }
+            else
+            {
+                msg.IsSuccess = false;
+                msg.ResultMessage = "수정 중 오류가 발생했습니다.";
+            }
+            return Ok(msg);
+        }
         //public IHttpActionResult SearchEquipment(string lineID, string siteID)
         //{
         //    Message<EquipmentVO> msg = new Message<EquipmentVO>();
