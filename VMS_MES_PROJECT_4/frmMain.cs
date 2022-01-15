@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MESDTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +16,7 @@ namespace VMS_MES_PROJECT_4
     {
         MenuDAC db = new MenuDAC();
         DataTable dtMenu;
-
+        public UserVO CurrentUser { get; set; }
         //string user ID;
         public frmMain()
         {
@@ -29,6 +30,18 @@ namespace VMS_MES_PROJECT_4
 
         private void frmMain_Load(object sender, EventArgs e)
         {
+            frmLogin login = new frmLogin();
+            if (login.ShowDialog() == DialogResult.OK)
+            {
+                //메인화면 코딩 시작
+                //로그인 성공한 사람의 권한에 따라서 다르게 메뉴를 보여준다.
+                this.CurrentUser = login.CurrentUser;
+            }
+            else
+            {
+                Application.Exit();
+            }
+
             MenuBinding();
             ucTabControl1.Visible = false;
         }
@@ -52,7 +65,7 @@ namespace VMS_MES_PROJECT_4
                 }
             }
 
-            Form frm = (Form)Activator.CreateInstance(frmType);
+            Form frm = (Form)Activator.CreateInstance(frmType,CurrentUser);
             frm.MdiParent = this;
             frm.Show(); //Load->Activate 이벤트
         }

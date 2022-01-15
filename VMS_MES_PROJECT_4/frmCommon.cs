@@ -18,10 +18,11 @@ namespace VMS_MES_PROJECT_4
         //LoggingUtility _logging;
         int editIndex;
         List<CommonVO> clist;
-
+        public UserVO CurrentUser { get; set; }
         public frmCommon()
         {
             InitializeComponent();
+            this.CurrentUser = CurrentUser;
             //logging = new LoggingUtility("Setup", Level.Debug, 30); //테스트용
         }
 
