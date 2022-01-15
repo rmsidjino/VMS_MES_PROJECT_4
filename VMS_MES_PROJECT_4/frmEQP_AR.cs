@@ -113,7 +113,8 @@ namespace VMS_MES_PROJECT_4
                 EquipmentArrVO eqpitem = eqplist.Find((equipmentarr) => equipmentarr.PRODUCT_ID == productID);
                 PopupEQP_AR_reg frm = new PopupEQP_AR_reg(eqpitem);                
                 frm.StartPosition = FormStartPosition.CenterScreen;
-                frm.Show();
+                frm.ShowDialog();
+                LoadData();
             }
         }
     }

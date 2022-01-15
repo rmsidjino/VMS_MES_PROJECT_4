@@ -28,6 +28,10 @@ namespace VMS_MES_PROJECT_4
             InitializeComponent();
             this.eqpItem = eqpItem;
             update = true;
+            cboProductID.Enabled = false;
+            cboProcessID.Enabled = false;
+            cboStepID.Enabled = false;
+            txtEQPID.Enabled = false;
         }
 
         private async void btnOK_Click(object sender, EventArgs e)
