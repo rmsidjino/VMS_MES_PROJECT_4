@@ -115,7 +115,8 @@ namespace VMS_MES_PROJECT_4
 
                 PopupProduct frm = new PopupProduct(sitem);
                 frm.StartPosition = FormStartPosition.CenterScreen;
-                frm.Show();
+                frm.ShowDialog();
+                LoadData();
             }
         }
     }
