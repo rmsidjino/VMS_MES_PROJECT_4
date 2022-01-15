@@ -102,5 +102,28 @@ namespace MES_WEB_API.Controllers
             }
             return Ok(msg);
         }
+
+        //GET : https://localhost:44332/api/Product/UpdateProduct
+        [HttpPost]
+        [Route("UpdateProduct")]
+        public IHttpActionResult UpdateProduct(ProductVO product)
+        {
+            Message msg = new Message();
+
+            ProductDAC db = new ProductDAC();
+            bool result = db.UpdateProduct(product);
+
+            if (result)
+            {
+                msg.IsSuccess = true;
+                msg.ResultMessage = "성공적으로 수정되었습니다.";
+            }
+            else
+            {
+                msg.IsSuccess = false;
+                msg.ResultMessage = "수정 중 오류가 발생했습니다.";
+            }
+            return Ok(msg);
+        }
     }
 }

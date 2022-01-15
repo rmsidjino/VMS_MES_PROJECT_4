@@ -154,5 +154,32 @@ values(@PRODUCT_ID, @PRODUCT_TYPE, @PRODUCT_NAME, @PROCESS_ID, @LOT_SIZE, @INPUT
                 return null;
             }
         }
+
+        public bool UpdateProduct(ProductVO product)
+        {
+            string sql = "Update PRODUCT set PRODUCT_TYPE=@PRODUCT_TYPE, PRODUCT_NAME=@PRODUCT_NAME, PROCESS_ID=@PROCESS_ID, LOT_SIZE=@LOT_SIZE, INPUT_BATCH_SIZE=@INPUT_BATCH_SIZE where PRODUCT_ID=@PRODUCT_ID";
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand(sql, conn);
+
+                cmd.Connection.Open();
+                cmd.Parameters.AddWithValue("@PRODUCT_ID", product.PRODUCT_ID);
+                cmd.Parameters.AddWithValue("@PRODUCT_TYPE", product.PRODUCT_TYPE);
+                cmd.Parameters.AddWithValue("@PRODUCT_NAME", product.PRODUCT_NAME);
+                cmd.Parameters.AddWithValue("@PROCESS_ID", product.PROCESS_ID);
+                cmd.Parameters.AddWithValue("@LOT_SIZE", product.LOT_SIZE);
+                cmd.Parameters.AddWithValue("@INPUT_BATCH_SIZE", product.INPUT_BATCH_SIZE);
+                cmd.Parameters.AddWithValue("@MODIFIER", product.MODIFIER);
+                cmd.Parameters.AddWithValue("@MODIFIER_DATE", product.MODIFIER_DATE);
+
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception err)
+            {
+                return false;
+            }
+        }
     }
 }
