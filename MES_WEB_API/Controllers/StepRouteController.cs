@@ -101,5 +101,27 @@ namespace MES_WEB_API.Controllers
             }
             return Ok(msg);
         }
+        //GET : https://localhost:44332/api/StepRoute/UpdateStepRoute
+        [HttpPost]
+        [Route("UpdateStepRoute")]
+        public IHttpActionResult UpdateStepRoute(StepRouteVO step_route)
+        {
+            Message msg = new Message();
+
+            StepRouteDAC db = new StepRouteDAC();
+            bool result = db.UpdateStepRoute(step_route);
+
+            if (result)
+            {
+                msg.IsSuccess = true;
+                msg.ResultMessage = "성공적으로 수정되었습니다.";
+            }
+            else
+            {
+                msg.IsSuccess = false;
+                msg.ResultMessage = "수정 중 오류가 발생했습니다.";
+            }
+            return Ok(msg);
+        }
     }
 }

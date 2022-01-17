@@ -82,20 +82,19 @@ namespace VMS_MES_PROJECT_4
                 MODIFIER = "Kim",
                 MODIFIER_DATE = DateTime.Now
             };
-            if (txtDemandID.Enabled)
-            {
-                msg = await srv.PostAsyncNone("api/Demand/InsertDemand", demand);
-            }
-            else
+            if (update)
             {
                 msg = await srv.PostAsyncNone("api/Demand/UpdateDemand", demand);
             }
+            else
+            {
+                msg = await srv.PostAsyncNone("api/Demand/InsertDemand", demand);
+            }
+            MessageBox.Show(msg.ResultMessage);
             if (msg.IsSuccess)
             {
                 //btnSearch.PerformClick();
             }
-
-            MessageBox.Show(msg.ResultMessage);
             this.Close();
         }
 

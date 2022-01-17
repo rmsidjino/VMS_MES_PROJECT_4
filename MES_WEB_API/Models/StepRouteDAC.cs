@@ -156,5 +156,33 @@ from STEP_ROUTE where 1=1 ";
                 return null;
             }
         }
+        public bool UpdateStepRoute(StepRouteVO step_route)
+        {
+            string sql = "Update StepRoute set STEP_SEQ=@STEP_SEQ, STD_STEP_ID=@STD_STEP_ID, STEP_TYPE=@STEP_TYPE, PROCESS_TYPE=@PROCESS_TYPE, IN_STOCK=@IN_STOCK, OUT_STOCK=@OUT_STOCK, MODIFIER=@MODIFIER, MODIFIER_DATE=@MODIFIER_DATE where PROCESS_ID=@PROCESS_ID and STEP_ID=@STEP_ID";
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Connection.Open();
+
+                cmd.Parameters.AddWithValue("@PROCESS_ID", step_route.PROCESS_ID);
+                cmd.Parameters.AddWithValue("@STEP_ID", step_route.STEP_ID);
+                cmd.Parameters.AddWithValue("@STEP_SEQ", step_route.STEP_SEQ);
+                cmd.Parameters.AddWithValue("@STD_STEP_ID", step_route.STD_STEP_ID);
+                cmd.Parameters.AddWithValue("@STEP_TYPE", step_route.STEP_TYPE);
+                cmd.Parameters.AddWithValue("@PROCESS_TYPE", step_route.PROCESS_TYPE);
+                cmd.Parameters.AddWithValue("@IN_STOCK", step_route.IN_STOCK);
+                cmd.Parameters.AddWithValue("@OUT_STOCK", step_route.OUT_STOCK);
+                cmd.Parameters.AddWithValue("@MODIFIER", step_route.MODIFIER);
+                cmd.Parameters.AddWithValue("@MODIFIER_DATE", step_route.MODIFIER_DATE);
+
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception err)
+            {
+                return false;
+            }
+        }
     }
 }

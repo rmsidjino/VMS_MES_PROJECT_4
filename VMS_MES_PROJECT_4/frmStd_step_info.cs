@@ -11,14 +11,14 @@ using MESDTO;
 
 namespace VMS_MES_PROJECT_4
 {
-    public partial class frmStdStepInfo : Form
+    public partial class frmStd_step_info : Form
     {
         ServiceHelp srv = new ServiceHelp("");
         int editIndex;
         List<StdStepInfoVO> stlist;
         List<CommonVO> com;
 
-        public frmStdStepInfo()
+        public frmStd_step_info()
         {
             InitializeComponent();
         }

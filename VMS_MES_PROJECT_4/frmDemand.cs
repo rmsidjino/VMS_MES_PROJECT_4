@@ -113,7 +113,8 @@ namespace VMS_MES_PROJECT_4
 
                 PopupDemand frm = new PopupDemand(ditem);
                 frm.StartPosition = FormStartPosition.CenterScreen;
-                frm.Show();
+                frm.ShowDialog();
+                LoadData();
             }
         }
     }

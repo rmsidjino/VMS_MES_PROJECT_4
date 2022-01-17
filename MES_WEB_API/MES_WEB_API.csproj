@@ -2133,7 +2133,7 @@
     <Compile Include="Controllers\Load_StatController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\SetupController.cs" />
-    <Compile Include="Controllers\Std_step_infoController.cs" />
+    <Compile Include="Controllers\StdStepInfoController.cs" />
     <Compile Include="Controllers\StepRouteController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\UserLoginController.cs" />

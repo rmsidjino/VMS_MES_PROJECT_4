@@ -10,7 +10,7 @@ using MES_WEB_API.Models;
 namespace MES_WEB_API.Controllers
 {
     [RoutePrefix("api/Std_step_info")]
-    public class Std_step_infoController : ApiController
+    public class StdStepInfoController : ApiController
     {
         //GET : https://localhost:44332/api/Std_step_info/Std_step_infos
         [HttpGet]
@@ -97,6 +97,28 @@ namespace MES_WEB_API.Controllers
                 msg.IsSuccess = true;
                 msg.ResultMessage = "해당하는 제품이 없습니다.";
                 msg.Data = null;
+            }
+            return Ok(msg);
+        }
+        //GET : https://localhost:44332/api/Std_step_info/UpdateStd_step_info
+        [HttpPost]
+        [Route("UpdateStd_step_info")]
+        public IHttpActionResult UpdateStd_step_info(StdStepInfoVO std_step_info)
+        {
+            Message msg = new Message();
+
+            StdStepInfoDAC db = new StdStepInfoDAC();
+            bool result = db.UpdateStd_step_info(std_step_info);
+
+            if (result)
+            {
+                msg.IsSuccess = true;
+                msg.ResultMessage = "성공적으로 수정되었습니다.";
+            }
+            else
+            {
+                msg.IsSuccess = false;
+                msg.ResultMessage = "수정 중 오류가 발생했습니다.";
             }
             return Ok(msg);
         }
