@@ -37,6 +37,7 @@ namespace VMS_MES_PROJECT_4
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvEQPPlan = new System.Windows.Forms.DataGridView();
+            this.lblEqpPlan = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEQPPlan)).BeginInit();
@@ -87,6 +88,7 @@ namespace VMS_MES_PROJECT_4
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.lblEqpPlan);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(12, 60);
             this.panel2.Name = "panel2";
@@ -114,6 +116,16 @@ namespace VMS_MES_PROJECT_4
             this.dgvEQPPlan.RowTemplate.Height = 23;
             this.dgvEQPPlan.Size = new System.Drawing.Size(1360, 450);
             this.dgvEQPPlan.TabIndex = 2;
+            // 
+            // lblEqpPlan
+            // 
+            this.lblEqpPlan.AutoSize = true;
+            this.lblEqpPlan.Location = new System.Drawing.Point(1238, 11);
+            this.lblEqpPlan.Name = "lblEqpPlan";
+            this.lblEqpPlan.Size = new System.Drawing.Size(110, 12);
+            this.lblEqpPlan.TabIndex = 7;
+            this.lblEqpPlan.Text = "작업내역 Gantt차트";
+            this.lblEqpPlan.Click += new System.EventHandler(this.lblEqpPlan_Click);
             // 
             // frmEQPPlan
             // 
@@ -145,6 +157,7 @@ namespace VMS_MES_PROJECT_4
         private System.Windows.Forms.DataGridView dgvEQPPlan;
         private System.Windows.Forms.ComboBox cboProductID;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblEqpPlan;
     }
 }
 

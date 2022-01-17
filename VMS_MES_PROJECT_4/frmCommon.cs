@@ -18,16 +18,19 @@ namespace VMS_MES_PROJECT_4
         //LoggingUtility _logging;
         int editIndex;
         List<CommonVO> clist;
-        public UserVO CurrentUser { get; set; }
-        public frmCommon()
+        UserVO CurrentUser;
+        
+        public frmCommon(UserVO CurrentUser)
         {
             InitializeComponent();
             this.CurrentUser = CurrentUser;
             //logging = new LoggingUtility("Setup", Level.Debug, 30); //테스트용
+
         }
 
         private void frmCommon_Load(object sender, EventArgs e)
         {
+
             // 제품 데이터그리드뷰 컬럼 셋팅
             DataGridViewUtil.SetInitGridView(dgvCommon);
             DataGridViewUtil.AddGridTextColumn(dgvCommon, "공통코드ID", "CCODE", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
@@ -35,13 +38,19 @@ namespace VMS_MES_PROJECT_4
             DataGridViewUtil.AddGridTextColumn(dgvCommon, "공통코드그룹", "CCATEGORY", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
 
             DataGridViewButtonColumn btnEdit = new DataGridViewButtonColumn();
-
-            btnEdit.Text = "수정";
-            btnEdit.Width = 50;
-            btnEdit.UseColumnTextForButtonValue = true;
-            btnEdit.Name = "Edit";
-            editIndex = dgvCommon.Columns.Add(btnEdit);
-
+            if (CurrentUser.IsAdmin == "관리자" || CurrentUser.IsAdmin == "마스터관리자")
+            {
+                btnEdit.Text = "수정";
+                btnEdit.Width = 50;
+                btnEdit.UseColumnTextForButtonValue = true;
+                btnEdit.Name = "Edit";
+                editIndex = dgvCommon.Columns.Add(btnEdit);
+            }
+            else
+            {
+                btnCreate.Enabled = false;
+                btnDelete.Enabled = false;
+            }
             LoadData();
         }
 

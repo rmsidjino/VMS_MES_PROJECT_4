@@ -41,7 +41,8 @@ namespace VMS_MES_PROJECT_4
             {
                 Application.Exit();
             }
-
+            if (CurrentUser.IsAdmin != "마스터관리자")
+                btnMaster.Visible = false;
             MenuBinding();
             ucTabControl1.Visible = false;
         }
@@ -65,7 +66,7 @@ namespace VMS_MES_PROJECT_4
                 }
             }
 
-            Form frm = (Form)Activator.CreateInstance(frmType,CurrentUser);
+            Form frm = (Form)Activator.CreateInstance(frmType);
             frm.MdiParent = this;
             frm.Show(); //Load->Activate 이벤트
         }
@@ -224,6 +225,7 @@ namespace VMS_MES_PROJECT_4
 
             for (int i = 0; i < dv1.Count; i++)
             {
+                
                 Button btnItem = new Button();
                 btnItem.BackColor = System.Drawing.Color.Silver;
                 btnItem.Dock = System.Windows.Forms.DockStyle.Top;               
@@ -239,8 +241,9 @@ namespace VMS_MES_PROJECT_4
                 btnItem.Text = dv1[i]["menu_name"].ToString();
                 btnItem.UseVisualStyleBackColor = false;
                 btnItem.Click += BtnItem_Click;
-
+                
                 panel1.Controls.Add(btnItem);  
+
             }
             
         }
@@ -268,7 +271,7 @@ namespace VMS_MES_PROJECT_4
 
             try
             {
-                Form frm = (Form)Activator.CreateInstance(frmType);
+                Form frm = (Form)Activator.CreateInstance(frmType,CurrentUser);
                 frm.MdiParent = this;
                 frm.WindowState = FormWindowState.Maximized;
                 frm.Text = formText;

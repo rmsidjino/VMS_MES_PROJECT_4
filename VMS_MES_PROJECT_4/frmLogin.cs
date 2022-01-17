@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -80,6 +81,15 @@ namespace VMS_MES_PROJECT_4
             lblSignup.ForeColor = Color.White;
         }
 
-
+        private void lblWeb_Click(object sender, EventArgs e)
+        {
+            var psi = new ProcessStartInfo
+            {
+                FileName = "chrome.exe",
+                Arguments = "https://localhost:44332/UserLogin/index",
+                UseShellExecute = true
+            };
+            Process.Start(psi);
+        }
     }
 }

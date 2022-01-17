@@ -39,6 +39,7 @@ namespace VMS_MES_PROJECT_4
             this.panel1 = new System.Windows.Forms.Panel();
             this.cboEQP = new System.Windows.Forms.ComboBox();
             this.cboLine = new System.Windows.Forms.ComboBox();
+            this.lblWebLoad = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoadStat)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -93,6 +94,7 @@ namespace VMS_MES_PROJECT_4
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.lblWebLoad);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(12, 60);
             this.panel2.Name = "panel2";
@@ -128,6 +130,16 @@ namespace VMS_MES_PROJECT_4
             this.cboLine.Size = new System.Drawing.Size(100, 20);
             this.cboLine.TabIndex = 0;
             // 
+            // lblWebLoad
+            // 
+            this.lblWebLoad.AutoSize = true;
+            this.lblWebLoad.Location = new System.Drawing.Point(1181, 11);
+            this.lblWebLoad.Name = "lblWebLoad";
+            this.lblWebLoad.Size = new System.Drawing.Size(93, 12);
+            this.lblWebLoad.TabIndex = 6;
+            this.lblWebLoad.Text = "가동률 분석차트";
+            this.lblWebLoad.Click += new System.EventHandler(this.lblWebLoad_Click);
+            // 
             // frmLoad_Stat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -159,5 +171,6 @@ namespace VMS_MES_PROJECT_4
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox cboEQP;
         private System.Windows.Forms.ComboBox cboLine;
+        private System.Windows.Forms.Label lblWebLoad;
     }
 }
