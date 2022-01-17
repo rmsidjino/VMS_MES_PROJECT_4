@@ -29,6 +29,7 @@ namespace VMS_MES_PROJECT_4
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -219,10 +220,11 @@ namespace VMS_MES_PROJECT_4
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
-            this.Text = "메인 메뉴";
+            this.Text = "관리자 프로그램";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.MdiChildActivate += new System.EventHandler(this.frmMain_MdiChildActivate);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ucTabControl1_MouseDown);

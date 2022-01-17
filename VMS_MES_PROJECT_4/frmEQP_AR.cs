@@ -17,10 +17,12 @@ namespace VMS_MES_PROJECT_4
         int editIndex;
         List<EquipmentArrVO> eqplist;
         List<CommonVO> com;
+        UserVO CurrentUser;
 
-        public frmEQP_AR()
+        public frmEQP_AR(UserVO CurrentUser)
         {
             InitializeComponent();
+            this.CurrentUser = CurrentUser;
         }
 
         private void frmEQP_AR_Load(object sender, EventArgs e)
@@ -37,13 +39,19 @@ namespace VMS_MES_PROJECT_4
 
             DataGridViewButtonColumn btnEdit = new DataGridViewButtonColumn();
 
-            btnEdit.Text = "수정";
-            btnEdit.Width = 50;
-            btnEdit.UseColumnTextForButtonValue = true;
-            btnEdit.Name = "Edit";
-            editIndex = dgvEqpArr.Columns.Add(btnEdit);
-            
-
+            if (CurrentUser.IsAdmin == "관리자" || CurrentUser.IsAdmin == "마스터관리자")
+            {
+                btnEdit.Text = "수정";
+                btnEdit.Width = 50;
+                btnEdit.UseColumnTextForButtonValue = true;
+                btnEdit.Name = "Edit";
+                editIndex = dgvEqpArr.Columns.Add(btnEdit);
+            }
+            else
+            {
+                btnCreate.Enabled = false;
+                btnDelete.Enabled = false;
+            }
             LoadData();
         }
 

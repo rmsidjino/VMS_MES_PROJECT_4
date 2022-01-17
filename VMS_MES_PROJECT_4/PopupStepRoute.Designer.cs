@@ -30,6 +30,7 @@ namespace VMS_MES_PROJECT_4
         private void InitializeComponent()
         {
             System.Windows.Forms.Label label7;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PopupStepRoute));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -288,6 +289,7 @@ namespace VMS_MES_PROJECT_4
             this.Controls.Add(this.txtStepSeq);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PopupStepRoute";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "작업공정 등록";
