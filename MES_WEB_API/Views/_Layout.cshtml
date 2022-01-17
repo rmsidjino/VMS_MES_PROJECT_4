@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta content="AJAX Chart,Chart from JSON,Gantt Chart,Gantt Resource Chart,JSON Chart,JSON Plot,Project Management" name="keywords">
+    <meta content="AnyChart - JavaScript Charts designed to be embedded and integrated" name="description">
+    <title>VMS Solution | Web Chart</title>
+    @*[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]*@
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="~/plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/dist/css/adminlte.min.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link href="https://playground.anychart.com/gallery/src/Gantt_Live_Editing/Resource_Chart_Editing/iframe" rel="canonical">
+    <link href="https://cdn.anychart.com/releases/v8/css/anychart-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.anychart.com/releases/v8/fonts/css/anychart-font.min.css" rel="stylesheet" type="text/css">
+
+   
+
+    <style>
+        html,
+        body,
+        #container {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .toolbar {
+            height: 30px;
+            padding: 10px;
+            background: #f7f7f7;
+            border-bottom: 1px solid #cecece;
+        }
+
+            .toolbar select {
+                height: 30px;
+            }
+        .table {
+            table-layout: fixed;
+            width: 100%;
+            border-collapse: collapse;
+            border: 3px solid gray;
+        }
+        tbody td {
+            text-align: right;
+        }
+        td:nth-child(1) {
+            text-align: center;
+        }
+        td:nth-child(2) {
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+
+            <!-- SEARCH FORM -->
+            <form class="form-inline ml-3">
+                <div class="input-group input-group-sm">
+                    <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+                    <div class="input-group-append">
+                        <button class="btn btn-navbar" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+            </ul>
+            <div class="right-div">
+                @Html.ActionLink("LOG ME OUT", "Logout", "UserLogin", new { @class = "btn btn-danger pull-right" })
+            </div>
+        </nav>
+        <!-- /.navbar -->
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="http://www.vms-solutions.com/" class="brand-link">
+                <img src="data:image/jpeg;base64,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" alt="VMS Logo" class="brand-image-xl logo-xs"
+                     style="opacity: .8">
+                <span class="brand-text font-weight-light">VMS Solutions</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user panel (optional) -->
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <li class="nav-item">
+                            <a href="~/Capacity/Index" class="nav-link">
+                                <i class="fas fa-chart-area"></i>
+                                <p>설비가동률</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="~/Gantt/Index" class="nav-link">
+                                <i class="fas fa-calendar-week"></i>
+                                <p>작업계획 Gantt Chart</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="~/Gantt/Lot" class="nav-link">
+                                <i class="nav-icon fas fa-clipboard-list"></i>
+                                <p>Lot Gantt Chart</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            @RenderBody()
+        </div>
+        <!-- /.content-wrapper -->
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+            <div class="p-3">
+                <h5>Title</h5>
+                <p>Sidebar content</p>
+            </div>
+        </aside>
+        <!-- /.control-sidebar -->
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <!-- To the right -->
+            <div class="float-right d-none d-sm-inline">
+                Anything you want
+            </div>
+            <!-- Default to the left -->
+            <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+        </footer>
+    </div>
+    <!-- ./wrapper -->
+    <!-- REQUIRED SCRIPTS -->
+    <!-- jQuery -->
+    <script src="~/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/dist/js/adminlte.min.js"></script>
+    <!-- ChartJS -->
+    <script src="~/plugins/chart.js/Chart.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-gantt.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-data-adapter.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-data-adapter.min.js"></script>
+
+    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-base.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-gantt.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-exports.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-ui.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+
+    <!-- FLOT CHARTS -->
+    <script src="https://cdn.jsdelivr.net/npm/flot/jquery.flot.js"></script>
+    <!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.resize.min.js"></script>
+    <!-- FLOT PIE PLUGIN - also used to draw donut charts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.pie.min.js"></script>
+
+    <link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
+
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

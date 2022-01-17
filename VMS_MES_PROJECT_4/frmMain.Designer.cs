@@ -36,9 +36,9 @@ namespace VMS_MES_PROJECT_4
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnMaster = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ucTabControl1 = new VMS_MES_PROJECT_4.ucTabControl();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -118,7 +118,7 @@ namespace VMS_MES_PROJECT_4
             this.flowLayoutPanel1.Controls.Add(this.button4);
             this.flowLayoutPanel1.Controls.Add(this.button6);
             this.flowLayoutPanel1.Controls.Add(this.button5);
-            this.flowLayoutPanel1.Controls.Add(this.button7);
+            this.flowLayoutPanel1.Controls.Add(this.btnMaster);
             this.flowLayoutPanel1.Controls.Add(this.panel1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -161,31 +161,22 @@ namespace VMS_MES_PROJECT_4
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button2_Click);
             // 
-            // menuStrip1
+            // btnMaster
             // 
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1211, 24);
-            this.menuStrip1.TabIndex = 10;
-            this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.Visible = false;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.SandyBrown;
-            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button7.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button7.ForeColor = System.Drawing.Color.Black;
-            this.button7.Location = new System.Drawing.Point(0, 240);
-            this.button7.Margin = new System.Windows.Forms.Padding(0);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(218, 36);
-            this.button7.TabIndex = 12;
-            this.button7.Tag = "6@19";
-            this.button7.Text = "마스터 관리";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button2_Click);
+            this.btnMaster.BackColor = System.Drawing.Color.SandyBrown;
+            this.btnMaster.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMaster.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMaster.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnMaster.ForeColor = System.Drawing.Color.Black;
+            this.btnMaster.Location = new System.Drawing.Point(0, 240);
+            this.btnMaster.Margin = new System.Windows.Forms.Padding(0);
+            this.btnMaster.Name = "btnMaster";
+            this.btnMaster.Size = new System.Drawing.Size(218, 36);
+            this.btnMaster.TabIndex = 12;
+            this.btnMaster.Tag = "6@19";
+            this.btnMaster.Text = "마스터 관리";
+            this.btnMaster.UseVisualStyleBackColor = false;
+            this.btnMaster.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel1
             // 
@@ -195,6 +186,15 @@ namespace VMS_MES_PROJECT_4
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(218, 289);
             this.panel1.TabIndex = 13;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1211, 24);
+            this.menuStrip1.TabIndex = 10;
+            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.Visible = false;
             // 
             // ucTabControl1
             // 
@@ -242,7 +242,7 @@ namespace VMS_MES_PROJECT_4
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private ucTabControl ucTabControl1;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnMaster;
         private System.Windows.Forms.Panel panel1;
     }
 }

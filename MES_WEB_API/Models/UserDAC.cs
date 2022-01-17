@@ -25,7 +25,7 @@ namespace MES_WEB_API.Models
         public UserVO CheckUser(UserVO user)
         {
 
-            string sql = "select Email,Password,IsAdmin from Enrollment where Email=@Email and Password=@Password";
+            string sql = "select Email,Password,IsAdmin,FirstName,LastName from Enrollment where Email=@Email and Password=@Password";
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 cmd.Parameters.AddWithValue("@Email", user.Email);

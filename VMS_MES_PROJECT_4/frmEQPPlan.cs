@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -72,6 +73,17 @@ namespace VMS_MES_PROJECT_4
             eqpplanlist = await srv.GetAsync($"api/EquipmentPlan/SearchEquipmentPlan/{productID}/", eqpplanlist);
             dgvEQPPlan.DataSource = null;
             dgvEQPPlan.DataSource = eqpplanlist;
+        }
+
+        private void lblEqpPlan_Click(object sender, EventArgs e)
+        {
+            var psi = new ProcessStartInfo
+            {
+                FileName = "chrome.exe",
+                Arguments = "https://localhost:44332/Gantt/index",
+                UseShellExecute = true
+            };
+            Process.Start(psi);
         }
     }
 }
