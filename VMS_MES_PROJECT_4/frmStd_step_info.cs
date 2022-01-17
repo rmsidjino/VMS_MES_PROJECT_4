@@ -17,10 +17,12 @@ namespace VMS_MES_PROJECT_4
         int editIndex;
         List<StdStepInfoVO> stlist;
         List<CommonVO> com;
+        UserVO CurrentUser;
 
-        public frmStd_step_info()
+        public frmStd_step_info(UserVO CurrentUser)
         {
             InitializeComponent();
+            this.CurrentUser = CurrentUser;
         }
 
         private void frmStd_step_info_Load(object sender, EventArgs e)
@@ -34,12 +36,19 @@ namespace VMS_MES_PROJECT_4
 
             DataGridViewButtonColumn btnEdit = new DataGridViewButtonColumn();
 
-            btnEdit.Text = "수정";
-            btnEdit.Width = 50;
-            btnEdit.UseColumnTextForButtonValue = true;
-            btnEdit.Name = "Edit";
-            editIndex = dgvStdStepInfo.Columns.Add(btnEdit);
-
+            if (CurrentUser.IsAdmin == "관리자" || CurrentUser.IsAdmin == "마스터관리자")
+            {
+                btnEdit.Text = "수정";
+                btnEdit.Width = 50;
+                btnEdit.UseColumnTextForButtonValue = true;
+                btnEdit.Name = "Edit";
+                editIndex = dgvStdStepInfo.Columns.Add(btnEdit);
+            }
+            else
+            {
+                btnCreate.Enabled = false;
+                btnDelete.Enabled = false;
+            }
             LoadData();
         }
         private async void LoadData()
