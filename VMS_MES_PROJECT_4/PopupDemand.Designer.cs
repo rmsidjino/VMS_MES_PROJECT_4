@@ -139,10 +139,13 @@ namespace VMS_MES_PROJECT_4
             // 
             // dtpDueDate
             // 
+            this.dtpDueDate.CustomFormat = "yyyy-MM-dd";
+            this.dtpDueDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDueDate.Location = new System.Drawing.Point(169, 187);
             this.dtpDueDate.Name = "dtpDueDate";
             this.dtpDueDate.Size = new System.Drawing.Size(163, 21);
             this.dtpDueDate.TabIndex = 4;
+            this.dtpDueDate.Value = new System.DateTime(2022, 1, 17, 20, 53, 47, 0);
             // 
             // btnOk
             // 
