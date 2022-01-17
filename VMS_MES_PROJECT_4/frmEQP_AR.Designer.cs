@@ -29,6 +29,7 @@ namespace VMS_MES_PROJECT_4
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEQP_AR));
             this.dgvEqpArr = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -166,6 +167,7 @@ namespace VMS_MES_PROJECT_4
             this.Controls.Add(this.dgvEqpArr);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmEQP_AR";
             this.Text = "설비 배치";
             this.Load += new System.EventHandler(this.frmEQP_AR_Load);

@@ -29,6 +29,7 @@ namespace VMS_MES_PROJECT_4
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoad_Stat));
             this.dgvLoadStat = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -135,6 +136,7 @@ namespace VMS_MES_PROJECT_4
             this.Controls.Add(this.dgvLoadStat);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLoad_Stat";
             this.Text = "가동률 분석";
             this.Load += new System.EventHandler(this.frmLoad_Stat_Load);

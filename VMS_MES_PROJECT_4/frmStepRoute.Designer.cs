@@ -29,6 +29,7 @@ namespace VMS_MES_PROJECT_4
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStepRoute));
             this.panel1 = new System.Windows.Forms.Panel();
             this.cboStep = new System.Windows.Forms.ComboBox();
             this.cboProcess = new System.Windows.Forms.ComboBox();
@@ -172,6 +173,7 @@ namespace VMS_MES_PROJECT_4
             this.Controls.Add(this.dgvStepRoute);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmStepRoute";
             this.Text = "작업공정";
             this.Load += new System.EventHandler(this.frmStepRoute_Load);

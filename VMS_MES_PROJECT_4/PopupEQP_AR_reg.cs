@@ -60,6 +60,10 @@ namespace VMS_MES_PROJECT_4
             {
                 sb.AppendLine("- 시간이 같지 않습니다. 다시 입력하세요.");
             }
+            if(dtpStartDate.Value >= dtpEndTime.Value)
+            {
+                sb.AppendLine("-  시간이 맞지 않습니다. 다시 입력하세요.");
+            }
             if (sb.ToString().Length > 1)
             {
                 MessageBox.Show(sb.ToString());

@@ -29,6 +29,7 @@ namespace VMS_MES_PROJECT_4
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStd_step_info));
             this.dgvStdStepInfo = new System.Windows.Forms.DataGridView();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
@@ -133,7 +134,7 @@ namespace VMS_MES_PROJECT_4
             this.cboStd_Step_Id.Size = new System.Drawing.Size(100, 20);
             this.cboStd_Step_Id.TabIndex = 0;
             // 
-            // frmStdStepInfo
+            // frmStd_step_info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -141,7 +142,8 @@ namespace VMS_MES_PROJECT_4
             this.Controls.Add(this.dgvStdStepInfo);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "frmStdStepInfo";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "frmStd_step_info";
             this.Text = "표준공정정보관리";
             this.Load += new System.EventHandler(this.frmStd_step_info_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStdStepInfo)).EndInit();
