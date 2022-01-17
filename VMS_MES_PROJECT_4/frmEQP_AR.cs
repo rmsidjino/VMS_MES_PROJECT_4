@@ -34,8 +34,8 @@ namespace VMS_MES_PROJECT_4
             DataGridViewUtil.AddGridTextColumn(dgvEqpArr, "장비ID", "EQP_ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
             DataGridViewUtil.AddGridTextColumn(dgvEqpArr, "공정시간", "TACT_TIME", DataGridViewContentAlignment.MiddleRight,colWidth: 100);
             DataGridViewUtil.AddGridTextColumn(dgvEqpArr, "동작시간", "PROC_TIME", DataGridViewContentAlignment.MiddleRight,colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvEqpArr, "장비 가용 시간(시작)", "EFF_START_DATE", colWidth: 150);
-            DataGridViewUtil.AddGridTextColumn(dgvEqpArr, "장비 가용 시간(종료)", "EFF_END_DATE", colWidth: 150);            
+            DataGridViewUtil.AddGridTextColumn(dgvEqpArr, "장비 가용 시간(시작)", "EFF_START_DATE", DataGridViewContentAlignment.MiddleRight, colWidth: 150);
+            DataGridViewUtil.AddGridTextColumn(dgvEqpArr, "장비 가용 시간(종료)", "EFF_END_DATE", DataGridViewContentAlignment.MiddleRight, colWidth: 150);            
 
             DataGridViewButtonColumn btnEdit = new DataGridViewButtonColumn();
 

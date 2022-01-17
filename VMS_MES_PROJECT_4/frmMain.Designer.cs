@@ -185,7 +185,7 @@ namespace VMS_MES_PROJECT_4
             this.panel1.Location = new System.Drawing.Point(0, 276);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(218, 289);
+            this.panel1.Size = new System.Drawing.Size(218, 138);
             this.panel1.TabIndex = 13;
             // 
             // menuStrip1
