@@ -2130,7 +2130,7 @@
     <Compile Include="Controllers\EquipmentController.cs" />
     <Compile Include="Controllers\EquipmentPlanController.cs" />
     <Compile Include="Controllers\GanttController.cs" />
-    <Compile Include="Controllers\Load_StatController.cs" />
+    <Compile Include="Controllers\LoadStatController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\SetupController.cs" />
     <Compile Include="Controllers\StdStepInfoController.cs" />
@@ -2152,7 +2152,6 @@
     <Compile Include="Models\Helper.cs" />
     <Compile Include="Models\LoadStat.cs" />
     <Compile Include="Models\LoadStatDAC.cs" />
-    <Compile Include="Models\Load_StatDAC.cs" />
     <Compile Include="Models\ProductDAC.cs" />
     <Compile Include="Models\SetupDAC.cs" />
     <Compile Include="Models\StdStepInfoDAC.cs" />
