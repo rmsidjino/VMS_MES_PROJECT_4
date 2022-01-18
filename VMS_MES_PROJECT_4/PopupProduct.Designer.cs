@@ -29,6 +29,7 @@ namespace VMS_MES_PROJECT_4
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PopupProduct));
             this.label6 = new System.Windows.Forms.Label();
             this.txtInputBatchSize = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -240,6 +241,7 @@ namespace VMS_MES_PROJECT_4
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PopupProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "제품 등록";

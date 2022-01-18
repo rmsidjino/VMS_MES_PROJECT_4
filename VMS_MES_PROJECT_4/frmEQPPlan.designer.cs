@@ -29,6 +29,7 @@ namespace VMS_MES_PROJECT_4
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEQPPlan));
             this.panel1 = new System.Windows.Forms.Panel();
             this.cboProductID = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -134,6 +135,7 @@ namespace VMS_MES_PROJECT_4
             this.Controls.Add(this.dgvEQPPlan);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmEQPPlan";
             this.Text = "작업내역";
             this.Load += new System.EventHandler(this.frmEQPPlan_Load);

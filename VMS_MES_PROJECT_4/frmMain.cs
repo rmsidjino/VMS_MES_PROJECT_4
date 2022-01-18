@@ -41,6 +41,7 @@ namespace VMS_MES_PROJECT_4
             {
                 Application.Exit();
             }
+
             if (CurrentUser.IsAdmin != "마스터관리자")
                 btnMaster.Visible = false;
             MenuBinding();

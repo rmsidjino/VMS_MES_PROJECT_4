@@ -18,10 +18,12 @@ namespace VMS_MES_PROJECT_4
         int editIndex;
         List<EquipmentVO> eqplist;
         List<CommonVO> com;
+        UserVO CurrentUser;
 
-        public frmEQP()
+        public frmEQP(UserVO CurrentUser)
         {
             InitializeComponent();
+            this.CurrentUser = CurrentUser;
         }
 
         private void frmEQP_Load(object sender, EventArgs e)
@@ -38,17 +40,24 @@ namespace VMS_MES_PROJECT_4
             DataGridViewUtil.AddGridTextColumn(dgvEQP, "비상배치타입", "DISPATCHER_TYPE", DataGridViewContentAlignment.MiddleCenter, colWidth: 130);
             DataGridViewUtil.AddGridTextColumn(dgvEQP, "장비 가동 상태", "EQP_STATE", DataGridViewContentAlignment.MiddleCenter, colWidth: 150);
             DataGridViewUtil.AddGridTextColumn(dgvEQP, "장비 가동 코드", "EQP_STATE_CODE", DataGridViewContentAlignment.MiddleRight, colWidth: 150);
-            DataGridViewUtil.AddGridTextColumn(dgvEQP, "장비 가동 변경 시간", "STATE_CHANGE_TIME",colWidth: 150);
+            DataGridViewUtil.AddGridTextColumn(dgvEQP, "장비 가동 변경 시간", "STATE_CHANGE_TIME", DataGridViewContentAlignment.MiddleRight, colWidth: 150);
             DataGridViewUtil.AddGridTextColumn(dgvEQP, "자동화", "AUTOMATION", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
 
             DataGridViewButtonColumn btnEdit = new DataGridViewButtonColumn();
 
-            btnEdit.Text = "수정";
-            btnEdit.Width = 50;
-            btnEdit.UseColumnTextForButtonValue = true;
-            btnEdit.Name = "Edit";
-            editIndex = dgvEQP.Columns.Add(btnEdit);
-
+            if (CurrentUser.IsAdmin == "관리자" || CurrentUser.IsAdmin == "마스터관리자")
+            {
+                btnEdit.Text = "수정";
+                btnEdit.Width = 50;
+                btnEdit.UseColumnTextForButtonValue = true;
+                btnEdit.Name = "Edit";
+                editIndex = dgvEQP.Columns.Add(btnEdit);
+            }
+            else
+            {
+                btnCreate.Enabled = false;
+                btnDelete.Enabled = false;
+            }
             LoadData();
 
         }

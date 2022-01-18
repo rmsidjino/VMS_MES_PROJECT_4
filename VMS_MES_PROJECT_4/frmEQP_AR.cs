@@ -17,10 +17,12 @@ namespace VMS_MES_PROJECT_4
         int editIndex;
         List<EquipmentArrVO> eqplist;
         List<CommonVO> com;
+        UserVO CurrentUser;
 
-        public frmEQP_AR()
+        public frmEQP_AR(UserVO CurrentUser)
         {
             InitializeComponent();
+            this.CurrentUser = CurrentUser;
         }
 
         private void frmEQP_AR_Load(object sender, EventArgs e)
@@ -32,18 +34,24 @@ namespace VMS_MES_PROJECT_4
             DataGridViewUtil.AddGridTextColumn(dgvEqpArr, "장비ID", "EQP_ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
             DataGridViewUtil.AddGridTextColumn(dgvEqpArr, "공정시간", "TACT_TIME", DataGridViewContentAlignment.MiddleRight,colWidth: 100);
             DataGridViewUtil.AddGridTextColumn(dgvEqpArr, "동작시간", "PROC_TIME", DataGridViewContentAlignment.MiddleRight,colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvEqpArr, "장비 가용 시간(시작)", "EFF_START_DATE", colWidth: 150);
-            DataGridViewUtil.AddGridTextColumn(dgvEqpArr, "장비 가용 시간(종료)", "EFF_END_DATE", colWidth: 150);            
+            DataGridViewUtil.AddGridTextColumn(dgvEqpArr, "장비 가용 시간(시작)", "EFF_START_DATE", DataGridViewContentAlignment.MiddleRight, colWidth: 150);
+            DataGridViewUtil.AddGridTextColumn(dgvEqpArr, "장비 가용 시간(종료)", "EFF_END_DATE", DataGridViewContentAlignment.MiddleRight, colWidth: 150);            
 
             DataGridViewButtonColumn btnEdit = new DataGridViewButtonColumn();
 
-            btnEdit.Text = "수정";
-            btnEdit.Width = 50;
-            btnEdit.UseColumnTextForButtonValue = true;
-            btnEdit.Name = "Edit";
-            editIndex = dgvEqpArr.Columns.Add(btnEdit);
-            
-
+            if (CurrentUser.IsAdmin == "관리자" || CurrentUser.IsAdmin == "마스터관리자")
+            {
+                btnEdit.Text = "수정";
+                btnEdit.Width = 50;
+                btnEdit.UseColumnTextForButtonValue = true;
+                btnEdit.Name = "Edit";
+                editIndex = dgvEqpArr.Columns.Add(btnEdit);
+            }
+            else
+            {
+                btnCreate.Enabled = false;
+                btnDelete.Enabled = false;
+            }
             LoadData();
         }
 
