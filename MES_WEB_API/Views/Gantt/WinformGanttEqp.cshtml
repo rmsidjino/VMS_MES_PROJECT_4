@@ -1,0 +1,203 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    <title>WinformGantt</title>
+    <meta content="AJAX Chart,Chart from JSON,Gantt Chart,Gantt Resource Chart,JSON Chart,JSON Plot,Project Management" name="keywords">
+    <meta content="AnyChart - JavaScript Charts designed to be embedded and integrated" name="description">
+    <title>VMS Solution | Web Chart</title>
+    @*[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]*@
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="~/plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/dist/css/adminlte.min.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link href="https://playground.anychart.com/gallery/src/Gantt_Live_Editing/Resource_Chart_Editing/iframe" rel="canonical">
+    <link href="https://cdn.anychart.com/releases/v8/css/anychart-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.anychart.com/releases/v8/fonts/css/anychart-font.min.css" rel="stylesheet" type="text/css">
+    <script src="~/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/dist/js/adminlte.min.js"></script>
+    <!-- ChartJS -->
+    <script src="~/plugins/chart.js/Chart.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-gantt.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-data-adapter.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-data-adapter.min.js"></script>
+
+    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-base.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-gantt.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-exports.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-ui.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+
+    <!-- FLOT CHARTS -->
+    <script src="https://cdn.jsdelivr.net/npm/flot/jquery.flot.js"></script>
+    <!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.resize.min.js"></script>
+    <!-- FLOT PIE PLUGIN - also used to draw donut charts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.pie.min.js"></script>
+
+    <link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
+
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
+</head>
+<body>
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Lot Gantt Chart</h1>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- /.content-header -->
+    <div class="formElements">
+        <form action="~/Gantt/WinformGanttEqp" method="get">
+
+            EQP Group :
+            @Html.DropDownList("EQP")
+            Product ID
+            @Html.DropDownList("Product")
+            <input type="submit" id="button1" value="조회" />
+        </form>
+
+    </div>
+
+    <div id="container" style="height:700px"></div>
+
+    @{
+        string EQPSearch = ViewBag.EQPSearch; //x축
+
+        string ProductSearch = ViewBag.ProductSearch;
+
+        //@Json.Encode(ViewBag.Data);
+
+        var jss = new System.Web.Script.Serialization.JavaScriptSerializer();
+        var InfoJson = jss.Serialize(ViewBag.Data);
+
+    }
+
+<script type="text/javascript">
+
+        @*var temp = "@eqp"; //"1월,2월,3월...12월"
+        var arrTemp = temp.split(','); // ['1월', '2월'..]*@
+
+        var Info = JSON.parse('@Html.Raw(InfoJson)')
+
+        anychart.onDocumentReady(<!--function ()--> @*{
+            // The data used in this sample can be obtained from the CDN
+            // https://cdn.anychart.com/samples/gantt-live-editing/resource-chart-editing/data.json
+
+            //var url = 'https://localhost:44370/Gantt/LoadEqpPlan/@EQPSearch/@ProductSearch';
+            anychart.data.fromJson(
+
+                Info,*@
+            function () {
+                    var Info = JSON.parse('@Html.Raw(InfoJson)')
+                    // create data tree on raw data
+                    var treeData = anychart.data.tree(Info, 'as-table');
+                    // create resource gantt chart
+
+                    var chart = anychart.ganttResource();
+                    chart.defaultRowHeight(50)
+                        .splitterPosition(150);
+
+                    //var view = treeData.mapAs();
+                    //var filteredView = view.filter('id', function (value) {
+                    //    return id = "PRESS";
+                    //});
+
+                    //var chart = anychart.ganttResource(filteredView);
+
+
+                    // set data for the chart
+                    chart.data(treeData);
+                    //chart.data(treeData);
+
+
+
+                    var timeLine = chart.getTimeline();
+                    //timeLine.elements().labels().anchor('left-bottom').offsetY(3);
+
+                    chart.getTimeline().scale().zoomLevels([
+                        [
+                            { unit: "hour", count: 12 },
+                            { unit: "day", count: 1 }
+                        ]
+                    ]);
+                    chart.getTimeline().scale().minimum("2019-11-08");
+                    chart.getTimeline().scale().maximum("2019-11-15");
+                    chart.getTimeline().periods().labels().enabled(true);
+                    chart.getTimeline().periods().labels().format("{%id}");
+                    chart.getTimeline().periods().labels().fontColor("black");
+                    chart.getTimeline().periods().labels().fontSize(8);
+                    // make chart editable
+
+                    chart.getTimeline().tooltip().useHtml(true);
+                    chart.getTimeline().tooltip().titleFormat("{%id}");
+                    chart.getTimeline().tooltip().format("StartDate: {%start} <br>EndDate: {%end}");
+
+                    chart.edit(true);
+
+                    var dataGrid = chart.dataGrid();
+
+                    var column = dataGrid.column(1);
+                    column.width(250);
+                    column.labelsOverrider(function (label, item) {
+                        if (item.meta('filter')) {
+                            label.fontWeight('bold');
+                            label.fontColor('#66BB6A');
+                        }
+                    });
+
+                    // set first column settings
+                    dataGrid
+                        .column(0)
+                        .title('#')
+                        .width(30)
+                        .labels({ hAlign: 'center' });
+                    // set second column settings
+                    dataGrid
+                        .column(1)
+                        .title('EQP')
+                        .width(150)
+                        .labels({ hAlign: 'center' });
+
+
+
+
+                    // set container id for the chart
+                    chart.container('container');
+
+                    // initiate chart drawing
+                    chart.draw();
+
+                    // zoom chart all dates range
+
+
+                }
+            );
+        /*})*/;
+</script>
+</body>
+</html>

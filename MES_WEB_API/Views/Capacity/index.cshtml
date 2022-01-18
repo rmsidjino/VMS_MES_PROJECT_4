@@ -58,25 +58,18 @@
 
 
                 <div class="row">
-                    <div class="col-md-10">
+                    <div class="col-sm-12">
                         <!-- AREA CHART -->
                         <div class="card bg-light mb-3">
                             <div class="card-header">
                                 <h3 class="card-title">날짜별가동률</h3>
-
-                                <div class="card-tools">
-                                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                                        <i class="fas fa-minus"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button>
-                                </div>
                             </div>
                             @*<div class="card-body">
                                     <div class="chart">
                                         <canvas id="line-chart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
                                     </div>
                                 </div>*@
-                            <div>
+                            <div style="width: 100%">
                                 <canvas id="myChart"></canvas>
                             </div>
                             <!-- /.card-body -->
@@ -151,15 +144,18 @@
             datasets: [{
                 label: '@label3',
                 borderColor: 'rgb(96, 56, 87)',
-                data: @data3
+                data: @data3,
+                tension: 0.01
             }, {
                 label: '@label2',
                 borderColor: 'rgb(200, 77, 96)',
-                data: @data2
+                data: @data2,
+                tension: 0.01
             },{
                 label: '@label1',
                 borderColor: 'rgb(52, 78, 98)',
-                data: @data1
+                data: @data1,
+                tension: 0.01
             }]
         };
 

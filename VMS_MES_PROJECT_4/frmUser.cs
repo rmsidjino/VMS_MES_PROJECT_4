@@ -19,7 +19,7 @@ namespace VMS_MES_PROJECT_4
         int editIndex;
         List<UserVO> ulist;
         public UserVO CurrentUser { get; set; }
-        public frmUser()
+        public frmUser(UserVO CurrentUser)
         {
             InitializeComponent();
             this.CurrentUser = CurrentUser;

@@ -4,11 +4,14 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MESDTO;
+using Microsoft.Toolkit.Forms.UI.Controls;
 
 namespace VMS_MES_PROJECT_4
 {
@@ -19,7 +22,7 @@ namespace VMS_MES_PROJECT_4
         List<Equipment_PlanVO> eqpplanlist;
         List<CommonVO> com;
 
-        public frmEQPPlan()
+        public frmEQPPlan(UserVO CurrentUser)
         {
             InitializeComponent();
         }
@@ -77,13 +80,18 @@ namespace VMS_MES_PROJECT_4
 
         private void lblEqpPlan_Click(object sender, EventArgs e)
         {
-            var psi = new ProcessStartInfo
-            {
-                FileName = "chrome.exe",
-                Arguments = "https://localhost:44332/Gantt/index",
-                UseShellExecute = true
-            };
-            Process.Start(psi);
+            //var psi = new ProcessStartInfo
+            //{
+            //    FileName = "chrome.exe",
+            //    Arguments = "https://localhost:44332/Gantt/index",
+            //    UseShellExecute = true
+            //};
+            //Process.Start(psi);
+
+            Form frm = new frmWebView();
+            frm.Show();
+
+
         }
     }
 }

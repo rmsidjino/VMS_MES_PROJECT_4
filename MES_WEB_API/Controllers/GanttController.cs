@@ -366,6 +366,211 @@ namespace MES_WEB_API.Controllers
             return PartialView();
         }
 
+        public ActionResult WinformGantt(string EQP = "", string Product = "")
+        {
+
+            SelectCategory();
+            list = db.GetLotPlan();
+
+            if (!string.IsNullOrWhiteSpace(EQP))
+            {
+                if (!string.IsNullOrWhiteSpace(Product))
+                {
+                    list = list.FindAll((x) => x.STEP_ID == EQP && x.id.Contains(Product));
+                }
+                else
+                    list = list.FindAll((x) => x.STEP_ID == EQP);
+            }
+            else
+            {
+                if (!string.IsNullOrWhiteSpace(Product))
+                    list = list.FindAll((x) => x.id.Contains(Product));
+            }
+
+            var lotNum = list.GroupBy(o => new { o.name })
+               .Select(o => o.FirstOrDefault());
+
+            int seed = 0;
+            foreach (var item in lotNum)
+            {
+                var elist = list.FindAll(x => x.name == item.name);
+                ArrayList ePlan = new ArrayList();
+
+                var random = new Random(seed);
+                var color = String.Format("#{0:X6}", random.Next(0x1000000));
+                for (int i = 0; i < elist.Count; i++)
+                {
+                    ePlan.Add(new
+                    {
+                        id = elist[i].name,
+                        start = elist[i].start,
+                        end = elist[i].end,
+                        stroke = "#B8AA96",
+                        fill = new
+                        {
+                            angle = 90,
+                            keys = new[] {
+                                    new { color = color, position = 0 }
+                                }
+                        }
+                    });
+
+                };
+                eqpPlan.Add(new
+                {
+                    id = item.name,
+                    name = item.name,
+                    periods = ePlan
+                });
+
+                seed += 1;
+            }
+            ViewBag.Data = eqpPlan;
+
+            return PartialView();
+        }
+
+        public ActionResult WinformGanttEqp(string EQP = "", string Product = "")
+        {
+
+            SelectCategory();
+
+            list = db.GetEqpPlan();
+            if (!string.IsNullOrWhiteSpace(EQP))
+            {
+                if (!string.IsNullOrWhiteSpace(Product))
+                {
+                    list = list.FindAll((x) => x.STEP_ID == EQP && x.id.Contains(Product));
+                }
+                else
+                    list = list.FindAll((x) => x.STEP_ID == EQP);
+            }
+            else
+            {
+                if (!string.IsNullOrWhiteSpace(Product))
+                    list = list.FindAll((x) => x.id.Contains(Product));
+            }
+
+            var stepNum = list.GroupBy(o => new { o.STEP_ID })
+               .Select(o => o.FirstOrDefault());
+            var eqpNum = list.GroupBy(o => new { o.name })
+               .Select(o => o.FirstOrDefault());
+
+            foreach (var item in stepNum)
+            {
+                eqpPlan.Add(new
+                {
+                    id = item.STEP_ID,
+                    name = item.STEP_ID
+
+                });
+                foreach (var eqp in eqpNum.Where((x) => x.STEP_ID == item.STEP_ID))
+                {
+                    var elist = list.FindAll(x => x.name == eqp.name);
+                    ArrayList ePlan = new ArrayList();
+                    for (int i = 0; i < elist.Count; i++)
+                    {
+                        if (elist[i].MACHINE_STATE == "SETUP")
+                        {
+                            ePlan.Add(new
+                            {
+                                id = "SETUP",
+                                start = elist[i].start,
+                                end = elist[i].end,
+                                stroke = "#B8AA96",
+                                fill = new
+                                {
+                                    angle = 90,
+                                    keys = new[] {
+                                    new { color = "#CFC0A9", position = 0 },
+                                    new {color= "#E6D5BC",position= 1},
+                                    new {color= "#E8D9C3",position= 1}
+                                }
+                                }
+                            });
+                        }
+                        else
+                        {
+                            if (elist[i].id.Contains("STARBUCKS"))
+                            {
+                                ePlan.Add(new
+                                {
+                                    id = elist[i].id,
+                                    start = elist[i].start,
+                                    end = elist[i].end,
+                                    stroke = "#B8AA96",
+                                    fill = new
+                                    {
+                                        angle = 90,
+                                        keys = new[] {
+                                    new { color = "#006400", position = 1 }
+                                }
+                                    }
+                                });
+                            }
+                            else if (elist[i].id.Contains("KANU"))
+                            {
+                                ePlan.Add(new
+                                {
+                                    id = elist[i].id,
+                                    start = elist[i].start,
+                                    end = elist[i].end,
+                                    stroke = "#B8AA96",
+                                    fill = new
+                                    {
+                                        angle = 90,
+                                        keys = new[] {
+                                    new { color = "#DC143C", position = 1 }
+                                }
+                                    }
+                                });
+                            }
+                            else if (elist[i].id.Contains("TOMNTOMS"))
+                            {
+                                ePlan.Add(new
+                                {
+                                    id = elist[i].id,
+                                    start = elist[i].start,
+                                    end = elist[i].end,
+                                    stroke = "#B8AA96",
+                                    fill = new
+                                    {
+                                        angle = 90,
+                                        keys = new[] {
+                                    new { color = "#CD853F", position = 1 }
+                                }
+                                    }
+                                });
+                            }
+                            else
+                            {
+                                ePlan.Add(new
+                                {
+                                    id = elist[i].id,
+                                    start = elist[i].start,
+                                    end = elist[i].end,
+                                });
+                            }
+
+                        }
+
+                    }
+                    eqpPlan.Add(new
+                    {
+                        id = eqp.name,
+                        name = eqp.name,
+                        periods = ePlan,
+                        parent = item.STEP_ID
+                    });
+                }
+            }
+
+            //string json = JsonConvert.SerializeObject(eqpPlan.ToArray(), Formatting.Indented);
+            ViewBag.Data = eqpPlan;
+
+            return PartialView();
+        }
+
         public ActionResult SelectCategory()
         {
 

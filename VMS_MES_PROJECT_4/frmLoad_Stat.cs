@@ -18,8 +18,9 @@ namespace VMS_MES_PROJECT_4
         int editIndex;
         List<LoadStatVO> Llist;
         List<CommonVO> com;
+        UserVO CurrentUser;
 
-        public frmLoad_Stat()
+        public frmLoad_Stat(UserVO CurrentUser)
         {
             InitializeComponent();
         }

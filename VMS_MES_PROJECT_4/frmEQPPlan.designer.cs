@@ -35,9 +35,9 @@ namespace VMS_MES_PROJECT_4
             this.label5 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblEqpPlan = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvEQPPlan = new System.Windows.Forms.DataGridView();
-            this.lblEqpPlan = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEQPPlan)).BeginInit();
@@ -95,6 +95,18 @@ namespace VMS_MES_PROJECT_4
             this.panel2.Size = new System.Drawing.Size(1360, 33);
             this.panel2.TabIndex = 1;
             // 
+            // lblEqpPlan
+            // 
+            this.lblEqpPlan.AutoSize = true;
+            this.lblEqpPlan.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblEqpPlan.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblEqpPlan.Location = new System.Drawing.Point(1238, 11);
+            this.lblEqpPlan.Name = "lblEqpPlan";
+            this.lblEqpPlan.Size = new System.Drawing.Size(110, 12);
+            this.lblEqpPlan.TabIndex = 7;
+            this.lblEqpPlan.Text = "작업내역 Gantt차트";
+            this.lblEqpPlan.Click += new System.EventHandler(this.lblEqpPlan_Click);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -116,16 +128,6 @@ namespace VMS_MES_PROJECT_4
             this.dgvEQPPlan.RowTemplate.Height = 23;
             this.dgvEQPPlan.Size = new System.Drawing.Size(1360, 450);
             this.dgvEQPPlan.TabIndex = 2;
-            // 
-            // lblEqpPlan
-            // 
-            this.lblEqpPlan.AutoSize = true;
-            this.lblEqpPlan.Location = new System.Drawing.Point(1238, 11);
-            this.lblEqpPlan.Name = "lblEqpPlan";
-            this.lblEqpPlan.Size = new System.Drawing.Size(110, 12);
-            this.lblEqpPlan.TabIndex = 7;
-            this.lblEqpPlan.Text = "작업내역 Gantt차트";
-            this.lblEqpPlan.Click += new System.EventHandler(this.lblEqpPlan_Click);
             // 
             // frmEQPPlan
             // 
