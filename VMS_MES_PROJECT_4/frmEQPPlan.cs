@@ -11,7 +11,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MESDTO;
-using Microsoft.Toolkit.Forms.UI.Controls;
 
 namespace VMS_MES_PROJECT_4
 {
@@ -21,6 +20,7 @@ namespace VMS_MES_PROJECT_4
         int editIndex;
         List<Equipment_PlanVO> eqpplanlist;
         List<CommonVO> com;
+        UserVO CurrentUser;
 
         public frmEQPPlan(UserVO CurrentUser)
         {

@@ -29,17 +29,16 @@ namespace VMS_MES_PROJECT_4
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoad_Stat));
             this.dgvLoadStat = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblWebLoad = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cboEQP = new System.Windows.Forms.ComboBox();
             this.cboLine = new System.Windows.Forms.ComboBox();
-            this.lblWebLoad = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoadStat)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -101,6 +100,16 @@ namespace VMS_MES_PROJECT_4
             this.panel2.Size = new System.Drawing.Size(1298, 33);
             this.panel2.TabIndex = 4;
             // 
+            // lblWebLoad
+            // 
+            this.lblWebLoad.AutoSize = true;
+            this.lblWebLoad.Location = new System.Drawing.Point(1181, 11);
+            this.lblWebLoad.Name = "lblWebLoad";
+            this.lblWebLoad.Size = new System.Drawing.Size(93, 12);
+            this.lblWebLoad.TabIndex = 6;
+            this.lblWebLoad.Text = "가동률 분석차트";
+            this.lblWebLoad.Click += new System.EventHandler(this.lblWebLoad_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
@@ -130,16 +139,6 @@ namespace VMS_MES_PROJECT_4
             this.cboLine.Size = new System.Drawing.Size(100, 20);
             this.cboLine.TabIndex = 0;
             // 
-            // lblWebLoad
-            // 
-            this.lblWebLoad.AutoSize = true;
-            this.lblWebLoad.Location = new System.Drawing.Point(1181, 11);
-            this.lblWebLoad.Name = "lblWebLoad";
-            this.lblWebLoad.Size = new System.Drawing.Size(93, 12);
-            this.lblWebLoad.TabIndex = 6;
-            this.lblWebLoad.Text = "가동률 분석차트";
-            this.lblWebLoad.Click += new System.EventHandler(this.lblWebLoad_Click);
-            // 
             // frmLoad_Stat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -148,7 +147,6 @@ namespace VMS_MES_PROJECT_4
             this.Controls.Add(this.dgvLoadStat);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLoad_Stat";
             this.Text = "가동률 분석";
             this.Load += new System.EventHandler(this.frmLoad_Stat_Load);

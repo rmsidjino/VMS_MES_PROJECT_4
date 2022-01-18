@@ -39,6 +39,7 @@ namespace VMS_MES_PROJECT_4
             this.button5 = new System.Windows.Forms.Button();
             this.btnMaster = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnLogOut = new System.Windows.Forms.ToolStripButton();
             this.btnReSet = new System.Windows.Forms.ToolStripButton();
@@ -191,15 +192,25 @@ namespace VMS_MES_PROJECT_4
             this.panel1.Size = new System.Drawing.Size(218, 138);
             this.panel1.TabIndex = 13;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Location = new System.Drawing.Point(218, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1415, 24);
+            this.menuStrip1.TabIndex = 16;
+            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.Visible = false;
+            this.menuStrip1.ItemAdded += new System.Windows.Forms.ToolStripItemEventHandler(this.menuStrip1_ItemAdded);
+            // 
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnLogOut,
             this.btnReSet});
-            this.toolStrip1.Location = new System.Drawing.Point(218, 26);
+            this.toolStrip1.Location = new System.Drawing.Point(218, 50);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1415, 25);
-            this.toolStrip1.TabIndex = 14;
+            this.toolStrip1.TabIndex = 18;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // btnLogOut
@@ -211,7 +222,6 @@ namespace VMS_MES_PROJECT_4
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(23, 22);
             this.btnLogOut.Text = "toolStripButton1";
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // btnReSet
             // 
@@ -228,13 +238,11 @@ namespace VMS_MES_PROJECT_4
             this.ucTabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.ucTabControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ucTabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            this.ucTabControl1.Location = new System.Drawing.Point(218, 0);
+            this.ucTabControl1.Location = new System.Drawing.Point(218, 24);
             this.ucTabControl1.Name = "ucTabControl1";
             this.ucTabControl1.SelectedIndex = 0;
             this.ucTabControl1.Size = new System.Drawing.Size(1415, 26);
-            this.ucTabControl1.TabIndex = 12;
-            this.ucTabControl1.SelectedIndexChanged += new System.EventHandler(this.ucTabControl1_SelectedIndexChanged);
-            this.ucTabControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ucTabControl1_MouseDown);
+            this.ucTabControl1.TabIndex = 17;
             // 
             // frmMain
             // 
@@ -244,10 +252,12 @@ namespace VMS_MES_PROJECT_4
             this.ClientSize = new System.Drawing.Size(1633, 695);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.ucTabControl1);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
             this.Text = "관리자 프로그램";
             this.Load += new System.EventHandler(this.frmMain_Load);
@@ -269,12 +279,13 @@ namespace VMS_MES_PROJECT_4
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
-        private ucTabControl ucTabControl1;
         private System.Windows.Forms.Button btnMaster;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnLogOut;
         private System.Windows.Forms.ToolStripButton btnReSet;
+        private ucTabControl ucTabControl1;
     }
 }
 

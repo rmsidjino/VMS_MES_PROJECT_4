@@ -29,7 +29,6 @@ namespace VMS_MES_PROJECT_4
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStd_step_info));
             this.dgvStdStepInfo = new System.Windows.Forms.DataGridView();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
@@ -142,7 +141,6 @@ namespace VMS_MES_PROJECT_4
             this.Controls.Add(this.dgvStdStepInfo);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmStd_step_info";
             this.Text = "표준공정정보관리";
             this.Load += new System.EventHandler(this.frmStd_step_info_Load);

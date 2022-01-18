@@ -29,7 +29,6 @@ namespace VMS_MES_PROJECT_4
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSetupTime));
             this.panel1 = new System.Windows.Forms.Panel();
             this.cboStep = new System.Windows.Forms.ComboBox();
             this.cboSite = new System.Windows.Forms.ComboBox();
@@ -173,7 +172,6 @@ namespace VMS_MES_PROJECT_4
             this.Controls.Add(this.dgvSetup);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmSetupTime";
             this.Text = "셋업관리";
             this.Load += new System.EventHandler(this.frmSetupTime_Load);

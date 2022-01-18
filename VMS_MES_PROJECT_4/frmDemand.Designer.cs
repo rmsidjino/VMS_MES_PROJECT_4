@@ -30,7 +30,6 @@ namespace VMS_MES_PROJECT_4
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDemand));
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtDemandVer = new System.Windows.Forms.TextBox();
             this.cboProduct = new System.Windows.Forms.ComboBox();
@@ -198,7 +197,6 @@ namespace VMS_MES_PROJECT_4
             this.Controls.Add(this.dgvDemand);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDemand";
             this.Text = "수주관리";
             this.Load += new System.EventHandler(this.frmDemand_Load);
