@@ -117,6 +117,9 @@ namespace VMS_MES_PROJECT_4
             // lblWeb
             // 
             this.lblWeb.AutoSize = true;
+            this.lblWeb.BackColor = System.Drawing.SystemColors.Control;
+            this.lblWeb.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblWeb.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblWeb.Location = new System.Drawing.Point(306, 237);
             this.lblWeb.Name = "lblWeb";
             this.lblWeb.Size = new System.Drawing.Size(97, 12);

@@ -42,9 +42,9 @@ from LOAD_STAT";
             {
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
-                    cmd.Connection.Open();
-
-                    return Helper.DataReaderMapToList<LoadStatVO>(cmd.ExecuteReader());
+                    List<LoadStatVO> list = Helper.DataReaderMapToList<LoadStatVO>(cmd.ExecuteReader());
+                    cmd.Connection.Close();
+                    return list;
                 }
             }
             catch (Exception err)

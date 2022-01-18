@@ -4,6 +4,7 @@
 @{
     ViewBag.Title = "Index";
 }
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,8 +13,173 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link href="../../Content/StyleSheet.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript">
+
+    <style>
+        .register {
+            background: -webkit-linear-gradient(left, #F39C12, #FEF5E7 );
+            margin-top: 20%;
+            padding: 3%;
+        }
+
+        .register-left {
+            text-align: center;
+            color: #fff;
+            margin-top: 4%;
+        }
+
+            .register-left input {
+                border: none;
+                border-radius: 1.5rem;
+                padding: 2%;
+                width: 60%;
+                background: #f8f9fa;
+                font-weight: bold;
+                color: #383d41;
+                margin-top: 30%;
+                margin-bottom: 3%;
+                cursor: pointer;
+            }
+
+        .register-right {
+            background: #f8f9fa;
+            border-top-left-radius: 10% 50%;
+            border-bottom-left-radius: 10% 50%;
+        }
+
+        .register-left img {
+            margin-top: 15%;
+            margin-bottom: 5%;
+            width: 25%;
+            -webkit-animation: mover 2s infinite alternate;
+            animation: mover 1s infinite alternate;
+        }
+
+        .register-left p {
+            font-weight: lighter;
+            padding: 12%;
+            margin-top: -9%;
+        }
+
+        .register .register-form {
+            padding: 10%;
+            margin-top: 10%;
+        }
+
+        .btnRegister {
+            float: right;
+            margin-top: 10%;
+            border: none;
+            border-radius: 1.5rem;
+            padding: 2%;
+            background: #F39C12;
+            color: #fff;
+            font-weight: 600;
+            width: 50%;
+            cursor: pointer;
+        }
+
+        .register .nav-tabs {
+            margin-top: 3%;
+            border: none;
+            background: #F39C12;
+            border-radius: 1.5rem;
+            width: 28%;
+            float: right;
+        }
+
+            .register .nav-tabs .nav-link {
+                padding: 2%;
+                height: 34px;
+                font-weight: 600;
+                color: #fff;
+                border-top-right-radius: 1.5rem;
+                border-bottom-right-radius: 1.5rem;
+            }
+
+                .register .nav-tabs .nav-link:hover {
+                    border: none;
+                }
+
+                .register .nav-tabs .nav-link.active {
+                    width: 100px;
+                    color: #F39C12;
+                    border: 2px solid #F39C12;
+                    border-top-left-radius: 1.5rem;
+                    border-bottom-left-radius: 1.5rem;
+                }
+
+        .register-heading {
+            text-align: center;
+            margin-top: 8%;
+            margin-bottom: -15%;
+            color: #495057;
+        }
+    </style>
+</head>
+
+<body>
+    <!------ Include the above in your HEAD tag ---------->
+    @using (Html.BeginForm("Index", "UserLogin", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+    <div class="container register">
+        <div class="row">
+            <div class="col-md-3 register-left">
+                <img src="data:image/png;base64,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" alt="" />
+                <h3>Welcome</h3>
+                <p>
+                    This is a website for viewing work data.
+                    <br />로그인을 해주세요.
+                </p>
+            </div>
+            <div class="col-md-9 register-right">
+                <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link" id="home-tab" data-toggle="tab" href="../Enrollment/Index" role="tab" aria-controls="home" aria-selected="false">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" id="profile-tab" data-toggle="tab" href="../UserLogin/Index" role="tab" aria-controls="profile" aria-selected="true">Login</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <h3 class="register-heading">Apply as a Member</h3>
+                        <div class="row register-form">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    @Html.TextBoxFor(e => e.Email, new { @class = "form-control", placeholder = "Your Email *" })
+                                    @Html.ValidationMessageFor(e => e.Email)
+                                </div>
+                                <div class="form-group">
+                                    @Html.PasswordFor(e => e.Password, new { id = "password", @class = "form-control", placeholder = "Password *" })
+                                    <span id="result"></span>
+                                    @Html.ValidationMessageFor(e => e.Password)
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="submit" class="btnLogin" value="Login" />
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+
+               $(function () {
+                     var msg = '@ViewData["result"]';
+                     if (msg == '1')
+                     {
+                         alert("User Details Inserted Successfully");
+                         window.location.href = "@Url.Action("Index", "UserLogin")";
+                      }
+                  });
+        </script>
+
+        <script type="text/javascript">
 
 
     $(document).ready(function () {
@@ -31,72 +197,8 @@
             }
         });
     });
-    </script>
-</head>
-
-<body>
-    <!------ Include the above in your HEAD tag ---------->
-    @using (Html.BeginForm("Index", "UserLogin", FormMethod.Post))
-    {
-        @Html.AntiForgeryToken()
-        <div class="container register">
-            <div class="row">
-                <div class="col-md-3 register-left">
-                    <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
-                    <h3>Welcome</h3>
-                    <p>
-                        This is a website for viewing work data.
-                        <br />로그인을 해주세요.
-                    </p>
-                </div>
-                <div class="col-md-9 register-right">
-                    <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="../Enrollment/Index" role="tab" aria-controls="home" aria-selected="true">Register</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="../UserLogin/Index" role="tab" aria-controls="profile" aria-selected="false">Login</a>
-                        </li>
-                    </ul>
-                    <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                            <h3 class="register-heading">Apply as a Member</h3>
-                            <div class="row register-form">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        @Html.TextBoxFor(e => e.Email, new { @class = "form-control", placeholder = "Your Email *" })
-                                        @Html.ValidationMessageFor(e => e.Email)
-                                    </div>
-                                    <div class="form-group">
-                                        @Html.PasswordFor(e => e.Password, new { id = "password", @class = "form-control", placeholder = "Password *" })
-                                        <span id="result"></span>
-                                        @Html.ValidationMessageFor(e => e.Password)
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type="submit" class="btnLogin" value="Login" />
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <script type="text/javascript">
-
-               $(function () {
-                     var msg = '@ViewData["result"]';
-                     if (msg == '1')
-                     {
-                         alert("User Details Inserted Successfully");
-                         window.location.href = "@Url.Action("Index", "UserLogin")";
-                      }
-                  });
-            </script>
-            }
-        </div>
+        </script>
+    </div>
     }
 </body>
 </html>

@@ -2108,7 +2108,6 @@
     <Content Include="plugins\uplot\uPlot.min.css" />
     <Content Include="Views\Gantt\css\anychart-font.min.css" />
     <Content Include="Views\Gantt\css\anychart-ui.min.css" />
-    <Content Include="Views\Gantt\index.html" />
     <Content Include="Views\Gantt\js\anychart-base.min.js" />
     <Content Include="Views\Gantt\js\anychart-data-adapter.min.js" />
     <Content Include="Views\Gantt\js\anychart-exports.min.js" />
@@ -2312,6 +2311,11 @@
     <Content Include="plugins\summernote\summernote.js.map" />
     <Content Include="plugins\summernote\summernote.min.js.map" />
     <Content Include="plugins\toastr\toastr.js.map" />
+    <None Include="Properties\PublishProfiles\VMSWEB - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\VMSWEB - ReadOnly - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\VMSWEB - Web Deploy.pubxml" />
+    <Content Include="Views\Gantt\WinformGantt.cshtml" />
+    <Content Include="Views\Gantt\WinformGanttEqp.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -2322,9 +2326,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Data\" />
-    <Folder Include="Views\EquipmentArr\" />
-    <Folder Include="Views\EquipmentPlan\" />
-    <Folder Include="Views\Equipment\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MESDTO\MESDTO.csproj">
