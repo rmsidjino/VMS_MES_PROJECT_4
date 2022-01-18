@@ -9,7 +9,7 @@ using MES_WEB_API.Models;
 
 namespace MES_WEB_API.Controllers
 {
-    [RoutePrefix("api/Load_Stat")]
+    [RoutePrefix("api/LoadStat")]
     public class LoadStatController : ApiController
     {
         //GET : https://localhost:44332/api/Load_Stat/Load_Stats

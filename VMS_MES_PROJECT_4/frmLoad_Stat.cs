@@ -46,7 +46,7 @@ namespace VMS_MES_PROJECT_4
         private async void LoadData()
         {
             Llist = null;
-            Llist = await srv.GetListAsync("api/Load_Stat/Load_Stats", Llist);
+            Llist = await srv.GetListAsync("api/LoadStat/Load_Stats", Llist);
             dgvLoadStat.DataSource = Llist;
 
             com = null;
@@ -67,7 +67,7 @@ namespace VMS_MES_PROJECT_4
                 eqpID = cboEQP.SelectedValue.ToString();
 
 
-            string url = $"api/Load_Stat/SearchLoad_StatList?lineID={lineID}&eqpID={eqpID}";
+            string url = $"api/LoadStat/SearchLoad_StatList?lineID={lineID}&eqpID={eqpID}";
             Llist = null;
             Llist = await srv.GetListAsync(url, Llist);
             dgvLoadStat.DataSource = null;
