@@ -36,16 +36,18 @@ namespace VMS_MES_PROJECT_4
                 //메인화면 코딩 시작
                 //로그인 성공한 사람의 권한에 따라서 다르게 메뉴를 보여준다.
                 this.CurrentUser = login.CurrentUser;
+
+                if (CurrentUser.IsAdmin != "마스터관리자")
+                    btnMaster.Visible = false;
+                MenuBinding();
+                ucTabControl1.Visible = false;
             }
             else
             {
                 Application.Exit();
             }
 
-            if (CurrentUser.IsAdmin != "마스터관리자")
-                btnMaster.Visible = false;
-            MenuBinding();
-            ucTabControl1.Visible = false;
+            
         }
         private void OpenCreateForm(string prgName)
         {
@@ -294,6 +296,19 @@ namespace VMS_MES_PROJECT_4
                     Application.OpenForms[i].Close();
                 }
             }
+        }
+
+        private void 메뉴ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Restart();
+            frmMain frm = new frmMain();
+            frm.Show();         
         }
     }
 }

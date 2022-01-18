@@ -100,6 +100,7 @@ namespace VMS_MES_PROJECT_4
             // 
             // dtpStartDate
             // 
+            this.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dtpStartDate.Location = new System.Drawing.Point(220, 216);
             this.dtpStartDate.Name = "dtpStartDate";
             this.dtpStartDate.Size = new System.Drawing.Size(163, 21);
@@ -118,6 +119,7 @@ namespace VMS_MES_PROJECT_4
             // 
             // dtpEndTime
             // 
+            this.dtpEndTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dtpEndTime.Location = new System.Drawing.Point(220, 247);
             this.dtpEndTime.Name = "dtpEndTime";
             this.dtpEndTime.Size = new System.Drawing.Size(163, 21);

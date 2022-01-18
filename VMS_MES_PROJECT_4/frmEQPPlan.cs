@@ -18,10 +18,11 @@ namespace VMS_MES_PROJECT_4
         int editIndex;
         List<Equipment_PlanVO> eqpplanlist;
         List<CommonVO> com;
-
-        public frmEQPPlan()
+        UserVO CurrentUser;
+        public frmEQPPlan(UserVO CurrentUser)
         {
             InitializeComponent();
+            this.CurrentUser = CurrentUser;
         }
 
         private void frmEQPPlan_Load(object sender, EventArgs e)
