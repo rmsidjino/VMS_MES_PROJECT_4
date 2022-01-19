@@ -28,6 +28,10 @@ namespace VMS_MES_PROJECT_4
             this.eItem = eItem;
             update = true;
             txtEQPID.Enabled = false;
+            cboSiteID.Enabled = false;
+            cboLineID.Enabled = false;
+            txtEQPModel.Enabled = false;
+            cboEqpGroup.Enabled = false;
         }
 
         private async void frmEQP_reg_Load(object sender, EventArgs e) // 수정

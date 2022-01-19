@@ -21,6 +21,10 @@ namespace VMS_MES_PROJECT_4
         public PopupSetupTime()
         {
             InitializeComponent();
+            cboLine.Enabled = false;
+            cboSite.Enabled = false;
+            cboEqpGroup.Enabled = false;
+            cboStep.Enabled = false;
         }
 
         public PopupSetupTime(SetupVO sItem)

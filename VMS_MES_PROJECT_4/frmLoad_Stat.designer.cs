@@ -51,7 +51,7 @@ namespace VMS_MES_PROJECT_4
             this.dgvLoadStat.Name = "dgvLoadStat";
             this.dgvLoadStat.RowHeadersVisible = false;
             this.dgvLoadStat.RowTemplate.Height = 23;
-            this.dgvLoadStat.Size = new System.Drawing.Size(1298, 450);
+            this.dgvLoadStat.Size = new System.Drawing.Size(1360, 450);
             this.dgvLoadStat.TabIndex = 5;
             // 
             // label3
@@ -66,7 +66,7 @@ namespace VMS_MES_PROJECT_4
             // btnSearch
             // 
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearch.Location = new System.Drawing.Point(1199, 9);
+            this.btnSearch.Location = new System.Drawing.Point(1261, 9);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 4;
@@ -98,13 +98,13 @@ namespace VMS_MES_PROJECT_4
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(12, 60);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1298, 33);
+            this.panel2.Size = new System.Drawing.Size(1360, 33);
             this.panel2.TabIndex = 4;
             // 
             // lblWebLoad
             // 
             this.lblWebLoad.AutoSize = true;
-            this.lblWebLoad.Location = new System.Drawing.Point(1181, 11);
+            this.lblWebLoad.Location = new System.Drawing.Point(1259, 15);
             this.lblWebLoad.Name = "lblWebLoad";
             this.lblWebLoad.Size = new System.Drawing.Size(93, 12);
             this.lblWebLoad.TabIndex = 6;
@@ -123,7 +123,7 @@ namespace VMS_MES_PROJECT_4
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1298, 42);
+            this.panel1.Size = new System.Drawing.Size(1360, 42);
             this.panel1.TabIndex = 3;
             // 
             // cboEQP

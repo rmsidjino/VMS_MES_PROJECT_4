@@ -19,9 +19,15 @@ namespace VMS_MES_PROJECT_4
         EquipmentArrVO eqpItem;
         List<CommonVO> com;
         bool update = false;
+        
         public PopupEQP_AR_reg()
         {
             InitializeComponent();
+            cboProductID.Enabled = false;
+            cboProcessID.Enabled = false;
+            cboStepID.Enabled = false;
+            txtEQPID.Enabled = false;
+
         }
         public PopupEQP_AR_reg(EquipmentArrVO eqpItem)
         {
