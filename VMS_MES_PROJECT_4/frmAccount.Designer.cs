@@ -52,24 +52,25 @@ namespace VMS_MES_PROJECT_4
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("굴림", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(51, 60);
+            this.label4.Font = new System.Drawing.Font("맑은 고딕", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.Location = new System.Drawing.Point(57, 23);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(214, 19);
+            this.label4.Size = new System.Drawing.Size(237, 30);
             this.label4.TabIndex = 14;
             this.label4.Text = "Create a New Account";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(54, 79);
+            this.label3.Location = new System.Drawing.Point(50, 75);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 12);
             this.label3.TabIndex = 13;
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(53, 164);
+            this.label2.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(50, 131);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 19);
             this.label2.TabIndex = 12;
@@ -77,7 +78,8 @@ namespace VMS_MES_PROJECT_4
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(53, 116);
+            this.label1.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(50, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 19);
             this.label1.TabIndex = 7;
@@ -85,7 +87,8 @@ namespace VMS_MES_PROJECT_4
             // 
             // btnCreate
             // 
-            this.btnCreate.Location = new System.Drawing.Point(55, 350);
+            this.btnCreate.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnCreate.Location = new System.Drawing.Point(107, 384);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(119, 45);
             this.btnCreate.TabIndex = 10;
@@ -95,24 +98,25 @@ namespace VMS_MES_PROJECT_4
             // 
             // txtPwd
             // 
-            this.txtPwd.Font = new System.Drawing.Font("굴림", 12F);
-            this.txtPwd.Location = new System.Drawing.Point(170, 160);
+            this.txtPwd.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtPwd.Location = new System.Drawing.Point(50, 152);
             this.txtPwd.Name = "txtPwd";
             this.txtPwd.PasswordChar = '*';
-            this.txtPwd.Size = new System.Drawing.Size(197, 26);
+            this.txtPwd.Size = new System.Drawing.Size(197, 29);
             this.txtPwd.TabIndex = 9;
             // 
             // txtEmail
             // 
-            this.txtEmail.Font = new System.Drawing.Font("굴림", 12F);
-            this.txtEmail.Location = new System.Drawing.Point(170, 112);
+            this.txtEmail.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtEmail.Location = new System.Drawing.Point(50, 90);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(197, 26);
+            this.txtEmail.Size = new System.Drawing.Size(197, 29);
             this.txtEmail.TabIndex = 8;
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(53, 260);
+            this.label5.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Location = new System.Drawing.Point(50, 262);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 19);
             this.label5.TabIndex = 18;
@@ -120,7 +124,8 @@ namespace VMS_MES_PROJECT_4
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(53, 212);
+            this.label6.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label6.Location = new System.Drawing.Point(50, 191);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(109, 19);
             this.label6.TabIndex = 15;
@@ -128,25 +133,26 @@ namespace VMS_MES_PROJECT_4
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Font = new System.Drawing.Font("굴림", 12F);
-            this.txtFirstName.Location = new System.Drawing.Point(170, 256);
+            this.txtFirstName.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtFirstName.Location = new System.Drawing.Point(50, 281);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(262, 26);
+            this.txtFirstName.Size = new System.Drawing.Size(197, 29);
             this.txtFirstName.TabIndex = 17;
             // 
             // txtRepeatPwd
             // 
-            this.txtRepeatPwd.Font = new System.Drawing.Font("굴림", 12F);
-            this.txtRepeatPwd.Location = new System.Drawing.Point(170, 208);
+            this.txtRepeatPwd.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtRepeatPwd.Location = new System.Drawing.Point(50, 212);
             this.txtRepeatPwd.Name = "txtRepeatPwd";
             this.txtRepeatPwd.PasswordChar = '*';
-            this.txtRepeatPwd.Size = new System.Drawing.Size(262, 26);
+            this.txtRepeatPwd.Size = new System.Drawing.Size(197, 29);
             this.txtRepeatPwd.TabIndex = 16;
             this.txtRepeatPwd.Leave += new System.EventHandler(this.txtRepeatPwd_Leave);
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(53, 308);
+            this.label8.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label8.Location = new System.Drawing.Point(50, 318);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(74, 19);
             this.label8.TabIndex = 19;
@@ -154,15 +160,16 @@ namespace VMS_MES_PROJECT_4
             // 
             // txtLastName
             // 
-            this.txtLastName.Font = new System.Drawing.Font("굴림", 12F);
-            this.txtLastName.Location = new System.Drawing.Point(170, 304);
+            this.txtLastName.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtLastName.Location = new System.Drawing.Point(50, 337);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(261, 26);
+            this.txtLastName.Size = new System.Drawing.Size(197, 29);
             this.txtLastName.TabIndex = 20;
             // 
             // btnIDCheck
             // 
-            this.btnIDCheck.Location = new System.Drawing.Point(373, 112);
+            this.btnIDCheck.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnIDCheck.Location = new System.Drawing.Point(253, 90);
             this.btnIDCheck.Name = "btnIDCheck";
             this.btnIDCheck.Size = new System.Drawing.Size(58, 26);
             this.btnIDCheck.TabIndex = 23;
@@ -172,7 +179,8 @@ namespace VMS_MES_PROJECT_4
             // 
             // btnPwdCheck
             // 
-            this.btnPwdCheck.Location = new System.Drawing.Point(374, 160);
+            this.btnPwdCheck.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnPwdCheck.Location = new System.Drawing.Point(253, 152);
             this.btnPwdCheck.Name = "btnPwdCheck";
             this.btnPwdCheck.Size = new System.Drawing.Size(58, 26);
             this.btnPwdCheck.TabIndex = 24;
@@ -183,19 +191,21 @@ namespace VMS_MES_PROJECT_4
             // lblRepeatPwd
             // 
             this.lblRepeatPwd.AutoSize = true;
+            this.lblRepeatPwd.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lblRepeatPwd.ForeColor = System.Drawing.Color.Red;
-            this.lblRepeatPwd.Location = new System.Drawing.Point(171, 237);
+            this.lblRepeatPwd.Location = new System.Drawing.Point(49, 244);
             this.lblRepeatPwd.Name = "lblRepeatPwd";
-            this.lblRepeatPwd.Size = new System.Drawing.Size(179, 12);
+            this.lblRepeatPwd.Size = new System.Drawing.Size(201, 17);
             this.lblRepeatPwd.TabIndex = 25;
-            this.lblRepeatPwd.Text = "* 비밀번호가 일치하지 않습니다";
+            this.lblRepeatPwd.Text = "* 비밀번호가 일치하지 않습니다.";
             // 
             // lblSignIn
             // 
             this.lblSignIn.AutoSize = true;
-            this.lblSignIn.Location = new System.Drawing.Point(273, 366);
+            this.lblSignIn.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblSignIn.Location = new System.Drawing.Point(235, 407);
             this.lblSignIn.Name = "lblSignIn";
-            this.lblSignIn.Size = new System.Drawing.Size(44, 12);
+            this.lblSignIn.Size = new System.Drawing.Size(51, 17);
             this.lblSignIn.TabIndex = 26;
             this.lblSignIn.Text = "Sign In";
             this.lblSignIn.Click += new System.EventHandler(this.lblSignIn_Click);
@@ -204,7 +214,7 @@ namespace VMS_MES_PROJECT_4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(486, 427);
+            this.ClientSize = new System.Drawing.Size(349, 445);
             this.Controls.Add(this.lblSignIn);
             this.Controls.Add(this.lblRepeatPwd);
             this.Controls.Add(this.btnPwdCheck);

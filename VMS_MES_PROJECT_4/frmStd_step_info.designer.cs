@@ -61,7 +61,7 @@ namespace VMS_MES_PROJECT_4
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.Font = new System.Drawing.Font("굴림", 7F);
-            this.btnDelete.Location = new System.Drawing.Point(1309, 7);
+            this.btnDelete.Location = new System.Drawing.Point(1249, 7);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(40, 20);
             this.btnDelete.TabIndex = 3;
@@ -147,7 +147,7 @@ namespace VMS_MES_PROJECT_4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1384, 561);
+            this.ClientSize = new System.Drawing.Size(1370, 561);
             this.Controls.Add(this.dgvStdStepInfo);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

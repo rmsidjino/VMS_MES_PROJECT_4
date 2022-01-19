@@ -155,7 +155,7 @@ namespace VMS_MES_PROJECT_4
             {
                 sb.AppendLine("- 비밀번호를 입력하세요.");
             }
-            if (txtRepeatPwd.Text.Length < 1 || rCheck == false)
+            if (txtRepeatPwd.Text.Length < 1 || rCheck == false || pCheck ==false)
             {
                 sb.AppendLine("- 비밀번호를 체크하세요.");
             }

@@ -51,88 +51,88 @@ namespace VMS_MES_PROJECT_4
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(40, 188);
+            this.label5.Location = new System.Drawing.Point(33, 183);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 12);
+            this.label5.Size = new System.Drawing.Size(97, 17);
             this.label5.TabIndex = 34;
             this.label5.Text = "* 공정준비시간";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(40, 151);
+            this.label4.Location = new System.Drawing.Point(33, 146);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 12);
+            this.label4.Size = new System.Drawing.Size(71, 17);
             this.label4.TabIndex = 33;
             this.label4.Text = "* 공정수율";
             // 
             // txtStepSetup
             // 
-            this.txtStepSetup.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtStepSetup.Location = new System.Drawing.Point(177, 183);
+            this.txtStepSetup.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtStepSetup.Location = new System.Drawing.Point(170, 178);
             this.txtStepSetup.Name = "txtStepSetup";
-            this.txtStepSetup.Size = new System.Drawing.Size(163, 21);
+            this.txtStepSetup.Size = new System.Drawing.Size(163, 25);
             this.txtStepSetup.TabIndex = 4;
             // 
             // txtStepYield
             // 
-            this.txtStepYield.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtStepYield.Location = new System.Drawing.Point(177, 145);
+            this.txtStepYield.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtStepYield.Location = new System.Drawing.Point(170, 140);
             this.txtStepYield.Name = "txtStepYield";
-            this.txtStepYield.Size = new System.Drawing.Size(163, 21);
+            this.txtStepYield.Size = new System.Drawing.Size(163, 25);
             this.txtStepYield.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(40, 114);
+            this.label3.Location = new System.Drawing.Point(33, 109);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 12);
+            this.label3.Size = new System.Drawing.Size(71, 17);
             this.label3.TabIndex = 30;
             this.label3.Text = "* 공정시간";
             // 
             // txtStepTat
             // 
-            this.txtStepTat.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtStepTat.Location = new System.Drawing.Point(177, 108);
+            this.txtStepTat.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtStepTat.Location = new System.Drawing.Point(170, 103);
             this.txtStepTat.Name = "txtStepTat";
-            this.txtStepTat.Size = new System.Drawing.Size(163, 21);
+            this.txtStepTat.Size = new System.Drawing.Size(163, 25);
             this.txtStepTat.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(40, 77);
+            this.label2.Location = new System.Drawing.Point(33, 72);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 12);
+            this.label2.Size = new System.Drawing.Size(97, 17);
             this.label2.TabIndex = 28;
             this.label2.Text = "* 표준공정이름";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(40, 41);
+            this.label1.Location = new System.Drawing.Point(33, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 12);
+            this.label1.Size = new System.Drawing.Size(85, 17);
             this.label1.TabIndex = 26;
             this.label1.Text = "* 표준공정ID";
             // 
             // btnCancel
             // 
-            this.btnCancel.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnCancel.Location = new System.Drawing.Point(219, 313);
+            this.btnCancel.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnCancel.Location = new System.Drawing.Point(205, 305);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(86, 23);
+            this.btnCancel.Size = new System.Drawing.Size(73, 32);
             this.btnCancel.TabIndex = 8;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -140,10 +140,10 @@ namespace VMS_MES_PROJECT_4
             // 
             // btnOK
             // 
-            this.btnOK.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnOK.Location = new System.Drawing.Point(86, 313);
+            this.btnOK.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnOK.Location = new System.Drawing.Point(82, 305);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(86, 23);
+            this.btnOK.Size = new System.Drawing.Size(75, 32);
             this.btnOK.TabIndex = 7;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
@@ -152,59 +152,59 @@ namespace VMS_MES_PROJECT_4
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label8.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(52, 264);
+            this.label8.Location = new System.Drawing.Point(45, 259);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(57, 12);
+            this.label8.Size = new System.Drawing.Size(60, 17);
             this.label8.TabIndex = 40;
             this.label8.Text = "수정일자";
             // 
             // txtModDate
             // 
             this.txtModDate.Enabled = false;
-            this.txtModDate.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtModDate.Location = new System.Drawing.Point(177, 258);
+            this.txtModDate.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtModDate.Location = new System.Drawing.Point(170, 253);
             this.txtModDate.Name = "txtModDate";
-            this.txtModDate.Size = new System.Drawing.Size(163, 21);
+            this.txtModDate.Size = new System.Drawing.Size(163, 25);
             this.txtModDate.TabIndex = 6;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label7.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(52, 226);
+            this.label7.Location = new System.Drawing.Point(45, 221);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 12);
+            this.label7.Size = new System.Drawing.Size(73, 17);
             this.label7.TabIndex = 38;
             this.label7.Text = "최종수정자";
             // 
             // txtMod
             // 
             this.txtMod.Enabled = false;
-            this.txtMod.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtMod.Location = new System.Drawing.Point(177, 220);
+            this.txtMod.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtMod.Location = new System.Drawing.Point(170, 215);
             this.txtMod.Name = "txtMod";
-            this.txtMod.Size = new System.Drawing.Size(163, 21);
+            this.txtMod.Size = new System.Drawing.Size(163, 25);
             this.txtMod.TabIndex = 5;
             // 
             // cboStdStepID
             // 
-            this.cboStdStepID.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cboStdStepID.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cboStdStepID.FormattingEnabled = true;
-            this.cboStdStepID.Location = new System.Drawing.Point(177, 36);
+            this.cboStdStepID.Location = new System.Drawing.Point(170, 31);
             this.cboStdStepID.Name = "cboStdStepID";
-            this.cboStdStepID.Size = new System.Drawing.Size(163, 20);
+            this.cboStdStepID.Size = new System.Drawing.Size(163, 25);
             this.cboStdStepID.TabIndex = 0;
             // 
             // cboStdStepName
             // 
-            this.cboStdStepName.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cboStdStepName.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cboStdStepName.FormattingEnabled = true;
-            this.cboStdStepName.Location = new System.Drawing.Point(177, 73);
+            this.cboStdStepName.Location = new System.Drawing.Point(170, 68);
             this.cboStdStepName.Name = "cboStdStepName";
-            this.cboStdStepName.Size = new System.Drawing.Size(163, 20);
+            this.cboStdStepName.Size = new System.Drawing.Size(163, 25);
             this.cboStdStepName.TabIndex = 1;
             // 
             // PopupStdStepInfo
@@ -212,7 +212,7 @@ namespace VMS_MES_PROJECT_4
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(380, 366);
+            this.ClientSize = new System.Drawing.Size(365, 360);
             this.Controls.Add(this.cboStdStepName);
             this.Controls.Add(this.cboStdStepID);
             this.Controls.Add(this.label8);
