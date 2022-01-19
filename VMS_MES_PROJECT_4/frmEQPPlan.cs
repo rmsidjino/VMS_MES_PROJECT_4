@@ -89,7 +89,7 @@ namespace VMS_MES_PROJECT_4
             //};
             //Process.Start(psi);
 
-            Form frm = new frmWebView();
+            Form frm = new frmLotGantt();
             frm.Show();
 
 

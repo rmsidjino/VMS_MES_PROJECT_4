@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace VMS_MES_PROJECT_4
 {
-    public partial class frmWebView : Form
+    public partial class frmLotGantt : Form
     {
-        public frmWebView()
+        public frmLotGantt()
         {
             InitializeComponent();
         }

@@ -224,6 +224,7 @@ namespace VMS_MES_PROJECT_4
             this.Controls.Add(this.txtEmail);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAccount";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create";
             this.Load += new System.EventHandler(this.frmAccount_Load);
             this.ResumeLayout(false);
