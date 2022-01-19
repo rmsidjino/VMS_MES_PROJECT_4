@@ -57,7 +57,7 @@ namespace VMS_MES_PROJECT_4
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1346, 42);
+            this.panel1.Size = new System.Drawing.Size(1360, 42);
             this.panel1.TabIndex = 0;
             // 
             // cboStep
@@ -79,7 +79,7 @@ namespace VMS_MES_PROJECT_4
             // btnSearch
             // 
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearch.Location = new System.Drawing.Point(1254, 10);
+            this.btnSearch.Location = new System.Drawing.Point(1268, 10);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 2;
@@ -114,14 +114,14 @@ namespace VMS_MES_PROJECT_4
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(12, 60);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1346, 33);
+            this.panel2.Size = new System.Drawing.Size(1360, 33);
             this.panel2.TabIndex = 1;
             // 
             // btnDelete
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.Font = new System.Drawing.Font("굴림", 7F);
-            this.btnDelete.Location = new System.Drawing.Point(1289, 7);
+            this.btnDelete.Location = new System.Drawing.Point(1303, 7);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(40, 20);
             this.btnDelete.TabIndex = 3;
@@ -133,7 +133,7 @@ namespace VMS_MES_PROJECT_4
             // 
             this.btnCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCreate.Font = new System.Drawing.Font("굴림", 7F);
-            this.btnCreate.Location = new System.Drawing.Point(1243, 7);
+            this.btnCreate.Location = new System.Drawing.Point(1257, 7);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(40, 20);
             this.btnCreate.TabIndex = 3;
@@ -160,7 +160,7 @@ namespace VMS_MES_PROJECT_4
             this.dgvStepRoute.Name = "dgvStepRoute";
             this.dgvStepRoute.RowHeadersVisible = false;
             this.dgvStepRoute.RowTemplate.Height = 23;
-            this.dgvStepRoute.Size = new System.Drawing.Size(1346, 450);
+            this.dgvStepRoute.Size = new System.Drawing.Size(1360, 450);
             this.dgvStepRoute.TabIndex = 2;
             this.dgvStepRoute.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStepRoute_CellClick);
             // 
@@ -168,7 +168,7 @@ namespace VMS_MES_PROJECT_4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 561);
+            this.ClientSize = new System.Drawing.Size(1384, 561);
             this.Controls.Add(this.dgvStepRoute);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

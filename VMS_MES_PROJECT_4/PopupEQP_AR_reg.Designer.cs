@@ -59,7 +59,7 @@ namespace VMS_MES_PROJECT_4
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(54, 130);
+            this.label4.Location = new System.Drawing.Point(27, 130);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 12);
             this.label4.TabIndex = 20;
@@ -70,7 +70,7 @@ namespace VMS_MES_PROJECT_4
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(54, 99);
+            this.label3.Location = new System.Drawing.Point(27, 99);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 12);
             this.label3.TabIndex = 18;
@@ -81,7 +81,7 @@ namespace VMS_MES_PROJECT_4
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(54, 68);
+            this.label2.Location = new System.Drawing.Point(27, 68);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 12);
             this.label2.TabIndex = 16;
@@ -92,7 +92,7 @@ namespace VMS_MES_PROJECT_4
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(54, 37);
+            this.label1.Location = new System.Drawing.Point(27, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 12);
             this.label1.TabIndex = 14;
@@ -101,7 +101,7 @@ namespace VMS_MES_PROJECT_4
             // dtpStartDate
             // 
             this.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpStartDate.Location = new System.Drawing.Point(220, 216);
+            this.dtpStartDate.Location = new System.Drawing.Point(193, 216);
             this.dtpStartDate.Name = "dtpStartDate";
             this.dtpStartDate.Size = new System.Drawing.Size(163, 21);
             this.dtpStartDate.TabIndex = 7;
@@ -111,7 +111,7 @@ namespace VMS_MES_PROJECT_4
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label7.Location = new System.Drawing.Point(67, 222);
+            this.label7.Location = new System.Drawing.Point(40, 222);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(131, 12);
             this.label7.TabIndex = 25;
@@ -120,7 +120,7 @@ namespace VMS_MES_PROJECT_4
             // dtpEndTime
             // 
             this.dtpEndTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpEndTime.Location = new System.Drawing.Point(220, 247);
+            this.dtpEndTime.Location = new System.Drawing.Point(193, 247);
             this.dtpEndTime.Name = "dtpEndTime";
             this.dtpEndTime.Size = new System.Drawing.Size(163, 21);
             this.dtpEndTime.TabIndex = 9;
@@ -130,7 +130,7 @@ namespace VMS_MES_PROJECT_4
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label8.Location = new System.Drawing.Point(67, 253);
+            this.label8.Location = new System.Drawing.Point(40, 253);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(131, 12);
             this.label8.TabIndex = 27;
@@ -139,7 +139,7 @@ namespace VMS_MES_PROJECT_4
             // btnOK
             // 
             this.btnOK.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnOK.Location = new System.Drawing.Point(105, 354);
+            this.btnOK.Location = new System.Drawing.Point(82, 357);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 12;
@@ -150,7 +150,7 @@ namespace VMS_MES_PROJECT_4
             // btnCancel
             // 
             this.btnCancel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCancel.Location = new System.Drawing.Point(235, 354);
+            this.btnCancel.Location = new System.Drawing.Point(212, 357);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 13;
@@ -161,7 +161,7 @@ namespace VMS_MES_PROJECT_4
             // cboProductID
             // 
             this.cboProductID.FormattingEnabled = true;
-            this.cboProductID.Location = new System.Drawing.Point(220, 34);
+            this.cboProductID.Location = new System.Drawing.Point(193, 34);
             this.cboProductID.Name = "cboProductID";
             this.cboProductID.Size = new System.Drawing.Size(163, 20);
             this.cboProductID.TabIndex = 0;
@@ -169,7 +169,7 @@ namespace VMS_MES_PROJECT_4
             // cboProcessID
             // 
             this.cboProcessID.FormattingEnabled = true;
-            this.cboProcessID.Location = new System.Drawing.Point(220, 64);
+            this.cboProcessID.Location = new System.Drawing.Point(193, 64);
             this.cboProcessID.Name = "cboProcessID";
             this.cboProcessID.Size = new System.Drawing.Size(163, 20);
             this.cboProcessID.TabIndex = 1;
@@ -177,7 +177,7 @@ namespace VMS_MES_PROJECT_4
             // cboStepID
             // 
             this.cboStepID.FormattingEnabled = true;
-            this.cboStepID.Location = new System.Drawing.Point(220, 94);
+            this.cboStepID.Location = new System.Drawing.Point(193, 94);
             this.cboStepID.Name = "cboStepID";
             this.cboStepID.Size = new System.Drawing.Size(163, 20);
             this.cboStepID.TabIndex = 3;
@@ -187,7 +187,7 @@ namespace VMS_MES_PROJECT_4
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(54, 188);
+            this.label5.Location = new System.Drawing.Point(27, 188);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(105, 12);
             this.label5.TabIndex = 36;
@@ -198,7 +198,7 @@ namespace VMS_MES_PROJECT_4
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label6.Location = new System.Drawing.Point(54, 157);
+            this.label6.Location = new System.Drawing.Point(27, 157);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 12);
             this.label6.TabIndex = 35;
@@ -207,7 +207,7 @@ namespace VMS_MES_PROJECT_4
             // txtTactTime
             // 
             this.txtTactTime.BackColor = System.Drawing.Color.White;
-            this.txtTactTime.Location = new System.Drawing.Point(220, 154);
+            this.txtTactTime.Location = new System.Drawing.Point(193, 154);
             this.txtTactTime.Name = "txtTactTime";
             this.txtTactTime.Size = new System.Drawing.Size(163, 21);
             this.txtTactTime.TabIndex = 5;
@@ -215,7 +215,7 @@ namespace VMS_MES_PROJECT_4
             // txtProcTime
             // 
             this.txtProcTime.BackColor = System.Drawing.Color.White;
-            this.txtProcTime.Location = new System.Drawing.Point(220, 185);
+            this.txtProcTime.Location = new System.Drawing.Point(193, 185);
             this.txtProcTime.Name = "txtProcTime";
             this.txtProcTime.Size = new System.Drawing.Size(163, 21);
             this.txtProcTime.TabIndex = 6;
@@ -224,7 +224,7 @@ namespace VMS_MES_PROJECT_4
             // 
             this.txtModifier.BackColor = System.Drawing.SystemColors.Window;
             this.txtModifier.Enabled = false;
-            this.txtModifier.Location = new System.Drawing.Point(220, 278);
+            this.txtModifier.Location = new System.Drawing.Point(193, 278);
             this.txtModifier.Name = "txtModifier";
             this.txtModifier.Size = new System.Drawing.Size(163, 21);
             this.txtModifier.TabIndex = 10;
@@ -234,7 +234,7 @@ namespace VMS_MES_PROJECT_4
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label9.Location = new System.Drawing.Point(67, 281);
+            this.label9.Location = new System.Drawing.Point(40, 281);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(75, 12);
             this.label9.TabIndex = 39;
@@ -244,7 +244,7 @@ namespace VMS_MES_PROJECT_4
             // 
             this.txtModifierdate.BackColor = System.Drawing.SystemColors.Window;
             this.txtModifierdate.Enabled = false;
-            this.txtModifierdate.Location = new System.Drawing.Point(220, 309);
+            this.txtModifierdate.Location = new System.Drawing.Point(193, 309);
             this.txtModifierdate.Name = "txtModifierdate";
             this.txtModifierdate.Size = new System.Drawing.Size(163, 21);
             this.txtModifierdate.TabIndex = 11;
@@ -254,7 +254,7 @@ namespace VMS_MES_PROJECT_4
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label10.Location = new System.Drawing.Point(67, 312);
+            this.label10.Location = new System.Drawing.Point(40, 312);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(57, 12);
             this.label10.TabIndex = 41;
@@ -263,7 +263,7 @@ namespace VMS_MES_PROJECT_4
             // txtEQPID
             // 
             this.txtEQPID.BackColor = System.Drawing.SystemColors.Window;
-            this.txtEQPID.Location = new System.Drawing.Point(220, 127);
+            this.txtEQPID.Location = new System.Drawing.Point(193, 127);
             this.txtEQPID.Name = "txtEQPID";
             this.txtEQPID.Size = new System.Drawing.Size(163, 21);
             this.txtEQPID.TabIndex = 4;
@@ -272,7 +272,7 @@ namespace VMS_MES_PROJECT_4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(435, 405);
+            this.ClientSize = new System.Drawing.Size(380, 405);
             this.Controls.Add(this.txtEQPID);
             this.Controls.Add(this.txtModifierdate);
             this.Controls.Add(this.label10);

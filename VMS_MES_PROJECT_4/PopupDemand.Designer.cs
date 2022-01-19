@@ -226,7 +226,7 @@ namespace VMS_MES_PROJECT_4
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(377, 403);
+            this.ClientSize = new System.Drawing.Size(380, 403);
             this.Controls.Add(this.txtModDate);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtMod);

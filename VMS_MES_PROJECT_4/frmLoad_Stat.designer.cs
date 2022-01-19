@@ -143,7 +143,7 @@ namespace VMS_MES_PROJECT_4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1329, 561);
+            this.ClientSize = new System.Drawing.Size(1384, 561);
             this.Controls.Add(this.dgvLoadStat);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
