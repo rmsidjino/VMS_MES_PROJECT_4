@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace VMS_MES_PROJECT_4
 {
-    public partial class frmWebView : Form
+    public partial class frmCapacity : Form
     {
-        public frmWebView()
+        public frmCapacity()
         {
             InitializeComponent();
         }
 
         private void frmWebView_Load(object sender, EventArgs e)
         {
-            webView1.Navigate("https://vmsweb.azurewebsites.net/Gantt/WinformGantt");
+            webView1.Navigate("https://vmsweb.azurewebsites.net/Capacity/WinformGraph");
             webView1.Size = this.ClientSize;
 
         }

@@ -61,27 +61,24 @@
     <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
 </head>
 <body>
-    <section class="content-header">
-        <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-6">
-                    <h1>Lot Gantt Chart</h1>
-                </div>
-            </div>
-        </div><!-- /.container-fluid -->
-    </section>
 
     <!-- /.content-header -->
-    <div class="formElements">
-        <form action="~/Gantt/WinformGantt" method="get">
+    <div class="row justify-content-between my-3">
+        <div class="col-3" style="margin-left: 10px">
+            <form action="~/Gantt/WinformGanttEqp" method="get">
 
-            EQP Group :
-            @Html.DropDownList("EQP")
-            Product ID
-            @Html.DropDownList("Product")
-            <input type="submit" id="button1" value="조회" />
-        </form>
-
+                EQP Group :
+                @Html.DropDownList("EQP")
+                Product ID
+                @Html.DropDownList("Product")
+                <input type="submit" id="button1" value="조회" />
+            </form>
+        </div>
+        <div class="col-2">
+            <button id="zoomInButton" onclick="zoomIn()">+</button>
+            <button id="zoomOutButton" onclick="zoomOut()">-</button>
+            <label>zoom factor: 2</label>
+        </div>
     </div>
 
     <div id="container" style="height:700px"></div>
@@ -104,7 +101,7 @@
         var arrTemp = temp.split(','); // ['1월', '2월'..]*@
 
         var Info = JSON.parse('@Html.Raw(InfoJson)')
-
+        var chart;
         anychart.onDocumentReady(<!--function ()--> @*{
             // The data used in this sample can be obtained from the CDN
             // https://cdn.anychart.com/samples/gantt-live-editing/resource-chart-editing/data.json
@@ -119,7 +116,7 @@
                     var treeData = anychart.data.tree(Info, 'as-table');
                     // create resource gantt chart
 
-                    var chart = anychart.ganttResource();
+                    chart = anychart.ganttResource();
                     chart.defaultRowHeight(50)
                         .splitterPosition(150);
 
@@ -197,7 +194,17 @@
 
 
                 }
-            );
+        );
+        function zoomIn() {
+            chart.zoomIn(2);
+
+        }
+
+        // zoom the timeline out
+        function zoomOut() {
+            chart.zoomOut(2);
+
+        }
         /*})*/;
     </script>
 </body>

@@ -98,7 +98,7 @@ namespace VMS_MES_PROJECT_4
             // 
             this.lblEqpPlan.AutoSize = true;
             this.lblEqpPlan.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblEqpPlan.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblEqpPlan.ForeColor = System.Drawing.Color.Blue;
             this.lblEqpPlan.Location = new System.Drawing.Point(1238, 11);
             this.lblEqpPlan.Name = "lblEqpPlan";
             this.lblEqpPlan.Size = new System.Drawing.Size(110, 12);

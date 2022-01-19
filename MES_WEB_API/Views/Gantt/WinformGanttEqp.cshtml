@@ -60,77 +60,41 @@
     <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
 </head>
 <body>
-    <section class="content-header">
-        <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-6">
-                    <h1>Lot Gantt Chart</h1>
-                </div>
-            </div>
-        </div><!-- /.container-fluid -->
-    </section>
 
     <!-- /.content-header -->
-    <div class="formElements">
-        <form action="~/Gantt/WinformGanttEqp" method="get">
+    <div class="row justify-content-between my-3">
+        <div class="col-3" style="margin-left: 10px">
+            <form action="~/Gantt/WinformGanttEqp" method="get">
 
-            EQP Group :
-            @Html.DropDownList("EQP")
-            Product ID
-            @Html.DropDownList("Product")
-            <input type="submit" id="button1" value="조회" />
-        </form>
-
+                EQP Group :
+                @Html.DropDownList("EQP")
+                Product ID
+                @Html.DropDownList("Product")
+                <input type="submit" id="button1" value="조회" />
+            </form>
+        </div>
+        <div class="col-2">
+            <button id="zoomInButton" onclick="zoomIn()">+</button>
+            <button id="zoomOutButton" onclick="zoomOut()">-</button>
+            <label>zoom factor: 2</label>              
+        </div>       
     </div>
-    <button id="zoomInButton" onclick="zoomIn()">+</button>
-    <button id="zoomOutButton" onclick="zoomOut()">-</button>
-    <label>zoom factor: 2</label>
-    <br>
-    <button id="zoomToDatesButton" onclick="zoomToDates()">Zoom To Dates</button>
-    <label>start date:</label>
-    <label id="dateLabel1">03 February 2018</label>
-    <label>end date: </label>
-    <label id="dateLabel2">06 February 2018</label>
-    <br>
-    <button id="zoomToUnitsButton" onclick="zoomToUnits()">Zoom To Units</button>
-    <label for="unitSelect">unit: </label>
-    <select id="unitSelect">
-        <option value="millisecond">millisecond</option>
-        <option value="second">second</option>
-        <option value="minute">minute</option>
-        <option value="hour">hour</option>
-        <option value="day">day</option>
-        <option value="week" selected>week</option>
-        <option value="third-of-month">third-of-month</option>
-        <option value="month">month</option>
-        <option value="quarter">quarter</option>
-        <option value="semester">semester</option>
-        <option value="year">year</option>
-    </select>
-    <label>count: <input id="countInput" value="2"></label>
-    <label for="anchorSelect">anchor: </label>
-    <select id="anchorSelect">
-        <option value="first-date" selected>first-date</option>
-        <option value="first-visible-date">first-visible-date</option>
-        <option value="last-date">last-date</option>
-        <option value="last-visible-date">last-visible-date</option>
-    </select>
-    <br>
-    <div id="container" style="height:700px"></div>
 
-    @{
-        string EQPSearch = ViewBag.EQPSearch; //x축
+        <div id="container" style="height:700px"></div>
 
-        string ProductSearch = ViewBag.ProductSearch;
+        @{
+            string EQPSearch = ViewBag.EQPSearch; //x축
 
-        //@Json.Encode(ViewBag.Data);
+            string ProductSearch = ViewBag.ProductSearch;
 
-        var jss = new System.Web.Script.Serialization.JavaScriptSerializer();
-        var InfoJson = jss.Serialize(ViewBag.Data);
+            //@Json.Encode(ViewBag.Data);
 
-    }
+            var jss = new System.Web.Script.Serialization.JavaScriptSerializer();
+            var InfoJson = jss.Serialize(ViewBag.Data);
 
-    <script type="text/javascript">
+        }
+
+        <script type="text/javascript">
 
         @*var temp = "@eqp"; //"1월,2월,3월...12월"
         var arrTemp = temp.split(','); // ['1월', '2월'..]*@
@@ -174,34 +138,12 @@
                     chart.getTimeline().scale().minimum("2019-11-08");
                     chart.getTimeline().scale().maximum("2019-11-15");
                 chart.getTimeline().periods().labels().enabled(true);
-                chart.getTimeline().periods().labels().format(function () {
-                    var id = this.name;
-                    // create short id
-                    // sample: Trevor Moore => T.M
-                    var shortId = id
-                        .split('_')
-                        .map(function (item) {
-                            return item[0];
-                        })
-                        .join('.');
-
-                    var label = this.label;
-
-                    var barBounds = this.barBounds;
-                    var labelBounds = label.measureWithText(id);
-
-                    // if width of the label is greater than the width of the bar, then we show short id
-                    if (barBounds.width < labelBounds.width) {
-                        return shortId;
-                    }
-
-                    return id;
-                });
-                    chart.getTimeline().periods().labels().format("{%i}");
+                
+                    chart.getTimeline().periods().labels().format("{%id}");
                     chart.getTimeline().periods().labels().fontColor("black");
                     chart.getTimeline().periods().labels().fontSize(8);
 
-                
+
                     // make chart editable
 
                     chart.getTimeline().tooltip().useHtml(true);
@@ -245,7 +187,7 @@
 
 
                     // zoom chart all dates range
-                
+
 
 
                 }
@@ -258,7 +200,7 @@
         // zoom the timeline out
         function zoomOut() {
             chart.zoomOut(2);
-            
+
         }
 
 
@@ -270,6 +212,6 @@
             chart.zoomTo(unit, count, anchor);
         }
 
-    </script>
+        </script>
 </body>
 </html>
