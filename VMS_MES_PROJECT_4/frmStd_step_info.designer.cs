@@ -45,6 +45,9 @@ namespace VMS_MES_PROJECT_4
             // 
             // dgvStdStepInfo
             // 
+            this.dgvStdStepInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvStdStepInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStdStepInfo.Location = new System.Drawing.Point(12, 99);
             this.dgvStdStepInfo.Name = "dgvStdStepInfo";
@@ -90,7 +93,7 @@ namespace VMS_MES_PROJECT_4
             // btnSearch
             // 
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearch.Location = new System.Drawing.Point(1275, 8);
+            this.btnSearch.Location = new System.Drawing.Point(1274, 9);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 1;
@@ -137,7 +140,7 @@ namespace VMS_MES_PROJECT_4
             this.cboStd_Step_Id.FormattingEnabled = true;
             this.cboStd_Step_Id.Location = new System.Drawing.Point(109, 12);
             this.cboStd_Step_Id.Name = "cboStd_Step_Id";
-            this.cboStd_Step_Id.Size = new System.Drawing.Size(100, 20);
+            this.cboStd_Step_Id.Size = new System.Drawing.Size(139, 20);
             this.cboStd_Step_Id.TabIndex = 0;
             // 
             // frmStd_step_info

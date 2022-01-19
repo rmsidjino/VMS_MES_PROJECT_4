@@ -21,14 +21,15 @@ namespace VMS_MES_PROJECT_4
         public PopupProduct()
         {
             InitializeComponent();
-            cboProductType.Enabled = false;
-            txtProductID.Enabled = false;
-            txtProductName.Enabled = false;
+            
         }
 
         public PopupProduct(ProductVO pItem)
         {
             InitializeComponent();
+            cboProductType.Enabled = false;
+            txtProductID.Enabled = false;
+            txtProductName.Enabled = false;
             this.pItem = pItem;
             update = true;
         }

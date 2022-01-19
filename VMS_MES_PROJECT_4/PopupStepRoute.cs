@@ -22,15 +22,16 @@ namespace VMS_MES_PROJECT_4
         public PopupStepRoute()
         {
             InitializeComponent();
-            txtProcessID.Enabled = false;
-            cboStepID.Enabled = false;
-            cboStdStepID.Enabled = false;
+            
 
         }
 
         public PopupStepRoute(StepRouteVO SItem)
         {
             InitializeComponent();
+            txtProcessID.Enabled = false;
+            cboStepID.Enabled = false;
+            cboStdStepID.Enabled = false;
             this.SItem = SItem;
             update = true;
         }

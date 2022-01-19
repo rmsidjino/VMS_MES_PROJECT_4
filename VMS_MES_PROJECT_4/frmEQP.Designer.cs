@@ -47,6 +47,9 @@ namespace VMS_MES_PROJECT_4
             // 
             // dgvEQP
             // 
+            this.dgvEQP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvEQP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEQP.Location = new System.Drawing.Point(12, 99);
             this.dgvEQP.Name = "dgvEQP";
@@ -74,7 +77,7 @@ namespace VMS_MES_PROJECT_4
             // cboLineID
             // 
             this.cboLineID.FormattingEnabled = true;
-            this.cboLineID.Location = new System.Drawing.Point(248, 13);
+            this.cboLineID.Location = new System.Drawing.Point(254, 12);
             this.cboLineID.Name = "cboLineID";
             this.cboLineID.Size = new System.Drawing.Size(100, 20);
             this.cboLineID.TabIndex = 2;
@@ -90,7 +93,7 @@ namespace VMS_MES_PROJECT_4
             // btnSearch
             // 
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearch.Location = new System.Drawing.Point(1282, 11);
+            this.btnSearch.Location = new System.Drawing.Point(1276, 10);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 3;
@@ -101,7 +104,7 @@ namespace VMS_MES_PROJECT_4
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(192, 16);
+            this.label2.Location = new System.Drawing.Point(198, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 12);
             this.label2.TabIndex = 3;
@@ -129,7 +132,7 @@ namespace VMS_MES_PROJECT_4
             // 
             this.btnCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCreate.Font = new System.Drawing.Font("굴림", 7F);
-            this.btnCreate.Location = new System.Drawing.Point(1271, 7);
+            this.btnCreate.Location = new System.Drawing.Point(1265, 7);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(40, 20);
             this.btnCreate.TabIndex = 4;
@@ -141,7 +144,7 @@ namespace VMS_MES_PROJECT_4
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.Font = new System.Drawing.Font("굴림", 7F);
-            this.btnDelete.Location = new System.Drawing.Point(1317, 7);
+            this.btnDelete.Location = new System.Drawing.Point(1311, 7);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(40, 20);
             this.btnDelete.TabIndex = 5;

@@ -245,6 +245,8 @@ namespace VMS_MES_PROJECT_4
             this.ucTabControl1.SelectedIndex = 0;
             this.ucTabControl1.Size = new System.Drawing.Size(1415, 26);
             this.ucTabControl1.TabIndex = 20;
+            this.ucTabControl1.SelectedIndexChanged += new System.EventHandler(this.ucTabControl1_SelectedIndexChanged);
+            this.ucTabControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ucTabControl1_MouseDown);
             // 
             // frmMain
             // 

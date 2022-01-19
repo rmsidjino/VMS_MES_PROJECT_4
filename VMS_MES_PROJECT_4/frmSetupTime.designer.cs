@@ -63,15 +63,15 @@ namespace VMS_MES_PROJECT_4
             // cboStep
             // 
             this.cboStep.FormattingEnabled = true;
-            this.cboStep.Location = new System.Drawing.Point(284, 11);
+            this.cboStep.Location = new System.Drawing.Point(273, 10);
             this.cboStep.Name = "cboStep";
-            this.cboStep.Size = new System.Drawing.Size(121, 20);
+            this.cboStep.Size = new System.Drawing.Size(143, 20);
             this.cboStep.TabIndex = 6;
             // 
             // cboSite
             // 
             this.cboSite.FormattingEnabled = true;
-            this.cboSite.Location = new System.Drawing.Point(90, 11);
+            this.cboSite.Location = new System.Drawing.Point(79, 10);
             this.cboSite.Name = "cboSite";
             this.cboSite.Size = new System.Drawing.Size(121, 20);
             this.cboSite.TabIndex = 5;
@@ -90,7 +90,7 @@ namespace VMS_MES_PROJECT_4
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(228, 15);
+            this.label2.Location = new System.Drawing.Point(217, 14);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 12);
             this.label2.TabIndex = 3;
@@ -99,7 +99,7 @@ namespace VMS_MES_PROJECT_4
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 15);
+            this.label1.Location = new System.Drawing.Point(22, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 12);
             this.label1.TabIndex = 1;

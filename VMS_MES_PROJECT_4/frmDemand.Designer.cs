@@ -68,7 +68,7 @@ namespace VMS_MES_PROJECT_4
             // 
             // txtDemandVer
             // 
-            this.txtDemandVer.Location = new System.Drawing.Point(101, 10);
+            this.txtDemandVer.Location = new System.Drawing.Point(86, 10);
             this.txtDemandVer.Name = "txtDemandVer";
             this.txtDemandVer.Size = new System.Drawing.Size(123, 21);
             this.txtDemandVer.TabIndex = 0;
@@ -76,7 +76,7 @@ namespace VMS_MES_PROJECT_4
             // cboProduct
             // 
             this.cboProduct.FormattingEnabled = true;
-            this.cboProduct.Location = new System.Drawing.Point(304, 11);
+            this.cboProduct.Location = new System.Drawing.Point(289, 11);
             this.cboProduct.Name = "cboProduct";
             this.cboProduct.Size = new System.Drawing.Size(148, 20);
             this.cboProduct.TabIndex = 1;
@@ -84,7 +84,7 @@ namespace VMS_MES_PROJECT_4
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(240, 15);
+            this.label2.Location = new System.Drawing.Point(225, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 12);
             this.label2.TabIndex = 14;
@@ -93,7 +93,7 @@ namespace VMS_MES_PROJECT_4
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 15);
+            this.label1.Location = new System.Drawing.Point(15, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 12);
             this.label1.TabIndex = 13;

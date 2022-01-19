@@ -22,13 +22,14 @@ namespace VMS_MES_PROJECT_4
         public PopupStdStepInfo()
         {
             InitializeComponent();
-            cboStdStepID.Enabled = false;
-            cboStdStepID.Enabled = false;
+            
         }
 
         public PopupStdStepInfo(StdStepInfoVO stItem)
         {
             InitializeComponent();
+            cboStdStepID.Enabled = false;
+            cboStdStepID.Enabled = false;
             this.stItem = stItem;
             update = true;
         }

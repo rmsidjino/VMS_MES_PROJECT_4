@@ -60,7 +60,7 @@ namespace VMS_MES_PROJECT_4
             this.cboProductID.FormattingEnabled = true;
             this.cboProductID.Location = new System.Drawing.Point(75, 12);
             this.cboProductID.Name = "cboProductID";
-            this.cboProductID.Size = new System.Drawing.Size(101, 20);
+            this.cboProductID.Size = new System.Drawing.Size(166, 20);
             this.cboProductID.TabIndex = 0;
             // 
             // label5
