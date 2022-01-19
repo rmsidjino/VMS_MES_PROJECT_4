@@ -46,7 +46,7 @@ namespace VMS_MES_PROJECT_4
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1346, 42);
+            this.panel1.Size = new System.Drawing.Size(1360, 42);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -58,14 +58,14 @@ namespace VMS_MES_PROJECT_4
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(12, 60);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1346, 33);
+            this.panel2.Size = new System.Drawing.Size(1360, 33);
             this.panel2.TabIndex = 1;
             // 
             // btnDelete
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.Font = new System.Drawing.Font("굴림", 7F);
-            this.btnDelete.Location = new System.Drawing.Point(1291, 7);
+            this.btnDelete.Location = new System.Drawing.Point(1305, 7);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(40, 20);
             this.btnDelete.TabIndex = 9;
@@ -77,7 +77,7 @@ namespace VMS_MES_PROJECT_4
             // 
             this.btnCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCreate.Font = new System.Drawing.Font("굴림", 7F);
-            this.btnCreate.Location = new System.Drawing.Point(1245, 7);
+            this.btnCreate.Location = new System.Drawing.Point(1259, 7);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(40, 20);
             this.btnCreate.TabIndex = 8;
@@ -104,7 +104,7 @@ namespace VMS_MES_PROJECT_4
             this.dgvCommon.Name = "dgvCommon";
             this.dgvCommon.RowHeadersVisible = false;
             this.dgvCommon.RowTemplate.Height = 23;
-            this.dgvCommon.Size = new System.Drawing.Size(1346, 450);
+            this.dgvCommon.Size = new System.Drawing.Size(1360, 450);
             this.dgvCommon.TabIndex = 2;
             this.dgvCommon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSetup_CellClick);
             // 
@@ -112,7 +112,7 @@ namespace VMS_MES_PROJECT_4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 561);
+            this.ClientSize = new System.Drawing.Size(1384, 561);
             this.Controls.Add(this.dgvCommon);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
