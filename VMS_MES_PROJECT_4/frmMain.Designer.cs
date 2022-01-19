@@ -222,6 +222,7 @@ namespace VMS_MES_PROJECT_4
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(23, 22);
             this.btnLogOut.Text = "toolStripButton1";
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click_1);
             // 
             // btnReSet
             // 
