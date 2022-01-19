@@ -89,10 +89,22 @@ namespace VMS_MES_PROJECT_4
             //};
             //Process.Start(psi);
 
-            Form frm = new frmWebView();
+            frmCapacity frm = new frmCapacity();
             frm.Show();
 
 
+        }
+
+        private void lblEqpGantt_Click(object sender, EventArgs e)
+        {
+            frmEqpGantt frm = new frmEqpGantt();
+            frm.Show();
+        }
+
+        private void lblLotGantt_Click(object sender, EventArgs e)
+        {
+            frmLotGantt frm = new frmLotGantt();
+            frm.Show();
         }
     }
 }

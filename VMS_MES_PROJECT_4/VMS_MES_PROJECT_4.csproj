@@ -102,6 +102,18 @@
     <Compile Include="frmAccount.Designer.cs">
       <DependentUpon>frmAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEqpGantt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEqpGantt.Designer.cs">
+      <DependentUpon>frmEqpGantt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCapacity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCapacity.Designer.cs">
+      <DependentUpon>frmCapacity.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,11 +180,11 @@
     <Compile Include="frmStepRoute.designer.cs">
       <DependentUpon>frmStepRoute.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmWebView.cs">
+    <Compile Include="frmLotGantt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmWebView.Designer.cs">
-      <DependentUpon>frmWebView.cs</DependentUpon>
+    <Compile Include="frmLotGantt.Designer.cs">
+      <DependentUpon>frmLotGantt.cs</DependentUpon>
     </Compile>
     <Compile Include="PopupUser.cs">
       <SubType>Form</SubType>
@@ -251,6 +263,12 @@
     <EmbeddedResource Include="frmAccount.resx">
       <DependentUpon>frmAccount.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEqpGantt.resx">
+      <DependentUpon>frmEqpGantt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCapacity.resx">
+      <DependentUpon>frmCapacity.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmUser.resx">
       <DependentUpon>frmUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -284,8 +302,8 @@
     <EmbeddedResource Include="frmStepRoute.resx">
       <DependentUpon>frmStepRoute.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmWebView.resx">
-      <DependentUpon>frmWebView.cs</DependentUpon>
+    <EmbeddedResource Include="frmLotGantt.resx">
+      <DependentUpon>frmLotGantt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PopupUser.resx">
       <DependentUpon>PopupUser.cs</DependentUpon>
