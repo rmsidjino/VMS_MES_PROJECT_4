@@ -89,7 +89,7 @@ namespace VMS_MES_PROJECT_4
             //};
             //Process.Start(psi);
 
-            Form frm = new frmLotGantt();
+            frmCapacity frm = new frmCapacity();
             frm.Show();
 
 

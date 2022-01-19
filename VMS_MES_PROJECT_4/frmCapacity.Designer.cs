@@ -1,7 +1,7 @@
 ﻿
 namespace VMS_MES_PROJECT_4
 {
-    partial class frmEqpGantt
+    partial class frmCapacity
     {
         /// <summary>
         /// Required designer variable.
@@ -53,16 +53,16 @@ namespace VMS_MES_PROJECT_4
             this.webView1.Size = new System.Drawing.Size(1184, 761);
             this.webView1.TabIndex = 1;
             // 
-            // frmEqpGantt
+            // frmCapacity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 761);
             this.Controls.Add(this.webView1);
             this.Controls.Add(this.webBrowser1);
-            this.Name = "frmEqpGantt";
+            this.Name = "frmCapacity";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "EQP Gantt Chart";
+            this.Text = "Capacity Utilization Rate";
             this.Load += new System.EventHandler(this.frmWebView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.webView1)).EndInit();
             this.ResumeLayout(false);

@@ -53,16 +53,16 @@ namespace VMS_MES_PROJECT_4
             this.webView1.Size = new System.Drawing.Size(1184, 761);
             this.webView1.TabIndex = 1;
             // 
-            // frmWebView
+            // frmLotGantt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 761);
             this.Controls.Add(this.webView1);
             this.Controls.Add(this.webBrowser1);
-            this.Name = "frmWebView";
+            this.Name = "frmLotGantt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmWebView";
+            this.Text = "Lot Gantt Chart";
             this.Load += new System.EventHandler(this.frmWebView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.webView1)).EndInit();
             this.ResumeLayout(false);

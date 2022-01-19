@@ -35,10 +35,11 @@ namespace VMS_MES_PROJECT_4
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblWebLoad = new System.Windows.Forms.Label();
+            this.lblLotGantt = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cboEQP = new System.Windows.Forms.ComboBox();
             this.cboLine = new System.Windows.Forms.ComboBox();
+            this.lblEqpGantt = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoadStat)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -94,22 +95,26 @@ namespace VMS_MES_PROJECT_4
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.lblWebLoad);
+            this.panel2.Controls.Add(this.lblEqpGantt);
+            this.panel2.Controls.Add(this.lblLotGantt);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(12, 60);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1298, 33);
             this.panel2.TabIndex = 4;
             // 
-            // lblWebLoad
+            // lblLotGantt
             // 
-            this.lblWebLoad.AutoSize = true;
-            this.lblWebLoad.Location = new System.Drawing.Point(1181, 11);
-            this.lblWebLoad.Name = "lblWebLoad";
-            this.lblWebLoad.Size = new System.Drawing.Size(93, 12);
-            this.lblWebLoad.TabIndex = 6;
-            this.lblWebLoad.Text = "가동률 분석차트";
-            this.lblWebLoad.Click += new System.EventHandler(this.lblWebLoad_Click);
+            this.lblLotGantt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblLotGantt.AutoSize = true;
+            this.lblLotGantt.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblLotGantt.ForeColor = System.Drawing.Color.Blue;
+            this.lblLotGantt.Location = new System.Drawing.Point(1177, 11);
+            this.lblLotGantt.Name = "lblLotGantt";
+            this.lblLotGantt.Size = new System.Drawing.Size(107, 12);
+            this.lblLotGantt.TabIndex = 6;
+            this.lblLotGantt.Text = "Lot Gantt 분석차트";
+            this.lblLotGantt.Click += new System.EventHandler(this.lblLotGantt_Click);
             // 
             // panel1
             // 
@@ -142,6 +147,19 @@ namespace VMS_MES_PROJECT_4
             this.cboLine.Size = new System.Drawing.Size(100, 20);
             this.cboLine.TabIndex = 0;
             // 
+            // lblEqpGantt
+            // 
+            this.lblEqpGantt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblEqpGantt.AutoSize = true;
+            this.lblEqpGantt.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblEqpGantt.ForeColor = System.Drawing.Color.Blue;
+            this.lblEqpGantt.Location = new System.Drawing.Point(1045, 11);
+            this.lblEqpGantt.Name = "lblEqpGantt";
+            this.lblEqpGantt.Size = new System.Drawing.Size(115, 12);
+            this.lblEqpGantt.TabIndex = 7;
+            this.lblEqpGantt.Text = "EQP Gantt 분석차트";
+            this.lblEqpGantt.Click += new System.EventHandler(this.lblEqpGantt_Click);
+            // 
             // frmLoad_Stat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -172,6 +190,7 @@ namespace VMS_MES_PROJECT_4
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox cboEQP;
         private System.Windows.Forms.ComboBox cboLine;
-        private System.Windows.Forms.Label lblWebLoad;
+        private System.Windows.Forms.Label lblLotGantt;
+        private System.Windows.Forms.Label lblEqpGantt;
     }
 }

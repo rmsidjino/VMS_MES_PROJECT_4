@@ -75,15 +75,16 @@ namespace VMS_MES_PROJECT_4
             dgvLoadStat.DataSource = Llist;
         }
 
-        private void lblWebLoad_Click(object sender, EventArgs e)
+        private void lblEqpGantt_Click(object sender, EventArgs e)
         {
-            var psi = new ProcessStartInfo
-            {
-                FileName = "chrome.exe",
-                Arguments = "https://localhost:44332/Capacity/index",
-                UseShellExecute = true
-            };
-            Process.Start(psi);
+            frmLotGantt frm = new frmLotGantt();
+            frm.Show();
+        }
+
+        private void lblLotGantt_Click(object sender, EventArgs e)
+        {
+            frmEqpGantt frm = new frmEqpGantt();
+            frm.Show();
         }
     }
 }

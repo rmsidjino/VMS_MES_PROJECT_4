@@ -2316,6 +2316,7 @@
     <None Include="Properties\PublishProfiles\VMSWEB - Web Deploy.pubxml" />
     <Content Include="Views\Gantt\WinformGantt.cshtml" />
     <Content Include="Views\Gantt\WinformGanttEqp.cshtml" />
+    <Content Include="Views\Capacity\WinformGraph.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
