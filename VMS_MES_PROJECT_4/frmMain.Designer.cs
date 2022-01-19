@@ -207,7 +207,7 @@ namespace VMS_MES_PROJECT_4
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnLogOut,
             this.btnReSet});
-            this.toolStrip1.Location = new System.Drawing.Point(218, 26);
+            this.toolStrip1.Location = new System.Drawing.Point(218, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1415, 25);
             this.toolStrip1.TabIndex = 18;
@@ -240,13 +240,11 @@ namespace VMS_MES_PROJECT_4
             this.ucTabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.ucTabControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ucTabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            this.ucTabControl1.Location = new System.Drawing.Point(218, 0);
+            this.ucTabControl1.Location = new System.Drawing.Point(218, 25);
             this.ucTabControl1.Name = "ucTabControl1";
             this.ucTabControl1.SelectedIndex = 0;
             this.ucTabControl1.Size = new System.Drawing.Size(1415, 26);
-            this.ucTabControl1.TabIndex = 17;
-            this.ucTabControl1.SelectedIndexChanged += new System.EventHandler(this.ucTabControl1_SelectedIndexChanged);
-            this.ucTabControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ucTabControl1_MouseDown);
+            this.ucTabControl1.TabIndex = 20;
             // 
             // frmMain
             // 
@@ -254,8 +252,8 @@ namespace VMS_MES_PROJECT_4
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.ClientSize = new System.Drawing.Size(1633, 695);
-            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.ucTabControl1);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.DoubleBuffered = true;
