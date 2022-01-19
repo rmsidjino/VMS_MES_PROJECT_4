@@ -35,10 +35,10 @@ namespace VMS_MES_PROJECT_4
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblEqpPlan = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cboEQP = new System.Windows.Forms.ComboBox();
             this.cboLine = new System.Windows.Forms.ComboBox();
-            this.lblEqpPlan = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoadStat)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -101,6 +101,19 @@ namespace VMS_MES_PROJECT_4
             this.panel2.Size = new System.Drawing.Size(1360, 33);
             this.panel2.TabIndex = 4;
             // 
+            // lblEqpPlan
+            // 
+            this.lblEqpPlan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblEqpPlan.AutoSize = true;
+            this.lblEqpPlan.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblEqpPlan.ForeColor = System.Drawing.Color.Blue;
+            this.lblEqpPlan.Location = new System.Drawing.Point(1229, 10);
+            this.lblEqpPlan.Name = "lblEqpPlan";
+            this.lblEqpPlan.Size = new System.Drawing.Size(117, 12);
+            this.lblEqpPlan.TabIndex = 8;
+            this.lblEqpPlan.Text = "설비가동률 분석차트";
+            this.lblEqpPlan.Click += new System.EventHandler(this.lblEqpPlan_Click);
+            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -131,19 +144,6 @@ namespace VMS_MES_PROJECT_4
             this.cboLine.Name = "cboLine";
             this.cboLine.Size = new System.Drawing.Size(100, 20);
             this.cboLine.TabIndex = 0;
-            // 
-            // lblEqpPlan
-            // 
-            this.lblEqpPlan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblEqpPlan.AutoSize = true;
-            this.lblEqpPlan.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblEqpPlan.ForeColor = System.Drawing.Color.Blue;
-            this.lblEqpPlan.Location = new System.Drawing.Point(1169, 10);
-            this.lblEqpPlan.Name = "lblEqpPlan";
-            this.lblEqpPlan.Size = new System.Drawing.Size(117, 12);
-            this.lblEqpPlan.TabIndex = 8;
-            this.lblEqpPlan.Text = "설비가동률 분석차트";
-            this.lblEqpPlan.Click += new System.EventHandler(this.lblEqpPlan_Click);
             // 
             // frmLoad_Stat
             // 
