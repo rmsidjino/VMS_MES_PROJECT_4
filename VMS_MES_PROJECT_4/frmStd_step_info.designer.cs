@@ -58,7 +58,7 @@ namespace VMS_MES_PROJECT_4
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.Font = new System.Drawing.Font("굴림", 7F);
-            this.btnDelete.Location = new System.Drawing.Point(1249, 7);
+            this.btnDelete.Location = new System.Drawing.Point(1235, 7);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(40, 20);
             this.btnDelete.TabIndex = 3;
@@ -70,7 +70,7 @@ namespace VMS_MES_PROJECT_4
             // 
             this.btnCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCreate.Font = new System.Drawing.Font("굴림", 7F);
-            this.btnCreate.Location = new System.Drawing.Point(1203, 7);
+            this.btnCreate.Location = new System.Drawing.Point(1189, 7);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(40, 20);
             this.btnCreate.TabIndex = 2;
@@ -90,7 +90,7 @@ namespace VMS_MES_PROJECT_4
             // btnSearch
             // 
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearch.Location = new System.Drawing.Point(1215, 8);
+            this.btnSearch.Location = new System.Drawing.Point(1201, 8);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 1;
@@ -116,7 +116,7 @@ namespace VMS_MES_PROJECT_4
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(12, 60);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1300, 33);
+            this.panel2.Size = new System.Drawing.Size(1286, 33);
             this.panel2.TabIndex = 4;
             // 
             // panel1
@@ -129,7 +129,7 @@ namespace VMS_MES_PROJECT_4
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1300, 42);
+            this.panel1.Size = new System.Drawing.Size(1286, 42);
             this.panel1.TabIndex = 3;
             // 
             // cboStd_Step_Id
@@ -144,7 +144,7 @@ namespace VMS_MES_PROJECT_4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1384, 561);
+            this.ClientSize = new System.Drawing.Size(1370, 561);
             this.Controls.Add(this.dgvStdStepInfo);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
