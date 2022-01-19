@@ -82,7 +82,40 @@
         </form>
 
     </div>
-
+    <button id="zoomInButton" onclick="zoomIn()">+</button>
+    <button id="zoomOutButton" onclick="zoomOut()">-</button>
+    <label>zoom factor: 2</label>
+    <br>
+    <button id="zoomToDatesButton" onclick="zoomToDates()">Zoom To Dates</button>
+    <label>start date:</label>
+    <label id="dateLabel1">03 February 2018</label>
+    <label>end date: </label>
+    <label id="dateLabel2">06 February 2018</label>
+    <br>
+    <button id="zoomToUnitsButton" onclick="zoomToUnits()">Zoom To Units</button>
+    <label for="unitSelect">unit: </label>
+    <select id="unitSelect">
+        <option value="millisecond">millisecond</option>
+        <option value="second">second</option>
+        <option value="minute">minute</option>
+        <option value="hour">hour</option>
+        <option value="day">day</option>
+        <option value="week" selected>week</option>
+        <option value="third-of-month">third-of-month</option>
+        <option value="month">month</option>
+        <option value="quarter">quarter</option>
+        <option value="semester">semester</option>
+        <option value="year">year</option>
+    </select>
+    <label>count: <input id="countInput" value="2"></label>
+    <label for="anchorSelect">anchor: </label>
+    <select id="anchorSelect">
+        <option value="first-date" selected>first-date</option>
+        <option value="first-visible-date">first-visible-date</option>
+        <option value="last-date">last-date</option>
+        <option value="last-visible-date">last-visible-date</option>
+    </select>
+    <br>
     <div id="container" style="height:700px"></div>
 
     @{
@@ -97,28 +130,21 @@
 
     }
 
-<script type="text/javascript">
+    <script type="text/javascript">
 
         @*var temp = "@eqp"; //"1월,2월,3월...12월"
         var arrTemp = temp.split(','); // ['1월', '2월'..]*@
 
         var Info = JSON.parse('@Html.Raw(InfoJson)')
-
-        anychart.onDocumentReady(<!--function ()--> @*{
-            // The data used in this sample can be obtained from the CDN
-            // https://cdn.anychart.com/samples/gantt-live-editing/resource-chart-editing/data.json
-
-            //var url = 'https://localhost:44370/Gantt/LoadEqpPlan/@EQPSearch/@ProductSearch';
-            anychart.data.fromJson(
-
-                Info,*@
+        var chart;
+        anychart.onDocumentReady(
             function () {
                     var Info = JSON.parse('@Html.Raw(InfoJson)')
                     // create data tree on raw data
                     var treeData = anychart.data.tree(Info, 'as-table');
                     // create resource gantt chart
 
-                    var chart = anychart.ganttResource();
+                    chart = anychart.ganttResource();
                     chart.defaultRowHeight(50)
                         .splitterPosition(150);
 
@@ -147,14 +173,39 @@
                     ]);
                     chart.getTimeline().scale().minimum("2019-11-08");
                     chart.getTimeline().scale().maximum("2019-11-15");
-                    chart.getTimeline().periods().labels().enabled(true);
-                    chart.getTimeline().periods().labels().format("{%id}");
+                chart.getTimeline().periods().labels().enabled(true);
+                chart.getTimeline().periods().labels().format(function () {
+                    var id = this.name;
+                    // create short id
+                    // sample: Trevor Moore => T.M
+                    var shortId = id
+                        .split('_')
+                        .map(function (item) {
+                            return item[0];
+                        })
+                        .join('.');
+
+                    var label = this.label;
+
+                    var barBounds = this.barBounds;
+                    var labelBounds = label.measureWithText(id);
+
+                    // if width of the label is greater than the width of the bar, then we show short id
+                    if (barBounds.width < labelBounds.width) {
+                        return shortId;
+                    }
+
+                    return id;
+                });
+                    chart.getTimeline().periods().labels().format("{%i}");
                     chart.getTimeline().periods().labels().fontColor("black");
                     chart.getTimeline().periods().labels().fontSize(8);
+
+                
                     // make chart editable
 
                     chart.getTimeline().tooltip().useHtml(true);
-                    chart.getTimeline().tooltip().titleFormat("{%id}");
+                    chart.getTimeline().tooltip().titleFormat("{%name}");
                     chart.getTimeline().tooltip().format("StartDate: {%start} <br>EndDate: {%end}");
 
                     chart.edit(true);
@@ -192,12 +243,33 @@
                     // initiate chart drawing
                     chart.draw();
 
+
                     // zoom chart all dates range
+                
 
 
                 }
-            );
-        /*})*/;
-</script>
+        );
+        function zoomIn() {
+            chart.zoomIn(2);
+
+        }
+
+        // zoom the timeline out
+        function zoomOut() {
+            chart.zoomOut(2);
+            
+        }
+
+
+        // zoom the timeline to the given units
+        function zoomToUnits() {
+            var unit = document.getElementById("unitSelect").value;
+            var count = document.getElementById("countInput").value;
+            var anchor = document.getElementById("anchorSelect").value;
+            chart.zoomTo(unit, count, anchor);
+        }
+
+    </script>
 </body>
 </html>
