@@ -75,15 +75,10 @@ namespace VMS_MES_PROJECT_4
             dgvLoadStat.DataSource = Llist;
         }
 
-        private void lblEqpGantt_Click(object sender, EventArgs e)
-        {
-            frmLotGantt frm = new frmLotGantt();
-            frm.Show();
-        }
 
-        private void lblLotGantt_Click(object sender, EventArgs e)
+        private void lblEqpPlan_Click(object sender, EventArgs e)
         {
-            frmEqpGantt frm = new frmEqpGantt();
+            frmCapacity frm = new frmCapacity();
             frm.Show();
         }
     }
