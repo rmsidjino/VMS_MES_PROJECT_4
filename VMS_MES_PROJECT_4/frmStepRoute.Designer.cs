@@ -63,7 +63,7 @@ namespace VMS_MES_PROJECT_4
             // cboStep
             // 
             this.cboStep.FormattingEnabled = true;
-            this.cboStep.Location = new System.Drawing.Point(375, 10);
+            this.cboStep.Location = new System.Drawing.Point(367, 10);
             this.cboStep.Name = "cboStep";
             this.cboStep.Size = new System.Drawing.Size(101, 20);
             this.cboStep.TabIndex = 1;
@@ -71,7 +71,7 @@ namespace VMS_MES_PROJECT_4
             // cboProcess
             // 
             this.cboProcess.FormattingEnabled = true;
-            this.cboProcess.Location = new System.Drawing.Point(112, 10);
+            this.cboProcess.Location = new System.Drawing.Point(104, 10);
             this.cboProcess.Name = "cboProcess";
             this.cboProcess.Size = new System.Drawing.Size(188, 20);
             this.cboProcess.TabIndex = 0;
@@ -79,7 +79,7 @@ namespace VMS_MES_PROJECT_4
             // btnSearch
             // 
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearch.Location = new System.Drawing.Point(1268, 10);
+            this.btnSearch.Location = new System.Drawing.Point(1273, 10);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 2;
@@ -90,7 +90,7 @@ namespace VMS_MES_PROJECT_4
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(312, 14);
+            this.label2.Location = new System.Drawing.Point(304, 14);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 12);
             this.label2.TabIndex = 3;
@@ -99,7 +99,7 @@ namespace VMS_MES_PROJECT_4
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 14);
+            this.label1.Location = new System.Drawing.Point(19, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 12);
             this.label1.TabIndex = 1;
@@ -121,7 +121,7 @@ namespace VMS_MES_PROJECT_4
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.Font = new System.Drawing.Font("굴림", 7F);
-            this.btnDelete.Location = new System.Drawing.Point(1303, 7);
+            this.btnDelete.Location = new System.Drawing.Point(1308, 7);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(40, 20);
             this.btnDelete.TabIndex = 3;
@@ -133,7 +133,7 @@ namespace VMS_MES_PROJECT_4
             // 
             this.btnCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCreate.Font = new System.Drawing.Font("굴림", 7F);
-            this.btnCreate.Location = new System.Drawing.Point(1257, 7);
+            this.btnCreate.Location = new System.Drawing.Point(1262, 7);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(40, 20);
             this.btnCreate.TabIndex = 3;

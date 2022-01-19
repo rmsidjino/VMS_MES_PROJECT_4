@@ -193,7 +193,7 @@ namespace VMS_MES_PROJECT_4
                 btnItem.Dock = System.Windows.Forms.DockStyle.Top;               
                 btnItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
                 btnItem.ForeColor = System.Drawing.Color.Black;
-                btnItem.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+                btnItem.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
                 btnItem.Location = new System.Drawing.Point(0, 0);
                 btnItem.Margin = new System.Windows.Forms.Padding(0);
                 btnItem.Name = "button7";

@@ -22,14 +22,15 @@ namespace VMS_MES_PROJECT_4
         public PopupDemand()
         {
             InitializeComponent();
-            txtDemandID.Enabled = false;
-            txtDemand_Ver.Enabled = false;
+            
 
         }
 
         public PopupDemand(DemandVO dItem)
         {
             InitializeComponent();
+            txtDemandID.Enabled = false;
+            txtDemand_Ver.Enabled = false;
             this.dItem = dItem;
             update = true;
         }

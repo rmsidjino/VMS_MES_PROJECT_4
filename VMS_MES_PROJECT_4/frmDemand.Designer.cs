@@ -63,12 +63,12 @@ namespace VMS_MES_PROJECT_4
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1360, 42);
+            this.panel1.Size = new System.Drawing.Size(1346, 42);
             this.panel1.TabIndex = 0;
             // 
             // txtDemandVer
             // 
-            this.txtDemandVer.Location = new System.Drawing.Point(101, 10);
+            this.txtDemandVer.Location = new System.Drawing.Point(86, 10);
             this.txtDemandVer.Name = "txtDemandVer";
             this.txtDemandVer.Size = new System.Drawing.Size(123, 21);
             this.txtDemandVer.TabIndex = 0;
@@ -76,7 +76,7 @@ namespace VMS_MES_PROJECT_4
             // cboProduct
             // 
             this.cboProduct.FormattingEnabled = true;
-            this.cboProduct.Location = new System.Drawing.Point(304, 11);
+            this.cboProduct.Location = new System.Drawing.Point(289, 11);
             this.cboProduct.Name = "cboProduct";
             this.cboProduct.Size = new System.Drawing.Size(148, 20);
             this.cboProduct.TabIndex = 1;
@@ -84,7 +84,7 @@ namespace VMS_MES_PROJECT_4
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(240, 15);
+            this.label2.Location = new System.Drawing.Point(225, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 12);
             this.label2.TabIndex = 14;
@@ -93,7 +93,7 @@ namespace VMS_MES_PROJECT_4
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 15);
+            this.label1.Location = new System.Drawing.Point(15, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 12);
             this.label1.TabIndex = 13;
@@ -102,7 +102,7 @@ namespace VMS_MES_PROJECT_4
             // btnSearch
             // 
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearch.Location = new System.Drawing.Point(1272, 11);
+            this.btnSearch.Location = new System.Drawing.Point(1258, 11);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 3;
@@ -119,14 +119,14 @@ namespace VMS_MES_PROJECT_4
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(12, 60);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1360, 33);
+            this.panel2.Size = new System.Drawing.Size(1346, 33);
             this.panel2.TabIndex = 1;
             // 
             // btnDelete
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.Font = new System.Drawing.Font("굴림", 7F);
-            this.btnDelete.Location = new System.Drawing.Point(1307, 7);
+            this.btnDelete.Location = new System.Drawing.Point(1293, 7);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(40, 20);
             this.btnDelete.TabIndex = 5;
@@ -138,7 +138,7 @@ namespace VMS_MES_PROJECT_4
             // 
             this.btnCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCreate.Font = new System.Drawing.Font("굴림", 7F);
-            this.btnCreate.Location = new System.Drawing.Point(1261, 7);
+            this.btnCreate.Location = new System.Drawing.Point(1247, 7);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(40, 20);
             this.btnCreate.TabIndex = 4;
@@ -165,7 +165,7 @@ namespace VMS_MES_PROJECT_4
             this.dgvDemand.Name = "dgvDemand";
             this.dgvDemand.RowHeadersVisible = false;
             this.dgvDemand.RowTemplate.Height = 23;
-            this.dgvDemand.Size = new System.Drawing.Size(1360, 450);
+            this.dgvDemand.Size = new System.Drawing.Size(1346, 450);
             this.dgvDemand.TabIndex = 2;
             this.dgvDemand.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDemand_CellClick);
             // 
@@ -193,7 +193,7 @@ namespace VMS_MES_PROJECT_4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1384, 561);
+            this.ClientSize = new System.Drawing.Size(1370, 561);
             this.Controls.Add(this.dgvDemand);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

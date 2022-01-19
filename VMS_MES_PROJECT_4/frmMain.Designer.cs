@@ -53,7 +53,7 @@ namespace VMS_MES_PROJECT_4
             this.button4.BackColor = System.Drawing.Color.SandyBrown;
             this.button4.Dock = System.Windows.Forms.DockStyle.Top;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button4.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button4.ForeColor = System.Drawing.Color.Black;
             this.button4.Location = new System.Drawing.Point(0, 132);
             this.button4.Margin = new System.Windows.Forms.Padding(0);
@@ -70,7 +70,7 @@ namespace VMS_MES_PROJECT_4
             this.button3.BackColor = System.Drawing.Color.SandyBrown;
             this.button3.Dock = System.Windows.Forms.DockStyle.Top;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button3.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button3.ForeColor = System.Drawing.Color.Black;
             this.button3.Location = new System.Drawing.Point(0, 96);
             this.button3.Margin = new System.Windows.Forms.Padding(0);
@@ -87,7 +87,7 @@ namespace VMS_MES_PROJECT_4
             this.button2.BackColor = System.Drawing.Color.SandyBrown;
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button2.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Location = new System.Drawing.Point(0, 60);
             this.button2.Margin = new System.Windows.Forms.Padding(0);
@@ -137,7 +137,7 @@ namespace VMS_MES_PROJECT_4
             this.button6.BackColor = System.Drawing.Color.SandyBrown;
             this.button6.Dock = System.Windows.Forms.DockStyle.Top;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button6.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button6.ForeColor = System.Drawing.Color.Black;
             this.button6.Location = new System.Drawing.Point(0, 168);
             this.button6.Margin = new System.Windows.Forms.Padding(0);
@@ -154,7 +154,7 @@ namespace VMS_MES_PROJECT_4
             this.button5.BackColor = System.Drawing.Color.SandyBrown;
             this.button5.Dock = System.Windows.Forms.DockStyle.Top;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button5.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button5.ForeColor = System.Drawing.Color.Black;
             this.button5.Location = new System.Drawing.Point(0, 204);
             this.button5.Margin = new System.Windows.Forms.Padding(0);
@@ -171,7 +171,7 @@ namespace VMS_MES_PROJECT_4
             this.btnMaster.BackColor = System.Drawing.Color.SandyBrown;
             this.btnMaster.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnMaster.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnMaster.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnMaster.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnMaster.ForeColor = System.Drawing.Color.Black;
             this.btnMaster.Location = new System.Drawing.Point(0, 240);
             this.btnMaster.Margin = new System.Windows.Forms.Padding(0);
@@ -209,7 +209,7 @@ namespace VMS_MES_PROJECT_4
             this.btnReSet});
             this.toolStrip1.Location = new System.Drawing.Point(218, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1415, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1152, 25);
             this.toolStrip1.TabIndex = 18;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -245,6 +245,8 @@ namespace VMS_MES_PROJECT_4
             this.ucTabControl1.SelectedIndex = 0;
             this.ucTabControl1.Size = new System.Drawing.Size(1415, 26);
             this.ucTabControl1.TabIndex = 20;
+            this.ucTabControl1.SelectedIndexChanged += new System.EventHandler(this.ucTabControl1_SelectedIndexChanged);
+            this.ucTabControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ucTabControl1_MouseDown);
             // 
             // frmMain
             // 

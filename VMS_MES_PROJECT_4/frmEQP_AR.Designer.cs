@@ -47,6 +47,9 @@ namespace VMS_MES_PROJECT_4
             // 
             // dgvEqpArr
             // 
+            this.dgvEqpArr.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvEqpArr.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEqpArr.Location = new System.Drawing.Point(12, 99);
             this.dgvEqpArr.Name = "dgvEqpArr";
@@ -119,17 +122,17 @@ namespace VMS_MES_PROJECT_4
             // cboProcessID
             // 
             this.cboProcessID.FormattingEnabled = true;
-            this.cboProcessID.Location = new System.Drawing.Point(303, 11);
+            this.cboProcessID.Location = new System.Drawing.Point(326, 12);
             this.cboProcessID.Name = "cboProcessID";
-            this.cboProcessID.Size = new System.Drawing.Size(129, 20);
+            this.cboProcessID.Size = new System.Drawing.Size(149, 20);
             this.cboProcessID.TabIndex = 1;
             // 
             // cboProductID
             // 
             this.cboProductID.FormattingEnabled = true;
-            this.cboProductID.Location = new System.Drawing.Point(72, 12);
+            this.cboProductID.Location = new System.Drawing.Point(75, 12);
             this.cboProductID.Name = "cboProductID";
-            this.cboProductID.Size = new System.Drawing.Size(121, 20);
+            this.cboProductID.Size = new System.Drawing.Size(145, 20);
             this.cboProductID.TabIndex = 0;
             // 
             // btnSearch
@@ -146,7 +149,7 @@ namespace VMS_MES_PROJECT_4
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(223, 15);
+            this.label2.Location = new System.Drawing.Point(246, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 12);
             this.label2.TabIndex = 3;
@@ -155,7 +158,7 @@ namespace VMS_MES_PROJECT_4
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 15);
+            this.label1.Location = new System.Drawing.Point(19, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 12);
             this.label1.TabIndex = 1;

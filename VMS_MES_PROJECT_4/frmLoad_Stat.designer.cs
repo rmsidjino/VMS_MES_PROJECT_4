@@ -46,6 +46,9 @@ namespace VMS_MES_PROJECT_4
             // 
             // dgvLoadStat
             // 
+            this.dgvLoadStat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvLoadStat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLoadStat.Location = new System.Drawing.Point(12, 99);
             this.dgvLoadStat.Name = "dgvLoadStat";
@@ -66,7 +69,7 @@ namespace VMS_MES_PROJECT_4
             // btnSearch
             // 
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearch.Location = new System.Drawing.Point(1261, 9);
+            this.btnSearch.Location = new System.Drawing.Point(1271, 9);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 4;
@@ -77,7 +80,7 @@ namespace VMS_MES_PROJECT_4
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(264, 16);
+            this.label2.Location = new System.Drawing.Point(205, 17);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 12);
             this.label2.TabIndex = 3;
@@ -101,18 +104,31 @@ namespace VMS_MES_PROJECT_4
             this.panel2.Size = new System.Drawing.Size(1360, 33);
             this.panel2.TabIndex = 4;
             // 
-            // lblEqpPlan
+            // lblEqpGantt
             // 
-            this.lblEqpPlan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblEqpPlan.AutoSize = true;
-            this.lblEqpPlan.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblEqpPlan.ForeColor = System.Drawing.Color.Blue;
-            this.lblEqpPlan.Location = new System.Drawing.Point(1229, 10);
-            this.lblEqpPlan.Name = "lblEqpPlan";
-            this.lblEqpPlan.Size = new System.Drawing.Size(117, 12);
-            this.lblEqpPlan.TabIndex = 8;
-            this.lblEqpPlan.Text = "설비가동률 분석차트";
-            this.lblEqpPlan.Click += new System.EventHandler(this.lblEqpPlan_Click);
+            this.lblEqpGantt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblEqpGantt.AutoSize = true;
+            this.lblEqpGantt.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblEqpGantt.ForeColor = System.Drawing.Color.Blue;
+            this.lblEqpGantt.Location = new System.Drawing.Point(1045, 11);
+            this.lblEqpGantt.Name = "lblEqpGantt";
+            this.lblEqpGantt.Size = new System.Drawing.Size(115, 12);
+            this.lblEqpGantt.TabIndex = 7;
+            this.lblEqpGantt.Text = "EQP Gantt 분석차트";
+            this.lblEqpGantt.Click += new System.EventHandler(this.lblEqpGantt_Click);
+            // 
+            // lblLotGantt
+            // 
+            this.lblLotGantt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblLotGantt.AutoSize = true;
+            this.lblLotGantt.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblLotGantt.ForeColor = System.Drawing.Color.Blue;
+            this.lblLotGantt.Location = new System.Drawing.Point(1177, 11);
+            this.lblLotGantt.Name = "lblLotGantt";
+            this.lblLotGantt.Size = new System.Drawing.Size(107, 12);
+            this.lblLotGantt.TabIndex = 6;
+            this.lblLotGantt.Text = "Lot Gantt 분석차트";
+            this.lblLotGantt.Click += new System.EventHandler(this.lblLotGantt_Click);
             // 
             // panel1
             // 
@@ -132,9 +148,9 @@ namespace VMS_MES_PROJECT_4
             // cboEQP
             // 
             this.cboEQP.FormattingEnabled = true;
-            this.cboEQP.Location = new System.Drawing.Point(330, 11);
+            this.cboEQP.Location = new System.Drawing.Point(271, 12);
             this.cboEQP.Name = "cboEQP";
-            this.cboEQP.Size = new System.Drawing.Size(100, 20);
+            this.cboEQP.Size = new System.Drawing.Size(148, 20);
             this.cboEQP.TabIndex = 1;
             // 
             // cboLine

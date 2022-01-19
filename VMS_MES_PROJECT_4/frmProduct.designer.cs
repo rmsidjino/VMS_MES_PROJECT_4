@@ -47,6 +47,8 @@ namespace VMS_MES_PROJECT_4
             // 
             // dgvProduct
             // 
+            this.dgvProduct.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProduct.Location = new System.Drawing.Point(12, 99);
             this.dgvProduct.Name = "dgvProduct";
@@ -103,7 +105,7 @@ namespace VMS_MES_PROJECT_4
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 16);
+            this.label1.Location = new System.Drawing.Point(24, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 12);
             this.label1.TabIndex = 1;
@@ -139,7 +141,7 @@ namespace VMS_MES_PROJECT_4
             // cboProcess
             // 
             this.cboProcess.FormattingEnabled = true;
-            this.cboProcess.Location = new System.Drawing.Point(356, 11);
+            this.cboProcess.Location = new System.Drawing.Point(351, 11);
             this.cboProcess.Name = "cboProcess";
             this.cboProcess.Size = new System.Drawing.Size(188, 20);
             this.cboProcess.TabIndex = 1;
@@ -147,7 +149,7 @@ namespace VMS_MES_PROJECT_4
             // cboProduct
             // 
             this.cboProduct.FormattingEnabled = true;
-            this.cboProduct.Location = new System.Drawing.Point(87, 11);
+            this.cboProduct.Location = new System.Drawing.Point(82, 11);
             this.cboProduct.Name = "cboProduct";
             this.cboProduct.Size = new System.Drawing.Size(166, 20);
             this.cboProduct.TabIndex = 0;
@@ -155,7 +157,7 @@ namespace VMS_MES_PROJECT_4
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(271, 16);
+            this.label2.Location = new System.Drawing.Point(266, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 12);
             this.label2.TabIndex = 6;
