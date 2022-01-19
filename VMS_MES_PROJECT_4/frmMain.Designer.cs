@@ -40,8 +40,12 @@ namespace VMS_MES_PROJECT_4
             this.btnMaster = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnLogOut = new System.Windows.Forms.ToolStripButton();
+            this.btnReSet = new System.Windows.Forms.ToolStripButton();
             this.ucTabControl1 = new VMS_MES_PROJECT_4.ucTabControl();
             this.flowLayoutPanel1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button4
@@ -190,12 +194,44 @@ namespace VMS_MES_PROJECT_4
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Location = new System.Drawing.Point(218, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1211, 24);
-            this.menuStrip1.TabIndex = 10;
+            this.menuStrip1.Size = new System.Drawing.Size(1415, 24);
+            this.menuStrip1.TabIndex = 16;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.Visible = false;
+            this.menuStrip1.ItemAdded += new System.Windows.Forms.ToolStripItemEventHandler(this.menuStrip1_ItemAdded);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnLogOut,
+            this.btnReSet});
+            this.toolStrip1.Location = new System.Drawing.Point(218, 26);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1415, 25);
+            this.toolStrip1.TabIndex = 18;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnLogOut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
+            this.btnLogOut.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(23, 22);
+            this.btnLogOut.Text = "toolStripButton1";
+            // 
+            // btnReSet
+            // 
+            this.btnReSet.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnReSet.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnReSet.Image = ((System.Drawing.Image)(resources.GetObject("btnReSet.Image")));
+            this.btnReSet.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnReSet.Name = "btnReSet";
+            this.btnReSet.Size = new System.Drawing.Size(23, 22);
+            this.btnReSet.Text = "toolStripButton1";
             // 
             // ucTabControl1
             // 
@@ -206,7 +242,7 @@ namespace VMS_MES_PROJECT_4
             this.ucTabControl1.Name = "ucTabControl1";
             this.ucTabControl1.SelectedIndex = 0;
             this.ucTabControl1.Size = new System.Drawing.Size(1415, 26);
-            this.ucTabControl1.TabIndex = 12;
+            this.ucTabControl1.TabIndex = 17;
             this.ucTabControl1.SelectedIndexChanged += new System.EventHandler(this.ucTabControl1_SelectedIndexChanged);
             this.ucTabControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ucTabControl1_MouseDown);
             // 
@@ -216,9 +252,10 @@ namespace VMS_MES_PROJECT_4
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.ClientSize = new System.Drawing.Size(1633, 695);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.ucTabControl1);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
@@ -229,6 +266,8 @@ namespace VMS_MES_PROJECT_4
             this.MdiChildActivate += new System.EventHandler(this.frmMain_MdiChildActivate);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ucTabControl1_MouseDown);
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,10 +281,13 @@ namespace VMS_MES_PROJECT_4
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private ucTabControl ucTabControl1;
         private System.Windows.Forms.Button btnMaster;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton btnLogOut;
+        private System.Windows.Forms.ToolStripButton btnReSet;
+        private ucTabControl ucTabControl1;
     }
 }
 

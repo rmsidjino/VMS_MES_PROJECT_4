@@ -36,46 +36,19 @@ namespace VMS_MES_PROJECT_4
                 //메인화면 코딩 시작
                 //로그인 성공한 사람의 권한에 따라서 다르게 메뉴를 보여준다.
                 this.CurrentUser = login.CurrentUser;
+
+                if (CurrentUser.IsAdmin != "마스터관리자")
+                    btnMaster.Visible = false;
+                MenuBinding();
+                ucTabControl1.Visible = false;
             }
             else
             {
                 Application.Exit();
             }
 
-            if (CurrentUser.IsAdmin != "마스터관리자")
-                btnMaster.Visible = false;
-            MenuBinding();
-            ucTabControl1.Visible = false;
-        }
-        private void OpenCreateForm(string prgName)
-        {
-            // 열려있는 폼들중에서 없으면 새로 만들어서 폼을 보여주고,
-            // 이미 열려있는 폼이라면, 활성폼으로 만들어서 제일 앞으로 위치
-
-            string appName = Assembly.GetEntryAssembly().GetName().Name;
-
-            Type frmType = Type.GetType($"{appName}.{prgName}");
-            //어셈블리명.클래스명
-
-            foreach (Form form in Application.OpenForms)
-            {
-                if (form.GetType() == frmType)
-                {
-                    form.Activate(); //Activate 이벤트
-                    form.BringToFront();
-                    return;
-                }
-            }
-
-            Form frm = (Form)Activator.CreateInstance(frmType);
-            frm.MdiParent = this;
-            frm.Show(); //Load->Activate 이벤트
-        }
-        private void MenuItem_Click(object sender, EventArgs e)
-        {
-            Button menu = (Button)sender;
-            OpenCreateForm(menu.Tag.ToString());
-        }
+            
+        }          
         private void frmMain_MdiChildActivate(object sender, EventArgs e)
         {
             if (this.ActiveMdiChild == null)
@@ -191,19 +164,7 @@ namespace VMS_MES_PROJECT_4
         private void Menu_Click(object sender, EventArgs e)
         {
             throw new NotImplementedException();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
+        }      
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -294,6 +255,28 @@ namespace VMS_MES_PROJECT_4
                     Application.OpenForms[i].Close();
                 }
             }
+        }
+
+        private void 메뉴ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Restart();
+            frmMain frm = new frmMain();
+            frm.Show();         
+        }
+
+        private void menuStrip1_ItemAdded(object sender, ToolStripItemEventArgs e)
+        {
+            if (e.Item.Text == ""
+                   || e.Item.Text == "닫기(&C)"
+                   || e.Item.Text == "최소화(&N)"
+                   || e.Item.Text == "이전 크기로(&R)")
+                e.Item.Visible = false;
         }
     }
 }
