@@ -283,5 +283,13 @@ namespace VMS_MES_PROJECT_4
         {
 
         }
+
+        private void btnLogOut_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Restart();
+            frmMain frm = new frmMain();
+            frm.Show();
+        }
     }
 }
