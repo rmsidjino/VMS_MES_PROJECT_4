@@ -142,6 +142,37 @@ namespace VMS_MES_PROJECT_4
 
         private async void btnCreate_Click(object sender, EventArgs e)
         {
+            StringBuilder sb = new StringBuilder();
+            if (txtEmail.Text.Length < 1)
+            {
+                sb.AppendLine("- 이메일을 입력하세요.");
+            }
+            if (iCheck == false)
+            {
+                sb.AppendLine("- 이메일 체크를 해주세요.");
+            }
+            if (txtPwd.Text.Length < 1)
+            {
+                sb.AppendLine("- 비밀번호를 입력하세요.");
+            }
+            if (txtRepeatPwd.Text.Length < 1 || rCheck == false)
+            {
+                sb.AppendLine("- 비밀번호를 체크하세요.");
+            }
+            if (txtLastName.Text.Length < 1)
+            {
+                sb.AppendLine("- 성을 입력하세요.");
+            }
+            if (txtFirstName.Text.Length < 1)
+            {
+                sb.AppendLine("- 이름을 입력하세요.");
+            }
+            if (sb.ToString().Length > 1)
+            {
+                MessageBox.Show(sb.ToString());
+                return;
+            }
+
             UserVO user = new UserVO
             {
                 FirstName = txtFirstName.Text,
@@ -165,8 +196,6 @@ namespace VMS_MES_PROJECT_4
 
         private void lblSignIn_Click(object sender, EventArgs e)
         {
-            frmLogin Login = new frmLogin();
-            Login.Show();
             this.Close();
         }
     }

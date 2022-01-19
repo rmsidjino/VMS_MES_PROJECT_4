@@ -232,6 +232,7 @@ namespace VMS_MES_PROJECT_4
             this.btnReSet.Name = "btnReSet";
             this.btnReSet.Size = new System.Drawing.Size(23, 22);
             this.btnReSet.Text = "toolStripButton1";
+            this.btnReSet.Click += new System.EventHandler(this.btnReSet_Click);
             // 
             // ucTabControl1
             // 

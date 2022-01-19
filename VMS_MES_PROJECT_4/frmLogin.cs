@@ -64,9 +64,10 @@ namespace VMS_MES_PROJECT_4
         // label go to signup CLICK
         private void lblSignup_Click(object sender, EventArgs e)
         {
-            this.Hide();
             frmAccount registerform = new frmAccount();
-            registerform.Show();
+            this.Hide();
+            registerform.ShowDialog();
+            this.Show();
         }
 
         // label go to signup MOUSE ENTER

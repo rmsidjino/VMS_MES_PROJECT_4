@@ -278,5 +278,10 @@ namespace VMS_MES_PROJECT_4
                    || e.Item.Text == "이전 크기로(&R)")
                 e.Item.Visible = false;
         }
+
+        private void btnReSet_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
