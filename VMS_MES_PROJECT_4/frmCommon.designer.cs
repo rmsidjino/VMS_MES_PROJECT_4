@@ -44,9 +44,10 @@ namespace VMS_MES_PROJECT_4
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(12, 15);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1360, 42);
+            this.panel1.Size = new System.Drawing.Size(1346, 52);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -56,18 +57,20 @@ namespace VMS_MES_PROJECT_4
             this.panel2.Controls.Add(this.btnDelete);
             this.panel2.Controls.Add(this.btnCreate);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(12, 60);
+            this.panel2.Location = new System.Drawing.Point(12, 75);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1360, 33);
+            this.panel2.Size = new System.Drawing.Size(1346, 41);
             this.panel2.TabIndex = 1;
             // 
             // btnDelete
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelete.Font = new System.Drawing.Font("굴림", 7F);
-            this.btnDelete.Location = new System.Drawing.Point(1305, 7);
+            this.btnDelete.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnDelete.Location = new System.Drawing.Point(1291, 4);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(40, 20);
+            this.btnDelete.Size = new System.Drawing.Size(40, 34);
             this.btnDelete.TabIndex = 9;
             this.btnDelete.Text = "삭제";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -76,10 +79,11 @@ namespace VMS_MES_PROJECT_4
             // btnCreate
             // 
             this.btnCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCreate.Font = new System.Drawing.Font("굴림", 7F);
-            this.btnCreate.Location = new System.Drawing.Point(1259, 7);
+            this.btnCreate.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnCreate.Location = new System.Drawing.Point(1245, 4);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(40, 20);
+            this.btnCreate.Size = new System.Drawing.Size(40, 34);
             this.btnCreate.TabIndex = 8;
             this.btnCreate.Text = "등록";
             this.btnCreate.UseVisualStyleBackColor = true;
@@ -88,11 +92,12 @@ namespace VMS_MES_PROJECT_4
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 15);
+            this.label3.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Location = new System.Drawing.Point(3, 21);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 12);
+            this.label3.Size = new System.Drawing.Size(86, 17);
             this.label3.TabIndex = 5;
-            this.label3.Text = "공통코드관리";
+            this.label3.Text = "공통정보관리";
             // 
             // dgvCommon
             // 
@@ -100,24 +105,27 @@ namespace VMS_MES_PROJECT_4
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCommon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCommon.Location = new System.Drawing.Point(12, 99);
+            this.dgvCommon.Location = new System.Drawing.Point(12, 124);
+            this.dgvCommon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvCommon.Name = "dgvCommon";
             this.dgvCommon.RowHeadersVisible = false;
             this.dgvCommon.RowTemplate.Height = 23;
-            this.dgvCommon.Size = new System.Drawing.Size(1360, 450);
+            this.dgvCommon.Size = new System.Drawing.Size(1346, 562);
             this.dgvCommon.TabIndex = 2;
             this.dgvCommon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSetup_CellClick);
             // 
             // frmCommon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1384, 561);
+            this.ClientSize = new System.Drawing.Size(1370, 661);
             this.Controls.Add(this.dgvCommon);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmCommon";
-            this.Text = "공통코드관리";
+            this.Text = "공통정보관리";
             this.Load += new System.EventHandler(this.frmCommon_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

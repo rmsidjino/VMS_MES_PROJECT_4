@@ -34,7 +34,7 @@ namespace VMS_MES_PROJECT_4
             // 제품 데이터그리드뷰 컬럼 셋팅
             DataGridViewUtil.SetInitGridView(dgvCommon);
             DataGridViewUtil.AddGridTextColumn(dgvCommon, "공통코드ID", "CCODE", DataGridViewContentAlignment.MiddleCenter, colWidth: 120);
-            DataGridViewUtil.AddGridTextColumn(dgvCommon, "공통코드이름", "CNAME", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
+            DataGridViewUtil.AddGridTextColumn(dgvCommon, "공통코드이름", "CNAME", DataGridViewContentAlignment.MiddleCenter, colWidth: 120);
             DataGridViewUtil.AddGridTextColumn(dgvCommon, "공통코드그룹", "CCATEGORY", DataGridViewContentAlignment.MiddleCenter, colWidth: 120);
 
             DataGridViewButtonColumn btnEdit = new DataGridViewButtonColumn();

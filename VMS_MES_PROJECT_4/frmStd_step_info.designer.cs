@@ -45,25 +45,26 @@ namespace VMS_MES_PROJECT_4
             // 
             // dgvStdStepInfo
             // 
-            this.dgvStdStepInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvStdStepInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.dgvStdStepInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStdStepInfo.Location = new System.Drawing.Point(12, 99);
+            this.dgvStdStepInfo.Location = new System.Drawing.Point(12, 128);
+            this.dgvStdStepInfo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvStdStepInfo.Name = "dgvStdStepInfo";
             this.dgvStdStepInfo.RowHeadersVisible = false;
             this.dgvStdStepInfo.RowTemplate.Height = 23;
-            this.dgvStdStepInfo.Size = new System.Drawing.Size(1360, 450);
+            this.dgvStdStepInfo.Size = new System.Drawing.Size(1346, 602);
             this.dgvStdStepInfo.TabIndex = 5;
             this.dgvStdStepInfo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStdStepInfo_CellClick);
             // 
             // btnDelete
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelete.Font = new System.Drawing.Font("굴림", 7F);
-            this.btnDelete.Location = new System.Drawing.Point(1249, 7);
+            this.btnDelete.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnDelete.Location = new System.Drawing.Point(1297, 4);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(40, 20);
+            this.btnDelete.Size = new System.Drawing.Size(40, 34);
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "삭제";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -72,10 +73,11 @@ namespace VMS_MES_PROJECT_4
             // btnCreate
             // 
             this.btnCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCreate.Font = new System.Drawing.Font("굴림", 7F);
-            this.btnCreate.Location = new System.Drawing.Point(1263, 7);
+            this.btnCreate.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnCreate.Location = new System.Drawing.Point(1251, 4);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(40, 20);
+            this.btnCreate.Size = new System.Drawing.Size(40, 34);
             this.btnCreate.TabIndex = 2;
             this.btnCreate.Text = "등록";
             this.btnCreate.UseVisualStyleBackColor = true;
@@ -84,18 +86,21 @@ namespace VMS_MES_PROJECT_4
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 15);
+            this.label3.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Location = new System.Drawing.Point(4, 20);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 12);
+            this.label3.Size = new System.Drawing.Size(112, 17);
             this.label3.TabIndex = 5;
             this.label3.Text = "표준공정정보관리";
             // 
             // btnSearch
             // 
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearch.Location = new System.Drawing.Point(1274, 9);
+            this.btnSearch.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSearch.Location = new System.Drawing.Point(1252, 4);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.Size = new System.Drawing.Size(86, 45);
             this.btnSearch.TabIndex = 1;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -104,9 +109,10 @@ namespace VMS_MES_PROJECT_4
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 16);
+            this.label1.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(16, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 12);
+            this.label1.Size = new System.Drawing.Size(86, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "￭ 표준공정ID";
             // 
@@ -117,9 +123,10 @@ namespace VMS_MES_PROJECT_4
             this.panel2.Controls.Add(this.btnDelete);
             this.panel2.Controls.Add(this.btnCreate);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(12, 60);
+            this.panel2.Location = new System.Drawing.Point(12, 75);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1360, 33);
+            this.panel2.Size = new System.Drawing.Size(1349, 41);
             this.panel2.TabIndex = 4;
             // 
             // panel1
@@ -130,27 +137,32 @@ namespace VMS_MES_PROJECT_4
             this.panel1.Controls.Add(this.cboStd_Step_Id);
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(12, 15);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1360, 42);
+            this.panel1.Size = new System.Drawing.Size(1349, 52);
             this.panel1.TabIndex = 3;
             // 
             // cboStd_Step_Id
             // 
+            this.cboStd_Step_Id.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cboStd_Step_Id.FormattingEnabled = true;
-            this.cboStd_Step_Id.Location = new System.Drawing.Point(109, 12);
+            this.cboStd_Step_Id.Location = new System.Drawing.Point(117, 15);
+            this.cboStd_Step_Id.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboStd_Step_Id.Name = "cboStd_Step_Id";
-            this.cboStd_Step_Id.Size = new System.Drawing.Size(139, 20);
+            this.cboStd_Step_Id.Size = new System.Drawing.Size(139, 25);
             this.cboStd_Step_Id.TabIndex = 0;
             // 
             // frmStd_step_info
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 561);
+            this.ClientSize = new System.Drawing.Size(1370, 701);
             this.Controls.Add(this.dgvStdStepInfo);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmStd_step_info";
             this.Text = "표준공정정보관리";
             this.Load += new System.EventHandler(this.frmStd_step_info_Load);
