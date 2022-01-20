@@ -129,7 +129,7 @@ namespace VMS_MES_PROJECT_4
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(218, 695);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(218, 746);
             this.flowLayoutPanel1.TabIndex = 8;
             // 
             // button6
@@ -209,7 +209,7 @@ namespace VMS_MES_PROJECT_4
             this.btnReSet});
             this.toolStrip1.Location = new System.Drawing.Point(218, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1152, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1415, 25);
             this.toolStrip1.TabIndex = 18;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -240,6 +240,7 @@ namespace VMS_MES_PROJECT_4
             this.ucTabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.ucTabControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ucTabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            this.ucTabControl1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.ucTabControl1.Location = new System.Drawing.Point(218, 25);
             this.ucTabControl1.Name = "ucTabControl1";
             this.ucTabControl1.SelectedIndex = 0;
@@ -253,7 +254,7 @@ namespace VMS_MES_PROJECT_4
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.ClientSize = new System.Drawing.Size(1633, 695);
+            this.ClientSize = new System.Drawing.Size(1633, 746);
             this.Controls.Add(this.ucTabControl1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);

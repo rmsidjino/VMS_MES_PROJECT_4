@@ -29,17 +29,17 @@ namespace VMS_MES_PROJECT_4
         private void frmEQP_Load(object sender, EventArgs e)
         {
             DataGridViewUtil.SetInitGridView(dgvEQP);
-            DataGridViewUtil.AddGridTextColumn(dgvEQP, "현장ID", "SITE_ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvEQP, "라인ID", "LINE_ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvEQP, "장비ID", "EQP_ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvEQP, "장비 모델", "EQP_MODEL", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvEQP, "장비타입", "EQP_TYPE", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvEQP, "공정 그룹", "EQP_GROUP", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvEQP, "시뮬레이션 타입", "SIM_TYPE", DataGridViewContentAlignment.MiddleCenter, colWidth: 150);
+            DataGridViewUtil.AddGridTextColumn(dgvEQP, "현장ID", "SITE_ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 80);
+            DataGridViewUtil.AddGridTextColumn(dgvEQP, "라인ID", "LINE_ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 80);
+            DataGridViewUtil.AddGridTextColumn(dgvEQP, "장비ID", "EQP_ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 80);
+            DataGridViewUtil.AddGridTextColumn(dgvEQP, "장비 모델", "EQP_MODEL", DataGridViewContentAlignment.MiddleCenter, colWidth: 90);
+            DataGridViewUtil.AddGridTextColumn(dgvEQP, "장비타입", "EQP_TYPE", DataGridViewContentAlignment.MiddleCenter, colWidth: 80);
+            DataGridViewUtil.AddGridTextColumn(dgvEQP, "공정 그룹", "EQP_GROUP", DataGridViewContentAlignment.MiddleCenter, colWidth: 90);
+            DataGridViewUtil.AddGridTextColumn(dgvEQP, "시뮬레이션 타입", "SIM_TYPE", DataGridViewContentAlignment.MiddleCenter, colWidth: 120);
             DataGridViewUtil.AddGridTextColumn(dgvEQP, "사전 설정ID", "PRESET_ID", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvEQP, "비상배치타입", "DISPATCHER_TYPE", DataGridViewContentAlignment.MiddleCenter, colWidth: 130);
-            DataGridViewUtil.AddGridTextColumn(dgvEQP, "장비 가동 상태", "EQP_STATE", DataGridViewContentAlignment.MiddleCenter, colWidth: 150);
-            DataGridViewUtil.AddGridTextColumn(dgvEQP, "장비 가동 코드", "EQP_STATE_CODE", DataGridViewContentAlignment.MiddleRight, colWidth: 150);
+            DataGridViewUtil.AddGridTextColumn(dgvEQP, "비상배치타입", "DISPATCHER_TYPE", DataGridViewContentAlignment.MiddleCenter, colWidth: 110);
+            DataGridViewUtil.AddGridTextColumn(dgvEQP, "장비 가동 상태", "EQP_STATE", DataGridViewContentAlignment.MiddleCenter, colWidth: 120);
+            DataGridViewUtil.AddGridTextColumn(dgvEQP, "장비 가동 코드", "EQP_STATE_CODE", DataGridViewContentAlignment.MiddleRight, colWidth: 120);
             DataGridViewUtil.AddGridTextColumn(dgvEQP, "장비 가동 변경 시간", "STATE_CHANGE_TIME", DataGridViewContentAlignment.MiddleRight, colWidth: 150);
             DataGridViewUtil.AddGridTextColumn(dgvEQP, "자동화", "AUTOMATION", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
 
