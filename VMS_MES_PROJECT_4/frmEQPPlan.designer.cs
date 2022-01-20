@@ -109,7 +109,7 @@ namespace VMS_MES_PROJECT_4
             this.lblEqpGantt.AutoSize = true;
             this.lblEqpGantt.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lblEqpGantt.ForeColor = System.Drawing.Color.Blue;
-            this.lblEqpGantt.Location = new System.Drawing.Point(1088, 16);
+            this.lblEqpGantt.Location = new System.Drawing.Point(1089, 13);
             this.lblEqpGantt.Name = "lblEqpGantt";
             this.lblEqpGantt.Size = new System.Drawing.Size(126, 17);
             this.lblEqpGantt.TabIndex = 9;
@@ -122,7 +122,7 @@ namespace VMS_MES_PROJECT_4
             this.lblLotGantt.AutoSize = true;
             this.lblLotGantt.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lblLotGantt.ForeColor = System.Drawing.Color.Blue;
-            this.lblLotGantt.Location = new System.Drawing.Point(1220, 16);
+            this.lblLotGantt.Location = new System.Drawing.Point(1221, 13);
             this.lblLotGantt.Name = "lblLotGantt";
             this.lblLotGantt.Size = new System.Drawing.Size(120, 17);
             this.lblLotGantt.TabIndex = 8;

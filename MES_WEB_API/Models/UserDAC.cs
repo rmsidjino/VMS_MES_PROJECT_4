@@ -106,6 +106,7 @@ values(@FirstName, @LastName, @Password, @Email)";
             {
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
+                    cmd.Connection.Open();
 
                     cmd.Parameters.AddWithValue("@ID", ID);
 
@@ -122,16 +123,20 @@ values(@FirstName, @LastName, @Password, @Email)";
 
         public bool UpdateUser(UserVO user)
         {
-            string sql = "Update COMMON_CODE set FirstName=@FirstName, LastName=@LastName, Password=@Password, Email=@Email,IsAdmin=@IsAdmin where ID=@ID";
+            string sql = "Update Enrollment set FirstName=@FirstName, LastName=@LastName, Password=@Password, Email=@Email,IsAdmin=@IsAdmin where ID=@ID";
 
             try
             {
 
                 SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Connection.Open();
+
+                cmd.Parameters.AddWithValue("@ID", user.ID);
                 cmd.Parameters.AddWithValue("@FirstName", user.FirstName);
                 cmd.Parameters.AddWithValue("@LastName", user.LastName);
                 cmd.Parameters.AddWithValue("@Password", user.Password);
                 cmd.Parameters.AddWithValue("@Email", user.Email);
+                cmd.Parameters.AddWithValue("@IsAdmin", user.IsAdmin);
 
                 cmd.ExecuteNonQuery();
                 return true;

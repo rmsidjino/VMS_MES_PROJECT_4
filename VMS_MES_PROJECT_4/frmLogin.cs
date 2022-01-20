@@ -48,7 +48,7 @@ namespace VMS_MES_PROJECT_4
 
             Message<UserVO> Umsg = await srv.PostAsync("api/User/Check", user);
 
-            if (Umsg !=null || Umsg.IsSuccess)
+            if (Umsg.IsSuccess)
             {
                 MessageBox.Show("로그인이 완료되었습니다");
 
