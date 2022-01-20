@@ -35,10 +35,10 @@ namespace VMS_MES_PROJECT_4
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblEqpPlan = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cboEQP = new System.Windows.Forms.ComboBox();
             this.cboLine = new System.Windows.Forms.ComboBox();
+            this.lblEqpPlan = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoadStat)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -104,32 +104,6 @@ namespace VMS_MES_PROJECT_4
             this.panel2.Size = new System.Drawing.Size(1360, 33);
             this.panel2.TabIndex = 4;
             // 
-            // lblEqpGantt
-            // 
-            this.lblEqpGantt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblEqpGantt.AutoSize = true;
-            this.lblEqpGantt.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblEqpGantt.ForeColor = System.Drawing.Color.Blue;
-            this.lblEqpGantt.Location = new System.Drawing.Point(1045, 11);
-            this.lblEqpGantt.Name = "lblEqpGantt";
-            this.lblEqpGantt.Size = new System.Drawing.Size(115, 12);
-            this.lblEqpGantt.TabIndex = 7;
-            this.lblEqpGantt.Text = "EQP Gantt 분석차트";
-            this.lblEqpGantt.Click += new System.EventHandler(this.lblEqpGantt_Click);
-            // 
-            // lblLotGantt
-            // 
-            this.lblLotGantt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblLotGantt.AutoSize = true;
-            this.lblLotGantt.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblLotGantt.ForeColor = System.Drawing.Color.Blue;
-            this.lblLotGantt.Location = new System.Drawing.Point(1177, 11);
-            this.lblLotGantt.Name = "lblLotGantt";
-            this.lblLotGantt.Size = new System.Drawing.Size(107, 12);
-            this.lblLotGantt.TabIndex = 6;
-            this.lblLotGantt.Text = "Lot Gantt 분석차트";
-            this.lblLotGantt.Click += new System.EventHandler(this.lblLotGantt_Click);
-            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -160,6 +134,19 @@ namespace VMS_MES_PROJECT_4
             this.cboLine.Name = "cboLine";
             this.cboLine.Size = new System.Drawing.Size(100, 20);
             this.cboLine.TabIndex = 0;
+            // 
+            // lblEqpPlan
+            // 
+            this.lblEqpPlan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblEqpPlan.AutoSize = true;
+            this.lblEqpPlan.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblEqpPlan.ForeColor = System.Drawing.Color.Blue;
+            this.lblEqpPlan.Location = new System.Drawing.Point(1234, 12);
+            this.lblEqpPlan.Name = "lblEqpPlan";
+            this.lblEqpPlan.Size = new System.Drawing.Size(117, 12);
+            this.lblEqpPlan.TabIndex = 10;
+            this.lblEqpPlan.Text = "설비가동률 분석차트";
+            this.lblEqpPlan.Click += new System.EventHandler(this.lblEqpPlan_Click);
             // 
             // frmLoad_Stat
             // 
