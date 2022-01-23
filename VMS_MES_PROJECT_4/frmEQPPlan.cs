@@ -106,5 +106,102 @@ namespace VMS_MES_PROJECT_4
             frmLotGantt frm = new frmLotGantt();
             frm.Show();
         }
+
+        private void dgvEQPPlan_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataGridView grid = (DataGridView)sender;
+            SortOrder so = SortOrder.None;
+            if (grid.Columns[e.ColumnIndex].HeaderCell.SortGlyphDirection == SortOrder.None ||
+                grid.Columns[e.ColumnIndex].HeaderCell.SortGlyphDirection == SortOrder.Ascending)
+            {
+                so = SortOrder.Descending;
+            }
+            else
+            {
+                so = SortOrder.Ascending;
+            }
+            //set SortGlyphDirection after databinding otherwise will always be none 
+            Sort(grid.Columns[e.ColumnIndex].Name, so);
+            grid.Columns[e.ColumnIndex].HeaderCell.SortGlyphDirection = so;
+        }
+
+        private void Sort(string column, SortOrder sortOrder)
+        {
+            switch (column)
+            {
+                case "VERSION_NO":
+                    {
+                        if (sortOrder == SortOrder.Ascending)
+                        {
+                            dgvEQPPlan.DataSource = eqpplanlist.OrderBy(x => x.VERSION_NO).ToList();
+                        }
+                        else
+                        {
+                            dgvEQPPlan.DataSource = eqpplanlist.OrderByDescending(x => x.VERSION_NO).ToList();
+                        }
+                        break;
+                    }
+                case "LINE_ID":
+                    {
+                        if (sortOrder == SortOrder.Ascending)
+                        {
+                            dgvEQPPlan.DataSource = eqpplanlist.OrderBy(x => x.LINE_ID).ToList();
+                        }
+                        else
+                        {
+                            dgvEQPPlan.DataSource = eqpplanlist.OrderByDescending(x => x.LINE_ID).ToList();
+                        }
+                        break;
+                    }
+                case "EQP_ID":
+                    {
+                        if (sortOrder == SortOrder.Ascending)
+                        {
+                            dgvEQPPlan.DataSource = eqpplanlist.OrderBy(x => x.EQP_ID).ToList();
+                        }
+                        else
+                        {
+                            dgvEQPPlan.DataSource = eqpplanlist.OrderByDescending(x => x.EQP_ID).ToList();
+                        }
+                        break;
+                    }
+                case "LOT_ID":
+                    {
+                        if (sortOrder == SortOrder.Ascending)
+                        {
+                            dgvEQPPlan.DataSource = eqpplanlist.OrderBy(x => x.LOT_ID).ToList();
+                        }
+                        else
+                        {
+                            dgvEQPPlan.DataSource = eqpplanlist.OrderByDescending(x => x.LOT_ID).ToList();
+                        }
+                        break;
+                    }
+                case "PRODUCT_ID":
+                    {
+                        if (sortOrder == SortOrder.Ascending)
+                        {
+                            dgvEQPPlan.DataSource = eqpplanlist.OrderBy(x => x.PRODUCT_ID).ToList();
+                        }
+                        else
+                        {
+                            dgvEQPPlan.DataSource = eqpplanlist.OrderByDescending(x => x.PRODUCT_ID).ToList();
+                        }
+                        break;
+                    }
+                case "STEP_ID":
+                    {
+                        if (sortOrder == SortOrder.Ascending)
+                        {
+                            dgvEQPPlan.DataSource = eqpplanlist.OrderBy(x => x.STEP_ID).ToList();
+                        }
+                        else
+                        {
+                            dgvEQPPlan.DataSource = eqpplanlist.OrderByDescending(x => x.STEP_ID).ToList();
+                        }
+                        break;
+                    }
+            }
+        }
     }
 }

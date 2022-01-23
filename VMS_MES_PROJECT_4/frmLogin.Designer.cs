@@ -148,7 +148,7 @@ namespace VMS_MES_PROJECT_4
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "로그인";
+            this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 

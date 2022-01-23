@@ -312,7 +312,7 @@ namespace MES_WEB_API.Controllers
             {
                 if (!string.IsNullOrWhiteSpace(Product))
                 {
-                    list = list.FindAll((x) => x.STEP_ID == EQP && x.id.Contains(Product));
+                    list = list.FindAll((x) => x.STEP_ID == EQP && x.name.Contains(Product));
                 }
                 else
                     list = list.FindAll((x) => x.STEP_ID == EQP);
@@ -320,7 +320,7 @@ namespace MES_WEB_API.Controllers
             else
             {
                 if (!string.IsNullOrWhiteSpace(Product))
-                    list = list.FindAll((x) => x.id.Contains(Product));
+                    list = list.FindAll((x) => x.name.Contains(Product));
             }
 
             var lotNum = list.GroupBy(o => new { o.name })
@@ -376,7 +376,7 @@ namespace MES_WEB_API.Controllers
             {
                 if (!string.IsNullOrWhiteSpace(Product))
                 {
-                    list = list.FindAll((x) => x.STEP_ID == EQP && x.id.Contains(Product));
+                    list = list.FindAll((x) => x.STEP_ID == EQP && x.name.Contains(Product));
                 }
                 else
                     list = list.FindAll((x) => x.STEP_ID == EQP);
@@ -384,7 +384,7 @@ namespace MES_WEB_API.Controllers
             else
             {
                 if (!string.IsNullOrWhiteSpace(Product))
-                    list = list.FindAll((x) => x.id.Contains(Product));
+                    list = list.FindAll((x) => x.name.Contains(Product));
             }
 
             var lotNum = list.GroupBy(o => new { o.name })

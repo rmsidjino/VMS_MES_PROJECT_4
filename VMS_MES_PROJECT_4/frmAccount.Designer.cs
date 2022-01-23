@@ -205,9 +205,9 @@ namespace VMS_MES_PROJECT_4
             this.lblSignIn.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lblSignIn.Location = new System.Drawing.Point(235, 407);
             this.lblSignIn.Name = "lblSignIn";
-            this.lblSignIn.Size = new System.Drawing.Size(51, 17);
+            this.lblSignIn.Size = new System.Drawing.Size(41, 17);
             this.lblSignIn.TabIndex = 26;
-            this.lblSignIn.Text = "Sign In";
+            this.lblSignIn.Text = "Login";
             this.lblSignIn.Click += new System.EventHandler(this.lblSignIn_Click);
             // 
             // frmAccount
@@ -235,7 +235,7 @@ namespace VMS_MES_PROJECT_4
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Create";
+            this.Text = "Sign Up";
             this.Load += new System.EventHandler(this.frmAccount_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

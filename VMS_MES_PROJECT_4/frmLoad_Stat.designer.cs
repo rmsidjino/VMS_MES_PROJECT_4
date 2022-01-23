@@ -57,6 +57,7 @@ namespace VMS_MES_PROJECT_4
             this.dgvLoadStat.RowTemplate.Height = 23;
             this.dgvLoadStat.Size = new System.Drawing.Size(1346, 562);
             this.dgvLoadStat.TabIndex = 5;
+            this.dgvLoadStat.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvLoadStat_ColumnHeaderMouseClick);
             // 
             // label3
             // 

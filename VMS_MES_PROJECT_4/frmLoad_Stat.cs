@@ -81,5 +81,66 @@ namespace VMS_MES_PROJECT_4
             frmCapacity frm = new frmCapacity();
             frm.Show();
         }
+
+        private void dgvLoadStat_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataGridView grid = (DataGridView)sender;
+            SortOrder so = SortOrder.None;
+            if (grid.Columns[e.ColumnIndex].HeaderCell.SortGlyphDirection == SortOrder.None ||
+                grid.Columns[e.ColumnIndex].HeaderCell.SortGlyphDirection == SortOrder.Ascending)
+            {
+                so = SortOrder.Descending;
+            }
+            else
+            {
+                so = SortOrder.Ascending;
+            }
+            //set SortGlyphDirection after databinding otherwise will always be none 
+            Sort(grid.Columns[e.ColumnIndex].Name, so);
+            grid.Columns[e.ColumnIndex].HeaderCell.SortGlyphDirection = so;
+        }
+
+        private void Sort(string column, SortOrder sortOrder)
+        {
+            switch (column)
+            {
+                case "VERSION_NO":
+                    {
+                        if (sortOrder == SortOrder.Ascending)
+                        {
+                            dgvLoadStat.DataSource = Llist.OrderBy(x => x.VERSION_NO).ToList();
+                        }
+                        else
+                        {
+                            dgvLoadStat.DataSource = Llist.OrderByDescending(x => x.VERSION_NO).ToList();
+                        }
+                        break;
+                    }
+                case "LINE_ID":
+                    {
+                        if (sortOrder == SortOrder.Ascending)
+                        {
+                            dgvLoadStat.DataSource = Llist.OrderBy(x => x.LINE_ID).ToList();
+                        }
+                        else
+                        {
+                            dgvLoadStat.DataSource = Llist.OrderByDescending(x => x.LINE_ID).ToList();
+                        }
+                        break;
+                    }
+                case "EQP_ID":
+                    {
+                        if (sortOrder == SortOrder.Ascending)
+                        {
+                            dgvLoadStat.DataSource = Llist.OrderBy(x => x.EQP_ID).ToList();
+                        }
+                        else
+                        {
+                            dgvLoadStat.DataSource = Llist.OrderByDescending(x => x.EQP_ID).ToList();
+                        }
+                        break;
+                    }              
+            }
+        }
     }
 }

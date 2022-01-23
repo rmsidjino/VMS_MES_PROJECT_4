@@ -40,7 +40,7 @@ namespace VMS_MES_PROJECT_4
             this.webBrowser1.Location = new System.Drawing.Point(0, 0);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(1184, 861);
+            this.webBrowser1.Size = new System.Drawing.Size(1384, 1061);
             this.webBrowser1.TabIndex = 0;
             // 
             // webView1
@@ -50,14 +50,14 @@ namespace VMS_MES_PROJECT_4
             this.webView1.Location = new System.Drawing.Point(0, 0);
             this.webView1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webView1.Name = "webView1";
-            this.webView1.Size = new System.Drawing.Size(1184, 861);
+            this.webView1.Size = new System.Drawing.Size(1384, 1061);
             this.webView1.TabIndex = 1;
             // 
             // frmLotGantt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 861);
+            this.ClientSize = new System.Drawing.Size(1384, 1061);
             this.Controls.Add(this.webView1);
             this.Controls.Add(this.webBrowser1);
             this.Name = "frmLotGantt";

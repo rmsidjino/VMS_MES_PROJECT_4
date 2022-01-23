@@ -152,6 +152,7 @@ namespace VMS_MES_PROJECT_4
             this.dgvEQPPlan.RowTemplate.Height = 23;
             this.dgvEQPPlan.Size = new System.Drawing.Size(1346, 562);
             this.dgvEQPPlan.TabIndex = 2;
+            this.dgvEQPPlan.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvEQPPlan_ColumnHeaderMouseClick);
             // 
             // frmEQPPlan
             // 

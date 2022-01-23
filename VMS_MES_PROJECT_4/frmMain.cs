@@ -1,4 +1,5 @@
 ﻿using MESDTO;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +10,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace VMS_MES_PROJECT_4
 {
@@ -16,6 +18,8 @@ namespace VMS_MES_PROJECT_4
     {
         MenuDAC db = new MenuDAC();
         DataTable dtMenu;
+        string saveFileName;
+        DataTable jdt;
         public UserVO CurrentUser { get; set; }
         //string user ID;
         public frmMain()
@@ -281,7 +285,88 @@ namespace VMS_MES_PROJECT_4
 
         private void btnReSet_Click(object sender, EventArgs e)
         {
+            if (this.ActiveMdiChild == null)
+            {
+                return;
+            }
 
+            var conList = GetControls(this.ActiveMdiChild);
+            foreach (Control ps in conList)
+            {
+                if ((ps.GetType() == typeof(DataGridView)))
+                {
+                    GetExcel((DataGridView)ps);
+                }
+            }
+        }
+
+        private void GetExcel(DataGridView dgv)
+        {
+            //저장다이얼로그가 떠서, 어떤경로, 파일로 저장
+            SaveFileDialog dlg = new SaveFileDialog();
+            dlg.Filter = "Excel Files(*.xls)|*.xls";
+            dlg.Title = "엑셀파일로 내보내기";
+
+            var json = JsonConvert.SerializeObject(dgv.DataSource);
+            jdt = (DataTable)JsonConvert.DeserializeObject(json, (typeof(DataTable)));
+
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                saveFileName = dlg.FileName;
+                frmWaitAsyncForm frm = new frmWaitAsyncForm(MakeExcel);
+                frm.ShowDialog(); 
+            }
+        }
+
+        private void MakeExcel()
+        {
+            Excel.Application xlApp = new Excel.Application();
+            Excel.Workbook xlWorkBook = xlApp.Workbooks.Add();
+            Excel.Worksheet xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+
+
+            //컬럼헤더를 출력
+            for (int c = 0; c < jdt.Columns.Count; c++)
+            {
+                xlWorkSheet.Cells[1, c + 1] = jdt.Columns[c].ColumnName;
+            }
+
+            //데이터를 출력
+            for (int r = 0; r < jdt.Rows.Count; r++)
+            {
+                for (int c = 0; c < jdt.Columns.Count; c++)
+                {
+                    xlWorkSheet.Cells[r + 2, c + 1] = jdt.Rows[r][c].ToString();
+                }
+            }
+
+            xlWorkBook.SaveAs(saveFileName, Excel.XlFileFormat.xlWorkbookNormal);
+            xlWorkBook.Close();
+            xlApp.Quit();
+
+            releaseObject(xlWorkSheet);
+            releaseObject(xlWorkBook);
+            releaseObject(xlApp);
+
+            MessageBox.Show("엑셀다운로드 완료");
+        }
+
+        private void releaseObject(object obj)
+        {
+            try
+            {
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(obj);
+                obj = null;
+            }
+            catch (Exception ex)
+            {
+                obj = null;
+                MessageBox.Show("Exception Occured while releasing object " + ex.ToString());
+            }
+            finally
+            {
+                GC.Collect();
+            }
         }
 
         private void btnLogOut_Click_1(object sender, EventArgs e)
