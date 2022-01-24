@@ -161,9 +161,11 @@ namespace VMS_MES_PROJECT_4
             this.txtProductID.Name = "txtProductID";
             this.txtProductID.Size = new System.Drawing.Size(163, 25);
             this.txtProductID.TabIndex = 0;
+            this.txtProductID.TextChanged += new System.EventHandler(this.txtProductID_TextChanged);
             // 
             // txtProductName
             // 
+            this.txtProductName.Enabled = false;
             this.txtProductName.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtProductName.Location = new System.Drawing.Point(174, 94);
             this.txtProductName.Name = "txtProductName";
@@ -172,6 +174,7 @@ namespace VMS_MES_PROJECT_4
             // 
             // txtProcessID
             // 
+            this.txtProcessID.Enabled = false;
             this.txtProcessID.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtProcessID.Location = new System.Drawing.Point(174, 129);
             this.txtProcessID.Name = "txtProcessID";

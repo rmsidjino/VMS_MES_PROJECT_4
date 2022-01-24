@@ -134,5 +134,11 @@ namespace VMS_MES_PROJECT_4
                 txtInputBatchSize.Text = pItem.INPUT_BATCH_SIZE.ToString();
             }
         }
+
+        private void txtProductID_TextChanged(object sender, EventArgs e)
+        {
+            txtProductName.Text = txtProductID.Text;
+            txtProcessID.Text = "PROC_" + txtProductID.Text;
+        }
     }
 }
