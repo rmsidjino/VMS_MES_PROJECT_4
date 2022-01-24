@@ -64,7 +64,6 @@ namespace VMS_MES_PROJECT_4
             com = await srv.GetListAsync($"api/Common/All", com);
 
             CommonUtil.ComboBinding(cboProduct, com, "PRODUCT_ID", blankText: "선택");
-            CommonUtil.ComboBinding(cboProcess, com, "PROCESS_ID", blankText: "선택");
         }
 
 
@@ -102,12 +101,7 @@ namespace VMS_MES_PROJECT_4
             if (cboProduct.SelectedIndex > 0)
                 productID = cboProduct.SelectedValue.ToString();
 
-            string processID = " ";
-            if (cboProcess.SelectedIndex > 0)
-                processID = cboProcess.SelectedValue.ToString();
-
-
-            string url = $"api/Product/SearchProductList?productID={productID}&processID={processID}";
+            string url = $"api/Product/SearchProductList?productID={productID}";
             plist = null;
             plist = await srv.GetListAsync(url, plist);
             dgvProduct.DataSource = null;

@@ -69,13 +69,13 @@ namespace MES_WEB_API.Controllers
         }
 
 
-        //GET : https://localhost:44332/api/Product/SearchProductList?productID={productID}&processID={processID}
+        //GET : https://localhost:44332/api/Product/SearchProductList?productID={productID}
         [HttpGet]
         [Route("SearchProductList")]
-        public List<ProductVO> SearchProductList(string productID = "", string processID = "")
+        public List<ProductVO> SearchProductList(string productID = "")
         {
             ProductDAC db = new ProductDAC();
-            return db.SearchProductList(productID, processID);
+            return db.SearchProductList(productID);
         }
 
         //GET : https://localhost:44332/api/Product/{id}

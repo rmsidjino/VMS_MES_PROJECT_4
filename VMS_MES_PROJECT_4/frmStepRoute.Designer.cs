@@ -29,6 +29,7 @@ namespace VMS_MES_PROJECT_4
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStepRoute));
             this.panel1 = new System.Windows.Forms.Panel();
             this.cboStep = new System.Windows.Forms.ComboBox();
             this.cboProcess = new System.Windows.Forms.ComboBox();
@@ -36,12 +37,14 @@ namespace VMS_MES_PROJECT_4
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvStepRoute = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStepRoute)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +68,7 @@ namespace VMS_MES_PROJECT_4
             // 
             this.cboStep.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cboStep.FormattingEnabled = true;
-            this.cboStep.Location = new System.Drawing.Point(421, 15);
+            this.cboStep.Location = new System.Drawing.Point(404, 15);
             this.cboStep.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboStep.Name = "cboStep";
             this.cboStep.Size = new System.Drawing.Size(101, 25);
@@ -75,7 +78,7 @@ namespace VMS_MES_PROJECT_4
             // 
             this.cboProcess.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cboProcess.FormattingEnabled = true;
-            this.cboProcess.Location = new System.Drawing.Point(120, 15);
+            this.cboProcess.Location = new System.Drawing.Point(122, 15);
             this.cboProcess.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboProcess.Name = "cboProcess";
             this.cboProcess.Size = new System.Drawing.Size(188, 25);
@@ -85,10 +88,10 @@ namespace VMS_MES_PROJECT_4
             // 
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnSearch.Location = new System.Drawing.Point(1248, 4);
+            this.btnSearch.Location = new System.Drawing.Point(1248, 5);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(86, 44);
+            this.btnSearch.Size = new System.Drawing.Size(86, 42);
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -98,7 +101,7 @@ namespace VMS_MES_PROJECT_4
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(345, 20);
+            this.label2.Location = new System.Drawing.Point(328, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 17);
             this.label2.TabIndex = 3;
@@ -118,6 +121,7 @@ namespace VMS_MES_PROJECT_4
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.btnDelete);
             this.panel2.Controls.Add(this.btnCreate);
             this.panel2.Controls.Add(this.label3);
@@ -127,11 +131,21 @@ namespace VMS_MES_PROJECT_4
             this.panel2.Size = new System.Drawing.Size(1346, 41);
             this.panel2.TabIndex = 1;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // btnDelete
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnDelete.Location = new System.Drawing.Point(1294, 4);
+            this.btnDelete.Location = new System.Drawing.Point(1293, 4);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(40, 34);
@@ -156,12 +170,12 @@ namespace VMS_MES_PROJECT_4
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(3, 21);
+            this.label3.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Location = new System.Drawing.Point(40, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 17);
+            this.label3.Size = new System.Drawing.Size(95, 25);
             this.label3.TabIndex = 5;
-            this.label3.Text = "작업공정";
+            this.label3.Text = "작업 공정";
             // 
             // dgvStepRoute
             // 
@@ -187,14 +201,16 @@ namespace VMS_MES_PROJECT_4
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmStepRoute";
-            this.Text = "작업공정";
+            this.Text = "작업 공정";
             this.Load += new System.EventHandler(this.frmStepRoute_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStepRoute)).EndInit();
             this.ResumeLayout(false);
 
@@ -213,6 +229,7 @@ namespace VMS_MES_PROJECT_4
         private System.Windows.Forms.ComboBox cboProcess;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnCreate;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

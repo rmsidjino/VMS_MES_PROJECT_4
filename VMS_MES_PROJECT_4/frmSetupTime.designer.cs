@@ -29,6 +29,7 @@ namespace VMS_MES_PROJECT_4
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSetupTime));
             this.panel1 = new System.Windows.Forms.Panel();
             this.cboStep = new System.Windows.Forms.ComboBox();
             this.cboSite = new System.Windows.Forms.ComboBox();
@@ -40,9 +41,11 @@ namespace VMS_MES_PROJECT_4
             this.btnCreate = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvSetup = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSetup)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -119,6 +122,7 @@ namespace VMS_MES_PROJECT_4
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.btnDelete);
             this.panel2.Controls.Add(this.btnCreate);
             this.panel2.Controls.Add(this.label3);
@@ -157,12 +161,12 @@ namespace VMS_MES_PROJECT_4
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(4, 20);
+            this.label3.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Location = new System.Drawing.Point(39, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 17);
+            this.label3.Size = new System.Drawing.Size(95, 25);
             this.label3.TabIndex = 5;
-            this.label3.Text = "셋업관리";
+            this.label3.Text = "셋업 관리";
             // 
             // dgvSetup
             // 
@@ -179,6 +183,16 @@ namespace VMS_MES_PROJECT_4
             this.dgvSetup.TabIndex = 2;
             this.dgvSetup.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSetup_CellClick);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmSetupTime
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -188,15 +202,17 @@ namespace VMS_MES_PROJECT_4
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmSetupTime";
-            this.Text = "셋업관리";
+            this.Text = "셋업 관리";
             this.Load += new System.EventHandler(this.frmSetupTime_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSetup)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -214,6 +230,7 @@ namespace VMS_MES_PROJECT_4
         private System.Windows.Forms.DataGridView dgvSetup;
         private System.Windows.Forms.ComboBox cboStep;
         private System.Windows.Forms.ComboBox cboSite;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
