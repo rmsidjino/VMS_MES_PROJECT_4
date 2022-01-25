@@ -118,7 +118,7 @@ values(@PRODUCT_ID, @PRODUCT_TYPE, @PRODUCT_NAME, @PROCESS_ID, @LOT_SIZE, @INPUT
             }
         }
 
-        public List<ProductVO> SearchProductList(string productID = "", string processID = "")
+        public List<ProductVO> SearchProductList(string productID = "")
         {
             string sql = @"select PRODUCT_ID, PRODUCT_TYPE, PRODUCT_NAME, PROCESS_ID, LOT_SIZE, INPUT_BATCH_SIZE, MODIFIER, MODIFIER_DATE
                                     from PRODUCT where 1=1 ";
@@ -131,12 +131,6 @@ values(@PRODUCT_ID, @PRODUCT_TYPE, @PRODUCT_NAME, @PROCESS_ID, @LOT_SIZE, @INPUT
                     {
                         sql += " and PRODUCT_ID=@PRODUCT_ID";
                         cmd.Parameters.AddWithValue("@PRODUCT_ID", productID);
-                    }
-
-                    if (processID != null && processID.Trim().Length > 0)
-                    {
-                        sql += " and PROCESS_ID=@PROCESS_ID";
-                        cmd.Parameters.AddWithValue("@PROCESS_ID", processID);
                     }
 
                     cmd.Connection = conn;

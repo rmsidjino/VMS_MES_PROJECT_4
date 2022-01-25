@@ -34,7 +34,7 @@ namespace VMS_MES_PROJECT_4
             DataGridViewUtil.AddGridTextColumn(dgvUser, "이름","FirstName", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
             DataGridViewUtil.AddGridTextColumn(dgvUser, "성","LastName", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
             DataGridViewUtil.AddGridTextColumn(dgvUser, "비밀번호","Password", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
-            DataGridViewUtil.AddGridTextColumn(dgvUser, "이메일","Email",  DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
+            DataGridViewUtil.AddGridTextColumn(dgvUser, "이메일","Email",  DataGridViewContentAlignment.MiddleCenter, colWidth: 150);
             DataGridViewUtil.AddGridTextColumn(dgvUser, "권한","IsAdmin", DataGridViewContentAlignment.MiddleCenter, colWidth: 100);
 
             DataGridViewButtonColumn btnEdit = new DataGridViewButtonColumn();
